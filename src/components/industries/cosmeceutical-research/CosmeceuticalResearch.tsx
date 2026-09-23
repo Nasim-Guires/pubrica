@@ -160,45 +160,48 @@ export default function CosmeceuticalResearch({
       </section>
 
       {/* Segments We Serve Section */}
-      <section className="bg-gray-50/50 py-8 px-6 border-t border-b border-gray-100">
-        <div className="max-w-6xl mx-auto text-left mb-8">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-2 text-[#0f2824]">{segmentsTitle}</h2>
-          <p className="text-gray-600 text-sm sm:text-base max-w-3xl leading-relaxed">
+      <section className="py-7 bg-gray-50 px-4 md:px-8">
+        <div className="max-w-6xl mx-auto text-center mb-12">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+            {segmentsTitle}
+          </h2>
+          <p className="text-sm md:text-base text-gray-600 max-w-5xl mx-auto leading-relaxed">
             {segmentsSubtitle}
           </p>
         </div>
 
-        {/* Circular / Grid Segments Layout with reduced gaps */}
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 items-center">
-          {/* Left Column Segments */}
-          <div className="space-y-4">
+        {/* Central Graphic with Surrounding Cards Layout */}
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+          {/* Left Column Cards (First 3 items) */}
+          <div className="space-y-6">
             {segments.slice(0, 3).map((segment, index) => (
-              <div key={index} className="bg-white p-5 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow text-left">
-                <h3 className="font-bold text-base text-[#cc0000] mb-1.5">{segment.title}</h3>
-                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{segment.description}</p>
+              <div key={index} className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                <h3 className="font-bold text-red-700 text-base mb-1.5">{segment.title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{segment.description}</p>
               </div>
             ))}
           </div>
 
           {/* Center Image */}
-          <div className="flex justify-center my-4 md:my-0">
-            <div className="relative w-[240px] h-[240px] sm:w-[300px] sm:h-[300px] rounded-full overflow-hidden shadow-xl border-4 border-white">
+          <div className="flex justify-center my-6 md:my-0">
+            <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full border-4 border-white shadow-md overflow-hidden">
               <Image
                 src={segmentsCenterImage}
                 alt="Cosmeceutical clinical treatment"
                 fill
-                sizes="300px"
-                style={{ objectFit: 'cover' }}
+                className="object-cover"
+                sizes="(max-width: 768px) 288px, 320px"
+                priority
               />
             </div>
           </div>
 
-          {/* Right Column Segments */}
-          <div className="space-y-4">
+          {/* Right Column Cards (Next 3 items) */}
+          <div className="space-y-6">
             {segments.slice(3, 6).map((segment, index) => (
-              <div key={index} className="bg-white p-5 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow text-left">
-                <h3 className="font-bold text-base text-[#cc0000] mb-1.5">{segment.title}</h3>
-                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{segment.description}</p>
+              <div key={index} className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                <h3 className="font-bold text-red-700 text-base mb-1.5">{segment.title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{segment.description}</p>
               </div>
             ))}
           </div>
@@ -206,18 +209,44 @@ export default function CosmeceuticalResearch({
       </section>
 
       {/* Expertise Section */}
-      <section className="max-w-6xl mx-auto py-6 px-6 text-left">
-        <h2 className="text-2xl sm:text-3xl font-bold mb-2 text-[#0f2824]">{expertiseTitle}</h2>
-        <p className="text-gray-600 text-sm sm:text-base max-w-4xl leading-relaxed mb-8">
-          {expertiseSubtitle}
-        </p>
+      <section className="py-8 px-6 max-w-7xl mx-auto">
+        {/* Header Section */}
+        <div className="text-left mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] mb-3">
+            {expertiseTitle}
+          </h2>
+          <p className="text-gray-700 max-w-5xl text-sm md:text-base leading-relaxed">
+            {expertiseSubtitle}
+          </p>
+        </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        {/* Grid Section - 3 Columns Horizontal Design */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {expertiseItems.map((item, index) => (
-            <div key={index} className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm flex flex-col items-start text-left hover:shadow-md transition-shadow">
-              {item.iconSrc ? <div className="relative w-10 h-10 mb-3"><Image src={item.iconSrc} alt="" fill className="object-contain" sizes="40px" /></div> : null}
-              <h3 className="font-bold text-base sm:text-lg text-gray-900 mb-1.5">{item.title}</h3>
-              <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{item.description}</p>
+            <div
+              key={index}
+              className="bg-white border border-gray-100 p-5 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-row items-start space-x-3 min-h-[140px]"
+            >
+              {item.iconSrc ? (
+                <div className="relative w-10 h-10 shrink-0 flex items-center justify-center">
+                  <Image
+                    src={item.iconSrc}
+                    alt=""
+                    fill
+                    className="object-contain"
+                    sizes="40px"
+                  />
+                </div>
+              ) : null}
+
+              <div className="flex-1">
+                <h4 className="font-bold text-sm md:text-base text-[#1b3b32] mb-1.5 leading-snug">
+                  {item.title}
+                </h4>
+                <p className="text-gray-600 text-xs md:text-xs leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>

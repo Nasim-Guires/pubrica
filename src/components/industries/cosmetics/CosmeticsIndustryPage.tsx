@@ -118,113 +118,96 @@ export default function CosmeticsIndustryPage({
         headingAs="h1"
       />
       {/* Transforming Ideas into Market-Ready Cosmetic Innovations */}
-      <section className="py-7 px-6 max-w-6xl mx-auto">
-        <div className="flex flex-col lg:flex-row gap-12 items-center">
-          <div className="flex-1 space-y-6">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#0f2824] leading-snug">
-              {transformTitle}
-            </h2>
-            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-              {transformParagraph1}
-            </p>
-            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-              {transformParagraph2}
-            </p>
-            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-              {transformParagraph3}
-            </p>
-            <div>
-              <GetFreeQuoteButton />
+      <section className="pt-6 border-t border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="mb-5">
+              <h2 className="text-3xl font-bold text-[#0c2e3a] mb-5 leading-tight">
+                {transformTitle}
+              </h2>
             </div>
-          </div>
-          <div className="w-full lg:w-[420px] flex-shrink-0">
-            <div className="relative w-full h-[360px] rounded-full overflow-hidden shadow-xl border-4 border-white">
-              <Image
-                src={transformImage}
-                alt="Transforming cosmetic ideas"
-                fill
-                sizes="(max-width: 1024px) 100vw, 420px"
-                style={{ objectFit: 'cover' }}
-              />
+
+            <div className="flow-root">
+              <div className="lg:float-right lg:ml-8 lg:mb-4 mb-6 flex justify-center w-full lg:w-[420px]">
+                <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-[350px] lg:h-[350px] rounded-full overflow-hidden shadow-lg border-4 border-white flex-shrink-0 mx-auto bg-[#a3c9bd]/30">
+                  <Image
+                    src={transformImage}
+                    alt="Transforming cosmetic ideas"
+                    fill
+                    priority
+                    className="object-cover"
+                    sizes="(max-width: 768px) 320px, 380px"
+                  />
+                </div>
+              </div>
+
+              <div className="space-y-5 text-slate-700">
+                <div className="space-y-5">
+                  <p className="text-base leading-relaxed">
+                    {transformParagraph1}
+                  </p>
+
+                  <p className="text-base leading-relaxed">
+                    {transformParagraph2}
+                  </p>
+
+                  <p className="text-base leading-relaxed">
+                    {transformParagraph3}
+                  </p>
+
+                  {/* CTA Button */}
+                  <div className="pt-2">
+                    <GetFreeQuoteButton />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
-
       {/* Our Expertise in the Cosmetics Industry Includes (Exact Radial/Orbit Layout matching reference) */}
-      <section className="py-8 px-4 max-w-7xl mx-auto border-t border-gray-100 text-center">
-        <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-[#0f2824]">{expertiseTitle}</h2>
-        <p className="text-gray-600 text-sm sm:text-base max-w-3xl mx-auto mb-16 leading-relaxed">
-          {expertiseSubtitle}
-        </p>
-
-        {/* Desktop Orbit Layout */}
-        <div className="relative hidden lg:flex items-center justify-center min-h-[600px] max-w-5xl mx-auto">
-          {/* Center Circular Image */}
-          <div className="absolute z-10 w-[280px] h-[280px] rounded-full overflow-hidden border-4 border-white shadow-2xl bg-white">
-            <Image
-              src={expertiseCenterImage}
-              alt="Cosmetic expert"
-              fill
-              sizes="280px"
-              style={{ objectFit: 'cover' }}
-            />
-          </div>
-
-          {/* Left Cards (3 cards stacked vertically) */}
-          <div className="absolute left-0 flex flex-col justify-between h-[520px] w-[340px] z-20">
-            {defaultExpertiseItems.slice(0, 3).map((item, idx) => (
-              <div
-                key={idx}
-                className="bg-white border border-gray-200/80 rounded-xl p-4 shadow-md text-left transition-transform hover:scale-105"
-              >
-                <h3 className="text-[#b91c1c] font-bold text-sm mb-1">{item.title}</h3>
-                <p className="text-gray-600 text-xs leading-relaxed">{item.description}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* Right Cards (4 cards stacked vertically) */}
-          <div className="absolute right-0 flex flex-col justify-between h-[640px] w-[340px] z-20">
-            {defaultExpertiseItems.slice(3, 7).map((item, idx) => (
-              <div
-                key={idx}
-                className="bg-white border border-gray-200/80 rounded-xl p-4 shadow-md text-left transition-transform hover:scale-105"
-              >
-                <h3 className="text-[#b91c1c] font-bold text-sm mb-1">{item.title}</h3>
-                <p className="text-gray-600 text-xs leading-relaxed">{item.description}</p>
-              </div>
-            ))}
-          </div>
+      <section className="py-7 bg-gray-50 px-4 md:px-8">
+        <div className="max-w-6xl mx-auto text-center mb-12">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+            {expertiseTitle}
+          </h2>
+          <p className="text-sm md:text-base text-gray-600 max-w-5xl mx-auto leading-relaxed">
+            {expertiseSubtitle}
+          </p>
         </div>
 
-        {/* Mobile / Tablet Stacked Layout */}
-        {/* Mobile / Tablet Stacked Layout */}
-        <div className="flex lg:hidden flex-col items-center gap-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full text-left">
+        {/* Central Graphic with Surrounding Cards Layout */}
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+          {/* Left Column Cards (First 3 items) */}
+          <div className="space-y-6">
             {defaultExpertiseItems.slice(0, 3).map((item, idx) => (
-              <div key={idx} className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
-                <h3 className="text-[#b91c1c] font-bold text-sm mb-1">{item.title}</h3>
-                <p className="text-gray-600 text-xs leading-relaxed">{item.description}</p>
+              <div key={idx} className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                <h3 className="font-bold text-red-700 text-base mb-1.5">{item.title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
 
-          <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-white shadow-xl my-2">
-            <Image
-              src={expertiseCenterImage}
-              alt="Cosmetic expert"
-              fill
-              sizes="192px"
-              style={{ objectFit: 'cover' }}
-            />
+          {/* Center Image */}
+          <div className="flex justify-center my-6 md:my-0">
+            <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full border-4 border-white shadow-md overflow-hidden">
+              <Image
+                src={expertiseCenterImage}
+                alt="Cosmetic expert"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 288px, 320px"
+                priority
+              />
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full text-left">
+          {/* Right Column Cards (Remaining 4 items) */}
+          <div className="space-y-6">
             {defaultExpertiseItems.slice(3, 7).map((item, idx) => (
-              <div key={idx} className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
-                <h3 className="text-[#b91c1c] font-bold text-sm mb-1">{item.title}</h3>
-                <p className="text-gray-600 text-xs leading-relaxed">{item.description}</p>
+              <div key={idx} className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                <h3 className="font-bold text-red-700 text-base mb-1.5">{item.title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
@@ -232,19 +215,43 @@ export default function CosmeticsIndustryPage({
       </section>
 
       {/* Cosmetic Segments We Serve */}
-      <section className="py-5 px-6 max-w-6xl mx-auto border-t border-gray-100 text-left">
-        <h2 className="text-2xl sm:text-3xl font-bold mb-3 text-[#0f2824]">{segmentsTitle}</h2>
-        <p className="text-gray-600 text-sm sm:text-base max-w-4xl mb-8 leading-relaxed">
-          {segmentsSubtitle}
-        </p>
+      <section className="py-8 px-6 max-w-7xl mx-auto">
+        {/* Header Section */}
+        <div className="text-left mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] mb-3">
+            {segmentsTitle}
+          </h2>
+          <p className="text-gray-700 max-w-5xl text-sm md:text-base leading-relaxed">
+            {segmentsSubtitle}
+          </p>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
+        {/* Grid Section - 3 Columns Horizontal Design */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {defaultSegmentsItems.map((item, idx) => (
-            <div key={idx} className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
-              <div>
-                {item.iconSrc ? <div className="relative w-10 h-10 mb-4"><Image src={item.iconSrc} alt="" fill className="object-contain" sizes="40px" /></div> : null}
-                <h3 className="font-bold text-base text-[#0f2824] mb-2">{item.title}</h3>
-                <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">{item.description}</p>
+            <div
+              key={idx}
+              className="bg-white border border-gray-100 p-5 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-row items-start space-x-3 min-h-[140px]"
+            >
+              {item.iconSrc ? (
+                <div className="relative w-10 h-10 shrink-0 flex items-center justify-center">
+                  <Image
+                    src={item.iconSrc}
+                    alt=""
+                    fill
+                    className="object-contain"
+                    sizes="40px"
+                  />
+                </div>
+              ) : null}
+
+              <div className="flex-1">
+                <h4 className="font-bold text-sm md:text-base text-[#1b3b32] mb-1.5 leading-snug">
+                  {item.title}
+                </h4>
+                <p className="text-gray-600 text-xs md:text-xs leading-relaxed">
+                  {item.description}
+                </p>
               </div>
             </div>
           ))}

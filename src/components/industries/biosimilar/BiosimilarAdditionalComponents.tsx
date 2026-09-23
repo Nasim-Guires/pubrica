@@ -1,5 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
+import WhereAuthorsPublish from '@/components/common/WhereAuthorsPublish';
+import ExpertEditorsSection, { ExpertEditorItem } from '@/components/common/ExpertEditorsSection';
 
 interface FdaProduct {
   name: string;
@@ -103,6 +105,33 @@ const defaultEditors: EditorProfile[] = [
   }
 ];
 
+const expertEditors: ExpertEditorItem[] = [
+  {
+    name: "Dr. Laurence",
+    degree: "PHD - Biosimilar Research",
+    experience: "7 years of experience",
+    manuscripts: "100+ manuscripts edited",
+    avatar: "/images/industries/generics/Dr.-Laurence.webp",
+    flag: "/images/country/gb.png",
+  },
+  {
+    name: "Dr. AJ",
+    degree: "PHD - Biosimilar Research",
+    experience: "5 Years of Experience",
+    manuscripts: "90+ manuscripts edited",
+    avatar: "/images/industries/generics/Dr.-AJ.webp",
+    flag: "/images/country/us.png",
+  },
+  {
+    name: "Dr. Jay",
+    degree: "PHD - Biosimilar Research",
+    experience: "15 Years of Experience",
+    manuscripts: "150+ manuscripts edited",
+    avatar: "/images/industries/nutraceutical-research/Dr.-Rohit-Kapoor.webp",
+    flag: "/images/country/us.png",
+  },
+];
+
 export default function BiosimilarAdditionalComponents({
   featureCards = defaultFeatureCards,
   authorSectionTitle = 'Where Our Authors Publish',
@@ -145,89 +174,51 @@ export default function BiosimilarAdditionalComponents({
       {/* 2. Where Our Authors Publish Section */}
 
       <section className="py-6 max-w-7xl mx-auto px-6">
-        <div className="text-start max-w-4xl mb-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] mb-2">
-            {authorSectionTitle}
-          </h2>
-
-          <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-            {authorSectionSubtitle}
-          </p>
-        </div>
-
-        <div className="space-y-4">
-          <div className="bg-[#fafcfa] border border-gray-100 rounded-xl p-5 md:p-6 shadow-sm grid grid-cols-1 md:grid-cols-[180px_1fr] gap-6 items-center">
-
-            <div className="relative w-full h-[220px] rounded-lg overflow-hidden bg-white border border-gray-100 shadow-inner flex items-center justify-center p-2">
-              <Image
-                src={journalCoverImage}
-                alt="Journal publication cover"
-                fill
-                sizes="(max-width: 768px) 100vw, 180px"
-                className="object-contain p-1"
-              />
-            </div>
-
-            <div className="space-y-2 text-sm md:text-base text-gray-700">
-              <div>
-                <span className="font-bold text-gray-900">Paper Title: </span>
-                <span className="text-gray-800">{paperTitle}</span>
-              </div>
-
-              <div>
-                <span className="font-bold text-gray-900">Author: </span>
-                <span>{paperAuthors}</span>
-              </div>
-
-              <div>
-                <span className="font-bold text-gray-900">Journal Name: </span>
-                <span className="text-[#1b3b32] font-semibold">
-                  {journalName}
-                </span>
-              </div>
-
-              <div>
-                <span className="font-bold text-gray-900">Publisher: </span>
-                <span>{publisher}</span>
-              </div>
-
-              <div>
-                <span className="font-bold text-gray-900">Impact factor: </span>
-                <span>{impactFactor}</span>
-              </div>
-            </div>
-
-          </div>
-        </div>
+        <WhereAuthorsPublish
+          title="Where Our Authors Publish"
+          description="Our authors share Pubrica’s expert content in top-tier journals, conferences, and platforms, maximizing and amplifying its recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity."
+          publication={{
+            imageSrc:
+              "/images/industries/biosimilar/sample-works-1-1.webp",
+            imageAlt: "Pharmaceuticals Journal Cover",
+            paperTitle:
+              "An Overview of Biosimilars-Development, Quality, Regulatory Issues, and Management in Healthcare",
+            author:
+              "Mascarenhas-Melo, F., Diaz, M., Gonçalves, M. B. S., Vieira, P., Bell, V., Viana, S., Nunes, S., Paiva-Santos, A. C., & Veiga, F",
+            journalName: "Pharmaceuticals (Basel, Switzerland)",
+            publisher: "MDPI",
+            impactFactor: "4.8",
+          }}
+        />
       </section>
 
 
 
       {/* 3. FDA-Approved Biosimilar Products Table Section */}
-      <section className="py-6 px-6 max-w-7xl mx-auto">
-        <div className="text-start mb-6">
-          <h2 className="text-2xl md:text-3xl font-bold mb-2 text-[#0f2824]">{fdaSectionTitle}</h2>
-          <p className="text-gray-600 text-sm md:text-base max-w-4xl leading-relaxed">
+      <section className="py-4 px-4 max-w-5xl mx-auto">
+        <div className="text-start mb-4">
+          <h2 className="text-xl md:text-2xl font-bold mb-1 text-[#0f2824]">{fdaSectionTitle}</h2>
+          <p className="text-gray-600 text-xs md:text-sm max-w-3xl leading-relaxed">
             {fdaSectionDescription}
           </p>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden">
+        <div className="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse">
               <thead>
                 <tr className="bg-gray-50/75 border-b border-gray-200 text-[#0f2824]">
-                  <th className="py-3 px-6 font-bold text-sm text-center">Biosimilar Name</th>
-                  <th className="py-3 px-6 font-bold text-sm text-center">Approval Date</th>
-                  <th className="py-3 px-6 font-bold text-sm text-center">Reference Product</th>
+                  <th className="py-2 px-4 font-semibold text-xs text-center">Biosimilar Name</th>
+                  <th className="py-2 px-4 font-semibold text-xs text-center">Approval Date</th>
+                  <th className="py-2 px-4 font-semibold text-xs text-center">Reference Product</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-gray-100 text-sm">
+              <tbody className="divide-y divide-gray-100 text-xs">
                 {fdaProducts.map((product, index) => (
                   <tr key={index} className={`hover:bg-gray-50 transition-colors ${product.statusColor || ''}`}>
-                    <td className="py-3 px-6 text-gray-800 font-medium text-center">{product.name}</td>
-                    <td className="py-3 px-6 text-gray-600 text-center">{product.approvalDate}</td>
-                    <td className="py-3 px-6 text-gray-600 text-center">{product.referenceProduct}</td>
+                    <td className="py-2 px-4 text-gray-800 font-medium text-center">{product.name}</td>
+                    <td className="py-2 px-4 text-gray-600 text-center">{product.approvalDate}</td>
+                    <td className="py-2 px-4 text-gray-600 text-center">{product.referenceProduct}</td>
                   </tr>
                 ))}
               </tbody>
@@ -235,66 +226,13 @@ export default function BiosimilarAdditionalComponents({
           </div>
         </div>
       </section>
-
       {/* 4. Our Expert Medical Editors Section */}
       <section className="py-6 max-w-7xl mx-auto px-6">
-        <div className="text-start max-w-4xl mb-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] mb-2">
-            {editorsSectionTitle}
-          </h2>
-
-          <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-            {editorsSectionSubtitle}
-          </p>
-        </div>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {editors.map((editor, index) => (
-            <div
-              key={index}
-              className="bg-white border border-gray-200/60 rounded-xl p-5 flex flex-col items-start shadow-sm hover:border-gray-300 transition-all"
-            >
-              <div className="flex items-center space-x-4 mb-3 w-full">
-                <div className="relative w-14 h-14 rounded-full overflow-hidden bg-gray-100 shrink-0 border border-gray-100">
-                  <Image
-                    src={editor.imageSrc}
-                    alt={editor.name}
-                    fill
-                    sizes="56px"
-                    className="object-cover"
-                  />
-                </div>
-
-                <div>
-                  <div className="flex items-center gap-2">
-                    <h3 className="font-bold text-gray-900 text-base">
-                      {editor.name}
-                    </h3>
-
-                    <div className="relative w-5 h-3.5 overflow-hidden rounded-sm">
-                      <Image
-                        src={editor.flagSrc}
-                        alt="Country flag"
-                        fill
-                        sizes="20px"
-                        className="object-cover"
-                      />
-                    </div>
-                  </div>
-
-                  <p className="text-xs text-[#1b3b32] font-semibold">
-                    {editor.title}
-                  </p>
-                </div>
-              </div>
-
-              <div className="w-full space-y-1 text-xs text-gray-600 pt-3 border-t border-gray-100">
-                <p>{editor.experience}</p>
-                <p>{editor.manuscripts}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+        <ExpertEditorsSection
+          title="Our Expert Medical Editors"
+          description="Pubrica’s team of industry specialists offers unrivalled expertise and perspectives to provide complete solutions with precision and originality. Through a mix of both experience and specialization, they strive for excellence in everything they do."
+          editors={expertEditors}
+        />
       </section>
     </div>
   );

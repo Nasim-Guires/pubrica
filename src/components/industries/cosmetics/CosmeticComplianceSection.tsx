@@ -3,6 +3,8 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import WhereAuthorsPublish from '@/components/common/WhereAuthorsPublish';
+import ExpertEditorsSection, { ExpertEditorItem } from '@/components/common/ExpertEditorsSection';
 
 interface ComplianceItem {
     title: string;
@@ -104,9 +106,36 @@ const defaultEditors: ExpertEditor[] = [
     }
 ];
 
+const expertEditors: ExpertEditorItem[] = [
+    {
+        name: "Dr. Ananya Mehta",
+        degree: "PhD, MSc – Cosmetic Science & Dermatology",
+        experience: "15 years of experience",
+        manuscripts: "80+ manuscripts edited",
+        avatar: "/images/industries/nutraceutical-research/Dr.-Ananya-Mehta-2.webp",
+        flag: "/images/country/gb.png",
+    },
+    {
+        name: "Dr. Priya Nair",
+        degree: "PhD, M Pharm – Cosmeceuticals & Skincare Research",
+        experience: "12 Years of Experience",
+        manuscripts: "70+ manuscripts edited",
+        avatar: "/images/industries/nutraceutical-research/Dr.-Priya-Nair-1.webp",
+        flag: "/images/country/us.png",
+    },
+    {
+        name: "Dr. Kiran Sharma",
+        degree: "PhD, MD – Dermatology & Aesthetic Medicine",
+        experience: "18 Years of Experience",
+        manuscripts: "95+ manuscripts",
+        avatar: "/images/industries/nutraceutical-research/Dr.-Rohit-Kapoor.webp",
+        flag: "/images/country/us.png",
+    },
+];
+
 export default function CosmeticsAuthorsAndCompliance({
     sectionTitle = 'Our Compliance And Guidelines For Cosmetics',
-    sectionSubtitle = 'At Pubrica, we ensure that every cosmetic product you develop, market, or publish adheres to the highest standards of safety, efficacy, and regulatory compliance. Our team combines scientific expertise with in-depth knowledge of global cosmetic regulations to help your brand succeed confidently.',
+    sectionSubtitle = 'At Pubrica, we ensure that every cosmetic product you develop, market, or publish about adheres to the highest standards of safety, efficacy, and regulatory compliance. Our team combines scientific expertise with in-depth knowledge of global cosmetic regulations to help your brand succeed confidently.',
     items = defaultComplianceItems,
     authorsSectionTitle = 'Where Our Authors Publish',
     authorsSectionSubtitle = "Our authors share Pubrica's expert content in top-tier journals, conferences, and platforms, maximizing and amplifying its recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity.",
@@ -129,171 +158,108 @@ export default function CosmeticsAuthorsAndCompliance({
         <div className="bg-white text-[#0f2824] w-full font-sans overflow-hidden">
 
             {/* Compliance And Guidelines Section */}
-            <section className="py-7 px-6 max-w-6xl mx-auto">
-                <div className="text-left max-w-3xl mb-12">
-                    <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-[#0f2824]">{sectionTitle}</h2>
-                    <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-                        {sectionSubtitle}
-                    </p>
-                </div>
+            <section className="py-12 px-6 w-full bg-sky-50">
+                <div className="max-w-7xl mx-auto">
+                    <div className="text-center max-w-4xl mx-auto mb-12">
+                        <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-[#0f2824]">{sectionTitle}</h2>
+                        <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                            {sectionSubtitle}
+                        </p>
+                    </div>
 
-                {/* Grid layout matching the exact design reference (3 top cards, 2 centered bottom cards) */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center items-start">
-                    {items.map((item, index) => {
-                        const isOpen = openIndices.includes(index);
-                        const isCenteredBottomRow = index >= 3;
+                    {/* Grid layout (Top 3 full-width cards, Bottom 2 reduced size cards centered) */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 items-start">
+                        {items.map((item, index) => {
+                            const isOpen = openIndices.includes(index);
 
-                        return (
-                            <div
-                                key={index}
-                                className={`bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden transition-all self-start ${isCenteredBottomRow ? 'lg:col-span-1 lg:mx-auto lg:w-full max-w-md' : ''
-                                    }`}
-                            >
-                                <button
-                                    type="button"
-                                    onClick={() => toggleAccordion(index)}
-                                    className="w-full py-5 px-6 flex items-center justify-between text-left focus:outline-none hover:bg-gray-50/50 transition-colors"
+                            // Top row: 3 cards taking 2 columns each (lg:col-span-2)
+                            // Bottom row: 2 cards taking 3 columns each with reduced maximum width (max-w-md)
+                            const gridClass =
+                                index < 3
+                                    ? 'lg:col-span-2 w-full'
+                                    : 'lg:col-span-3 max-w-md w-full justify-self-center';
+
+                            return (
+                                <div
+                                    key={index}
+                                    className={`bg-white border border-sky-100 rounded-2xl shadow-sm overflow-hidden transition-all self-start ${gridClass}`}
                                 >
-                                    <div className="flex items-center gap-3 pr-2">
-                                        <div className="relative w-8 h-8 flex-shrink-0">
-                                            {item.iconSrc ? <Image src={item.iconSrc} alt="" fill className="object-contain" sizes="32px" /> : null}
-                                        </div>
-                                        <span className="font-bold text-sm sm:text-base text-[#0f2824] leading-snug">{item.title}</span>
-                                    </div>
-                                    <svg
-                                        className={`w-5 h-5 text-gray-500 transform transition-transform duration-200 flex-shrink-0 ${isOpen ? 'rotate-180' : ''}`}
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
+                                    <button
+                                        type="button"
+                                        onClick={() => toggleAccordion(index)}
+                                        className="w-full py-5 px-6 flex items-center justify-between text-left focus:outline-none hover:bg-sky-50/50 transition-colors"
                                     >
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                                    </svg>
-                                </button>
+                                        <div className="flex items-center gap-3 pr-2 w-full min-w-0">
+                                            <div className="relative w-8 h-8 flex-shrink-0">
+                                                {item.iconSrc ? (
+                                                    <Image
+                                                        src={item.iconSrc}
+                                                        alt=""
+                                                        fill
+                                                        className="object-contain"
+                                                        sizes="32px"
+                                                    />
+                                                ) : null}
+                                            </div>
+                                            <span className="font-bold text-sm sm:text-base text-[#0f2824] leading-snug whitespace-normal break-words w-full">
+                                                {item.title}
+                                            </span>
+                                        </div>
+                                        <svg
+                                            className={`w-5 h-5 text-gray-500 transform transition-transform duration-200 flex-shrink-0 ${isOpen ? 'rotate-180' : ''
+                                                }`}
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth="2"
+                                                d="M19 9l-7 7-7-7"
+                                            />
+                                        </svg>
+                                    </button>
 
-                                {isOpen && (
-                                    <div className="px-6 pb-5 pt-1 text-gray-600 text-xs sm:text-sm border-t border-gray-100 bg-gray-50/30 leading-relaxed">
-                                        {item.description}
-                                    </div>
-                                )}
-                            </div>
-                        );
-                    })}
+                                    {isOpen && (
+                                        <div className="px-6 pb-5 pt-1 text-gray-600 text-xs sm:text-sm border-t border-sky-100 bg-sky-50/20 leading-relaxed whitespace-normal break-words w-full">
+                                            {item.description}
+                                        </div>
+                                    )}
+                                </div>
+                            );
+                        })}
+                    </div>
                 </div>
             </section>
 
             {/* Where Our Authors Publish Section */}
 
             <section className="py-12 max-w-5xl mx-auto px-4 border-t border-gray-100">
-                <div className="text-left max-w-2xl mb-10">
-                    <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] mb-3">
-                        {authorsSectionTitle}
-                    </h2>
-
-                    <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-                        {authorsSectionSubtitle}
-                    </p>
-                </div>
-
-                <div className="space-y-6">
-                    <div className="bg-[#fafcfa] border border-gray-100 rounded-xl p-6 md:p-8 shadow-sm grid grid-cols-1 md:grid-cols-[200px_1fr] gap-6 items-center">
-                        <div className="relative w-full h-[260px] rounded-lg overflow-hidden bg-white border border-gray-100 shadow-inner flex items-center justify-center p-2">
-                            <Image
-                                src={publication.image}
-                                alt={publication.title}
-                                fill
-                                sizes="(max-width: 768px) 100vw, 200px"
-                                className="object-contain p-1"
-                            />
-                        </div>
-
-                        <div className="space-y-3 text-sm md:text-base text-gray-700">
-                            <div>
-                                <span className="font-bold text-gray-900">Paper Title: </span>
-                                <span className="text-gray-800">
-                                    {publication.title}
-                                </span>
-                            </div>
-
-                            <div>
-                                <span className="font-bold text-gray-900">Author: </span>
-                                <span>{publication.author}</span>
-                            </div>
-
-                            <div>
-                                <span className="font-bold text-gray-900">Journal Name: </span>
-                                <span className="text-[#1b3b32] font-semibold">
-                                    {publication.journal}
-                                </span>
-                            </div>
-
-                            <div>
-                                <span className="font-bold text-gray-900">Publisher: </span>
-                                <span>{publication.publisher}</span>
-                            </div>
-
-                            <div>
-                                <span className="font-bold text-gray-900">Impact factor: </span>
-                                <span>{publication.impactFactor}</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <WhereAuthorsPublish
+                    title="Where Our Authors Publish"
+                    description="Our authors share Pubrica’s expert content in top-tier journals, conferences, and platforms, maximizing and amplifying its recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity."
+                    publication={{
+                        imageSrc:
+                            "/images/industries/cosmetics/sample-works-2-2.webp",
+                        imageAlt: "Cosmetics Journal Cover",
+                        paperTitle: "Dermoscopy of Facial Dermatoses: An Updated Review",
+                        author: "Filipović Mioč, N., Negovetić, P., Gaćina, K., & Buljan, M",
+                        journalName: "Cosmetics",
+                        publisher: "MDPI",
+                        impactFactor: "3.2",
+                    }}
+                />
             </section>
 
             {/* Our Expert Cosmetic Editors Section */}
 
             <section className="py-12 max-w-6xl mx-auto px-4 border-t border-gray-100">
-                <div className="text-left max-w-2xl mb-10">
-                    <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] mb-3">
-                        {editorsSectionTitle}
-                    </h2>
-
-                    <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-                        {editorsSectionSubtitle}
-                    </p>
-                </div>
-
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {editors.map((editor, idx) => (
-                        <div
-                            key={idx}
-                            className="bg-white border border-gray-200/60 rounded-xl p-6 flex flex-col items-start shadow-sm hover:border-gray-300 transition-all"
-                        >
-                            <div className="flex items-center space-x-4 mb-4 w-full">
-                                <div className="relative w-14 h-14 rounded-full overflow-hidden bg-gray-100 shrink-0 border border-gray-100">
-                                    <Image
-                                        src={editor.avatar}
-                                        alt={editor.name}
-                                        fill
-                                        sizes="56px"
-                                        className="object-cover"
-                                    />
-                                </div>
-
-                                <div>
-                                    <div className="flex items-center gap-2">
-                                        <h3 className="font-bold text-gray-900 text-base">
-                                            {editor.name}
-                                        </h3>
-
-                                        {editor.flag ? (
-                                            <span className="text-sm">{editor.flag}</span>
-                                        ) : null}
-                                    </div>
-
-                                    <p className="text-xs text-[#1b3b32] font-semibold">
-                                        {editor.role}
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="w-full space-y-1.5 text-xs text-gray-600 pt-3 border-t border-gray-100">
-                                <p>{editor.experience}</p>
-                                <p>{editor.manuscripts}</p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+                <ExpertEditorsSection
+                    title="Our Expert Cosmeceutical Editors"
+                    description="Pubrica’s team of industry specialists offers unrivalled expertise and perspectives to provide complete solutions with precision and originality. Through a mix of both experience and specialization, they strive for excellence in everything they do."
+                    editors={expertEditors}
+                />
             </section>
         </div>
     );

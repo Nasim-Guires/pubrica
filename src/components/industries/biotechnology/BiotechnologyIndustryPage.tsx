@@ -190,63 +190,69 @@ export default function BiotechnologyIndustryPage({
         </section>
 
         {/* Our Expertise in Biotechnology Includes (Surrounding Circular Layout) */}
-        <section className="py-6 px-4 bg-gray-50 text-[#0f2824] overflow-hidden">
-          <div className="max-w-7xl mx-auto text-left mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold mb-3">{expertiseHeading}</h2>
-            <p className="text-gray-600 max-w-3xl leading-relaxed text-sm md:text-base">{expertiseDescription}</p>
+        <section className="py-7 bg-gray-50 px-4 md:px-8">
+          <div className="max-w-6xl mx-auto text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+              {expertiseHeading}
+            </h2>
+            <p className="text-sm md:text-base text-gray-600 max-w-5xl mx-auto leading-relaxed">
+              {expertiseDescription}
+            </p>
           </div>
 
-          <div className="relative max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-center min-h-[620px] gap-6 lg:gap-0">
-            {/* Left Column Cards */}
-            <div className="flex flex-col gap-4 w-full lg:w-[350px] z-10">
-              <div className="bg-white p-5 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-gray-100">
-                <h3 className="font-bold text-[#b91c1c] text-base mb-1.5">{services[2].title}</h3>
-                <p className="text-gray-600 text-xs leading-relaxed">{services[2].description}</p>
+          {/* Central Graphic with Surrounding Cards Layout */}
+          <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+            {/* Left Column Cards (3 items: 2, 4, 5) */}
+            <div className="space-y-6">
+              <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                <h3 className="font-bold text-red-700 text-base mb-1.5">{services[2].title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{services[2].description}</p>
               </div>
-              <div className="bg-white p-5 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-gray-100">
-                <h3 className="font-bold text-[#b91c1c] text-base mb-1.5">{services[4].title}</h3>
-                <p className="text-gray-600 text-xs leading-relaxed">{services[4].description}</p>
+              <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                <h3 className="font-bold text-red-700 text-base mb-1.5">{services[4].title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{services[4].description}</p>
               </div>
-              <div className="bg-white p-5 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-gray-100">
-                <h3 className="font-bold text-[#b91c1c] text-base mb-1.5">{services[5].title}</h3>
-                <p className="text-gray-600 text-xs leading-relaxed">{services[5].description}</p>
+              <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                <h3 className="font-bold text-red-700 text-base mb-1.5">{services[5].title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{services[5].description}</p>
               </div>
             </div>
 
-            {/* Center Circular Image */}
-            <div className="relative w-[280px] h-[280px] sm:w-[360px] sm:h-[360px] lg:mx-[-20px] z-0 flex-shrink-0 flex items-center justify-center">
-              <div className="absolute inset-0 rounded-full border-[12px] border-white shadow-2xl overflow-hidden bg-gray-200">
+            {/* Center Image */}
+            <div className="flex justify-center my-6 md:my-0">
+              <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full border-4 border-white shadow-md overflow-hidden">
                 <Image
                   src="/images/industries/biotechnology/Our-Expertise-in-Biotechnology-Includes.webp"
                   alt="Biotechnology research laboratory setup with scientific equipment"
                   fill
-                  sizes="(max-width: 768px) 280px, 360px"
-                  style={{ objectFit: 'cover' }}
+                  className="object-cover"
+                  sizes="(max-width: 768px) 288px, 320px"
+                  priority
                 />
               </div>
             </div>
 
-            {/* Right Column Cards */}
-            <div className="flex flex-col gap-4 w-full lg:w-[350px] z-10">
-              <div className="bg-white p-5 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-gray-100">
-                <h3 className="font-bold text-[#b91c1c] text-base mb-1.5">{services[0].title}</h3>
-                <p className="text-gray-600 text-xs leading-relaxed">{services[0].description}</p>
+            {/* Right Column Cards (3 items: 0, 1, 3) */}
+            <div className="space-y-6">
+              <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                <h3 className="font-bold text-red-700 text-base mb-1.5">{services[0].title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{services[0].description}</p>
               </div>
-              <div className="bg-white p-5 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-gray-100">
-                <h3 className="font-bold text-[#b91c1c] text-base mb-1.5">{services[1].title}</h3>
-                <p className="text-gray-600 text-xs leading-relaxed">{services[1].description}</p>
+              <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                <h3 className="font-bold text-red-700 text-base mb-1.5">{services[1].title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{services[1].description}</p>
               </div>
-              <div className="bg-white p-5 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-gray-100">
-                <h3 className="font-bold text-[#b91c1c] text-base mb-1.5">{services[3].title}</h3>
-                <p className="text-gray-600 text-xs leading-relaxed">{services[3].description}</p>
+              <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                <h3 className="font-bold text-red-700 text-base mb-1.5">{services[3].title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{services[3].description}</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* Types Of Biotechnology We Offer */}
-        <section className="py-8 px-6 max-w-7xl mx-auto">
-          <div className="text-left mb-12">
+        <section className="py-8 px-6 max-w-7xl mx-auto flex flex-col items-center">
+          <div className="text-center mb-12 flex flex-col items-center">
             <h2 className="text-3xl font-bold mb-4">{typesHeading}</h2>
             <p className="text-gray-600 max-w-3xl text-sm md:text-base leading-relaxed">{typesDescription}</p>
           </div>
@@ -256,29 +262,53 @@ export default function BiotechnologyIndustryPage({
               src="/images/industries/biotechnology/dafregdvg.webp"
               alt="Types of Biotechnology We Offer"
               fill
-              className="object-contain object-left"
+              className="object-contain object-center"
               sizes="(max-width: 768px) 100vw, 765px"
             />
           </div>
         </section>
 
         {/* Biotechnology Segments We Serve */}
-        <section className="py-5 px-6 bg-gray-50 border-t border-gray-200">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-left mb-8">
-              <h2 className="text-3xl font-bold mb-3">{segmentsHeading}</h2>
-              <p className="text-gray-600 max-w-3xl text-sm md:text-base leading-relaxed">{segmentsDescription}</p>
-            </div>
+        <section className="py-8 px-6 max-w-7xl mx-auto">
+          {/* Header Section */}
+          <div className="text-left mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] mb-3">
+              {segmentsHeading}
+            </h2>
+            <p className="text-gray-700 max-w-5xl text-sm md:text-base leading-relaxed">
+              {segmentsDescription}
+            </p>
+          </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {segments.map((seg, index) => (
-                <div key={index} className="bg-white border border-gray-200 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                  {seg.iconSrc ? <div className="relative w-10 h-10 mb-3"><Image src={seg.iconSrc} alt="" fill className="object-contain" sizes="40px" /></div> : null}
-                  <h3 className="font-bold text-lg text-[#0f2824] mb-3">{seg.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{seg.description}</p>
+          {/* Grid Section - 3 Columns Horizontal Design */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {segments.map((seg, index) => (
+              <div
+                key={index}
+                className="bg-white border border-gray-100 p-5 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-row items-start space-x-3 min-h-[140px]"
+              >
+                {seg.iconSrc ? (
+                  <div className="relative w-10 h-10 shrink-0 flex items-center justify-center">
+                    <Image
+                      src={seg.iconSrc}
+                      alt=""
+                      fill
+                      className="object-contain"
+                      sizes="40px"
+                    />
+                  </div>
+                ) : null}
+
+                <div className="flex-1">
+                  <h4 className="font-bold text-sm md:text-base text-[#1b3b32] mb-1.5 leading-snug">
+                    {seg.title}
+                  </h4>
+                  <p className="text-gray-600 text-xs md:text-xs leading-relaxed">
+                    {seg.description}
+                  </p>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </section>
       </main>

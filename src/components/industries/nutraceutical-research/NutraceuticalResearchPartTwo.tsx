@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import WhereAuthorsPublish from '@/components/common/WhereAuthorsPublish';
+import ExpertEditorsSection, { ExpertEditorItem } from '@/components/common/ExpertEditorsSection';
 
 interface ResearchListItem {
   title: string;
@@ -112,28 +114,31 @@ const defaultPublication: PublicationItem = {
   coverImage: "/images/industries/nutraceutical-research/sample-works-5.webp"
 };
 
-const defaultEditors: EditorProfile[] = [
+const expertEditors: ExpertEditorItem[] = [
   {
     name: "Dr. Ananya Mehta",
-    qualification: "PhD - Nutraceutical Science",
+    degree: "PhD - Nutraceutical Science",
     experience: "12 Years of Experience",
     manuscripts: "80+ manuscripts edited",
-    image: "/images/industries/nutraceutical-research/Dr.-Ananya-Mehta-2.webp"
+    avatar: "/images/industries/nutraceutical-research/Dr.-Ananya-Mehta-2.webp",
+    flag: "/images/country/gb.png",
   },
   {
     name: "Dr. Rohit Kapoor",
-    qualification: "PhD - Herbal Nutraceuticals",
+    degree: "PhD - Herbal Nutraceuticals",
     experience: "18 Years of Experience",
     manuscripts: "120+ manuscripts edited",
-    image: "/images/industries/nutraceutical-research/Dr.-Rohit-Kapoor.webp"
+    avatar: "/images/industries/nutraceutical-research/Dr.-Rohit-Kapoor.webp",
+    flag: "/images/country/us.png",
   },
   {
     name: "Dr. Priya Nair",
-    qualification: "PhD - Nutraceutical Research",
+    degree: "PhD - Nutraceutical Research",
     experience: "10 Years of Experience",
     manuscripts: "70+ manuscripts edited",
-    image: "/images/industries/nutraceutical-research/Dr.-Priya-Nair-1.webp"
-  }
+    avatar: "/images/industries/nutraceutical-research/Dr.-Priya-Nair-1.webp",
+    flag: "/images/country/us.png",
+  },
 ];
 
 export default function NutraceuticalResearchPartTwo({
@@ -156,10 +161,8 @@ export default function NutraceuticalResearchPartTwo({
   publication = defaultPublication,
   editorsTitle = "Our Expert Nutraceutical Editors",
   editorsDescription = "Pubrica's team of industry specialists offers unrivalled expertise and perspectives to provide complete solutions with precision and originality. Through a mix of both experience and specialization, they strive for excellence in everything they do.",
-  editors = defaultEditors
 }: NutraceuticalResearchPartTwoProps) {
-  const [activeTab, setActiveTab] = useState<number>(1);
-
+  const [activeTab, setActiveTab] = useState<number | null>(null);
   return (
     <div className="bg-white text-[#0f2824] w-full font-sans overflow-hidden">
 
@@ -282,108 +285,30 @@ export default function NutraceuticalResearchPartTwo({
       {/* Where Our Authors Publish */}
 
       <section className="py-6 max-w-5xl mx-auto px-4 border-t border-gray-100">
-        <div className="text-left max-w-2xl mb-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] mb-2">
-            {authorsPublishTitle}
-          </h2>
-
-          <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-            {authorsPublishDescription}
-          </p>
-        </div>
-
-        <div className="space-y-6">
-          <div className="bg-[#fafcfa] border border-gray-100 rounded-xl p-6 md:p-8 shadow-sm grid grid-cols-1 md:grid-cols-[200px_1fr] gap-6 items-center">
-            <div className="relative w-full h-[260px] rounded-lg overflow-hidden bg-white border border-gray-100 shadow-inner flex items-center justify-center p-2">
-              <Image
-                src={publication.coverImage}
-                alt={publication.title}
-                fill
-                sizes="(max-width: 768px) 100vw, 200px"
-                className="object-contain p-1"
-              />
-            </div>
-
-            <div className="space-y-3 text-sm md:text-base text-gray-700">
-              <div>
-                <span className="font-bold text-gray-900">Paper Title: </span>
-                <span className="text-gray-800">{publication.title}</span>
-              </div>
-
-              <div>
-                <span className="font-bold text-gray-900">Author: </span>
-                <span>{publication.author}</span>
-              </div>
-
-              <div>
-                <span className="font-bold text-gray-900">Journal Name: </span>
-                <span className="text-[#1b3b32] font-semibold">
-                  {publication.journal}
-                </span>
-              </div>
-
-              <div>
-                <span className="font-bold text-gray-900">Publisher: </span>
-                <span>{publication.publisher}</span>
-              </div>
-
-              <div>
-                <span className="font-bold text-gray-900">Impact factor: </span>
-                <span>{publication.impactFactor}</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <WhereAuthorsPublish
+          title="Where Our Authors Publish"
+          description="Our authors share Pubrica's expert content in top-tier journals, conferences, and platforms, maximizing and amplifying its recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity."
+          publication={{
+            imageSrc:
+              "/images/industries/nutraceutical-research/sample-works-5.webp",
+            imageAlt: "Nutraceuticals Journal Cover",
+            paperTitle: "Nutraceuticals in the Treatment of Major Depressive Disorder",
+            author: "Davis A, Pence J, Bloomer RJ",
+            journalName: "Nutraceuticals",
+            publisher: "MDPI",
+            impactFactor: "5.1",
+          }}
+        />
       </section>
 
       {/* Our Expert Nutraceutical Editors */}
 
       <section className="py-6 max-w-6xl mx-auto px-4">
-        <div className="text-left max-w-2xl mb-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] mb-2">
-            {editorsTitle}
-          </h2>
-
-          <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-            {editorsDescription}
-          </p>
-        </div>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {editors.map((editor, index) => (
-            <div
-              key={index}
-              className="bg-white border border-gray-200/60 rounded-xl p-6 flex flex-col items-start shadow-sm hover:border-gray-300 transition-all"
-            >
-              <div className="flex items-center space-x-4 mb-4 w-full">
-                <div className="relative w-14 h-14 rounded-full overflow-hidden bg-gray-100 shrink-0 border border-gray-100">
-                  <Image
-                    src={editor.image}
-                    alt={editor.name}
-                    fill
-                    sizes="56px"
-                    className="object-cover"
-                  />
-                </div>
-
-                <div>
-                  <h3 className="font-bold text-gray-900 text-base">
-                    {editor.name}
-                  </h3>
-
-                  <p className="text-xs text-[#1b3b32] font-semibold">
-                    {editor.qualification}
-                  </p>
-                </div>
-              </div>
-
-              <div className="w-full space-y-1.5 text-xs text-gray-600 pt-3 border-t border-gray-100">
-                <p>{editor.experience}</p>
-                <p>{editor.manuscripts}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+        <ExpertEditorsSection
+          title="Our Expert Nutraceutical Editors"
+          description="Pubrica’s team of industry specialists offers unrivalled expertise and perspectives to provide complete solutions with precision and originality. Through a mix of both experience and specialization, they strive for excellence in everything they do."
+          editors={expertEditors}
+        />
       </section>
 
 

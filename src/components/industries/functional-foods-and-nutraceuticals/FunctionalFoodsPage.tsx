@@ -73,27 +73,27 @@ const defaultSegmentsItems: SegmentItem[] = [
   {
     title: 'Dietary Supplements',
     iconSrc: '/images/industries/foods-nutraceuticals/Dietary-Supplements.webp',
-    description: 'Comprehensive support in formulation, regulatory compliance, and scientific documentation for vitamins, minerals, and herbal supplements.'
+    description: 'Comprehensive support in formulation, regulatory compliance, and scientific documentation for vitamins, minerals, probiotics, and other dietary supplements designed to enhance health and wellness.'
   },
   {
     title: 'Functional Beverages',
     iconSrc: '/images/industries/foods-nutraceuticals/Functional-Beverages.webp',
-    description: 'Expert guidance in the development and positioning of health-oriented drinks, including energy, immunity, and wellness formulations.'
+    description: 'Expert guidance in the development and positioning of health-oriented drinks, including energy drinks, fortified juices, herbal teas, and protein-based beverages.'
   },
   {
     title: 'Fortified Foods & Snacks',
     iconSrc: '/images/industries/foods-nutraceuticals/Fortified-Foods-Snacks.webp',
-    description: 'Support for food products enriched with nutrients or bioactive compounds, including cereals, bars, functional bakery, and confectionery.'
+    description: 'Support for food products enriched with nutrients or bioactive compounds, including cereals, bars, bakery items, and dairy products that promote specific health benefits.'
   },
   {
     title: 'Sports Nutrition Products',
     iconSrc: '/images/industries/foods-nutraceuticals/Sports-Nutrition-Products.webp',
-    description: 'End-to-end assistance in sports nutrition, from protein powders and amino acids to recovery supplements and pre-workout formulas.'
+    description: 'End-to-end assistance in sports nutrition, from protein powders and amino acids to recovery supplements, ensuring safety, efficacy, and market readiness.'
   },
   {
     title: 'Herbal & Traditional Health Products',
     iconSrc: '/images/industries/foods-nutraceuticals/Herbal-Traditional-Health-Products.webp',
-    description: 'Guidance in the research, documentation, and regulatory approval of herbal extracts, traditional formulations, and botanical products.'
+    description: 'Guidance in the research, documentation, and regulatory approval of herbal extracts, traditional remedies, and natural health products rooted in scientific validation.'
   }
 ];
 
@@ -193,120 +193,105 @@ export default function FunctionalFoodsPage({
         </div>
       </section>
       {/* Our Expertise in Functional Foods & Nutraceuticals Includes (Exact Orbit / Around Central Image Layout matching the reference screenshot) */}
-      <section className="py-8 px-6 max-w-7xl mx-auto border-t border-gray-100 relative">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-[#0f2824]">{expertiseTitle}</h2>
-          <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+      <section className="py-7 bg-gray-50 px-4 md:px-8">
+        <div className="max-w-6xl mx-auto text-center mb-12">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+            {expertiseTitle}
+          </h2>
+          <p className="text-sm md:text-base text-gray-600 max-w-5xl mx-auto leading-relaxed">
             {expertiseSubtitle}
           </p>
         </div>
 
-        {/* Desktop Absolute/Grid Hybrid Layout matching the exact orbiting card design from screenshot */}
-        <div className="relative max-w-5xl mx-auto min-h-[650px] flex items-center justify-center">
-
-          {/* Central Circular Image */}
-          <div className="absolute z-10 w-[280px] h-[280px] sm:w-[340px] sm:h-[340px] rounded-full overflow-hidden shadow-2xl border-4 border-white bg-white">
-            <Image
-              src="/images/industries/foods-nutraceuticals/Our-Expertise-in-Functional-Foods-Nutraceuticals-Includes.webp"
-              alt="Microscope research"
-              fill
-              sizes="340px"
-              style={{ objectFit: 'cover' }}
-            />
+        {/* Central Graphic with Surrounding Cards Layout */}
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+          {/* Left Column Cards (2 items: index 1 and 3) */}
+          <div className="space-y-6">
+            <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+              <h3 className="font-bold text-red-700 text-base mb-1.5">{expertiseItems[1].title}</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">{expertiseItems[1].description}</p>
+            </div>
+            <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+              <h3 className="font-bold text-red-700 text-base mb-1.5">{expertiseItems[3].title}</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">{expertiseItems[3].description}</p>
+            </div>
           </div>
 
-          {/* Surrounding Cards Grid for responsiveness & Absolute placements for Desktop exact match */}
-          <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-y-12 md:gap-y-[380px] gap-x-8 z-20">
-
-            {/* Top Left Card */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-md md:absolute md:left-0 md:top-0 md:w-[320px]">
-              <h3 className="text-base font-bold text-[#c8102e] mb-2">{expertiseItems[1].title}</h3>
-              <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">{expertiseItems[1].description}</p>
+          {/* Center Column: Image + Middle Card */}
+          <div className="flex flex-col items-center gap-6 my-6 md:my-0">
+            <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full border-4 border-white shadow-md overflow-hidden">
+              <Image
+                src="/images/industries/foods-nutraceuticals/Our-Expertise-in-Functional-Foods-Nutraceuticals-Includes.webp"
+                alt="Microscope research"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 288px, 320px"
+                priority
+              />
             </div>
-
-            {/* Top Right Card */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-md md:absolute md:right-0 md:top-0 md:w-[320px]">
-              <h3 className="text-base font-bold text-[#c8102e] mb-2">{expertiseItems[0].title}</h3>
-              <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">{expertiseItems[0].description}</p>
+            <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100 w-full">
+              <h3 className="font-bold text-red-700 text-base mb-1.5">{expertiseItems[2].title}</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">{expertiseItems[2].description}</p>
             </div>
-
-            {/* Bottom Left Card */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-md md:absolute md:left-0 md:bottom-0 md:w-[320px]">
-              <h3 className="text-base font-bold text-[#c8102e] mb-2">{expertiseItems[3].title}</h3>
-              <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">{expertiseItems[3].description}</p>
-            </div>
-
-            {/* Bottom Right Card */}
-            <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-md md:absolute md:right-0 md:bottom-0 md:w-[320px]">
-              <h3 className="text-base font-bold text-[#c8102e] mb-2">{expertiseItems[4].title}</h3>
-              <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">{expertiseItems[4].description}</p>
-            </div>
-
           </div>
-        </div>
 
-        {/* Centered Fifth Item placed nicely underneath the orbit section */}
-        <div className="max-w-md mx-auto mt-16 md:mt-24 z-20 relative">
-          <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-md text-center">
-            <h3 className="text-base font-bold text-[#c8102e] mb-2">{expertiseItems[2].title}</h3>
-            <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">{expertiseItems[2].description}</p>
+          {/* Right Column Cards (2 items: index 0 and 4) */}
+          <div className="space-y-6">
+            <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+              <h3 className="font-bold text-red-700 text-base mb-1.5">{expertiseItems[0].title}</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">{expertiseItems[0].description}</p>
+            </div>
+            <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+              <h3 className="font-bold text-red-700 text-base mb-1.5">{expertiseItems[4].title}</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">{expertiseItems[4].description}</p>
+            </div>
           </div>
         </div>
-
       </section>
 
       {/* Foods & Nutraceuticals Segments We Serve (Accordion style with individual control) */}
-      <section className="py-7 px-6 max-w-6xl mx-auto border-t border-gray-100">
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-[#0f2824]">{segmentsTitle}</h2>
-          <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+      <section className="py-8 px-6 max-w-7xl mx-auto">
+        {/* Header Section */}
+        <div className="text-left mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] mb-3">
+            {segmentsTitle}
+          </h2>
+          <p className="text-gray-700 max-w-5xl text-sm md:text-base leading-relaxed">
             {segmentsSubtitle}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
-          {segmentsItems.map((item, index) => {
-            const isOpen = openSegmentIndex === index;
-            const isCenteredBottomRow = index >= 3;
+        {/* Grid Section - 3 Columns Horizontal Design */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {segmentsItems.map((item, index) => (
+            <div
+              key={index}
+              className="bg-white border border-gray-100 p-5 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-row items-start space-x-3 min-h-[140px]"
+            >
+              {item.iconSrc ? (
+                <div className="relative w-10 h-10 shrink-0 flex items-center justify-center">
+                  <Image
+                    src={item.iconSrc}
+                    alt=""
+                    fill
+                    className="object-contain"
+                    sizes="40px"
+                  />
+                </div>
+              ) : null}
 
-            return (
-              <div
-                key={index}
-                className={`bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden transition-all flex flex-col ${isCenteredBottomRow ? 'lg:col-span-1 lg:mx-auto lg:w-full max-w-md' : ''
-                  }`}
-              >
-                <button
-                  type="button"
-                  onClick={() => toggleSegmentAccordion(index)}
-                  className="w-full py-5 px-6 flex items-center justify-between text-left focus:outline-none hover:bg-gray-50/50 transition-colors"
-                >
-                  <div className="flex items-center gap-3 pr-2">
-                    <div className="relative w-8 h-8 flex-shrink-0">
-                      {item.iconSrc ? <Image src={item.iconSrc} alt="" fill className="object-contain" sizes="32px" /> : null}
-                    </div>
-                    <span className="font-bold text-sm sm:text-base text-[#0f2824] leading-snug">{item.title}</span>
-                  </div>
-                  <svg
-                    className={`w-5 h-5 text-gray-500 transform transition-transform duration-200 flex-shrink-0 ${isOpen ? 'rotate-180' : ''}`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-
-                {isOpen && (
-                  <div className="px-6 pb-5 pt-1 text-gray-600 text-xs sm:text-sm border-t border-gray-100 bg-gray-50/30 leading-relaxed">
-                    {item.description}
-                  </div>
-                )}
+              <div className="flex-1">
+                <h4 className="font-bold text-sm md:text-base text-[#1b3b32] mb-1.5 leading-snug">
+                  {item.title}
+                </h4>
+                <p className="text-gray-600 text-xs md:text-xs leading-relaxed">
+                  {item.description}
+                </p>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
       </section>
-
     </div>
   );
 }
