@@ -3,14 +3,16 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import WhereAuthorsPublish from "@/components/common/WhereAuthorsPublish";
+import ExpertEditorsSection, { ExpertEditorItem } from "@/components/common/ExpertEditorsSection";
 
 const discoverySteps = [
   {
     id: "target-identification",
     title: "Target Identification and Discovery of Potential Drugs",
     description: [
-      "TLead compound identification is a pivotal next step in the drug discovery process, where researchers identify and select promising compounds that act on a validated target. ",
-      "Lead compound identification includes rigorous analysis of compound potency, selectivity, pharmacokinetics, and safety profiles. Successful identification of lead compounds provides a starting point for further optimization and development, ultimately leading to potential treatments.",
+      "Target identification is the first step in the drug discovery process, where researchers identify specific molecular targets within the body that play key roles in a disease or condition. By understanding the underlying biological mechanisms and pathways associated with the disease, scientists can identify potential targets that can be modulated to achieve therapeutic effects. Target identification involves a combination of experimental and computational approaches, including genomic, proteomic, and bioinformatic analyses. ",
+
     ],
     image: {
       src: "/images/industries/pharmaceutical/Target-Identification-and-Discovery-of-Potential-Drugs.webp",
@@ -54,51 +56,32 @@ const discoverySteps = [
   },
 ];
 
-const publishedPapers = [
-  {
-    title:
-      "Novel Approaches in the Drug Development and Delivery Systems for Age-Related Macular Degeneration",
-    authors: "Paliwal, H., Prajapati, B. G., Srichana, T., Singh, S., & Patel, R. J.",
-    journal: "Life (Basel, Switzerland)",
-    publisher: "MDPI",
-    impactFactor: "3.4",
-    cover: {
-      src: "/images/industries/pharmaceutical/sample-works-1.webp",
-      alt: "Cover of the published journal Life, featuring the macular degeneration research paper",
-    },
-  },
-];
 
-const experts = [
+
+const expertEditors: ExpertEditorItem[] = [
   {
     name: "Dr. Maria",
-    credentials: "PHD - Pharmaceutical Research",
+    degree: "PHD - Pharmaceutical Research",
     experience: "10 years of experience",
     manuscripts: "100+ manuscripts edited",
-    photo: {
-      src: "/images/industries/pharmaceutical/Dr.-Maria.webp",
-      alt: "Portrait of Dr. Maria, PhD in Pharmaceutical Research",
-    },
+    avatar: "/images/industries/pharmaceutical/Dr.-Maria.webp",
+    flag: "/images/country/gb.png",
   },
   {
     name: "Dr. Julie",
-    credentials: "PHD - Pharmaceutical Research",
+    degree: "PHD - Pharmaceutical Research",
     experience: "33 years of experience",
     manuscripts: "100+ manuscripts edited",
-    photo: {
-      src: "/images/industries/pharmaceutical/Dr.-Julie.webp",
-      alt: "Portrait of Dr. Julie, PhD in Pharmaceutical Research",
-    },
+    avatar: "/images/industries/pharmaceutical/Dr.-Julie.webp",
+    flag: "/images/country/us.png",
   },
   {
     name: "Dr. Michelle",
-    credentials: "PHD - Pharmaceutical Research",
+    degree: "PHD - Pharmaceutical Research",
     experience: "10 years of experience",
     manuscripts: "100+ manuscripts edited",
-    photo: {
-      src: "/images/industries/foods-nutraceuticals/Dr.-Raghav-Varma.webp",
-      alt: "Portrait of Dr. Michelle, PhD in Pharmaceutical Research",
-    },
+    avatar: "/images/industries/foods-nutraceuticals/Dr.-Raghav-Varma.webp",
+    flag: "/images/country/us.png",
   },
 ];
 
@@ -114,6 +97,7 @@ export default function PharmaceuticalDiscoveryAndPublishingPage() {
         <h2 className="text-3xl md:text-4xl font-bold text-black   mb-3">
           Drug Discovery And Development Process
         </h2>
+        <p>Stages in the Drug Development Process:</p>
 
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <Image
@@ -137,10 +121,7 @@ export default function PharmaceuticalDiscoveryAndPublishingPage() {
               advancement.
             </p>
             <p className="text-gray-700">
-              The drug discovery and development process is long,
-              challenging, and rewarding at the same time. It often takes
-              10-15 years and can cost billions of dollars to bring a new
-              treatment or therapy to market.
+              The drug discovery and development process is long, challenging, and rewarding at the same time. New medicines save lives and improve the quality of life for millions of people. The development of prescription and over-the-counter drugs, vaccines, cell therapies, medical devices, and surgical or other treatment procedures can stop diseases from getting worse or even reverse their course. However, it often takes 10-15 years and can cost billions of dollars to bring a new treatment or therapy to market.
             </p>
           </div>
         </div>
@@ -213,96 +194,32 @@ export default function PharmaceuticalDiscoveryAndPublishingPage() {
 
       {/* Where our authors publish */}
       <section className="py-12 max-w-5xl mx-auto px-4">
-        <div className="text-center max-w-2xl mx-auto mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] mb-3">
-            Where Our Authors Publish
-          </h2>
-          <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-            Our authors share expert content in top-tier journals, conferences, and platforms, maximizing and amplifying its recognition and reach.
-          </p>
-        </div>
-
-        <div className="space-y-6">
-          {publishedPapers.map((paper) => (
-            <div
-              key={paper.title}
-              className="bg-[#fafcfa] border border-gray-100 rounded-xl p-6 md:p-8 shadow-sm grid grid-cols-1 md:grid-cols-[200px_1fr] gap-6 items-center"
-            >
-              <div className="relative w-full h-[260px] rounded-lg overflow-hidden bg-white border border-gray-100 shadow-inner flex items-center justify-center p-2">
-                <Image
-                  src={paper.cover.src}
-                  alt={paper.cover.alt}
-                  fill
-                  className="object-contain p-1"
-                />
-              </div>
-
-              <div className="space-y-3 text-sm md:text-base text-gray-700">
-                <div>
-                  <span className="font-bold text-gray-900">Paper Title: </span>
-                  <span className="text-gray-800">{paper.title}</span>
-                </div>
-                <div>
-                  <span className="font-bold text-gray-900">Author: </span>
-                  <span>{paper.authors}</span>
-                </div>
-                <div>
-                  <span className="font-bold text-gray-900">Journal Name: </span>
-                  <span className="text-[#1b3b32] font-semibold">{paper.journal}</span>
-                </div>
-                <div>
-                  <span className="font-bold text-gray-900">Publisher: </span>
-                  <span>{paper.publisher}</span>
-                </div>
-                <div>
-                  <span className="font-bold text-gray-900">Impact factor: </span>
-                  <span>{paper.impactFactor}</span>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+        <WhereAuthorsPublish
+          title="Where Our Authors Publish"
+          description="Our authors share Pubrica’s expert content in top-tier journals, conferences, and platforms, maximizing and amplifying its recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity."
+          publication={{
+            imageSrc:
+              "/images/industries/pharmaceutical/sample-works-1.webp",
+            imageAlt:
+              "Cover of the published journal Life, featuring the macular degeneration research paper",
+            paperTitle:
+              "Novel Approaches in the Drug Development and Delivery Systems for Age-Related Macular Degeneration",
+            author:
+              "Paliwal, H., Prajapati, B. G., Srichana, T., Singh, S., & Patel, R. J.",
+            journalName: "Life (Basel, Switzerland)",
+            publisher: "MDPI",
+            impactFactor: "3.4",
+          }}
+        />
       </section>
 
       {/* Expert team */}
       <section className="py-6 max-w-6xl mx-auto px-4">
-        <div className="text-center max-w-2xl mx-auto mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] mb-3">
-            Our Expert Pharmaceutical Research
-          </h2>
-          <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-            Our team of industry specialists offers unrivalled expertise and perspectives to provide complete solutions with precision and originality.
-          </p>
-        </div>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {experts.map((expert) => (
-            <div
-              key={expert.name}
-              className="bg-white border border-gray-200/60 rounded-xl p-6 flex flex-col items-start shadow-sm hover:border-gray-300 transition-all"
-            >
-              <div className="flex items-center space-x-4 mb-4 w-full">
-                <div className="relative w-14 h-14 rounded-full overflow-hidden bg-gray-100 shrink-0 border border-gray-100">
-                  <Image
-                    src={expert.photo.src}
-                    alt={expert.photo.alt}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-900 text-base">{expert.name}</h3>
-                  <p className="text-xs text-[#1b3b32] font-semibold">{expert.credentials}</p>
-                </div>
-              </div>
-
-              <div className="w-full space-y-1.5 text-xs text-gray-600 pt-3 border-t border-gray-100">
-                <p>{expert.experience}</p>
-                <p>{expert.manuscripts}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+        <ExpertEditorsSection
+          title="Our Expert Pharmaceutical Research"
+          description="Pubrica’s team of industry specialists offers unrivalled expertise and perspectives to provide complete solutions with precision and originality. Through a mix of both experience and specialization, they strive for excellence in everything they do."
+          editors={expertEditors}
+        />
       </section>
     </main>
   );

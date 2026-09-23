@@ -24,9 +24,21 @@ const MedicalDeviceIndustryPage: NextPage = () => {
             </h2>
           </div>
 
+          {/* MOBILE IMAGE: Displayed block and centered on mobile only */}
+          <div className="block md:hidden mx-auto my-6 w-[280px] h-[280px] rounded-full overflow-hidden shadow-md bg-[#eaf4ef] p-3 relative">
+            <div className="relative w-full h-full rounded-full overflow-hidden">
+              <Image
+                src="/images/industries/medical-device/Enhancing-Compliance-and-Market-Readiness-of-Medical-Devices-1.png"
+                alt="Medical Device Operating Room"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+
           <div className="clearfix text-gray-700 text-sm md:text-base leading-relaxed space-y-6">
-            {/* CIRCULAR FLOATING IMAGE CONTAINER */}
-            <div className="float-right ml-8 mb-6 w-[280px] h-[280px] md:w-[360px] md:h-[360px] rounded-full overflow-hidden shadow-md bg-[#eaf4ef] p-3 flex items-center justify-center relative">
+            {/* DESKTOP IMAGE: Floating right on desktop only */}
+            <div className="hidden md:block md:float-right md:ml-8 mb-6 md:w-[360px] md:h-[360px] rounded-full overflow-hidden shadow-md bg-[#eaf4ef] p-3 relative">
               <div className="relative w-full h-full rounded-full overflow-hidden">
                 <Image
                   src="/images/industries/medical-device/Enhancing-Compliance-and-Market-Readiness-of-Medical-Devices-1.png"

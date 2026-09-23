@@ -1,6 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import Head from 'next/head';
+import WhereAuthorsPublish from '@/components/common/WhereAuthorsPublish';
+import ExpertEditorsSection, { ExpertEditorItem } from '@/components/common/ExpertEditorsSection';
 
 interface ServiceItem {
   title: string;
@@ -100,28 +102,31 @@ const defaultPublication: AuthorPublication = {
   impactFactor: '3.6'
 };
 
-const defaultEditors: EditorProfile[] = [
+const expertEditors: ExpertEditorItem[] = [
   {
-    name: 'Dr. Laurence',
-    credential: 'PHD - Generics',
-    experience: '7 years of experience',
-    manuscripts: '100+ manuscripts edited',
-    image: '/images/industries/generics/Dr.-Laurence.webp'
+    name: "Dr. Laurence",
+    degree: "PHD - Generics",
+    experience: "7 years of experience",
+    manuscripts: "100+ manuscripts edited",
+    avatar: "/images/industries/generics/Dr.-Laurence.webp",
+    flag: "/images/country/gb.png",
   },
   {
-    name: 'Dr. AJ',
-    credential: 'PHD - Generics',
-    experience: '5 Years of Experience',
-    manuscripts: '100+ manuscripts edited',
-    image: '/images/industries/generics/Dr.-AJ.webp'
+    name: "Dr. AJ",
+    degree: "PHD - Generics",
+    experience: "5 Years of Experience",
+    manuscripts: "100+ manuscripts edited",
+    avatar: "/images/industries/generics/Dr.-AJ.webp",
+    flag: "/images/country/us.png",
   },
   {
-    name: 'Dr. Jay',
-    credential: 'PHD, FIAMS, DMRD, DMRE, DNB - Medical',
-    experience: '15 Years of Experience',
-    manuscripts: '100+ manuscripts edited',
-    image: '/images/industries/nutraceutical-research/Dr.-Rohit-Kapoor.webp'
-  }
+    name: "Dr. Jay",
+    degree: "PHD, FIAMS, DMRD, DMRE, DNB - Medical",
+    experience: "15 Years of Experience",
+    manuscripts: "100+ manuscripts edited",
+    avatar: "/images/industries/nutraceutical-research/Dr.-Rohit-Kapoor.webp",
+    flag: "/images/country/us.png",
+  },
 ];
 
 export default function PharmaceuticalDiscoveryAndPublishingPage({
@@ -137,7 +142,6 @@ export default function PharmaceuticalDiscoveryAndPublishingPage({
   additionalServices = defaultAdditionalServices,
   segments = defaultSegments,
   publication = defaultPublication,
-  editors = defaultEditors
 }: PharmaceuticalDiscoveryAndPublishingPageProps) {
   return (
     <>
@@ -205,7 +209,7 @@ export default function PharmaceuticalDiscoveryAndPublishingPage({
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-[#1b3b32] font-bold mt-0.5">•</span>
-                <span>However, the generics landscape is complex; manufacturers face regulatory, scientific, and market challenges in bringing generics to market and sustaining competitiveness.</span>
+                <span>However, the generics landscape is complex manufacturers face regulatory, scientific, and market challenges in bringing generics to market and sustaining competitiveness.</span>
               </li>
             </ul>
           </div>
@@ -242,7 +246,7 @@ export default function PharmaceuticalDiscoveryAndPublishingPage({
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-[#0f2824] font-bold">•</span>
-                <span>The generic medicine is manufactured under the same strict standards as the brand-name drug.</span>
+                <span>The generic medicine is manufactured under the same strict standards as the brand-name medicine.</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-[#0f2824] font-bold">•</span>
@@ -250,7 +254,7 @@ export default function PharmaceuticalDiscoveryAndPublishingPage({
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-[#0f2824] font-bold">•</span>
-                <span>The generic medicine is bioequivalent to the brand-name drug.</span>
+                <span>The generic medicine is bioequivalent to the brand-name medicine.</span>
               </li>
             </ul>
           </div>
@@ -258,62 +262,23 @@ export default function PharmaceuticalDiscoveryAndPublishingPage({
 
         {/* Where Our Authors Publish Section */}
         <section className="py-12 max-w-5xl mx-auto px-4">
-          <div className="max-w-7xl mx-auto mb-2 px-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] mb-1 text-start">
-              Where Our Authors Publish
-            </h2>
-
-            <p className="text-gray-600 text-sm md:text-base leading-relaxed text-start max-w-4xl">
-              Our authors share Pubrica&apos;s expert content in top-tier journals,
-              conferences, and platforms, maximizing and amplifying its recognition and
-              reach. Our placement will enhance our visibility and elevate our standing
-              in an authoritative capacity.
-            </p>
-          </div>
 
           <div className="space-y-6">
-            <div className="bg-[#fafcfa] border border-gray-100 rounded-xl p-6 md:p-8 shadow-sm grid grid-cols-1 md:grid-cols-[200px_1fr] gap-6 items-center">
-              <div className="relative w-full h-[260px] rounded-lg overflow-hidden bg-white border border-gray-100 shadow-inner flex items-center justify-center p-2">
-                <Image
-                  src="/images/industries/generics/sample-works-2.webp"
-                  alt="Clinical Therapeutics Journal Cover"
-                  fill
-                  sizes="220px"
-                  className="object-contain p-1"
-                />
-              </div>
-
-              <div className="space-y-3 text-sm md:text-base text-gray-700">
-                <div>
-                  <span className="font-bold text-gray-900">Paper Title: </span>
-                  <span className="text-gray-800">
-                    {publication.paperTitle}
-                  </span>
-                </div>
-
-                <div>
-                  <span className="font-bold text-gray-900">Author: </span>
-                  <span>{publication.author}</span>
-                </div>
-
-                <div>
-                  <span className="font-bold text-gray-900">Journal Name: </span>
-                  <span className="text-[#1b3b32] font-semibold">
-                    {publication.journalName}
-                  </span>
-                </div>
-
-                <div>
-                  <span className="font-bold text-gray-900">Publisher: </span>
-                  <span>{publication.publisher}</span>
-                </div>
-
-                <div>
-                  <span className="font-bold text-gray-900">Impact factor: </span>
-                  <span>{publication.impactFactor}</span>
-                </div>
-              </div>
-            </div>
+            <WhereAuthorsPublish
+              title="Where Our Authors Publish"
+              description="Our authors share Pubrica&apos;s expert content in top-tier journals, conferences, and platforms, maximizing and amplifying its recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity."
+              publication={{
+                imageSrc:
+                  "/images/industries/generics/sample-works-2.webp",
+                imageAlt: "Clinical Therapeutics Journal Cover",
+                paperTitle:
+                  "The bioequivalence and therapeutic efficacy of generic versus brand-name psychoactive drugs",
+                author: "Borgheini G",
+                journalName: "Clinical Therapeutics",
+                publisher: "Elsevier",
+                impactFactor: "3.6",
+              }}
+            />
           </div>
         </section>
 
@@ -321,54 +286,11 @@ export default function PharmaceuticalDiscoveryAndPublishingPage({
 
         {/* Our Expert Medical Editors Section */}
         <section className="py-12 max-w-6xl mx-auto px-4">
-          <div className="max-w-7xl mx-auto mb-10 px-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] mb-3 text-start">
-              Our Expert Medical Editors
-            </h2>
-
-            <p className="text-gray-600 text-sm md:text-base leading-relaxed text-start max-w-4xl">
-              Pubrica&apos;s team of industry specialists offers unrivalled expertise
-              and perspectives to provide complete solutions with precision and
-              originality. Through a mix of both experience and specialization, they
-              strive for excellence in everything they do.
-            </p>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {editors.map((editor, index) => (
-              <div
-                key={index}
-                className="bg-white border border-gray-200/60 rounded-xl p-6 flex flex-col items-start shadow-sm hover:border-gray-300 transition-all"
-              >
-                <div className="flex items-center space-x-4 mb-4 w-full">
-                  <div className="relative w-14 h-14 rounded-full overflow-hidden bg-gray-100 shrink-0 border border-gray-100">
-                    <Image
-                      src={editor.image}
-                      alt={editor.name}
-                      fill
-                      sizes="56px"
-                      className="object-cover"
-                    />
-                  </div>
-
-                  <div>
-                    <h3 className="font-bold text-gray-900 text-base">
-                      {editor.name}
-                    </h3>
-
-                    <p className="text-xs text-[#1b3b32] font-semibold">
-                      {editor.credential}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="w-full space-y-1.5 text-xs text-gray-600 pt-3 border-t border-gray-100">
-                  <p>{editor.experience}</p>
-                  <p>{editor.manuscripts}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <ExpertEditorsSection
+            title="Our Expert Medical Editors"
+            description="Pubrica's team of industry specialists offers unrivalled expertise and perspectives to provide complete solutions with precision and originality. Through a mix of both experience and specialization, they strive for excellence in everything they do."
+            editors={expertEditors}
+          />
         </section>
 
 

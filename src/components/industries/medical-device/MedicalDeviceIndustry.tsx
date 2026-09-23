@@ -155,7 +155,7 @@ const MedicalDeviceIndustry: NextPage = () => {
                   <tr className="bg-[#fcf4f4]">
                     <td className="py-4 px-6 font-bold text-gray-900">Class IIb Devices (Medium-High Risk)</td>
                     <td className="py-4 px-6">Invasive or significant impact on patient health if they fail.</td>
-                    <td className="py-4 px-6">Ventilators, anaesthesia equipment, and implantable devices like pacemakers (non-life-sustaining).</td>
+                    <td className="py-4 px-6">Ventilators, anaesthesia equipment,and implantable devices like pacemakers (non-life-sustaining).</td>
                     <td className="py-4 px-6">• CER must rely on robust clinical evidence.<br />• Usually requires clinical investigations or well-controlled studies in addition to the literature.</td>
                   </tr>
                   <tr className="bg-[#fcf0f0]">

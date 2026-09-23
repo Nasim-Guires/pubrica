@@ -11,11 +11,11 @@ import InsightsSection from "@/components/services/medical-data-collection/Insig
 import { constructMetadata } from '@/lib/metadata'
 
 export const metadata = constructMetadata({
-  title: 'Expert CER & PMS Services for Medical Devices',
-  description:
-    'Ensure medical device safety & compliance with expert CER, post-market surveillance, and clinical data support.',
-  keywords: ['Medical Device'],
-  slug: '/industries/medical-device',
+    title: 'Expert CER & PMS Services for Medical Devices',
+    description:
+        'Ensure medical device safety & compliance with expert CER, post-market surveillance, and clinical data support.',
+    keywords: ['Medical Device'],
+    slug: '/industries/medical-device',
 })
 
 const page = () => {
@@ -30,7 +30,7 @@ const page = () => {
                 testimonials={medicalDeviceTestimonials}
                 itemsPerPage={2}
             />
-            <InsightsSection/>
+            <InsightsSection />
         </>
     )
 }

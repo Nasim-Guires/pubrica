@@ -106,9 +106,9 @@ export default function PharmaceuticalDiscoveryAndPublishingPage({
   pageTitle = 'Generic Drugs & Pharmaceutical Industry Support Services | Pubrica',
   metaDescription = 'Achieve seamless regulatory compliance for your generic products with our end-to-end support including bioequivalence studies, documentation, and submissions.',
   heroTitle = 'Generic Drugs',
-  heroSubtitle = 'Achieve seamless regulatory compliance for your generic products with our end to end support. We handle bioequivalence studies, documentation, and submissions, enabling you to bring high-quality generics to market efficiently.',
+  heroSubtitle = 'Achieve seamless regulatory compliance for your generic products with our end-to-end support. We handle bioequivalence studies, documentation, and submissions, enabling you to bring high-quality generics to market efficiently.',
   mainHeading = 'Generic drugs are just as safe and just as effective as their brand-name counterparts, and they are a cost-effective way of achieving substantial savings',
-  mainDescription = 'In today’s pharmaceutical landscape, generics industry services are critical to providing affordable access to medicines worldwide. However, delivering high quality generics requires rigorous scientific, regulatory, and operational support, not just cost efficiency. That’s where Pubrica steps in. We offer end-to-end capabilities tailored for generics manufacturers, helping you navigate regulatory complexity, ensure quality and compliance, and streamline market entry.',
+  mainDescription = 'In today’s pharmaceutical landscape, generics industry services are critical to providing affordable access to medicines worldwide. However, delivering high-quality generics requires rigorous scientific, regulatory, and operational support, not just cost efficiency. That’s where Pubrica steps in. We offer end-to-end capabilities tailored for generics manufacturers, helping you navigate regulatory complexity, ensure quality and compliance, and streamline market entry.',
   expertiseHeading = 'Our Expertise for the Generics Industry Includes',
   expertiseDescription = 'At Pubrica, we specialize in supporting generic pharmaceutical companies across every stage of the product lifecycle. Our deep understanding of regulatory requirements, scientific rigor, and market dynamics enables us to help you bring safe, effective, and compliant generic drugs to patients worldwide. Our expertise spans the following areas:',
   services = defaultServices,
@@ -173,91 +173,104 @@ export default function PharmaceuticalDiscoveryAndPublishingPage({
           </div>
         </section>
         {/* Expertise Section with 3 Cards on Left & 3 Cards on Right around Central Image */}
-        <section className="py-4 px-4 bg-white text-[#0f2824] overflow-hidden">
-          <div className="max-w-7xl mx-auto text-start mb-1 px-6">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <section className="py-7 bg-gray-50 px-4 md:px-8">
+          <div className="max-w-6xl mx-auto text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
               {expertiseHeading}
             </h2>
-            <p className="text-gray-600 max-w-4xl text-start leading-relaxed text-sm md:text-base">
+            <p className="text-sm md:text-base text-gray-600 max-w-5xl mx-auto leading-relaxed">
               {expertiseDescription}
             </p>
           </div>
 
-          <div className="relative max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-center min-h-[850px] gap-8 lg:gap-0">
-
-            {/* Left Column Cards (3 items) */}
-            <div className="flex flex-col gap-8 w-full lg:w-[380px] z-10">
-              <div className="bg-white p-6 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-gray-100">
-                <h3 className="font-bold text-[#b91c1c] text-lg mb-2">{services[1].title}</h3>
-                <p className="text-gray-600 text-xs leading-relaxed">{services[1].description}</p>
+          {/* Central Graphic with Surrounding Cards Layout */}
+          <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+            {/* Left Column Cards (3 items: 1, 3, 5) */}
+            <div className="space-y-6">
+              <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                <h3 className="font-bold text-red-700 text-base mb-1.5">{services[1].title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{services[1].description}</p>
               </div>
-              <div className="bg-white p-6 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-gray-100">
-                <h3 className="font-bold text-[#b91c1c] text-lg mb-2">{services[3].title}</h3>
-                <p className="text-gray-600 text-xs leading-relaxed">{services[3].description}</p>
+              <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                <h3 className="font-bold text-red-700 text-base mb-1.5">{services[3].title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{services[3].description}</p>
               </div>
-              <div className="bg-white p-6 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-gray-100">
-                <h3 className="font-bold text-[#b91c1c] text-lg mb-2">{services[5].title}</h3>
-                <p className="text-gray-600 text-xs leading-relaxed">{services[5].description}</p>
+              <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                <h3 className="font-bold text-red-700 text-base mb-1.5">{services[5].title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{services[5].description}</p>
               </div>
             </div>
 
-            {/* Center Circular Image */}
-            <div className="relative w-[320px] h-[320px] sm:w-[420px] sm:h-[420px] lg:mx-[-40px] z-0 flex-shrink-0 flex items-center justify-center">
-              <div className="absolute inset-0 rounded-full border-[12px] border-white shadow-2xl overflow-hidden bg-gray-100">
+            {/* Center Image - Scaled Up */}
+            <div className="flex justify-center my-6 md:my-0">
+              <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full border-4 border-white shadow-md overflow-hidden">
                 <Image
                   src="/images/industries/generics/Our-Expertise-for-the-Generics-Industry-Includes.webp"
                   alt="Medical professional reviewing data for generic pharmaceuticals"
                   fill
-                  sizes="(max-width: 768px) 320px, 420px"
-                  style={{ objectFit: 'cover', objectPosition: 'top' }}
+                  className="object-cover"
+                  sizes="(max-width: 768px) 288px, 320px"
                   priority
                 />
               </div>
             </div>
 
-            {/* Right Column Cards (3 items) */}
-            <div className="flex flex-col gap-8 w-full lg:w-[380px] z-10">
-              <div className="bg-white p-6 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-gray-100">
-                <h3 className="font-bold text-[#b91c1c] text-lg mb-2">{services[0].title}</h3>
-                <p className="text-gray-600 text-xs leading-relaxed">{services[0].description}</p>
+            {/* Right Column Cards (3 items: 0, 2, 4) */}
+            <div className="space-y-6">
+              <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                <h3 className="font-bold text-red-700 text-base mb-1.5">{services[0].title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{services[0].description}</p>
               </div>
-              <div className="bg-white p-6 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-gray-100">
-                <h3 className="font-bold text-[#b91c1c] text-lg mb-2">{services[2].title}</h3>
-                <p className="text-gray-600 text-xs leading-relaxed">{services[2].description}</p>
+              <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                <h3 className="font-bold text-red-700 text-base mb-1.5">{services[2].title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{services[2].description}</p>
               </div>
-              <div className="bg-white p-6 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-gray-100">
-                <h3 className="font-bold text-[#b91c1c] text-lg mb-2">{services[4].title}</h3>
-                <p className="text-gray-600 text-xs leading-relaxed">{services[4].description}</p>
+              <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                <h3 className="font-bold text-red-700 text-base mb-1.5">{services[4].title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{services[4].description}</p>
               </div>
             </div>
-
           </div>
         </section>
-
         {/* Generic Drug Segments We Serve Section */}
-        <section className="py-6 px-6 max-w-7xl mx-auto -mt-4">
-          <div className="text-center mb-8">
+        <section className="py-8 px-6 max-w-7xl mx-auto">
+          {/* Header Section */}
+          <div className="text-left mb-8">
             <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] mb-3">
               Generic Drug Segments We Serve
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
+            <p className="text-gray-700 max-w-5xl text-sm md:text-base leading-relaxed">
               At Pubrica, we provide specialized support across a broad spectrum of generic drug segments, helping manufacturers ensure regulatory compliance, market readiness, and product success. Our expertise spans the following categories:
             </p>
           </div>
 
+          {/* Grid Section */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {segments.map((segment, index) => (
               <div
                 key={index}
-                className="bg-[#fafcfa] border border-gray-100 p-5 rounded-xl shadow-sm hover:border-gray-200 hover:shadow-md transition-all flex flex-col items-start"
+                className="bg-white border border-gray-100 p-5 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-row items-start space-x-3 min-h-[140px]"
               >
                 {segment.iconSrc && (
-                  <div className="relative w-9 h-9 mb-3 bg-white rounded-lg p-1.5 shadow-sm border border-gray-100 flex items-center justify-center">
-                    <Image src={segment.iconSrc} alt="" fill className="object-contain p-1" sizes="36px" />
+                  <div className="relative w-10 h-10 shrink-0 flex items-center justify-center">
+                    <Image
+                      src={segment.iconSrc}
+                      alt=""
+                      fill
+                      className="object-contain"
+                      sizes="40px"
+                    />
                   </div>
                 )}
-                <h4 className="font-bold text-base text-[#1b3b32] mb-2">{segment.title}</h4>
-                <p className="text-gray-600 text-xs md:text-sm leading-relaxed">{segment.description}</p>
+
+                <div className="flex-1">
+                  <h4 className="font-bold text-sm md:text-base text-[#1b3b32] mb-1.5 leading-snug">
+                    {segment.title}
+                  </h4>
+                  <p className="text-gray-600 text-xs md:text-xs leading-relaxed">
+                    {segment.description}
+                  </p>
+                </div>
               </div>
             ))}
           </div>

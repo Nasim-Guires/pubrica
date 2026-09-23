@@ -30,9 +30,22 @@ export default function PharmaceuticalIndustryPage() {
           </h2>
         </div>
 
+        {/* MOBILE IMAGE: Displayed block and centered on mobile only */}
+        <div className="block md:hidden mx-auto my-6 w-[280px] h-[280px] rounded-full overflow-hidden shadow-md bg-[#eaf4ef] p-3 relative">
+          <div className="relative w-full h-full rounded-full overflow-hidden">
+            <Image
+              src="/images/industries/pharmaceutical/Enhancing-Regulatory-Compliance-and-Market-Readiness-of-Pharmaceutical-Products-.webp"
+              alt="Researcher writing notes with medical equipment and medicine bottles"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 288px, 384px"
+            />
+          </div>
+        </div>
+
         <div className="clearfix">
-          {/* CIRCULAR FLOATING IMAGE CONTAINER */}
-          <div className="float-right ml-8 mb-6 w-[280px] h-[280px] md:w-[360px] md:h-[360px] rounded-full overflow-hidden shadow-md bg-[#eaf4ef] p-3 flex items-center justify-center relative">
+          {/* DESKTOP IMAGE: Floating right on desktop only */}
+          <div className="hidden md:block md:float-right md:ml-8 mb-6 md:w-[360px] md:h-[360px] rounded-full overflow-hidden shadow-md bg-[#eaf4ef] p-3 relative">
             <div className="relative w-full h-full rounded-full overflow-hidden">
               <Image
                 src="/images/industries/pharmaceutical/Enhancing-Regulatory-Compliance-and-Market-Readiness-of-Pharmaceutical-Products-.webp"
@@ -63,7 +76,7 @@ export default function PharmaceuticalIndustryPage() {
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
             Our Expertise in the Pharmaceutical Industry Includes
           </h2>
-          <p className="text-sm md:text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-sm md:text-base text-gray-600 max-w-5xl mx-auto leading-relaxed">
             The pharmaceutical industry is a dynamic and highly regulated sector where precision, safety, and compliance are paramount. At Pubrica, we provide comprehensive solutions that support every stage of the pharmaceutical product lifecycle. From research and development to regulatory submissions and post-market management, our services are designed to ensure your products meet global standards while optimizing efficiency and patient safety.
           </p>
         </div>

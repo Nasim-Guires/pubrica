@@ -4,7 +4,7 @@ import { Testimonial } from "@/components/common/WhatClientsSays";
 export const medicalDeviceClinicalEvaluationReportWorkflow = {
   heading: "How to Prepare a Clinical Evaluation Report for Medical Devices",
   subheading: "A clinical evaluation takes place in four steps:",
-  description: "A comprehensive four-step process for preparing a clinical evaluation report for medical devices.",
+  description: "",
   steps: [
     {
       stepNumber: 1,

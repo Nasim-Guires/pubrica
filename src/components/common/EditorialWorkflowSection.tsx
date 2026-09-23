@@ -31,7 +31,7 @@ export const EditorialWorkflowSection: React.FC<
   return (
     <section className="py-6 md:py-7 px-4 md:px-8 bg-gray-50 w-full text-center font-sans overflow-hidden">
       {/* Header */}
-      <h2 className="text-3xl md:text-4xl font-bold text-[#0B353D] mb-2 leading-tight">
+      <h2 className="text-2xl md:text-3xl font-semibold text-[#0B353D] mb-2 leading-tight">
         {heading}
       </h2>
 
@@ -57,24 +57,21 @@ export const EditorialWorkflowSection: React.FC<
             >
               {index !== steps.length - 1 && (
                 <div
-                  className={`absolute top-6 bottom-0 w-[2px] bg-[#0081A7] z-0 ${
-                    isEven ? "left-4" : "right-4"
-                  }`}
+                  className={`absolute top-6 bottom-0 w-[2px] bg-[#0081A7] z-0 ${isEven ? "left-4" : "right-4"
+                    }`}
                 />
               )}
 
               <div
-                className={`absolute z-10 w-8 h-8 rounded-full bg-[#0081A7] text-white font-bold flex items-center justify-center text-sm shadow-sm ${
-                  isEven ? "left-0" : "right-0"
-                }`}
+                className={`absolute z-10 w-8 h-8 rounded-full bg-[#0081A7] text-white font-bold flex items-center justify-center text-sm shadow-sm ${isEven ? "left-0" : "right-0"
+                  }`}
               >
                 {step.stepNumber}
               </div>
 
               <div
-                className={`w-full flex ${
-                  isEven ? "pl-9 pr-2" : "pr-9 pl-2"
-                }`}
+                className={`w-full flex ${isEven ? "pl-9 pr-2" : "pr-9 pl-2"
+                  }`}
               >
                 <div className="bg-white border border-gray-100 rounded-lg shadow-sm p-4 flex flex-col items-center text-center w-full z-10">
                   {step.iconSrc && (
@@ -156,13 +153,12 @@ export const EditorialWorkflowSection: React.FC<
               {/* CENTER HORIZONTAL LINE SEGMENT */}
               <div className="w-full h-[6px] relative my-0 shrink-0">
                 <div
-                  className={`h-full bg-[#0081A7] w-full transition-colors duration-300 group-hover:bg-black ${
-                    index === 0
+                  className={`h-full bg-[#0081A7] w-full transition-colors duration-300 group-hover:bg-black ${index === 0
                       ? "rounded-l-sm"
                       : index === steps.length - 1
-                      ? "rounded-r-sm"
-                      : ""
-                  }`}
+                        ? "rounded-r-sm"
+                        : ""
+                    }`}
                 />
               </div>
 
