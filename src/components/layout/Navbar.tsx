@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -10,6 +10,7 @@ import {
   Mail,
   Phone,
   Search,
+  X,
   CheckCircle2,
 } from "lucide-react";
 import { NAV_LINKS, SOCIAL_LINKS } from "@/lib/constants";
@@ -22,6 +23,27 @@ export default function Navbar() {
   const isHome = pathname === "/";
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubcategory, setActiveSubcategory] = useState<string>("AI and ML Services");
+
+  // Search State
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const searchInputRef = useRef<HTMLInputElement>(null);
+
+  // Focus input when search is toggled open
+  useEffect(() => {
+    if (isSearchOpen && searchInputRef.current) {
+      searchInputRef.current.focus();
+    }
+  }, [isSearchOpen]);
+
+  // Optional: Submit handler for search
+  const handleSearchSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      // Execute your search routing logic here (e.g., router.push(`/search?q=${searchQuery}`))
+      console.log("Searching for:", searchQuery);
+    }
+  };
 
   return (
     <>
@@ -237,9 +259,53 @@ export default function Navbar() {
 
               {/* Right Search Action */}
               <div className="hidden md:flex items-center gap-2">
-                <button className="p-2 text-gray-700 hover:text-[#073632] hover:bg-gray-50 rounded-md transition-colors border border-gray-100 shadow-sm focus:outline-none" aria-label="Search">
-                  <Search className="h-4 w-4 stroke-[2.5]" />
-                </button>
+                <div className="relative flex items-center">
+                  <form
+                    onSubmit={handleSearchSubmit}
+                    className={cn(
+                      "flex items-center overflow-hidden transition-all duration-300 ease-in-out border rounded-md shadow-sm bg-white",
+                      isSearchOpen
+                        ? "w-48 lg:w-64 border-gray-300 px-2 py-1 opacity-100"
+                        : "w-0 border-transparent p-0 opacity-0 pointer-events-none"
+                    )}
+                  >
+                    <input
+                      ref={searchInputRef}
+                      type="text"
+                      placeholder="Search..."
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      className="w-full text-xs text-gray-800 bg-transparent outline-none px-1"
+                    />
+                    {searchQuery && (
+                      <button
+                        type="button"
+                        onClick={() => setSearchQuery("")}
+                        className="p-0.5 text-gray-400 hover:text-gray-600"
+                      >
+                        <X className="h-3 w-3" />
+                      </button>
+                    )}
+                  </form>
+
+                  <button
+                    onClick={() => {
+                      setIsSearchOpen((prev) => !prev);
+                      if (isSearchOpen) setSearchQuery("");
+                    }}
+                    className={cn(
+                      "p-2 text-gray-700 hover:text-[#073632] hover:bg-gray-50 rounded-md transition-colors border border-gray-100 shadow-sm focus:outline-none",
+                      isSearchOpen && "ml-1 bg-gray-50 text-[#073632]"
+                    )}
+                    aria-label="Search"
+                  >
+                    {isSearchOpen ? (
+                      <X className="h-4 w-4 stroke-[2.5]" />
+                    ) : (
+                      <Search className="h-4 w-4 stroke-[2.5]" />
+                    )}
+                  </button>
+                </div>
               </div>
 
               {/* Mobile Menu Trigger */}
