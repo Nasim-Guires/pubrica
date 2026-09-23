@@ -226,8 +226,7 @@ export default function TissueEngineeringPage() {
                                         Expert Editing and Publication Support services assist researchers with every step of publishing their work, from manuscript preparation through to editorial review. By assisting researchers with{" "}
                                         <Link href="/services/editing-and-translation/manuscript-editing/" className="text-blue-600 no-underline">
                                             manuscript preparation
-                                        </Link>
-                                        , language refinement, and adhering to journal guidelines, these services enable researchers to maximize the potential of their work. Researchers can also receive guidance regarding their research through the publication support services on the{" "}
+                                        </Link>, language refinement, and adhering to journal guidelines, these services enable researchers to maximize the potential impact of their work. Researchers can also receive guidance regarding their research through the publication support services on the{" "}
                                         <Link href="/services/publication-support/peer-review-pre-submission/" className="text-blue-600 no-underline">
                                             peer-review process
                                         </Link>{" "}

@@ -21,31 +21,31 @@ const applicationsData = [
     },
     {
         title: "",
-        desc: "New stem cell advancements - Creating ways of taking stem cells from an individual and reprogramming them to enhance the growth of tissues.",
+        desc: "New stem cell advancements – Creating ways of taking stem cells from an individual and reprogramming them to enhance the growth of tissues.",
         iconSrc:
             "/images/subject-matter-experts/tissue-engineering/New-stem-cell-advancements.webp",
     },
     {
         title: "",
-        desc: "Biomaterials Innovation - Developing advanced materials such as smart hydrogel and Nanomaterial to create a better performance in scaffold material.",
+        desc: "Biomaterials Innovation – Developing advanced materials such as smart hydrogel and Nanomaterial to create a better performance in scaffold material.",
         iconSrc:
             "/images/subject-matter-experts/tissue-engineering/Biomaterials-Innovation.webp",
     },
     {
         title: "",
-        desc: "Vascularization - Creating a vascular supply within the tissue to increase the longevity of the implanted tissue.",
+        desc: "Vascularization – Creating a vascular supply within the tissue to increase the longevity of the implanted tissue.",
         iconSrc:
             "/images/subject-matter-experts/tissue-engineering/Vascularization.webp",
     },
     {
         title: "",
-        desc: "Customized Tissue Engineering - Using a patient's cells to develop a more effective therapy option.",
+        desc: "Customized Tissue Engineering – Using a patient's cells to develop a more effective therapy option.",
         iconSrc:
             "/images/subject-matter-experts/tissue-engineering/Customized-Tissue-Engineering.webp",
     },
     {
         title: "",
-        desc: "Artificial Intelligence Machine Learning - Using data-driven insight to create an improved tissue engineering process.",
+        desc: "Artificial Intelligence Machine Learning – Using data-driven insight to create an improved tissue engineering process.",
         iconSrc:
             "/images/subject-matter-experts/tissue-engineering/Artificial-Intelligence-Machine-Learning.webp",
     },
@@ -112,7 +112,7 @@ export default function TissueEngineeringSubjectMatterExperts() {
                     paperTitle:
                         "The Chorioallantois Membrane as a Platform for Developing Vascularized Cell Microencapsulation Devices",
                     author:
-                        "Murillo D. I. Bernardi, Sonny F. de Jong, Maarten B. Rookmaker, Andrej Shaykhet, Roel Deckers, Silvia M. Mihăilă, Rosalinde Masereeuw, Marianne C. Verhaar",
+                        "Murillo D. L. Bernardi, Sonny F. de Jong, Maarten B. Rookmaker, Andrej Shoykhet, Roel Deckers, Silvia M. Mihăilă, Rosalinde Masereeuw, Marianne C. Verhaar",
                     journalName: "Journal of Tissue Engineering and Regenerative Medicine",
                     publisher: "Wiley",
                     impactFactor: "2.6",

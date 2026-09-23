@@ -158,7 +158,7 @@ export default function SurgerySubjectMatterExpertsSection() {
             {/* SECTION 3: Where Our Authors Publish */}
             <WhereAuthorsPublish
                 title="Where Our Authors Publish"
-                description="Our authors share Pubrica's expert content in top tier journals, conferences, and platforms, maximizing and amplifying its recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity."
+                description="Our authors share Pubrica’s expert content in top-tier journals, conferences, and platforms, maximizing and amplifying its recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity."
                 publication={{
                     imageSrc:
                         "/images/subject-matter-experts/surgery/sample-works-1.webp",

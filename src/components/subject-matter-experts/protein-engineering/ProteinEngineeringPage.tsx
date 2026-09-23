@@ -267,7 +267,7 @@ export default function ProteinEngineeringPage() {
                             Our Core Modalities in Protein Engineering
                         </h2>
                         <p className="text-gray-600 text-sm leading-relaxed max-w-full">
-                            Pubrica offers a variety of different advanced modalities for Protein Engineering that have been designed to address specific problems in research, clinical innovation and industrial applications. We utilise the latest techniques to create new proteins or improve existing ones to enhance their function, stability, or specificity and create innovative disruptive solutions. Our core modalities are:
+                            Pubrica offers a variety of different advanced modalities for Protein Engineering that have been designed to address specific problems in research, clinical innovation and industrial applications. We utilise the latest techniques to create new proteins or improve existing ones to enhance their function, stability, or specificity and create innovative disruptive solutions. Our core modalities are.
                         </p>
                     </div>
 

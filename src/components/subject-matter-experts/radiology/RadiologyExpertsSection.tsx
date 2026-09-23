@@ -24,7 +24,7 @@ const emergingTrendsData: EmergingTrendItem[] = [
         id: "teleradiology",
         title: "Teleradiology",
         description:
-            "Remote image interpretation enabling global diagnostic support and healthcare access",
+            "Remote image interpretation enabling global diagnostic support and healthcare access.",
     },
     {
         id: "3d-printing-vr",

@@ -253,7 +253,7 @@ export default function PharmaceuticalsPage() {
                         title="Our Expertise in Pharmaceutical Research and Publication"
                         description={
                             <>
-                                Publishing in high-impact pharmaceutical and medical journals requires more than sound science; it demands precision in presentation, adherence to formatting guidelines, and linguistic clarity. Our pharmaceutical editors and <Link href="/services/research-services/scientific-writing/" className="text-blue-600 hover:underline">scientific writing</Link> team offer tailored solutions for every stage of your research journey.
+                                Publishing in high-impact pharmaceutical and medical journals requires more than sound science; it demands precision in presentation, adherence to formatting guidelines, and linguistic clarity. Our pharmaceutical editors and <Link href="/services/research-services/scientific-writing/" className="text-blue-600">scientific writing</Link> team offer tailored solutions for every stage of your research journey.
                             </>
                         }
                         cards={expertiseCards}

@@ -97,7 +97,7 @@ const applicationsData = [
     },
     {
         title: "Agricultural Biotechnology",
-        desc: "Increase the strength, Mitigating Stress Passing, etc.. of Crops, and improve Nutritional Value, etc. of Crops.",
+        desc: "Increase the strength, Mitigating Stress Passing, etc... of Crops, and improve Nutritional Value, etc. of Crops.",
         iconSrc:
             "/images/subject-matter-experts/protein-engineering/Agricultural-Biotechnology.webp",
     },
@@ -120,7 +120,7 @@ const editorsData: ExpertEditorItem[] = [
         manuscripts: "145+ manuscripts edited",
         flag: "/images/country/us.png",
         avatar:
-            "/images/subject-matter-experts/biomolecular-engineering/Dr.-Maya-Chen.webp",
+            "/images/Dr.-Maya-Chen.webp",
     },
     {
         name: "Dr. Arjun Mehta",

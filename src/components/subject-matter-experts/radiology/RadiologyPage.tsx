@@ -259,7 +259,7 @@ export default function RadiologyPage() {
 
                 <CommonExpertiseCards
                     title="Our Expertise in Radiology Research and Publication"
-                    description="At Pubrica, we offer a full range of radiology research and publication support services, ensuring that your work meets the expectations of high impact journals and international conferences."
+                    description="At Pubrica, we offer a full range of radiology research and publication support services, ensuring that your work meets the expectations of high-impact journals and international conferences."
                     cards={expertiseCards}
                 />
             </section>

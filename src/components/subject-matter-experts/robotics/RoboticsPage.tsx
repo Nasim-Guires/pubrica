@@ -156,7 +156,7 @@ export default function RoboticsPage() {
             {/* SECTION 1: Banner */}
             <HeroBanner
                 title="Robotics"
-                description="Robotics is the intersection between creativity and accuracy as machines develop the ability to reason, act, and shape our world. Whether it is in an industrial setting or at home, robots are helping to redefine the boundaries of human capability and creativity."
+                description="Robotics is the intersection between creativity and accuracy as machines develop the ability to reason, act, and shape our world Whether it is in an industrial setting or at home, robots are helping to redefine the boundaries of human capability and creativity."
                 headingAs="h1"
             />
 

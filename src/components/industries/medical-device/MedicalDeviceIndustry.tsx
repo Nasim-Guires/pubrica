@@ -44,19 +44,74 @@ const MedicalDeviceIndustry: NextPage = () => {
   ];
 
   const guidelineCards = [
-    { title: 'MEDDEV Guidelines', iconSrc: '/images/industries/medical-device/MEDDEV-GUIDELINES.png' },
-    { title: 'MDCG Guidelines', iconSrc: '/images/industries/medical-device/MDGC-GUIDELINES.png' },
-    { title: 'Health Canada', iconSrc: '/images/industries/medical-device/HEALTH-CANADA.png' },
-    { title: 'NMPA (National Medical Products Administration)', iconSrc: '/images/industries/medical-device/NMPA.png' },
-    { title: 'DSMB (Data Safety Monitoring Boards) Guidelines', iconSrc: '/images/industries/medical-device/DSMB.png' },
-    { title: 'IMDRF (International Medical Device Regulators Forum)', iconSrc: '/images/industries/medical-device/IMDRF.png' },
-    { title: 'MHRA (Medicines and Healthcare Products Regulatory Agency)', iconSrc: '/images/industries/medical-device/MHRA.png' },
-    { title: 'COFEPRIS (Federal Commission for Protection against Sanitary Risks)', iconSrc: '/images/industries/medical-device/COFEPRIS.png' },
-    { title: 'PMDA (The Pharmaceuticals and Medical Devices Agency)', iconSrc: '/images/industries/medical-device/PMDA.png' },
-    { title: 'ANVISA (Brazilian Health Regulatory Agency)', iconSrc: '/images/industries/medical-device/ANVISA.png' },
-    { title: 'TGA (Therapeutic Goods Administration)', iconSrc: '/images/industries/medical-device/TGA.png' }
-  ];
+    {
+      title: 'MEDDEV Guidelines',
+      iconSrc: '/images/industries/medical-device/MEDDEV-GUIDELINES.png',
+      description: 'Guidance on how to conduct PMS and clinical evaluations in the EU.',
+    },
+    {
+      title: 'MDCG Guidelines',
+      iconSrc: '/images/industries/medical-device/MDGC-GUIDELINES.png',
+      description: 'Guidance on compliance with EU regulations, including detailed PMS and vigilance.',
+    },
+    {
+      title: 'Health Canada',
+      iconSrc: '/images/industries/medical-device/HEALTH-CANADA.png',
+      description: 'PMS ensures safety monitoring and license compliance for medical devices in Canada.',
+    },
+    {
+      title: 'NMPA (National Medical Products Administration)',
+      iconSrc: '/images/industries/medical-device/NMPA.png',
+      description: 'Requires PMS as part of the regulatory process for medical devices marketed in China.',
+    },
+    {
+      title: 'DSMB (Data Safety Monitoring Boards) Guidelines',
+      iconSrc: '/images/industries/medical-device/DSMB.png',
+      description: 'Often oversee clinical trials, including post-market phases.',
+    },
+    {
+      title: 'IMDRF (International Medical Device Regulators Forum)',
+      iconSrc: '/images/industries/medical-device/IMDRF.png',
+      description: 'Provides global harmonized PMS guidelines to enhance medical device safety.',
+    },
+    {
+      title: 'MHRA (Medicines and Healthcare Products Regulatory Agency)',
+      iconSrc: '/images/industries/medical-device/MHRA.png',
+      description: 'Mandates PMS for ongoing compliance and safety of medical devices in the UK.',
+    },
+    {
+      title: 'COFEPRIS (Federal Commission for Protection against Sanitary Risks)',
+      iconSrc: '/images/industries/medical-device/COFEPRIS.png',
+      description: 'Requires PMS to maintain the safety and efficacy of medical devices in Mexico.',
+    },
+    {
+      title: 'PMDA (The Pharmaceuticals and Medical Devices Agency)',
+      iconSrc: '/images/industries/medical-device/PMDA.png',
+      description: 'Enforces strict PMS for the continued safety and performance of medical devices in Japan.',
+    },
+    {
+      title: 'ANVISA (Brazilian Health Regulatory Agency)',
+      iconSrc: '/images/industries/medical-device/ANVISA.png',
+      description: 'Ensures medical devices in Brazil undergo comprehensive PMS monitoring.',
+    },
+    {
+      title: 'TGA (Therapeutic Goods Administration)',
+      iconSrc: '/images/industries/medical-device/TGA.png',
+      description: 'Mandates PMS to uphold Australian safety and performance standards for medical devices.',
+    },
+  ];;
 
+  // Type the state as an array of numbers
+  const [openCards, setOpenCards] = useState<number[]>([]);
+
+  // Type 'index' as number and 'prev' as number[] (or let TypeScript infer 'prev')
+  const toggleCard = (index: number) => {
+    setOpenCards((prev: number[]) =>
+      prev.includes(index)
+        ? prev.filter((i: number) => i !== index)
+        : [...prev, index]
+    );
+  };
   return (
     <>
       {/* No banner here — MedicalDeviceIndustryPage (rendered earlier on this route) already
@@ -150,25 +205,51 @@ const MedicalDeviceIndustry: NextPage = () => {
         </section>
 
         {/* SECTION: WHAT POST-MARKET SURVEILLANCE GUIDELINES SHOULD THE MEDICAL DEVICE INDUSTRY CONSIDER? */}
-        <section className="max-w-6xl mx-auto space-y-10 pt-2">
+        <section className="max-w-6xl mx-auto space-y-8 pt-2 px-4">
           <div className="text-center space-y-3">
             <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32]">
               What Post-Market Surveillance Guidelines Should The Medical Device Industry Consider?
             </h2>
             <p className="text-xs md:text-sm text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              PMS guidelines for the medical industry include references such as the Medical Device Guidance Documents (MEDDEV) and the Medical Device Coordination Group (MDCG) guidelines in the EU. PMS guidelines from different organizations are listed below.
+              PMS guidelines for the medical industry include references such as the Medical Device Guidance Documents (MEDDEV) and the Medical Device Coordination Group (MDCG) guidelines in the EU.
+            </p>
+            <p className="text-xs md:text-sm text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              PMS guidelines from different organizations are listed below.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {guidelineCards.map((item, idx) => (
-              <div key={idx} className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm flex items-center space-x-4">
-                <div className="relative w-10 h-10 rounded-lg bg-[#f0f4f1] shrink-0 overflow-hidden">
-                  <Image src={item.iconSrc} alt="" fill className="object-contain p-1" sizes="40px" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
+            {guidelineCards.map((item, idx) => {
+              const isOpen = openCards.includes(idx);
+              return (
+                <div
+                  key={idx}
+                  onClick={() => toggleCard(idx)}
+                  className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-md"
+                >
+                  <div className="p-5 flex items-center space-x-4 min-h-[80px]">
+                    <div className="relative w-10 h-10 shrink-0">
+                      <Image
+                        src={item.iconSrc}
+                        alt=""
+                        fill
+                        className="object-contain"
+                        sizes="40px"
+                      />
+                    </div>
+                    <h3 className="font-bold text-gray-900 text-xs md:text-sm leading-snug">
+                      {item.title}
+                    </h3>
+                  </div>
+
+                  {isOpen && (
+                    <div className="bg-[#f8f9fa] border-t border-gray-100 p-4 text-xs md:text-sm text-gray-600 text-center leading-relaxed">
+                      {item.description}
+                    </div>
+                  )}
                 </div>
-                <h3 className="font-bold text-gray-900 text-xs md:text-sm">{item.title}</h3>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </section>
       </div>
