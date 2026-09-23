@@ -48,10 +48,10 @@ const WhereOurAuthorsPublishAndEditors: NextPage = () => {
   ];
 
   return (
-    <div className="w-full bg-white text-gray-800 py-7 px-4 md:px-8 space-y-10">
+    <div className="w-full bg-white text-gray-800 py-2 px-4 md:px-8 space-y-2">
 
       {/* WHERE OUR AUTHORS PUBLISH SECTION */}
-      <section className="py-12 max-w-5xl mx-auto px-4">
+      <section className="py-1 max-w-5xl mx-auto px-4">
         <WhereAuthorsPublish
           title="Where Our Authors Publish"
           description="Our authors share Pubrica&apos;s expert content in top-tier journals, conferences, and platforms, maximizing and amplifying its recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity."
@@ -67,18 +67,14 @@ const WhereOurAuthorsPublishAndEditors: NextPage = () => {
         />
       </section>
 
-
       {/* OUR EXPERT MEDICAL EDITORS SECTION */}
-
-      <section className="py-12 max-w-6xl mx-auto px-4">
+      <section className="py-1 max-w-6xl mx-auto px-4">
         <ExpertEditorsSection
           title="Our Expert Medical Editors"
           description="Pubrica's team of industry specialists offers unrivalled expertise and perspectives to provide complete solutions with precision and originality. Through a mix of both experience and specialization, they strive for excellence in everything they do."
           editors={expertEditors}
         />
       </section>
-
-
 
     </div>
   );

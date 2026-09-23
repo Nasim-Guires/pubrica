@@ -99,7 +99,7 @@ const MedicalDeviceIndustry: NextPage = () => {
       iconSrc: '/images/industries/medical-device/TGA.png',
       description: 'Mandates PMS to uphold Australian safety and performance standards for medical devices.',
     },
-  ];;
+  ];
 
   // Type the state as an array of numbers
   const [openCards, setOpenCards] = useState<number[]>([]);
@@ -116,10 +116,10 @@ const MedicalDeviceIndustry: NextPage = () => {
     <>
       {/* No banner here — MedicalDeviceIndustryPage (rendered earlier on this route) already
           shows the "Medical Devices" hero; this component picks up with its own content below. */}
-      <div className="w-full bg-white text-gray-800 pb-7 px-4 md:px-8 space-y-20">
+      <div className="w-full bg-white text-gray-800 pb-4 px-4 md:px-8 space-y-6">
         {/* SECTION: CLASSES OF CLINICAL EVALUATION REPORT FOR MEDICAL DEVICES */}
-        <section className="max-w-6xl mx-auto space-y-10 pt-7">
-          <div className="text-center space-y-3">
+        <section className="max-w-6xl mx-auto space-y-4 pt-2">
+          <div className="text-center space-y-1.5">
             <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32]">
               Classes of Clinical Evaluation Report for Medical Devices
             </h2>
@@ -133,36 +133,36 @@ const MedicalDeviceIndustry: NextPage = () => {
               <table className="w-full text-left border-collapse">
                 <thead>
                   <tr className="bg-[#f9fafb] border-b border-gray-200 text-gray-900 text-sm font-bold">
-                    <th className="py-4 px-6">Class</th>
-                    <th className="py-4 px-6">Description</th>
-                    <th className="py-4 px-6">Examples</th>
-                    <th className="py-4 px-6">CER Focus</th>
+                    <th className="py-3 px-5">Class</th>
+                    <th className="py-3 px-5">Description</th>
+                    <th className="py-3 px-5">Examples</th>
+                    <th className="py-3 px-5">CER Focus</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-200 text-xs md:text-sm text-gray-700">
                   <tr className="bg-[#f2fcf5]">
-                    <td className="py-4 px-6 font-bold text-gray-900">Class I Devices (Low Risk)</td>
-                    <td className="py-4 px-6">Non-invasive devices or those with minimal risk to the user.</td>
-                    <td className="py-4 px-6">Bandages, stethoscopes, examination gloves.</td>
-                    <td className="py-4 px-6">• Clinical evaluation is often based mainly on literature review and well-documented experience.<br />• Clinical data requirements are generally less stringent than those for higher-risk classes.</td>
+                    <td className="py-3 px-5 font-bold text-gray-900">Class I Devices (Low Risk)</td>
+                    <td className="py-3 px-5">Non-invasive devices or those with minimal risk to the user.</td>
+                    <td className="py-3 px-5">Bandages, stethoscopes, examination gloves.</td>
+                    <td className="py-3 px-5">• Clinical evaluation is often based mainly on literature review and well-documented experience.<br />• Clinical data requirements are generally less stringent than those for higher-risk classes.</td>
                   </tr>
                   <tr className="bg-[#fffef0]">
-                    <td className="py-4 px-6 font-bold text-gray-900">Class IIa Devices (Medium-Low Risk)</td>
-                    <td className="py-4 px-6">Moderately invasive or pose moderate risk.</td>
-                    <td className="py-4 px-6">Dental fillings, infusion pumps, ultrasound equipment.</td>
-                    <td className="py-4 px-6">• Requires more detailed clinical data than Class I.<br />• May include post-market clinical follow-up (PMCF) or limited clinical investigations.</td>
+                    <td className="py-3 px-5 font-bold text-gray-900">Class IIa Devices (Medium-Low Risk)</td>
+                    <td className="py-3 px-5">Moderately invasive or pose moderate risk.</td>
+                    <td className="py-3 px-5">Dental fillings, infusion pumps, ultrasound equipment.</td>
+                    <td className="py-3 px-5">• Requires more detailed clinical data than Class I.<br />• May include post-market clinical follow-up (PMCF) or limited clinical investigations.</td>
                   </tr>
                   <tr className="bg-[#fcf4f4]">
-                    <td className="py-4 px-6 font-bold text-gray-900">Class IIb Devices (Medium-High Risk)</td>
-                    <td className="py-4 px-6">Invasive or significant impact on patient health if they fail.</td>
-                    <td className="py-4 px-6">Ventilators, anaesthesia equipment,and implantable devices like pacemakers (non-life-sustaining).</td>
-                    <td className="py-4 px-6">• CER must rely on robust clinical evidence.<br />• Usually requires clinical investigations or well-controlled studies in addition to the literature.</td>
+                    <td className="py-3 px-5 font-bold text-gray-900">Class IIb Devices (Medium-High Risk)</td>
+                    <td className="py-3 px-5">Invasive or significant impact on patient health if they fail.</td>
+                    <td className="py-3 px-5">Ventilators, anaesthesia equipment,and implantable devices like pacemakers (non-life-sustaining).</td>
+                    <td className="py-3 px-5">• CER must rely on robust clinical evidence.<br />• Usually requires clinical investigations or well-controlled studies in addition to the literature.</td>
                   </tr>
                   <tr className="bg-[#fcf0f0]">
-                    <td className="py-4 px-6 font-bold text-gray-900">Class III Devices (High Risk)</td>
-                    <td className="py-4 px-6">Devices that are life-sustaining or life-supporting, or have a high risk of serious health consequences.</td>
-                    <td className="py-4 px-6">Heart valves, implantable defibrillators, some orthopaedic implants.</td>
-                    <td className="py-4 px-6">• Requires extensive clinical data from trials and real-world evidence.<br />• CER is a critical component for regulatory approval and must demonstrate safety, performance, and clinical benefit comprehensively.</td>
+                    <td className="py-3 px-5 font-bold text-gray-900">Class III Devices (High Risk)</td>
+                    <td className="py-3 px-5">Devices that are life-sustaining or life-supporting, or have a high risk of serious health consequences.</td>
+                    <td className="py-3 px-5">Heart valves, implantable defibrillators, some orthopaedic implants.</td>
+                    <td className="py-3 px-5">• Requires extensive clinical data from trials and real-world evidence.<br />• CER is a critical component for regulatory approval and must demonstrate safety, performance, and clinical benefit comprehensively.</td>
                   </tr>
                 </tbody>
               </table>
@@ -171,8 +171,8 @@ const MedicalDeviceIndustry: NextPage = () => {
         </section>
 
         {/* SECTION: WHAT IS THE IMPORTANCE OF POST-MARKET SURVEILLANCE FOR MEDICAL DEVICES? */}
-        <section className="max-w-6xl mx-auto space-y-10 pt-7">
-          <div className="text-center space-y-3">
+        <section className="max-w-6xl mx-auto space-y-4 pt-2">
+          <div className="text-center space-y-1.5">
             <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32]">
               What Is The Importance Of Post-Market Surveillance For Medical Devices?
             </h2>
@@ -181,11 +181,11 @@ const MedicalDeviceIndustry: NextPage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {(showAllPMS ? pmsCards : pmsCards.slice(0, 3)).map((card, idx) => (
-              <div key={idx} className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm space-y-2 flex flex-col justify-between">
+              <div key={idx} className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm space-y-2 flex flex-col justify-between">
                 <div>
-                  <h3 className="font-bold text-gray-900 text-base mb-2">{card.title}</h3>
+                  <h3 className="font-bold text-gray-900 text-base mb-1.5">{card.title}</h3>
                   <p className="text-xs md:text-sm text-gray-600 leading-relaxed">{card.description}</p>
                 </div>
               </div>
@@ -193,10 +193,10 @@ const MedicalDeviceIndustry: NextPage = () => {
           </div>
 
           {!showAllPMS && (
-            <div className="flex justify-center pt-4">
+            <div className="flex justify-center pt-2">
               <button
                 onClick={() => setShowAllPMS(true)}
-                className="bg-[#1b3b32] text-white font-bold text-sm py-3 px-8 rounded-full hover:bg-[#122822] transition-colors shadow cursor-pointer"
+                className="bg-[#1b3b32] text-white font-bold text-sm py-2.5 px-7 rounded-full hover:bg-[#122822] transition-colors shadow cursor-pointer"
               >
                 Load More
               </button>
@@ -205,8 +205,8 @@ const MedicalDeviceIndustry: NextPage = () => {
         </section>
 
         {/* SECTION: WHAT POST-MARKET SURVEILLANCE GUIDELINES SHOULD THE MEDICAL DEVICE INDUSTRY CONSIDER? */}
-        <section className="max-w-6xl mx-auto space-y-8 pt-2 px-4">
-          <div className="text-center space-y-3">
+        <section className="max-w-6xl mx-auto space-y-4 pt-2 px-4">
+          <div className="text-center space-y-1.5">
             <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32]">
               What Post-Market Surveillance Guidelines Should The Medical Device Industry Consider?
             </h2>
@@ -218,7 +218,7 @@ const MedicalDeviceIndustry: NextPage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 items-start">
             {guidelineCards.map((item, idx) => {
               const isOpen = openCards.includes(idx);
               return (
@@ -227,7 +227,7 @@ const MedicalDeviceIndustry: NextPage = () => {
                   onClick={() => toggleCard(idx)}
                   className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-md"
                 >
-                  <div className="p-5 flex items-center space-x-4 min-h-[80px]">
+                  <div className="p-4 flex items-center space-x-4 min-h-[70px]">
                     <div className="relative w-10 h-10 shrink-0">
                       <Image
                         src={item.iconSrc}
@@ -243,7 +243,7 @@ const MedicalDeviceIndustry: NextPage = () => {
                   </div>
 
                   {isOpen && (
-                    <div className="bg-[#f8f9fa] border-t border-gray-100 p-4 text-xs md:text-sm text-gray-600 text-center leading-relaxed">
+                    <div className="bg-[#f8f9fa] border-t border-gray-100 p-3.5 text-xs md:text-sm text-gray-600 text-center leading-relaxed">
                       {item.description}
                     </div>
                   )}

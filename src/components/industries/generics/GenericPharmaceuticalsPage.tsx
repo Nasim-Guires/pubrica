@@ -124,7 +124,7 @@ export default function PharmaceuticalDiscoveryAndPublishingPage({
         <link rel="canonical" href="https://pubrica.com/industries/generics/" />
       </Head>
 
-      <main className="min-h-screen bg-white text-[#0f2824]">
+      <main className="min-h-screen bg-white text-[#0f2824] space-y-3">
         {/* Hero Banner Section */}
         <HeroBanner
           title={heroTitle}
@@ -133,8 +133,8 @@ export default function PharmaceuticalDiscoveryAndPublishingPage({
         />
 
         {/* Introduction Section */}
-        <section className="max-w-7xl mx-auto py-7 px-6">
-          <div className="space-y-4 mb-6">
+        <section className="max-w-7xl mx-auto py-2 px-6">
+          <div className="space-y-2 mb-3">
             <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] tracking-tight leading-snug">
               {mainHeading}
             </h2>
@@ -142,14 +142,14 @@ export default function PharmaceuticalDiscoveryAndPublishingPage({
 
           <div className="clearfix">
             {/* CIRCULAR FLOATING IMAGE CONTAINER */}
-            <div className="flex justify-center md:block md:float-right md:ml-8 mb-6">
-              <div className="w-[280px] h-[280px] md:w-[360px] md:h-[360px] rounded-full overflow-hidden shadow-md bg-[#eaf4ef] p-3 flex items-center justify-center relative">
+            <div className="flex justify-center md:block md:float-right md:ml-6 mb-3">
+              <div className="w-[280px] h-[280px] md:w-[320px] md:h-[320px] rounded-full overflow-hidden shadow-md bg-[#eaf4ef] p-2.5 flex items-center justify-center relative">
                 <div className="relative w-full h-full rounded-full overflow-hidden">
                   <Image
                     src="/images/industries/generics/Generic-drugs-are-just-as-safe-and-just-as-effective.webp"
                     alt="Medical professionals discussing generic drug regulatory compliance and market strategies"
                     fill
-                    sizes="(max-width: 768px) 100vw, 360px"
+                    sizes="(max-width: 768px) 100vw, 320px"
                     className="object-cover"
                     priority
                   />
@@ -157,25 +157,26 @@ export default function PharmaceuticalDiscoveryAndPublishingPage({
               </div>
             </div>
 
-            <p className="text-gray-700 mb-4 leading-relaxed text-sm md:text-base">
+            <p className="text-gray-700 mb-2 leading-relaxed text-sm md:text-base">
               {mainDescription}
             </p>
-            <p className="text-gray-700 mb-6 leading-relaxed text-sm md:text-base">
+            <p className="text-gray-700 mb-2 leading-relaxed text-sm md:text-base">
               At Pubrica, we specialize in providing comprehensive support for generics pharmaceuticals, encompassing regulatory affairs, market access strategies, and <a href="/services/scientific-communication/" className="text-blue-600">scientific communication</a>. Our team of experts collaborates closely with clients to navigate the complexities of the generics sector, ensuring compliance and facilitating market entry.
             </p>
-            <p className="text-gray-700 mb-6 leading-relaxed text-sm md:text-base">
+            <p className="text-gray-700 mb-3 leading-relaxed text-sm md:text-base">
               Generics account for 90 percent of prescriptions dispensed in the U.S., but only 13.1 percent of the total drug costs. The thousands of generics available today are rigorously tested by the FDA and must demonstrate that they are the same medicine with the same active ingredients, strength, and dosage as their brand-name counterparts.
             </p>
           </div>
 
-          <div className="flex justify-center">
+          <div className="flex justify-center mt-2">
             <GetFreeQuoteButton />
           </div>
         </section>
+
         {/* Expertise Section with 3 Cards on Left & 3 Cards on Right around Central Image */}
-        <section className="py-7 bg-gray-50 px-4 md:px-8">
-          <div className="max-w-6xl mx-auto text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+        <section className="py-4 bg-gray-50 px-4 md:px-8">
+          <div className="max-w-6xl mx-auto text-center mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
               {expertiseHeading}
             </h2>
             <p className="text-sm md:text-base text-gray-600 max-w-5xl mx-auto leading-relaxed">
@@ -184,59 +185,59 @@ export default function PharmaceuticalDiscoveryAndPublishingPage({
           </div>
 
           {/* Central Graphic with Surrounding Cards Layout */}
-          <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-2 md:gap-3 items-center">
             {/* Left Column Cards (3 items: 1, 3, 5) */}
-            <div className="space-y-6">
-              <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="font-bold text-red-700 text-base mb-1.5">{services[1].title}</h3>
+            <div className="space-y-3">
+              <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                <h3 className="font-bold text-red-700 text-base mb-1">{services[1].title}</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">{services[1].description}</p>
               </div>
-              <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="font-bold text-red-700 text-base mb-1.5">{services[3].title}</h3>
+              <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                <h3 className="font-bold text-red-700 text-base mb-1">{services[3].title}</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">{services[3].description}</p>
               </div>
-              <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="font-bold text-red-700 text-base mb-1.5">{services[5].title}</h3>
+              <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                <h3 className="font-bold text-red-700 text-base mb-1">{services[5].title}</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">{services[5].description}</p>
               </div>
             </div>
 
             {/* Center Image - Scaled Up */}
-            <div className="flex justify-center my-6 md:my-0">
-              <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full border-4 border-white shadow-md overflow-hidden">
+            <div className="flex justify-center my-2 md:my-0">
+              <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-full border-4 border-white shadow-md overflow-hidden shrink-0">
                 <Image
                   src="/images/industries/generics/Our-Expertise-for-the-Generics-Industry-Includes.webp"
                   alt="Medical professional reviewing data for generic pharmaceuticals"
                   fill
                   className="object-cover"
-                  sizes="(max-width: 768px) 288px, 320px"
+                  sizes="(max-width: 768px) 320px, 384px"
                   priority
                 />
               </div>
             </div>
 
             {/* Right Column Cards (3 items: 0, 2, 4) */}
-            <div className="space-y-6">
-              <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="font-bold text-red-700 text-base mb-1.5">{services[0].title}</h3>
+            <div className="space-y-3">
+              <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                <h3 className="font-bold text-red-700 text-base mb-1">{services[0].title}</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">{services[0].description}</p>
               </div>
-              <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="font-bold text-red-700 text-base mb-1.5">{services[2].title}</h3>
+              <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                <h3 className="font-bold text-red-700 text-base mb-1">{services[2].title}</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">{services[2].description}</p>
               </div>
-              <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="font-bold text-red-700 text-base mb-1.5">{services[4].title}</h3>
+              <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                <h3 className="font-bold text-red-700 text-base mb-1">{services[4].title}</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">{services[4].description}</p>
               </div>
             </div>
           </div>
         </section>
         {/* Generic Drug Segments We Serve Section */}
-        <section className="py-8 px-6 max-w-7xl mx-auto">
+        <section className="py-4 px-6 max-w-7xl mx-auto">
           {/* Header Section */}
-          <div className="text-left mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] mb-3">
+          <div className="text-left mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] mb-1.5">
               Generic Drug Segments We Serve
             </h2>
             <p className="text-gray-700 max-w-5xl text-sm md:text-base leading-relaxed">
@@ -245,29 +246,29 @@ export default function PharmaceuticalDiscoveryAndPublishingPage({
           </div>
 
           {/* Grid Section */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
             {segments.map((segment, index) => (
               <div
                 key={index}
-                className="bg-white border border-gray-100 p-5 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-row items-start space-x-3 min-h-[140px]"
+                className="bg-white border border-gray-100 p-4 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-row items-start space-x-3 min-h-[120px]"
               >
                 {segment.iconSrc && (
-                  <div className="relative w-10 h-10 shrink-0 flex items-center justify-center">
+                  <div className="relative w-9 h-9 shrink-0 flex items-center justify-center">
                     <Image
                       src={segment.iconSrc}
                       alt=""
                       fill
                       className="object-contain"
-                      sizes="40px"
+                      sizes="36px"
                     />
                   </div>
                 )}
 
                 <div className="flex-1">
-                  <h4 className="font-bold text-sm md:text-base text-[#1b3b32] mb-1.5 leading-snug">
+                  <h4 className="font-bold text-sm md:text-base text-[#1b3b32] mb-1 leading-snug">
                     {segment.title}
                   </h4>
-                  <p className="text-gray-600 text-xs md:text-xs leading-relaxed">
+                  <p className="text-gray-600 text-xs leading-relaxed">
                     {segment.description}
                   </p>
                 </div>

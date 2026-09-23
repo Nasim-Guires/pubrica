@@ -23,15 +23,15 @@ export default function PharmaceuticalIndustryPage() {
       />
 
       {/* Main Content & Overview Section */}
-      <section className="py-6 px-4 md:px-8 max-w-6xl mx-auto space-y-6">
-        <div className="space-y-4">
+      <section className="py-2 px-4 md:px-8 max-w-6xl mx-auto space-y-3">
+        <div className="space-y-2">
           <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] tracking-tight leading-snug">
             Enhancing Regulatory Compliance and Market Readiness of Pharmaceutical Products Through Expert Dossier Preparation, Pharmacovigilance, and Data Management Services
           </h2>
         </div>
 
         {/* MOBILE IMAGE: Displayed block and centered on mobile only */}
-        <div className="block md:hidden mx-auto my-6 w-[280px] h-[280px] rounded-full overflow-hidden shadow-md bg-[#eaf4ef] p-3 relative">
+        <div className="block md:hidden mx-auto my-3 w-[280px] h-[280px] rounded-full overflow-hidden shadow-md bg-[#eaf4ef] p-3 relative">
           <div className="relative w-full h-full rounded-full overflow-hidden">
             <Image
               src="/images/industries/pharmaceutical/Enhancing-Regulatory-Compliance-and-Market-Readiness-of-Pharmaceutical-Products-.webp"
@@ -45,7 +45,7 @@ export default function PharmaceuticalIndustryPage() {
 
         <div className="clearfix">
           {/* DESKTOP IMAGE: Floating right on desktop only */}
-          <div className="hidden md:block md:float-right md:ml-8 mb-6 md:w-[360px] md:h-[360px] rounded-full overflow-hidden shadow-md bg-[#eaf4ef] p-3 relative">
+          <div className="hidden md:block md:float-right md:ml-8 mb-3 md:w-[360px] md:h-[360px] rounded-full overflow-hidden shadow-md bg-[#eaf4ef] p-3 relative">
             <div className="relative w-full h-full rounded-full overflow-hidden">
               <Image
                 src="/images/industries/pharmaceutical/Enhancing-Regulatory-Compliance-and-Market-Readiness-of-Pharmaceutical-Products-.webp"
@@ -57,23 +57,23 @@ export default function PharmaceuticalIndustryPage() {
             </div>
           </div>
 
-          <p className="text-sm md:text-base text-gray-600 mb-4 leading-relaxed">
+          <p className="text-sm md:text-base text-gray-600 mb-3 leading-relaxed">
             The pharmaceutical industry is at the forefront of scientific innovation, transforming healthcare through the development of life-saving drugs, vaccines, and therapies. Navigating this highly regulated landscape requires expertise in clinical research, regulatory compliance, <a href="/services/research-services/medical-writing/" className="text-blue-600">medical writing</a>, and post-market surveillance to ensure that products are safe, effective, and meet global standards.
           </p>
-          <p className="text-sm md:text-base text-gray-600 mb-6 leading-relaxed">
+          <p className="text-sm md:text-base text-gray-600 mb-3 leading-relaxed">
             To help meet these challenges, Pubrica provides a range of services to the pharmaceutical industry, across research and discovery, marketing materials, and regulatory compliance. These services aim to be able to help in all facets of pharmaceutical drug development from discovery to market and clinician adoption. This comprehensive approach supports the scientific rigor of pharmaceutical development and enhances the marketability of solutions that can have a significant impact on global health. Our pharmacologists, researchers, and marketing experts collaborate to support every stage of pharmaceutical development.
           </p>
         </div>
 
-        <div className="">
+        <div className="pt-1">
           <GetFreeQuoteButton />
         </div>
       </section>
 
       {/* Expertise Section */}
-      <section className="py-7 bg-gray-50 px-4 md:px-8">
-        <div className="max-w-6xl mx-auto text-center mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+      <section className="py-3 bg-gray-50 px-4 md:px-8">
+        <div className="max-w-6xl mx-auto text-center mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
             Our Expertise in the Pharmaceutical Industry Includes
           </h2>
           <p className="text-sm md:text-base text-gray-600 max-w-5xl mx-auto leading-relaxed">
@@ -82,22 +82,22 @@ export default function PharmaceuticalIndustryPage() {
         </div>
 
         {/* Central Graphic with Surrounding Cards Layout */}
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-2 md:gap-3 items-center">
           {/* Left Column Cards */}
-          <div className="space-y-6">
-            <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+          <div className="space-y-3">
+            <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
               <h3 className="font-bold text-red-700 text-sm mb-1">Pharmacovigilance & Safety Monitoring</h3>
               <p className="text-xs text-gray-600 leading-relaxed">
                 End-to-end pharmacovigilance services, including adverse event reporting, risk management, and ongoing safety surveillance to ensure patient safety and regulatory compliance.
               </p>
             </div>
-            <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+            <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
               <h3 className="font-bold text-red-700 text-sm mb-1">Quality Assurance & Compliance</h3>
               <p className="text-xs text-gray-600 leading-relaxed">
                 Ensuring adherence to Good Manufacturing Practices (GMP), Good Clinical Practices (GCP), and other global quality standards.
               </p>
             </div>
-            <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+            <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
               <h3 className="font-bold text-red-700 text-sm mb-1">Medical Writing & Scientific Communication</h3>
               <p className="text-xs text-gray-600 leading-relaxed">
                 Preparation of clinical study reports, research manuscripts, and regulatory documents with precision and clarity.
@@ -105,33 +105,34 @@ export default function PharmaceuticalIndustryPage() {
             </div>
           </div>
 
-          <div className="flex justify-center my-6 md:my-0">
-            <div className="relative w-64 h-64 rounded-full border-4 border-white shadow-md overflow-hidden">
+          {/* Center Image Container - Scaled up */}
+          <div className="flex justify-center my-2 md:my-0">
+            <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-full border-4 border-white shadow-md overflow-hidden shrink-0">
               <Image
                 src="/images/industries/pharmaceutical/Our-Expertise-in-the-Pharmaceutical-Industry-Includes.webp"
                 alt="Laboratory scientist in white coat"
                 fill
                 className="object-cover"
-                sizes="256px"
+                sizes="(max-width: 768px) 320px, 384px"
               />
             </div>
           </div>
 
           {/* Right Column Cards */}
-          <div className="space-y-6">
-            <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+          <div className="space-y-3">
+            <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
               <h3 className="font-bold text-red-700 text-sm mb-1">Regulatory Affairs & Dossier Preparation</h3>
               <p className="text-xs text-gray-600 leading-relaxed">
                 Comprehensive support in preparing CTD dossiers, IND/NDA submissions, and regulatory documentation in line with global standards (FDA, EMA, ICH).
               </p>
             </div>
-            <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+            <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
               <h3 className="font-bold text-red-700 text-sm mb-1">Clinical Research Support</h3>
               <p className="text-xs text-gray-600 leading-relaxed">
                 End-to-end support for clinical trials, from study design and protocol development to data analysis and reporting.
               </p>
             </div>
-            <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+            <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
               <h3 className="font-bold text-red-700 text-sm mb-1">Market Access & Lifecycle Management</h3>
               <p className="text-xs text-gray-600 leading-relaxed">
                 Strategic support for product launch, post-marketing surveillance, and ongoing compliance throughout the product lifecycle.
@@ -142,9 +143,9 @@ export default function PharmaceuticalIndustryPage() {
       </section>
 
       {/* Pharmaceutical Segments We Serve */}
-      <section className="py-7 px-4 md:px-8 max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+      <section className="py-3 px-4 md:px-8 max-w-6xl mx-auto">
+        <div className="text-center mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
             Pharmaceutical Segments We Serve
           </h2>
           <p className="text-sm md:text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">

@@ -14,18 +14,18 @@ const MedicalDeviceIndustryPage: NextPage = () => {
         headingAs="h1"
       />
 
-      <div className="w-full bg-white text-gray-800 pb-7 px-4 md:px-8 space-y-20">
+      <div className="w-full bg-white text-gray-800 pb-4 px-4 md:px-8 space-y-6">
 
         {/* SECTION 1: ENHANCING COMPLIANCE & MARKET READINESS */}
-        <section className="max-w-5xl mx-auto space-y-8">
-          <div className="space-y-4">
+        <section className="max-w-5xl mx-auto space-y-3 py-1">
+          <div className="space-y-1">
             <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] tracking-tight">
               Enhancing Compliance and Market Readiness of Medical Devices Through Expert CER, Post-Market Surveillance, and Data Collection Services
             </h2>
           </div>
 
           {/* MOBILE IMAGE: Displayed block and centered on mobile only */}
-          <div className="block md:hidden mx-auto my-6 w-[280px] h-[280px] rounded-full overflow-hidden shadow-md bg-[#eaf4ef] p-3 relative">
+          <div className="block md:hidden mx-auto my-2 w-[280px] h-[280px] rounded-full overflow-hidden shadow-md bg-[#eaf4ef] p-3 relative">
             <div className="relative w-full h-full rounded-full overflow-hidden">
               <Image
                 src="/images/industries/medical-device/Enhancing-Compliance-and-Market-Readiness-of-Medical-Devices-1.png"
@@ -36,9 +36,9 @@ const MedicalDeviceIndustryPage: NextPage = () => {
             </div>
           </div>
 
-          <div className="clearfix text-gray-700 text-sm md:text-base leading-relaxed space-y-6">
+          <div className="clearfix text-gray-700 text-sm md:text-base leading-relaxed space-y-3">
             {/* DESKTOP IMAGE: Floating right on desktop only */}
-            <div className="hidden md:block md:float-right md:ml-8 mb-6 md:w-[360px] md:h-[360px] rounded-full overflow-hidden shadow-md bg-[#eaf4ef] p-3 relative">
+            <div className="hidden md:block md:float-right md:ml-8 mb-2 md:w-[360px] md:h-[360px] rounded-full overflow-hidden shadow-md bg-[#eaf4ef] p-3 relative">
               <div className="relative w-full h-full rounded-full overflow-hidden">
                 <Image
                   src="/images/industries/medical-device/Enhancing-Compliance-and-Market-Readiness-of-Medical-Devices-1.png"
@@ -61,9 +61,9 @@ const MedicalDeviceIndustryPage: NextPage = () => {
           </div>
 
           {/* KEY FEATURES LIST */}
-          <div className="clear-both pt-4 space-y-4">
+          <div className="clear-both pt-1 space-y-2">
             <h3 className="text-base font-bold text-gray-900">Key Features Include:</h3>
-            <ul className="space-y-3 text-gray-700 text-sm md:text-base">
+            <ul className="space-y-1.5 text-gray-700 text-sm md:text-base">
               <li className="flex items-start space-x-3">
                 <span className="text-red-600 font-bold text-sm mt-0.5">➔</span>
                 <span>Clinical investigation of the device under evaluation.</span>
@@ -82,28 +82,47 @@ const MedicalDeviceIndustryPage: NextPage = () => {
               </li>
             </ul>
 
-            <div className="pt-6">
+            <div className="pt-2">
               <GetFreeQuoteButton />
             </div>
           </div>
         </section>
 
-        {/* SECTION 2: OUR EXPERTISE IN MEDICAL DEVICES (EXACT CENTRALLY ALIGNED CIRCULAR WHEEL LAYOUT) */}
-        <section className="max-w-7xl mx-auto space-y-10 pt-8">
-          <div className="text-center space-y-3">
+        {/* SECTION 2: OUR EXPERTISE IN MEDICAL DEVICES */}
+        <section className="max-w-7xl mx-auto py-1 space-y-4">
+          {/* HEADER SECTION */}
+          <div className="text-center space-y-1.5">
             <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32]">
               Our Expertise in Medical Devices Includes
             </h2>
-            <p className="text-xs md:text-sm text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-sm md:text-base text-gray-600 max-w-4xl mx-auto leading-relaxed">
               We provide end-to-end support for medical device companies, helping them navigate the entire product lifecycle, from research and development to market access and PMS. Our services are designed to ensure compliance, efficiency, and safety, keeping patient welfare at the center of every solution.
             </p>
           </div>
 
-          {/* EXACT DESKTOP RADIAL CONTAINER */}
-          <div className="relative w-full max-w-5xl mx-auto h-[600px] hidden lg:flex items-center justify-center">
+          {/* DESKTOP INTEGRATED LAYOUT */}
+          <div className="hidden lg:flex items-center justify-center gap-8 py-1">
 
-            {/* CENTER CIRCLE IMAGE */}
-            <div className="absolute z-10 w-[340px] h-[340px] rounded-full overflow-hidden border-4 border-white shadow-xl bg-gray-100 flex items-center justify-center">
+            {/* LEFT CARDS COLUMN */}
+            <div className="flex flex-col gap-4 w-[340px] shrink-0">
+              <div className="bg-white border border-gray-200 rounded-2xl p-5 shadow-md space-y-2 hover:shadow-lg transition-shadow">
+                <h3 className="font-bold text-[#c5221f] text-base md:text-lg">Regulatory Submissions</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">Support for global regulatory compliance, including FDA, CE marking, and other regional approvals.</p>
+              </div>
+
+              <div className="bg-white border border-gray-200 rounded-2xl p-5 shadow-md space-y-2 hover:shadow-lg transition-shadow">
+                <h3 className="font-bold text-[#c5221f] text-base md:text-lg">Risk Management & Vigilance Reporting</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">Guidance on ISO 14971-based risk assessments, incident reporting, and corrective actions.</p>
+              </div>
+
+              <div className="bg-white border border-gray-200 rounded-2xl p-5 shadow-md space-y-2 hover:shadow-lg transition-shadow">
+                <h3 className="font-bold text-[#c5221f] text-base md:text-lg">Medical Writing & Scientific Support</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">Professional scientific writing, clinical study reports, and regulatory documentation for devices ranging from Class I to Class III.</p>
+              </div>
+            </div>
+
+            {/* CENTER CIRCLE IMAGE (ENLARGED) */}
+            <div className="relative w-[420px] h-[420px] rounded-full overflow-hidden border-8 border-white shadow-2xl bg-gray-100 shrink-0">
               <Image
                 src="/images/industries/medical-device/Our-Expertise-in-Medical-Devices-Includes.png"
                 alt="Medical Professional"
@@ -112,46 +131,28 @@ const MedicalDeviceIndustryPage: NextPage = () => {
               />
             </div>
 
-            {/* CARD 1: Left Top */}
-            <div className="absolute top-[80px] left-[20px] w-[280px] bg-white border border-gray-200 rounded-xl p-4 shadow-md space-y-1 z-20">
-              <h3 className="font-bold text-[#c5221f] text-xs md:text-sm">Regulatory Submissions</h3>
-              <p className="text-[11px] text-gray-600 leading-tight">Support for global regulatory compliance, including FDA, CE marking, and other regional approvals.</p>
-            </div>
+            {/* RIGHT CARDS COLUMN */}
+            <div className="flex flex-col gap-6 w-[340px] shrink-0">
+              <div className="bg-white border border-gray-200 rounded-2xl p-5 shadow-md space-y-2 hover:shadow-lg transition-shadow">
+                <h3 className="font-bold text-[#c5221f] text-base md:text-lg">Clinical Evaluation Reports (CERs)</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">Comprehensive preparation and maintenance of CERs to demonstrate safety and performance in line with MDR and ISO 13485 requirements.</p>
+              </div>
 
-            {/* CARD 2: Left Middle */}
-            <div className="absolute top-[250px] left-[-20px] w-[280px] bg-white border border-gray-200 rounded-xl p-4 shadow-md space-y-1 z-20">
-              <h3 className="font-bold text-[#c5221f] text-xs md:text-sm">Risk Management & Vigilance Reporting</h3>
-              <p className="text-[11px] text-gray-600 leading-tight">Guidance on ISO 14971-based risk assessments, incident reporting, and corrective actions.</p>
-            </div>
+              <div className="bg-white border border-gray-200 rounded-2xl p-5 shadow-md space-y-2 hover:shadow-lg transition-shadow">
+                <h3 className="font-bold text-[#c5221f] text-base md:text-lg">Post-Market Surveillance (PMS)</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">Collection, analysis, and reporting of post-market data to ensure ongoing device safety and compliance.</p>
+              </div>
 
-            {/* CARD 3: Left Bottom */}
-            <div className="absolute bottom-[40px] left-[40px] w-[280px] bg-white border border-gray-200 rounded-xl p-4 shadow-md space-y-1 z-20">
-              <h3 className="font-bold text-[#c5221f] text-xs md:text-sm">Medical Writing & Scientific Support</h3>
-              <p className="text-[11px] text-gray-600 leading-tight">Professional scientific writing, clinical study reports, and regulatory documentation for devices ranging from Class I to Class III.</p>
-            </div>
-
-            {/* CARD 4: Right Top */}
-            <div className="absolute top-[80px] right-[20px] w-[280px] bg-white border border-gray-200 rounded-xl p-4 shadow-md space-y-1 z-20">
-              <h3 className="font-bold text-[#c5221f] text-xs md:text-sm">Clinical Evaluation Reports (CERs)</h3>
-              <p className="text-[11px] text-gray-600 leading-tight">Comprehensive preparation and maintenance of CERs to demonstrate safety and performance in line with MDR and ISO 13485 requirements.</p>
-            </div>
-
-            {/* CARD 5: Right Middle */}
-            <div className="absolute top-[250px] right-[-20px] w-[280px] bg-white border border-gray-200 rounded-xl p-4 shadow-md space-y-1 z-20">
-              <h3 className="font-bold text-[#c5221f] text-xs md:text-sm">Post-Market Surveillance (PMS)</h3>
-              <p className="text-[11px] text-gray-600 leading-tight">Collection, analysis, and reporting of post-market data to ensure ongoing device safety and compliance.</p>
-            </div>
-
-            {/* CARD 6: Right Bottom */}
-            <div className="absolute bottom-[40px] right-[40px] w-[280px] bg-white border border-gray-200 rounded-xl p-4 shadow-md space-y-1 z-20">
-              <h3 className="font-bold text-[#c5221f] text-xs md:text-sm">Technical Documentation & Dossiers</h3>
-              <p className="text-[11px] text-gray-600 leading-tight">End-to-end support in preparing high-quality technical files and design dossiers.</p>
+              <div className="bg-white border border-gray-200 rounded-2xl p-5 shadow-md space-y-2 hover:shadow-lg transition-shadow">
+                <h3 className="font-bold text-[#c5221f] text-base md:text-lg">Technical Documentation & Dossiers</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">End-to-end support in preparing high-quality technical files and design dossiers.</p>
+              </div>
             </div>
 
           </div>
 
           {/* MOBILE / TABLET STACKED FALLBACK */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:hidden">
             {[
               {
                 title: 'Clinical Evaluation Reports (CERs)',
@@ -178,18 +179,17 @@ const MedicalDeviceIndustryPage: NextPage = () => {
                 description: 'Professional scientific writing, clinical study reports, and regulatory documentation for devices ranging from Class I to Class III.'
               }
             ].map((item, idx) => (
-              <div key={idx} className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm space-y-1">
-                <h3 className="font-bold text-[#c5221f] text-sm">{item.title}</h3>
-                <p className="text-xs text-gray-600 leading-relaxed">{item.description}</p>
+              <div key={idx} className="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm space-y-2">
+                <h3 className="font-bold text-[#c5221f] text-base">{item.title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
-
         </section>
 
         {/* SECTION 3: MEDICAL DEVICE SEGMENTS WE SERVE */}
-        <section className="max-w-6xl mx-auto space-y-10 pt-7">
-          <div className="text-center space-y-3">
+        <section className="max-w-6xl mx-auto space-y-4 pt-2">
+          <div className="text-center space-y-1.5">
             <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32]">
               Medical Device Segments We Serve
             </h2>
@@ -198,7 +198,7 @@ const MedicalDeviceIndustryPage: NextPage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
               {
                 title: 'Diagnostic & Imaging Devices',
@@ -231,12 +231,12 @@ const MedicalDeviceIndustryPage: NextPage = () => {
                 iconSrc: '/images/industries/medical-device/Surgical-Hospital-Devices.png',
               }
             ].map((segment, idx) => (
-              <div key={idx} className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm flex flex-col justify-between transition-all hover:shadow-md">
+              <div key={idx} className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm flex flex-col justify-between transition-all hover:shadow-md">
                 <div>
-                  <div className="relative w-10 h-10 mb-3">
+                  <div className="relative w-10 h-10 mb-2">
                     <Image src={segment.iconSrc} alt="" fill className="object-contain" sizes="40px" />
                   </div>
-                  <h3 className="font-bold text-gray-900 text-base mb-2">{segment.title}</h3>
+                  <h3 className="font-bold text-gray-900 text-base mb-1.5">{segment.title}</h3>
                   <p className="text-xs md:text-sm text-gray-600 leading-relaxed">{segment.description}</p>
                 </div>
               </div>

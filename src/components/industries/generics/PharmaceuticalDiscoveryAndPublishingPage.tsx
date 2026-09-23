@@ -152,12 +152,12 @@ export default function PharmaceuticalDiscoveryAndPublishingPage({
         <link rel="canonical" href="https://pubrica.com/industries/generics/" />
       </Head>
 
-      <main className="min-h-screen bg-white text-[#0f2824]">
+      <main className="min-h-screen bg-white text-[#0f2824] space-y-3">
 
         {/* Are Generic Drugs As Good As Brand Names Section */}
-        <section className="py-8 px-6 max-w-7xl mx-auto">
-          <div className="text-start mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] mb-3">
+        <section className="py-3 px-6 max-w-7xl mx-auto">
+          <div className="text-start mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] mb-1.5">
               Are Generic Drugs As Good As Brand Names?
             </h2>
             <p className="text-gray-600 text-sm md:text-base leading-relaxed">
@@ -165,49 +165,49 @@ export default function PharmaceuticalDiscoveryAndPublishingPage({
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
-            <div className="bg-[#e8f4f8] border border-[#c5e1eb] p-6 rounded-xl shadow-sm hover:shadow-md transition-all text-left flex flex-col items-start gap-4">
-              <div className="relative h-10 w-10 bg-white rounded-lg p-2 shadow-sm border border-[#c5e1eb] flex items-center justify-center">
-                <Image src="/images/industries/generics/same-active-ingredient-.webp" alt="Icon representing same active ingredient in pharmaceutical product" fill className="object-contain p-1" sizes="40px" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 mb-5">
+            <div className="bg-[#e8f4f8] border border-[#c5e1eb] p-4 rounded-xl shadow-sm hover:shadow-md transition-all text-left flex flex-col items-start gap-2.5">
+              <div className="relative h-9 w-9 bg-white rounded-lg p-1.5 shadow-sm border border-[#c5e1eb] flex items-center justify-center">
+                <Image src="/images/industries/generics/same-active-ingredient-.webp" alt="Icon representing same active ingredient in pharmaceutical product" fill className="object-contain p-1" sizes="36px" />
               </div>
               <p className="text-gray-800 font-semibold text-sm leading-snug">Contains the same active ingredient</p>
             </div>
 
-            <div className="bg-[#e8f4f8] border border-[#c5e1eb] p-6 rounded-xl shadow-sm hover:shadow-md transition-all text-left flex flex-col items-start gap-4">
-              <div className="relative h-10 w-10 bg-white rounded-lg p-2 shadow-sm border border-[#c5e1eb] flex items-center justify-center">
-                <Image src="/images/industries/generics/identical-in-strength-dosage-form-.webp" alt="Icon representing identical strength dosage form and route of administration" fill className="object-contain p-1" sizes="40px" />
+            <div className="bg-[#e8f4f8] border border-[#c5e1eb] p-4 rounded-xl shadow-sm hover:shadow-md transition-all text-left flex flex-col items-start gap-2.5">
+              <div className="relative h-9 w-9 bg-white rounded-lg p-1.5 shadow-sm border border-[#c5e1eb] flex items-center justify-center">
+                <Image src="/images/industries/generics/identical-in-strength-dosage-form-.webp" alt="Icon representing identical strength dosage form and route of administration" fill className="object-contain p-1" sizes="36px" />
               </div>
               <p className="text-gray-800 font-semibold text-sm leading-snug">Is identical in strength, dosage form, and route of administration</p>
             </div>
 
-            <div className="bg-[#e8f4f8] border border-[#c5e1eb] p-6 rounded-xl shadow-sm hover:shadow-md transition-all text-left flex flex-col items-start gap-4">
-              <div className="relative h-10 w-10 bg-white rounded-lg p-2 shadow-sm border border-[#c5e1eb] flex items-center justify-center">
-                <Image src="/images/industries/generics/indication-dosing-and-lablelling.webp" alt="Icon representing same indications dosing and labeling in pharmaceutical product" fill className="object-contain p-1" sizes="40px" />
+            <div className="bg-[#e8f4f8] border border-[#c5e1eb] p-4 rounded-xl shadow-sm hover:shadow-md transition-all text-left flex flex-col items-start gap-2.5">
+              <div className="relative h-9 w-9 bg-white rounded-lg p-1.5 shadow-sm border border-[#c5e1eb] flex items-center justify-center">
+                <Image src="/images/industries/generics/indication-dosing-and-lablelling.webp" alt="Icon representing same indications dosing and labeling in pharmaceutical product" fill className="object-contain p-1" sizes="36px" />
               </div>
               <p className="text-gray-800 font-semibold text-sm leading-snug">Has the same indications, dosing, and labelling</p>
             </div>
 
-            <div className="bg-[#e8f4f8] border border-[#c5e1eb] p-6 rounded-xl shadow-sm hover:shadow-md transition-all text-left flex flex-col items-start gap-4">
-              <div className="relative h-10 w-10 bg-white rounded-lg p-2 shadow-sm border border-[#c5e1eb] flex items-center justify-center">
-                <Image src="/images/industries/generics/efficacy-and-safety-bioequivalent-.webp" alt="Icon representing bioequivalence with same efficacy and safety profile" fill className="object-contain p-1" sizes="40px" />
+            <div className="bg-[#e8f4f8] border border-[#c5e1eb] p-4 rounded-xl shadow-sm hover:shadow-md transition-all text-left flex flex-col items-start gap-2.5">
+              <div className="relative h-9 w-9 bg-white rounded-lg p-1.5 shadow-sm border border-[#c5e1eb] flex items-center justify-center">
+                <Image src="/images/industries/generics/efficacy-and-safety-bioequivalent-.webp" alt="Icon representing bioequivalence with same efficacy and safety profile" fill className="object-contain p-1" sizes="36px" />
               </div>
               <p className="text-gray-800 font-semibold text-sm leading-snug">Provides the same efficacy and safety profile to patients (&quot;bioequivalent&quot;)</p>
             </div>
           </div>
 
           {/* Why the Generics Sector Matters - Clean non-card section */}
-          <div className="bg-white border-y border-[#c5e1eb] py-8 px-6 rounded-2xl">
-            <h3 className="text-xl md:text-2xl font-bold text-[#1b3b32] mb-5">Why the Generics Sector Matters</h3>
-            <ul className="space-y-4 text-gray-700 text-sm md:text-base leading-relaxed">
-              <li className="flex items-start gap-3">
+          <div className="bg-white border-y border-[#c5e1eb] py-4 px-5 rounded-2xl">
+            <h3 className="text-xl md:text-2xl font-bold text-[#1b3b32] mb-3">Why the Generics Sector Matters</h3>
+            <ul className="space-y-2 text-gray-700 text-sm md:text-base leading-relaxed">
+              <li className="flex items-start gap-2.5">
                 <span className="text-[#1b3b32] font-bold mt-0.5">•</span>
                 <span>Generic medicines play a critical role in global healthcare by making essential therapies more affordable while maintaining safety, efficacy, and quality.</span>
               </li>
-              <li className="flex items-start gap-3">
+              <li className="flex items-start gap-2.5">
                 <span className="text-[#1b3b32] font-bold mt-0.5">•</span>
                 <span>With patent expirations creating opportunities, competition from generics helps reduce overall healthcare costs and expand access.</span>
               </li>
-              <li className="flex items-start gap-3">
+              <li className="flex items-start gap-2.5">
                 <span className="text-[#1b3b32] font-bold mt-0.5">•</span>
                 <span>However, the generics landscape is complex manufacturers face regulatory, scientific, and market challenges in bringing generics to market and sustaining competitiveness.</span>
               </li>
@@ -216,8 +216,8 @@ export default function PharmaceuticalDiscoveryAndPublishingPage({
         </section>
 
         {/* Generic Drugs Must Meet the Same High Standards Section */}
-        <section className="py-7 px-6 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="relative w-full h-[400px] flex justify-center items-center">
+        <section className="py-3 px-6 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
+          <div className="relative w-full h-[280px] md:h-[340px] flex justify-center items-center">
             <div className="relative w-full h-full rounded-2xl overflow-hidden">
               <Image
                 src="/images/industries/generics/Generic-Drugs-Must-Meet-the-Same-High-Standards.webp"
@@ -229,13 +229,13 @@ export default function PharmaceuticalDiscoveryAndPublishingPage({
             </div>
           </div>
           <div>
-            <h2 className="text-2xl md:text-3xl font-bold mb-6 leading-snug">
+            <h2 className="text-2xl md:text-3xl font-bold mb-3 leading-snug">
               Generic Drugs Must Meet the Same High Standards as Brand-Name Drugs to Receive FDA Approval
             </h2>
-            <p className="text-gray-700 mb-4 text-sm md:text-base leading-relaxed">
+            <p className="text-gray-700 mb-2.5 text-sm md:text-base leading-relaxed">
               The FDA requires drug companies to demonstrate that the generic medicine can be effectively substituted and provide the same clinical benefit as the brand-name medicine. Generic drug applicants must show that the generic medicine is the same as the brand-name in the following ways:
             </p>
-            <ul className="space-y-3 text-gray-700 text-sm">
+            <ul className="space-y-2 text-gray-700 text-sm">
               <li className="flex items-start gap-2">
                 <span className="text-[#0f2824] font-bold">•</span>
                 <span>The active ingredient in the generic medicine is the same as in the brand-name drug/innovator drug.</span>
@@ -261,9 +261,8 @@ export default function PharmaceuticalDiscoveryAndPublishingPage({
         </section>
 
         {/* Where Our Authors Publish Section */}
-        <section className="py-12 max-w-5xl mx-auto px-4">
-
-          <div className="space-y-6">
+        <section className="py-2 max-w-5xl mx-auto px-4">
+          <div className="space-y-2">
             <WhereAuthorsPublish
               title="Where Our Authors Publish"
               description="Our authors share Pubrica&apos;s expert content in top-tier journals, conferences, and platforms, maximizing and amplifying its recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity."
@@ -282,17 +281,14 @@ export default function PharmaceuticalDiscoveryAndPublishingPage({
           </div>
         </section>
 
-
-
         {/* Our Expert Medical Editors Section */}
-        <section className="py-12 max-w-6xl mx-auto px-4">
+        <section className="py-2 max-w-6xl mx-auto px-4">
           <ExpertEditorsSection
             title="Our Expert Medical Editors"
             description="Pubrica's team of industry specialists offers unrivalled expertise and perspectives to provide complete solutions with precision and originality. Through a mix of both experience and specialization, they strive for excellence in everything they do."
             editors={expertEditors}
           />
         </section>
-
 
       </main>
     </>

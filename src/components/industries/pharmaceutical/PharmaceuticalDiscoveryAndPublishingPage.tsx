@@ -12,7 +12,6 @@ const discoverySteps = [
     title: "Target Identification and Discovery of Potential Drugs",
     description: [
       "Target identification is the first step in the drug discovery process, where researchers identify specific molecular targets within the body that play key roles in a disease or condition. By understanding the underlying biological mechanisms and pathways associated with the disease, scientists can identify potential targets that can be modulated to achieve therapeutic effects. Target identification involves a combination of experimental and computational approaches, including genomic, proteomic, and bioinformatic analyses. ",
-
     ],
     image: {
       src: "/images/industries/pharmaceutical/Target-Identification-and-Discovery-of-Potential-Drugs.webp",
@@ -56,8 +55,6 @@ const discoverySteps = [
   },
 ];
 
-
-
 const expertEditors: ExpertEditorItem[] = [
   {
     name: "Dr. Maria",
@@ -91,15 +88,17 @@ export default function PharmaceuticalDiscoveryAndPublishingPage() {
     discoverySteps.find((step) => step.id === activeId) ?? discoverySteps[0];
 
   return (
-    <main className="max-w-6xl mx-auto px-2 py-3">
+    <main className="max-w-6xl mx-auto px-2 py-1 space-y-4">
       {/* Hero / Intro */}
-      <section className="mb-10">
-        <h2 className="text-3xl md:text-4xl font-bold text-black   mb-3">
+      <section className="mb-2">
+        <h2 className="text-3xl md:text-4xl font-bold text-black mb-2">
           Drug Discovery And Development Process
         </h2>
-        <p>Stages in the Drug Development Process:</p>
+        <p className="mb-2 text-sm text-gray-600">
+          Stages in the Drug Development Process:
+        </p>
 
-        <div className="grid md:grid-cols-2 gap-8 items-center">
+        <div className="grid md:grid-cols-2 gap-6 items-center">
           <Image
             src="/images/industries/pharmaceutical/Drug-Discovery-and-Development-Process.webp"
             alt="Scientist holding a glass vial of medicine during the drug discovery phase"
@@ -110,17 +109,17 @@ export default function PharmaceuticalDiscoveryAndPublishingPage() {
           />
 
           <div>
-            <h2 className="text-xl font-semibold mb-3">
+            <h2 className="text-xl font-semibold mb-2">
               Discovering New Drugs: The Importance Of The Discovery Phase In
               Drug Development
             </h2>
-            <p className="text-gray-700 mb-4">
+            <p className="text-gray-700 mb-2 text-xs md:text-sm leading-relaxed">
               The discovery phase of drug development is an early, critical
               part of the process where potential drug targets are identified
               and validated to select the most promising candidate for
               advancement.
             </p>
-            <p className="text-gray-700">
+            <p className="text-gray-700 text-xs md:text-sm leading-relaxed">
               The drug discovery and development process is long, challenging, and rewarding at the same time. New medicines save lives and improve the quality of life for millions of people. The development of prescription and over-the-counter drugs, vaccines, cell therapies, medical devices, and surgical or other treatment procedures can stop diseases from getting worse or even reverse their course. However, it often takes 10-15 years and can cost billions of dollars to bring a new treatment or therapy to market.
             </p>
           </div>
@@ -128,9 +127,9 @@ export default function PharmaceuticalDiscoveryAndPublishingPage() {
       </section>
 
       {/* Steps in the process — interactive tabs */}
-      <section className="py-5 max-w-6xl mx-auto px-2">
-        <div className="mb-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] mb-3">
+      <section className="py-2 max-w-6xl mx-auto px-2">
+        <div className="mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] mb-2">
             Steps In The Drug Discovery Process
           </h2>
           <p className="text-gray-600 max-w-3xl text-sm md:text-base leading-relaxed">
@@ -138,9 +137,9 @@ export default function PharmaceuticalDiscoveryAndPublishingPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-6 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-4 items-start">
           {/* Tab list */}
-          <div className="space-y-2">
+          <div className="space-y-1.5">
             {discoverySteps.map((step) => {
               const isActive = step.id === activeStep.id;
               return (
@@ -148,9 +147,9 @@ export default function PharmaceuticalDiscoveryAndPublishingPage() {
                   key={step.id}
                   type="button"
                   onClick={() => setActiveId(step.id)}
-                  className={`w-full text-left px-4 py-3 rounded-lg font-medium text-sm transition-colors ${isActive
-                    ? "bg-[#1b3b32] text-white font-semibold shadow-sm"
-                    : "bg-white border border-gray-100 text-gray-600 hover:bg-gray-50 hover:text-[#1b3b32]"
+                  className={`w-full text-left px-4 py-2.5 rounded-lg font-medium text-sm transition-colors ${isActive
+                      ? "bg-[#1b3b32] text-white font-semibold shadow-sm"
+                      : "bg-white border border-gray-100 text-gray-600 hover:bg-gray-50 hover:text-[#1b3b32]"
                     }`}
                 >
                   {step.title}
@@ -159,9 +158,9 @@ export default function PharmaceuticalDiscoveryAndPublishingPage() {
             })}
           </div>
 
-          {/* Tab panel - light, clean design with compact spacing */}
-          <div className="bg-[#fafcfa] border border-gray-100 rounded-xl p-5 md:p-6 shadow-sm">
-            <div className="relative w-full h-[220px] md:h-[280px] rounded-lg overflow-hidden mb-5 bg-gray-50">
+          {/* Tab panel */}
+          <div className="bg-[#fafcfa] border border-gray-100 rounded-xl p-4 md:p-5 shadow-sm">
+            <div className="relative w-full h-[200px] md:h-[260px] rounded-lg overflow-hidden mb-3 bg-gray-50">
               <Image
                 src={activeStep.image.src}
                 alt={activeStep.image.alt}
@@ -170,11 +169,11 @@ export default function PharmaceuticalDiscoveryAndPublishingPage() {
               />
             </div>
 
-            <h3 className="text-lg md:text-xl font-bold text-[#1b3b32] mb-3">
+            <h3 className="text-lg md:text-xl font-bold text-[#1b3b32] mb-2">
               {activeStep.title}
             </h3>
 
-            <div className="space-y-3 mb-5">
+            <div className="space-y-2 mb-4">
               {activeStep.description.map((paragraph, i) => (
                 <p key={i} className="text-gray-600 text-xs md:text-sm leading-relaxed">
                   {paragraph}
@@ -193,7 +192,7 @@ export default function PharmaceuticalDiscoveryAndPublishingPage() {
       </section>
 
       {/* Where our authors publish */}
-      <section className="py-12 max-w-5xl mx-auto px-4">
+      <section className="py-2 max-w-5xl mx-auto px-2">
         <WhereAuthorsPublish
           title="Where Our Authors Publish"
           description="Our authors share Pubrica’s expert content in top-tier journals, conferences, and platforms, maximizing and amplifying its recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity."
@@ -214,7 +213,7 @@ export default function PharmaceuticalDiscoveryAndPublishingPage() {
       </section>
 
       {/* Expert team */}
-      <section className="py-6 max-w-6xl mx-auto px-4">
+      <section className="py-2 max-w-6xl mx-auto px-2">
         <ExpertEditorsSection
           title="Our Expert Pharmaceutical Research"
           description="Pubrica’s team of industry specialists offers unrivalled expertise and perspectives to provide complete solutions with precision and originality. Through a mix of both experience and specialization, they strive for excellence in everything they do."

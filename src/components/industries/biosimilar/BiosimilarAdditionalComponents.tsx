@@ -152,18 +152,18 @@ export default function BiosimilarAdditionalComponents({
   expertEditorsList = defaultExpertEditors,
 }: BiosimilarAdditionalComponentsProps) {
   return (
-    <div className="bg-white text-[#0f2824] w-full font-sans">
+    <div className="bg-white text-[#0f2824] w-full font-sans space-y-2">
 
       {/* 1. Feature Cards Grid (Complexity, Development, Regulatory) */}
-      <section className="py-6 px-6 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <section className="py-2 px-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {featureCards.map((card, idx) => (
-            <div key={idx} className="bg-white border border-gray-100 rounded-2xl p-6 shadow-[0_4px_20px_rgb(0,0,0,0.05)] relative flex flex-col justify-between">
+            <div key={idx} className="bg-white border border-gray-100 rounded-2xl p-4 md:p-5 shadow-[0_4px_20px_rgb(0,0,0,0.05)] relative flex flex-col justify-between">
               <div>
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="font-bold text-lg text-[#0f2824]">{card.title}</h3>
-                  <div className="relative w-10 h-10">
-                    <Image src={card.iconSrc} alt="" fill className="object-contain" sizes="40px" />
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="font-bold text-base md:text-lg text-[#0f2824]">{card.title}</h3>
+                  <div className="relative w-9 h-9 shrink-0">
+                    <Image src={card.iconSrc} alt="" fill className="object-contain" sizes="36px" />
                   </div>
                 </div>
                 <p className="text-gray-600 text-sm leading-relaxed">{card.description}</p>
@@ -174,7 +174,7 @@ export default function BiosimilarAdditionalComponents({
       </section>
 
       {/* 2. Where Our Authors Publish Section */}
-      <section className="py-6 max-w-7xl mx-auto px-6">
+      <section className="py-2 max-w-7xl mx-auto px-6">
         <WhereAuthorsPublish
           title={authorSectionTitle}
           description={authorSectionSubtitle}
@@ -191,9 +191,9 @@ export default function BiosimilarAdditionalComponents({
       </section>
 
       {/* 3. FDA-Approved Biosimilar Products Table Section */}
-      <section className="py-6 px-4 max-w-5xl mx-auto">
-        <div className="text-center mb-6 flex flex-col items-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-2 text-[#0f2824] whitespace-nowrap">
+      <section className="py-2 px-4 max-w-5xl mx-auto">
+        <div className="text-center mb-4 flex flex-col items-center">
+          <h2 className="text-2xl md:text-3xl font-bold mb-1.5 text-[#0f2824] whitespace-nowrap">
             {fdaSectionTitle}
           </h2>
           <p className="text-gray-600 text-sm md:text-base max-w-4xl mx-auto leading-relaxed">
@@ -206,31 +206,31 @@ export default function BiosimilarAdditionalComponents({
             <table className="w-full text-left border-collapse">
               <thead>
                 <tr className="bg-gray-50/75 border-b border-gray-200 text-[#0f2824]">
-                  <th className="py-3 px-5 font-semibold text-sm text-center">
+                  <th className="py-2.5 px-4 font-semibold text-xs md:text-sm text-center">
                     Biosimilar Name
                   </th>
-                  <th className="py-3 px-5 font-semibold text-sm text-center">
+                  <th className="py-2.5 px-4 font-semibold text-xs md:text-sm text-center">
                     Approval Date
                   </th>
-                  <th className="py-3 px-5 font-semibold text-sm text-center">
+                  <th className="py-2.5 px-4 font-semibold text-xs md:text-sm text-center">
                     Reference Product
                   </th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-gray-100 text-sm md:text-base">
+              <tbody className="divide-y divide-gray-100 text-xs md:text-sm">
                 {fdaProducts.map((product, index) => (
                   <tr
                     key={index}
                     className={`hover:bg-gray-50 transition-colors ${product.statusColor || ""
                       }`}
                   >
-                    <td className="py-3 px-5 text-gray-800 font-medium text-center">
+                    <td className="py-2 px-4 text-gray-800 font-medium text-center">
                       {product.name}
                     </td>
-                    <td className="py-3 px-5 text-gray-600 text-center">
+                    <td className="py-2 px-4 text-gray-600 text-center">
                       {product.approvalDate}
                     </td>
-                    <td className="py-3 px-5 text-gray-600 text-center">
+                    <td className="py-2 px-4 text-gray-600 text-center">
                       {product.referenceProduct}
                     </td>
                   </tr>
@@ -242,7 +242,7 @@ export default function BiosimilarAdditionalComponents({
       </section>
 
       {/* 4. Our Expert Medical Editors Section */}
-      <section className="py-6 max-w-7xl mx-auto px-6">
+      <section className="py-2 max-w-7xl mx-auto px-6">
         <ExpertEditorsSection
           title={editorsSectionTitle}
           description={editorsSectionSubtitle}

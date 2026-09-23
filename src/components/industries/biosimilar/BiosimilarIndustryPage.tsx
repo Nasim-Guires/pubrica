@@ -15,7 +15,7 @@ export default function BiosimilarIndustryPage() {
         <link rel="canonical" href="https://pubrica.com/industries/biosimilar/" />
       </Head>
 
-      <main className="min-h-screen bg-white text-[#0f2824]">
+      <main className="min-h-screen bg-white text-[#0f2824] space-y-3">
         {/* Hero Banner Section */}
         <HeroBanner
           title="Biosimilars"
@@ -24,8 +24,8 @@ export default function BiosimilarIndustryPage() {
         />
 
         {/* Introduction & Features Section */}
-        <section className="max-w-7xl mx-auto py-7 px-6">
-          <div className="space-y-4 mb-6">
+        <section className="max-w-7xl mx-auto py-3 px-6">
+          <div className="space-y-2 mb-4">
             <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] tracking-tight leading-snug">
               Advancing Compliance and Market Access for Biosimilars Through Expert Regulatory, Scientific, and Evidence Support Services
             </h2>
@@ -33,14 +33,14 @@ export default function BiosimilarIndustryPage() {
 
           <div className="clearfix">
             {/* CIRCULAR FLOATING IMAGE CONTAINER */}
-            <div className="flex justify-center md:block md:float-right md:ml-8 mb-6">
-              <div className="w-[280px] h-[280px] md:w-[380px] md:h-[380px] rounded-full overflow-hidden shadow-xl bg-gray-100 border-[10px] border-white p-1 flex items-center justify-center relative">
+            <div className="flex justify-center md:block md:float-right md:ml-6 mb-4">
+              <div className="w-[240px] h-[240px] md:w-[320px] md:h-[320px] rounded-full overflow-hidden shadow-xl bg-gray-100 border-[6px] border-white p-1 flex items-center justify-center relative">
                 <div className="relative w-full h-full rounded-full overflow-hidden">
                   <Image
                     src="/images/industries/biosimilar/Advancing-Compliance-and-Market-Access-for-Biosimilars.webp"
                     alt="Scientists working in a laboratory conducting biosimilar research and analysis"
                     fill
-                    sizes="(max-width: 768px) 100vw, 380px"
+                    sizes="(max-width: 768px) 100vw, 320px"
                     className="object-cover"
                     priority
                   />
@@ -48,54 +48,54 @@ export default function BiosimilarIndustryPage() {
               </div>
             </div>
 
-            <p className="text-gray-700 mb-4 leading-relaxed text-sm md:text-base">
+            <p className="text-gray-700 mb-3 leading-relaxed text-sm md:text-base">
               Biosimilars are a crucial component of today’s pharmaceutical landscape, providing more affordable alternatives to innovative biologic therapies without compromising safety or efficacy. As the demand for high-quality, cost-effective biologics grows, the biosimilars industry requires meticulous <Link href="/services/research-services/scientific-writing/" className='text-blue-600'>scientific</Link>, <Link href="/services/medical-writing/regulatory-writing/" className='text-blue-600'>regulatory</Link>, and operational support to navigate complex development pathways and global regulatory standards.
             </p>
-            <p className="text-gray-700 mb-4 leading-relaxed text-sm md:text-base">
+            <p className="text-gray-700 mb-3 leading-relaxed text-sm md:text-base">
               A biosimilar is a biologic product that is approved based on the demonstration that it is highly similar to an FDA‐approved biologic product, known as a reference product, and has no clinically meaningful differences in terms of safety and effectiveness from the reference product. Only minor differences in clinically inactive components are allowable in biosimilar products.
             </p>
-            <p className="text-gray-700 mb-6 leading-relaxed text-sm md:text-base">
+            <p className="text-gray-700 mb-4 leading-relaxed text-sm md:text-base">
               At Pubrica, we offer comprehensive end-to-end services to support biosimilar manufacturers&apos; success, from preclinical development to market authorization. Our expertise ensures your biosimilar products meet stringent quality, safety, and efficacy requirements while accelerating time-to-market.
             </p>
 
-            <h3 className="text-xl font-bold mb-4 text-[#0f2824]">Key Features of Biosimilars</h3>
-            <ul className="space-y-3 mb-8">
-              <li className="flex items-start gap-3 text-sm text-gray-700">
+            <h3 className="text-xl font-bold mb-3 text-[#0f2824]">Key Features of Biosimilars</h3>
+            <ul className="space-y-2 mb-5">
+              <li className="flex items-start gap-2.5 text-sm text-gray-700">
                 <span className="text-[#b91c1c] font-bold mt-0.5">➔</span>
                 <span>Highly similar to reference biologics in structure and function</span>
               </li>
-              <li className="flex items-start gap-3 text-sm text-gray-700">
+              <li className="flex items-start gap-2.5 text-sm text-gray-700">
                 <span className="text-[#b91c1c] font-bold mt-0.5">➔</span>
                 <span>Comparable safety, quality, and efficacy</span>
               </li>
-              <li className="flex items-start gap-3 text-sm text-gray-700">
+              <li className="flex items-start gap-2.5 text-sm text-gray-700">
                 <span className="text-[#b91c1c] font-bold mt-0.5">➔</span>
                 <span>Cost-effective alternative to original biologics</span>
               </li>
-              <li className="flex items-start gap-3 text-sm text-gray-700">
+              <li className="flex items-start gap-2.5 text-sm text-gray-700">
                 <span className="text-[#b91c1c] font-bold mt-0.5">➔</span>
                 <span>Approved through rigorous regulatory evaluation</span>
               </li>
-              <li className="flex items-start gap-3 text-sm text-gray-700">
+              <li className="flex items-start gap-2.5 text-sm text-gray-700">
                 <span className="text-[#b91c1c] font-bold mt-0.5">➔</span>
                 <span>Tested for immunogenicity to ensure safety</span>
               </li>
-              <li className="flex items-start gap-3 text-sm text-gray-700">
+              <li className="flex items-start gap-2.5 text-sm text-gray-700">
                 <span className="text-[#b91c1c] font-bold mt-0.5">➔</span>
                 <span>Manufactured with advanced, consistent processes</span>
               </li>
             </ul>
           </div>
 
-          <div className="clear-both pt-2">
+          <div className="clear-both pt-1">
             <GetFreeQuoteButton />
           </div>
         </section>
 
         {/* Our Expertise in Biosimilars Includes */}
-        <section className="py-7 bg-gray-50 px-4 md:px-8">
-          <div className="max-w-6xl mx-auto text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+        <section className="py-4 bg-gray-50 px-4 md:px-8">
+          <div className="max-w-6xl mx-auto text-center mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
               Our Expertise in Biosimilars Includes
             </h2>
             <p className="text-sm md:text-base text-gray-600 max-w-5xl mx-auto leading-relaxed">
@@ -104,60 +104,59 @@ export default function BiosimilarIndustryPage() {
           </div>
 
           {/* Central Graphic with Surrounding Cards Layout */}
-          <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-2 md:gap-3 items-center">
             {/* Left Column Cards */}
-            <div className="space-y-6">
-              <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="font-bold text-red-700 text-base mb-1.5">Clinical Research Support</h3>
+            <div className="space-y-3">
+              <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                <h3 className="font-bold text-red-700 text-base mb-1">Clinical Research Support</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">Designing and managing clinical trials for biosimilars, including PK/PD studies, immunogenicity assessments, and comparative efficacy trials.</p>
               </div>
-              <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="font-bold text-red-700 text-base mb-1.5">Evidence Generation &amp; Publications</h3>
+              <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                <h3 className="font-bold text-red-700 text-base mb-1">Evidence Generation &amp; Publications</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">Supporting real-world evidence studies, post-marketing surveillance, and peer-reviewed publications to demonstrate biosimilar safety and effectiveness.</p>
               </div>
-              <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="font-bold text-red-700 text-base mb-1.5">Market Access &amp; Strategy Consulting</h3>
+              <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                <h3 className="font-bold text-red-700 text-base mb-1">Market Access &amp; Strategy Consulting</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">Guidance on pricing, reimbursement strategies, and market positioning to maximize biosimilar uptake.</p>
               </div>
             </div>
 
-            {/* Center Image */}
-            <div className="flex justify-center my-6 md:my-0">
-              <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full border-4 border-white shadow-md overflow-hidden">
+            {/* Center Image - Scaled Up */}
+            <div className="flex justify-center my-2 md:my-0">
+              <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-full border-4 border-white shadow-md overflow-hidden shrink-0">
                 <Image
                   src="/images/industries/biosimilar/Our-Expertise-in-Biosimilars-Includes.webp"
                   alt="Researchers collaborating on biosimilar regulatory and scientific evidence"
                   fill
                   className="object-cover"
-                  sizes="(max-width: 768px) 288px, 320px"
+                  sizes="(max-width: 768px) 320px, 384px"
                   priority
                 />
               </div>
             </div>
 
             {/* Right Column Cards */}
-            <div className="space-y-6">
-              <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="font-bold text-red-700 text-base mb-1.5">Biosimilars Regulatory Services</h3>
+            <div className="space-y-3">
+              <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                <h3 className="font-bold text-red-700 text-base mb-1">Biosimilars Regulatory Services</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">Comprehensive guidance on global regulatory pathways, including FDA, EMA, and other emerging markets. We ensure your product meets all compliance requirements for approval and market entry.</p>
               </div>
-              <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="font-bold text-red-700 text-base mb-1.5">Scientific Writing &amp; Medical Communications</h3>
+              <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                <h3 className="font-bold text-red-700 text-base mb-1">Scientific Writing &amp; Medical Communications</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">Preparation of high-quality regulatory documents, clinical study reports, and scientific publications tailored to biosimilars.</p>
               </div>
-              <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
-                <h3 className="font-bold text-red-700 text-base mb-1.5">Regulatory Submission Support</h3>
+              <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                <h3 className="font-bold text-red-700 text-base mb-1">Regulatory Submission Support</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">End-to-end assistance in preparing INDs, BLAs, and marketing authorization applications for global submissions.</p>
               </div>
             </div>
           </div>
         </section>
-
         {/* Biosimilar Drug Segments We Serve */}
-        <section className="py-8 px-6 max-w-7xl mx-auto">
+        <section className="py-4 px-6 max-w-7xl mx-auto">
           {/* Header Section */}
-          <div className="text-left mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] mb-3">
+          <div className="text-left mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] mb-2">
               Biosimilar Drug Segments We Serve
             </h2>
             <p className="text-gray-700 max-w-5xl text-sm md:text-base leading-relaxed">
@@ -166,19 +165,19 @@ export default function BiosimilarIndustryPage() {
           </div>
 
           {/* Grid Section - 3 Columns */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            <div className="bg-white border border-gray-100 p-5 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-row items-start space-x-3 min-h-[140px]">
-              <div className="relative w-10 h-10 shrink-0 flex items-center justify-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
+            <div className="bg-white border border-gray-100 p-4 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-row items-start space-x-3 min-h-[120px]">
+              <div className="relative w-9 h-9 shrink-0 flex items-center justify-center">
                 <Image
                   src="/images/industries/biosimilar/Monoclonal-Antibodies-mAbs.webp"
                   alt=""
                   fill
                   className="object-contain"
-                  sizes="40px"
+                  sizes="36px"
                 />
               </div>
               <div className="flex-1">
-                <h4 className="font-bold text-sm md:text-base text-[#1b3b32] mb-1.5 leading-snug">
+                <h4 className="font-bold text-sm md:text-base text-[#1b3b32] mb-1 leading-snug">
                   Monoclonal Antibodies (mAbs)
                 </h4>
                 <p className="text-gray-600 text-xs md:text-xs leading-relaxed">
@@ -187,18 +186,18 @@ export default function BiosimilarIndustryPage() {
               </div>
             </div>
 
-            <div className="bg-white border border-gray-100 p-5 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-row items-start space-x-3 min-h-[140px]">
-              <div className="relative w-10 h-10 shrink-0 flex items-center justify-center">
+            <div className="bg-white border border-gray-100 p-4 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-row items-start space-x-3 min-h-[120px]">
+              <div className="relative w-9 h-9 shrink-0 flex items-center justify-center">
                 <Image
                   src="/images/industries/biosimilar/Insulins.webp"
                   alt=""
                   fill
                   className="object-contain"
-                  sizes="40px"
+                  sizes="36px"
                 />
               </div>
               <div className="flex-1">
-                <h4 className="font-bold text-sm md:text-base text-[#1b3b32] mb-1.5 leading-snug">
+                <h4 className="font-bold text-sm md:text-base text-[#1b3b32] mb-1 leading-snug">
                   Insulins
                 </h4>
                 <p className="text-gray-600 text-xs md:text-xs leading-relaxed">
@@ -207,18 +206,18 @@ export default function BiosimilarIndustryPage() {
               </div>
             </div>
 
-            <div className="bg-white border border-gray-100 p-5 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-row items-start space-x-3 min-h-[140px]">
-              <div className="relative w-10 h-10 shrink-0 flex items-center justify-center">
+            <div className="bg-white border border-gray-100 p-4 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-row items-start space-x-3 min-h-[120px]">
+              <div className="relative w-9 h-9 shrink-0 flex items-center justify-center">
                 <Image
                   src="/images/industries/biosimilar/Growth-Hormones.webp"
                   alt=""
                   fill
                   className="object-contain"
-                  sizes="40px"
+                  sizes="36px"
                 />
               </div>
               <div className="flex-1">
-                <h4 className="font-bold text-sm md:text-base text-[#1b3b32] mb-1.5 leading-snug">
+                <h4 className="font-bold text-sm md:text-base text-[#1b3b32] mb-1 leading-snug">
                   Growth Hormones
                 </h4>
                 <p className="text-gray-600 text-xs md:text-xs leading-relaxed">
@@ -227,18 +226,18 @@ export default function BiosimilarIndustryPage() {
               </div>
             </div>
 
-            <div className="bg-white border border-gray-100 p-5 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-row items-start space-x-3 min-h-[140px]">
-              <div className="relative w-10 h-10 shrink-0 flex items-center justify-center">
+            <div className="bg-white border border-gray-100 p-4 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-row items-start space-x-3 min-h-[120px]">
+              <div className="relative w-9 h-9 shrink-0 flex items-center justify-center">
                 <Image
                   src="/images/industries/biosimilar/Erythropoietins-EPOs.webp"
                   alt=""
                   fill
                   className="object-contain"
-                  sizes="40px"
+                  sizes="36px"
                 />
               </div>
               <div className="flex-1">
-                <h4 className="font-bold text-sm md:text-base text-[#1b3b32] mb-1.5 leading-snug">
+                <h4 className="font-bold text-sm md:text-base text-[#1b3b32] mb-1 leading-snug">
                   Erythropoietins (EPOs)
                 </h4>
                 <p className="text-gray-600 text-xs md:text-xs leading-relaxed">
@@ -247,18 +246,18 @@ export default function BiosimilarIndustryPage() {
               </div>
             </div>
 
-            <div className="bg-white border border-gray-100 p-5 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-row items-start space-x-3 min-h-[140px]">
-              <div className="relative w-10 h-10 shrink-0 flex items-center justify-center">
+            <div className="bg-white border border-gray-100 p-4 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-row items-start space-x-3 min-h-[120px]">
+              <div className="relative w-9 h-9 shrink-0 flex items-center justify-center">
                 <Image
                   src="/images/industries/biosimilar/Interferons.webp"
                   alt=""
                   fill
                   className="object-contain"
-                  sizes="40px"
+                  sizes="36px"
                 />
               </div>
               <div className="flex-1">
-                <h4 className="font-bold text-sm md:text-base text-[#1b3b32] mb-1.5 leading-snug">
+                <h4 className="font-bold text-sm md:text-base text-[#1b3b32] mb-1 leading-snug">
                   Interferons
                 </h4>
                 <p className="text-gray-600 text-xs md:text-xs leading-relaxed">
@@ -267,18 +266,18 @@ export default function BiosimilarIndustryPage() {
               </div>
             </div>
 
-            <div className="bg-white border border-gray-100 p-5 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-row items-start space-x-3 min-h-[140px]">
-              <div className="relative w-10 h-10 shrink-0 flex items-center justify-center">
+            <div className="bg-white border border-gray-100 p-4 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-row items-start space-x-3 min-h-[120px]">
+              <div className="relative w-9 h-9 shrink-0 flex items-center justify-center">
                 <Image
                   src="/images/industries/biosimilar/Other-Recombinant-Proteins.webp"
                   alt=""
                   fill
                   className="object-contain"
-                  sizes="40px"
+                  sizes="36px"
                 />
               </div>
               <div className="flex-1">
-                <h4 className="font-bold text-sm md:text-base text-[#1b3b32] mb-1.5 leading-snug">
+                <h4 className="font-bold text-sm md:text-base text-[#1b3b32] mb-1 leading-snug">
                   Other Recombinant Proteins
                 </h4>
                 <p className="text-gray-600 text-xs md:text-xs leading-relaxed">
@@ -290,13 +289,13 @@ export default function BiosimilarIndustryPage() {
         </section>
 
         {/* How Are Biosimilars Different From Generic Medicines? */}
-        <section className="py-8 px-6 max-w-7xl mx-auto">
+        <section className="py-4 px-6 max-w-7xl mx-auto">
           {/* Header Section */}
-          <div className="text-left mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] mb-3">
+          <div className="text-left mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1b3b32] mb-2">
               How Are Biosimilars Different From Generic Medicines?
             </h2>
-            <p className="text-gray-700 max-w-5xl text-sm md:text-base leading-relaxed mb-3">
+            <p className="text-gray-700 max-w-5xl text-sm md:text-base leading-relaxed mb-2">
               While identical generic versions of small molecules can typically be chemically synthesized, it is not possible to create identical versions of reference biologic medicines due to their complexity. Therefore, the processes used to develop generic medicines cannot be applied to the development of biosimilar medicines.
             </p>
           </div>
