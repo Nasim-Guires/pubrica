@@ -15,7 +15,7 @@ export const metadata = constructMetadata({
     description:
         'Ensure medical device safety & compliance with expert CER, post-market surveillance, and clinical data support.',
     keywords: ['Medical Device'],
-    slug: '/industries/medical-device',
+    slug: '/industries/medical-device/',
 })
 
 const page = () => {
