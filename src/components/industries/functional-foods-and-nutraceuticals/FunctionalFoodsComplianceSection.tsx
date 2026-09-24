@@ -87,62 +87,62 @@ export default function FoodsNutraceuticalsComplianceSection({
 
 }: FoodsNutraceuticalsComplianceProps) {
   return (
-    <div className="bg-white text-[#0f2824] w-full font-sans overflow-hidden">
+    <div className="bg-white text-[#0f2824] w-full font-sans overflow-hidden space-y-2">
 
       {/* Top Compliance & Guidelines Container */}
-      <section className="py-8 px-6 max-w-full bg-[#f0f4f8] border-t border-gray-100">
-        <div className="max-w-6xl mx-auto mb-10 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-3 text-[#0f2824]">{sectionTitle}</h2>
-          <p className="text-gray-600 text-sm sm:text-base max-w-4xl mx-auto leading-relaxed mb-8">
+      <section className="py-4 px-6 max-w-full bg-[#f0f4f8] border-t border-gray-100">
+        <div className="max-w-6xl mx-auto mb-4 text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-2 text-[#0f2824]">{sectionTitle}</h2>
+          <p className="text-gray-600 text-sm sm:text-base max-w-4xl mx-auto leading-relaxed mb-4">
             {sectionDescription}
           </p>
 
           {/* Regulatory Compliance Subsection */}
-          <div className="mb-10">
-            <h3 className="text-xl sm:text-2xl font-bold text-[#0f2824] mb-2">{regulatoryComplianceTitle}</h3>
-            <p className="text-gray-600 text-sm sm:text-base mb-6">{regulatoryIntro}</p>
+          <div className="mb-6">
+            <h3 className="text-xl sm:text-2xl font-bold text-[#0f2824] mb-1">{regulatoryComplianceTitle}</h3>
+            <p className="text-gray-600 text-sm sm:text-base mb-3">{regulatoryIntro}</p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm flex items-center justify-center h-32 hover:shadow-md transition-shadow relative">
-                <Image src="/images/industries/foods-nutraceuticals/fda.webp" alt="U.S. Food and Drug Administration" width={140} height={48} className="object-contain max-h-16" />
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
+              <div className="bg-white border border-gray-200 rounded-2xl p-4 shadow-sm flex items-center justify-center h-24 hover:shadow-md transition-shadow relative">
+                <Image src="/images/industries/foods-nutraceuticals/fda.webp" alt="U.S. Food and Drug Administration" width={140} height={48} className="object-contain max-h-12" />
               </div>
-              <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm flex items-center justify-center h-32 hover:shadow-md transition-shadow">
-                <Image src="/images/industries/foods-nutraceuticals/efsa.webp" alt="EFSA" width={140} height={48} className="object-contain max-h-16" />
+              <div className="bg-white border border-gray-200 rounded-2xl p-4 shadow-sm flex items-center justify-center h-24 hover:shadow-md transition-shadow">
+                <Image src="/images/industries/foods-nutraceuticals/efsa.webp" alt="EFSA" width={140} height={48} className="object-contain max-h-12" />
               </div>
-              <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm flex items-center justify-center h-32 hover:shadow-md transition-shadow">
-                <Image src="/images/industries/foods-nutraceuticals/fssai.webp" alt="FSSAI" width={140} height={48} className="object-contain max-h-16" />
+              <div className="bg-white border border-gray-200 rounded-2xl p-4 shadow-sm flex items-center justify-center h-24 hover:shadow-md transition-shadow">
+                <Image src="/images/industries/foods-nutraceuticals/fssai.webp" alt="FSSAI" width={140} height={48} className="object-contain max-h-12" />
               </div>
-              <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm flex items-center justify-center h-32 hover:shadow-md transition-shadow text-center">
-                <Image src="/images/industries/foods-nutraceuticals/codex-allimentariyus.webp" alt="Codex Alimentarius" width={140} height={48} className="object-contain max-h-16" />
+              <div className="bg-white border border-gray-200 rounded-2xl p-4 shadow-sm flex items-center justify-center h-24 hover:shadow-md transition-shadow text-center">
+                <Image src="/images/industries/foods-nutraceuticals/codex-allimentariyus.webp" alt="Codex Alimentarius" width={140} height={48} className="object-contain max-h-12" />
               </div>
             </div>
           </div>
 
           {/* Quality & Safety Standards Subsection */}
           <div>
-            <h3 className="text-xl sm:text-2xl font-bold text-[#0f2824] mb-2">{qualityStandardsTitle}</h3>
-            <p className="text-gray-600 text-sm sm:text-base mb-6">{qualityIntro}</p>
+            <h3 className="text-xl sm:text-2xl font-bold text-[#0f2824] mb-1">{qualityStandardsTitle}</h3>
+            <p className="text-gray-600 text-sm sm:text-base mb-3">{qualityIntro}</p>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm flex flex-col items-center justify-center text-center h-44 hover:shadow-md transition-shadow">
-                <div className="relative w-12 h-12 mb-3">
-                  <Image src="/images/industries/foods-nutraceuticals/gmp-.webp" alt="GMP" fill className="object-contain" sizes="48px" />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5">
+              <div className="bg-white border border-gray-200 rounded-2xl p-4 shadow-sm flex flex-col items-center justify-center text-center h-32 hover:shadow-md transition-shadow">
+                <div className="relative w-9 h-9 mb-2">
+                  <Image src="/images/industries/foods-nutraceuticals/gmp-.webp" alt="GMP" fill className="object-contain" sizes="36px" />
                 </div>
-                <h4 className="font-semibold text-sm sm:text-base text-gray-800">GMP (Good Manufacturing Practices) compliance</h4>
+                <h4 className="font-semibold text-xs sm:text-sm text-gray-800">GMP (Good Manufacturing Practices) compliance</h4>
               </div>
 
-              <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm flex flex-col items-center justify-center text-center h-44 hover:shadow-md transition-shadow">
-                <div className="relative w-12 h-12 mb-3">
-                  <Image src="/images/industries/foods-nutraceuticals/pa-iconshccp.webp" alt="HACCP" fill className="object-contain" sizes="48px" />
+              <div className="bg-white border border-gray-200 rounded-2xl p-4 shadow-sm flex flex-col items-center justify-center text-center h-32 hover:shadow-md transition-shadow">
+                <div className="relative w-9 h-9 mb-2">
+                  <Image src="/images/industries/foods-nutraceuticals/pa-iconshccp.webp" alt="HACCP" fill className="object-contain" sizes="36px" />
                 </div>
-                <h4 className="font-semibold text-sm sm:text-base text-gray-800">HACCP (Hazard Analysis Critical Control Points)</h4>
+                <h4 className="font-semibold text-xs sm:text-sm text-gray-800">HACCP (Hazard Analysis Critical Control Points)</h4>
               </div>
 
-              <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm flex flex-col items-center justify-center text-center h-44 hover:shadow-md transition-shadow">
-                <div className="relative w-12 h-12 mb-3">
-                  <Image src="/images/industries/foods-nutraceuticals/iso.webp" alt="ISO" fill className="object-contain" sizes="48px" />
+              <div className="bg-white border border-gray-200 rounded-2xl p-4 shadow-sm flex flex-col items-center justify-center text-center h-32 hover:shadow-md transition-shadow">
+                <div className="relative w-9 h-9 mb-2">
+                  <Image src="/images/industries/foods-nutraceuticals/iso.webp" alt="ISO" fill className="object-contain" sizes="36px" />
                 </div>
-                <h4 className="font-semibold text-sm sm:text-base text-gray-800">ISO certifications for food safety and quality</h4>
+                <h4 className="font-semibold text-xs sm:text-sm text-gray-800">ISO certifications for food safety and quality</h4>
               </div>
             </div>
           </div>
@@ -150,7 +150,7 @@ export default function FoodsNutraceuticalsComplianceSection({
       </section>
 
       {/* Where Our Authors Publish Section */}
-      <section className="py-12 max-w-5xl mx-auto px-4 border-t border-gray-100">
+      <section className="py-2 max-w-5xl mx-auto px-4 border-t border-gray-100">
         <WhereAuthorsPublish
           title="Where Our Authors Publish"
           description="Our authors share Pubrica’s expert content in top-tier journals, conferences, and platforms, maximizing and amplifying its recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity."
@@ -169,7 +169,7 @@ export default function FoodsNutraceuticalsComplianceSection({
       </section>
 
       {/* Our Expert Foods And Nutraceuticals Editors Section */}
-      <section className="py-6 max-w-6xl mx-auto px-4 border-t border-gray-100">
+      <section className="py-2 max-w-6xl mx-auto px-4 border-t border-gray-100">
         <ExpertEditorsSection
           title="Our Expert Foods and Nutraceuticals Editors"
           description="Pubrica’s team of industry specialists offers unrivalled expertise and perspectives to provide complete solutions with precision and originality. Through a mix of both experience and specialization, they strive for excellence in everything they do."

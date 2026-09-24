@@ -65,8 +65,16 @@ export default function NutraceuticalResearch() {
 
         {/* Central Graphic with Surrounding Cards Layout */}
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
-          {/* Left Column Cards */}
+          {/* Left Column Cards (3 items) */}
           <div className="space-y-6">
+            <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+              <h3 className="font-bold text-red-700 text-base mb-1.5">
+                Research &amp; Formulation
+              </h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Our team of experts conducts in-depth scientific research to identify active ingredients, bioavailability, and efficacy. We focus on innovative, safe, and market-relevant formulations tailored to target health benefits.
+              </p>
+            </div>
             <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
               <h3 className="font-bold text-red-700 text-base mb-1.5">
                 Clinical Evaluation &amp; Safety Assessment
@@ -99,16 +107,8 @@ export default function NutraceuticalResearch() {
             </div>
           </div>
 
-          {/* Right Column Cards */}
+          {/* Right Column Cards (2 items) */}
           <div className="space-y-6">
-            <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
-              <h3 className="font-bold text-red-700 text-base mb-1.5">
-                Research &amp; Formulation
-              </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                Our team of experts conducts in-depth scientific research to identify active ingredients, bioavailability, and efficacy. We focus on innovative, safe, and market-relevant formulations tailored to target health benefits.
-              </p>
-            </div>
             <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
               <h3 className="font-bold text-red-700 text-base mb-1.5">
                 Regulatory Compliance

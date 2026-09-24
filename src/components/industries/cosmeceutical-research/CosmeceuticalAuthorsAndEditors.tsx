@@ -88,6 +88,7 @@ const expertEditors: ExpertEditorItem[] = [
         flag: "/images/country/us.png",
     },
 ];
+
 export default function CosmeceuticalAuthorsAndEditors({
     authorsPublishTitle = 'Where Our Authors Publish',
     authorsPublishDescription = 'Our authors share Pubrica\'s expert content in top-tier journals, conferences, and platforms, maximizing and amplifying its recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity.',
@@ -97,10 +98,10 @@ export default function CosmeceuticalAuthorsAndEditors({
     editors = defaultEditors
 }: CosmeceuticalAuthorsAndEditorsProps) {
     return (
-        <div className="bg-white text-[#0f2824] w-full font-sans overflow-hidden py-7 px-6">
+        <div className="bg-white text-[#0f2824] w-full font-sans overflow-hidden space-y-2">
 
             {/* Where Our Authors Publish Section */}
-            <section className="py-6 max-w-5xl mx-auto px-4 border-t border-gray-100">
+            <section className="py-2 max-w-5xl mx-auto px-4 border-t border-gray-100">
                 <WhereAuthorsPublish
                     title="Where Our Authors Publish"
                     description="Our authors share Pubrica’s expert content in top-tier journals, conferences, and platforms, maximizing and amplifying its recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity."
@@ -116,14 +117,16 @@ export default function CosmeceuticalAuthorsAndEditors({
                     }}
                 />
             </section>
+
             {/* Our Expert Cosmeceutical Editors Section */}
-            <section className="py-6 max-w-6xl mx-auto px-4 border-t border-gray-100">
+            <section className="py-2 max-w-6xl mx-auto px-4 border-t border-gray-100">
                 <ExpertEditorsSection
                     title="Our Expert Cosmeceutical Editors"
                     description="Pubrica’s team of industry specialists offers unrivalled expertise and perspectives to provide complete solutions with precision and originality. Through a mix of both experience and specialization, they strive for excellence in everything they do."
                     editors={expertEditors}
                 />
             </section>
+
         </div>
     );
 }

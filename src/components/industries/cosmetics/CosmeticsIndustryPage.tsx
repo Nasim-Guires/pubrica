@@ -76,19 +76,31 @@ export default function CosmeticsIndustryPage() {
 
         {/* Central Graphic with Surrounding Cards Layout */}
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
-          {/* Left Column Cards (First 3 items) */}
+          {/* Left Column Cards (3 items) */}
           <div className="space-y-6">
             <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
-              <h3 className="font-bold text-red-700 text-base mb-1.5">Quality Assurance &amp; Compliance</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">Ensuring all products meet international safety standards and regulatory requirements.</p>
+              <h3 className="font-bold text-red-700 text-base mb-1.5">
+                Quality Assurance &amp; Compliance
+              </h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Ensuring all products meet international safety standards and regulatory requirements.
+              </p>
             </div>
             <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
-              <h3 className="font-bold text-red-700 text-base mb-1.5">Research &amp; Innovation</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">Staying ahead with the latest cosmetic technologies, natural ingredients, and sustainable practices.</p>
+              <h3 className="font-bold text-red-700 text-base mb-1.5">
+                Research &amp; Innovation
+              </h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Staying ahead with the latest cosmetic technologies, natural ingredients, and sustainable practices.
+              </p>
             </div>
             <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
-              <h3 className="font-bold text-red-700 text-base mb-1.5">Distribution &amp; Retail Partnerships</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">Strategically placing products in retail, e-commerce, and global markets.</p>
+              <h3 className="font-bold text-red-700 text-base mb-1.5">
+                Distribution &amp; Retail Partnerships
+              </h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Strategically placing products in retail, e-commerce, and global markets.
+              </p>
             </div>
           </div>
 
@@ -106,23 +118,31 @@ export default function CosmeticsIndustryPage() {
             </div>
           </div>
 
-          {/* Right Column Cards (Remaining 4 items) */}
+          {/* Right Column Cards (3 items) */}
           <div className="space-y-6">
             <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
-              <h3 className="font-bold text-red-700 text-base mb-1.5">Product Development &amp; Formulation</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">Creating innovative skincare, haircare, and makeup products tailored to market trends and consumer needs.</p>
+              <h3 className="font-bold text-red-700 text-base mb-1.5">
+                Product Development &amp; Formulation
+              </h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Creating innovative skincare, haircare, and makeup products tailored to market trends and consumer needs.
+              </p>
             </div>
             <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
-              <h3 className="font-bold text-red-700 text-base mb-1.5">Brand Strategy &amp; Marketing</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">Developing compelling brand identities, packaging designs, and marketing campaigns that resonate with target audiences.</p>
+              <h3 className="font-bold text-red-700 text-base mb-1.5">
+                Brand Strategy &amp; Marketing
+              </h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Developing compelling brand identities, packaging designs, and marketing campaigns that resonate with target audiences.
+              </p>
             </div>
             <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
-              <h3 className="font-bold text-red-700 text-base mb-1.5">Manufacturing &amp; Supply Chain Management</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">Efficient, scalable production with high-quality control and timely delivery.</p>
-            </div>
-            <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
-              <h3 className="font-bold text-red-700 text-base mb-1.5">Consumer Insights &amp; Trend Analysis</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">Understanding evolving beauty trends and consumer preferences to guide product innovation.</p>
+              <h3 className="font-bold text-red-700 text-base mb-1.5">
+                Manufacturing &amp; Supply Chain Management
+              </h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Efficient, scalable production with high-quality control and timely delivery.
+              </p>
             </div>
           </div>
         </div>

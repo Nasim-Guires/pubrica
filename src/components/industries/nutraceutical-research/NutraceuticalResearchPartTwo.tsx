@@ -163,14 +163,15 @@ export default function NutraceuticalResearchPartTwo({
   editorsDescription = "Pubrica's team of industry specialists offers unrivalled expertise and perspectives to provide complete solutions with precision and originality. Through a mix of both experience and specialization, they strive for excellence in everything they do.",
 }: NutraceuticalResearchPartTwoProps) {
   const [activeTab, setActiveTab] = useState<number | null>(null);
+
   return (
-    <div className="bg-white text-[#0f2824] w-full font-sans overflow-hidden">
+    <div className="bg-white text-[#0f2824] w-full font-sans overflow-hidden space-y-2">
 
       {/* Research And Development In Nutraceuticals */}
-      <section className="max-w-6xl mx-auto py-5 px-6">
-        <h2 className="text-2xl sm:text-3xl font-bold mb-3 text-[#0f2824]">{rdTitle}</h2>
+      <section className="max-w-6xl mx-auto py-4 px-6">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-2 text-[#0f2824]">{rdTitle}</h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-center">
           <div className="lg:col-span-5 relative flex justify-center">
             <div className="relative w-[280px] h-[320px] sm:w-[300px] sm:h-[350px] rounded-2xl overflow-hidden">
               <Image
@@ -184,11 +185,11 @@ export default function NutraceuticalResearchPartTwo({
             <div className="absolute -bottom-6 -right-2 sm:right-4 w-[160px] h-[120px] sm:w-[180px] sm:h-[130px] rounded-xl overflow-hidden shadow-xl border-4 border-white hidden" aria-hidden="true" />
           </div>
 
-          <div className="lg:col-span-7 space-y-3">
-            <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-4">
+          <div className="lg:col-span-7 space-y-2.5">
+            <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-3">
               {rdSubtitle}
             </p>
-            <ul className="space-y-2.5">
+            <ul className="space-y-2">
               {rdItems.map((item, index) => (
                 <li key={index} className="flex items-start text-xs sm:text-sm text-gray-700 leading-relaxed">
                   <span className="inline-block w-2 h-2 rounded-full bg-[#cc0000] mt-1.5 mr-3 flex-shrink-0"></span>
@@ -201,22 +202,24 @@ export default function NutraceuticalResearchPartTwo({
           </div>
         </div>
       </section>
+
       {/* Quality And Regulatory Standards */}
-      <section className="bg-gray-50/50 py-7 px-6 border-t border-b border-gray-100">
-        <div className="max-w-6xl mx-auto text-center mb-10">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-[#0f2824]">{standardsTitle}</h2>
+      <section className="bg-gray-50/50 py-4 px-6 border-t border-b border-gray-100">
+        <div className="max-w-6xl mx-auto text-center mb-4">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-2 text-[#0f2824]">{standardsTitle}</h2>
           <p className="text-gray-600 text-sm sm:text-base max-w-4xl mx-auto leading-relaxed">
             {standardsSubtitle}
           </p>
         </div>
 
         <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 mb-3">
             {standardsTabs.map((tab, index) => {
               const isActive = activeTab === index;
               return (
                 <div key={index} className="flex flex-col">
                   <button
+                    type="button"
                     onClick={() => setActiveTab(index)}
                     className={`w-full p-3 rounded-xl border text-left sm:text-center transition-all flex flex-col items-start sm:items-center justify-center gap-1.5 ${isActive
                       ? 'bg-white border-[#0f2824] shadow-sm text-[#0f2824] ring-1 ring-[#0f2824]/10 rounded-b-none border-b-0'
@@ -239,7 +242,7 @@ export default function NutraceuticalResearchPartTwo({
             })}
           </div>
 
-          <div className="text-left mt-4">
+          <div className="text-left mt-3">
             <p className="text-xs sm:text-sm text-gray-500 italic">
               Adhering to these standards is essential for building consumer trust and achieving global market acceptance.
             </p>
@@ -248,14 +251,14 @@ export default function NutraceuticalResearchPartTwo({
       </section>
 
       {/* Our Commitment To The Nutraceutical Industry */}
-      <section className="max-w-6xl mx-auto py-5 px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center">
-          <div className="space-y-4">
+      <section className="max-w-6xl mx-auto py-4 px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+          <div className="space-y-3">
             <h2 className="text-2xl sm:text-3xl font-bold text-[#0f2824]">{commitmentTitle}</h2>
             <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
               {commitmentDescription}
             </p>
-            <ul className="space-y-2.5">
+            <ul className="space-y-2">
               {commitmentBullets.map((bullet, index) => (
                 <li key={index} className="flex items-center text-xs sm:text-sm text-gray-700 font-medium">
                   <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center text-xs mr-3 flex-shrink-0 font-bold">✓</span>
@@ -283,8 +286,7 @@ export default function NutraceuticalResearchPartTwo({
       </section>
 
       {/* Where Our Authors Publish */}
-
-      <section className="py-6 max-w-5xl mx-auto px-4 border-t border-gray-100">
+      <section className="py-2 max-w-5xl mx-auto px-4 border-t border-gray-100">
         <WhereAuthorsPublish
           title="Where Our Authors Publish"
           description="Our authors share Pubrica's expert content in top-tier journals, conferences, and platforms, maximizing and amplifying its recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity."
@@ -302,15 +304,13 @@ export default function NutraceuticalResearchPartTwo({
       </section>
 
       {/* Our Expert Nutraceutical Editors */}
-
-      <section className="py-6 max-w-6xl mx-auto px-4">
+      <section className="py-2 max-w-6xl mx-auto px-4 border-t border-gray-100">
         <ExpertEditorsSection
           title="Our Expert Nutraceutical Editors"
           description="Pubrica’s team of industry specialists offers unrivalled expertise and perspectives to provide complete solutions with precision and originality. Through a mix of both experience and specialization, they strive for excellence in everything they do."
           editors={expertEditors}
         />
       </section>
-
 
     </div>
   );

@@ -143,14 +143,14 @@ export default function BiotechAdditionalSections({
   };
 
   return (
-    <div className="bg-white text-[#0f2824] w-full font-sans">
+    <div className="bg-white text-[#0f2824] w-full font-sans space-y-2">
 
       {/* 1. Why Pubrica For Biotechnology Section (Accordion Style) */}
-      <section className="py-12 px-6 w-full bg-sky-50">
+      <section className="py-4 px-6 w-full bg-sky-50">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-10 text-[#0f2824]">{whyTitle}</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-[#0f2824]">{whyTitle}</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5 items-start">
             {whyItems.map((item, index) => {
               const isOpen = openIndices.includes(index);
 
@@ -162,24 +162,24 @@ export default function BiotechAdditionalSections({
                 >
                   <button
                     onClick={() => toggleAccordion(index)}
-                    className="w-full py-4 px-6 flex items-center justify-between text-[#0f2824] font-semibold text-base focus:outline-none hover:bg-sky-50/50 transition-colors"
+                    className="w-full py-2.5 px-4 flex items-center justify-between text-[#0f2824] font-semibold text-sm md:text-base focus:outline-none hover:bg-sky-50/50 transition-colors"
                   >
-                    <div className="flex items-center gap-3">
-                      <div className="relative w-8 h-8 flex-shrink-0">
+                    <div className="flex items-center gap-2.5">
+                      <div className="relative w-7 h-7 flex-shrink-0">
                         {item.iconSrc ? (
                           <Image
                             src={item.iconSrc}
                             alt=""
                             fill
                             className="object-contain"
-                            sizes="32px"
+                            sizes="28px"
                           />
                         ) : null}
                       </div>
                       <span>{item.title}</span>
                     </div>
                     <svg
-                      className={`w-5 h-5 text-gray-500 transform transition-transform duration-200 flex-shrink-0 ${isOpen ? "rotate-180" : ""
+                      className={`w-4 h-4 text-gray-500 transform transition-transform duration-200 flex-shrink-0 ${isOpen ? "rotate-180" : ""
                         }`}
                       fill="none"
                       stroke="currentColor"
@@ -195,7 +195,7 @@ export default function BiotechAdditionalSections({
                   </button>
 
                   {isOpen && (
-                    <div className="px-6 pb-5 pt-1 text-gray-600 text-sm border-t border-sky-100 bg-sky-50/20 leading-relaxed">
+                    <div className="px-4 pb-3 pt-1 text-gray-600 text-xs md:text-sm border-t border-sky-100 bg-sky-50/20 leading-relaxed">
                       {item.description}
                     </div>
                   )}
@@ -205,9 +205,9 @@ export default function BiotechAdditionalSections({
           </div>
         </div>
       </section>
-      {/* 2. Where Our Authors Publish Section */}
 
-      <section className="py-12 max-w-5xl mx-auto px-4 border-t border-gray-100">
+      {/* 2. Where Our Authors Publish Section */}
+      <section className="py-2 max-w-5xl mx-auto px-4 border-t border-gray-100">
         <WhereAuthorsPublish
           title="Where Our Authors Publish"
           description="Our authors share Pubrica’s expert content in top-tier journals, conferences, and platforms, maximizing and amplifying its recognition and reach. Our placement will enhance our visibility and elevate our standing in an authoritative capacity."
@@ -225,17 +225,14 @@ export default function BiotechAdditionalSections({
         />
       </section>
 
-
       {/* 3. Our Expert Biotechnology Editors Section */}
-
-      <section className="py-12 max-w-6xl mx-auto px-4 border-t border-gray-100">
+      <section className="py-2 max-w-6xl mx-auto px-4 border-t border-gray-100">
         <ExpertEditorsSection
           title="Our Expert Biotechnology Editors"
           description="Pubrica’s team of industry specialists offers unrivalled expertise and perspectives to provide complete solutions with precision and originality. Through a mix of both experience and specialization, they strive for excellence in everything they do."
           editors={expertEditors}
         />
       </section>
-
 
     </div>
   );
