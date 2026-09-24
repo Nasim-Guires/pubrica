@@ -12,8 +12,9 @@ import CopyEditingSectionRecenPublication from '@/components/services/academic-e
 
 export const metadata = constructMetadata({
     title: 'Expert Manuscript Copy Editing Services | Pubrica',
-    description: "Improve manuscript quality with Pubrica’s Expert Copy Editing Services, ensuring clarity, precision, and adherence to journal guidelines.",
-    slug: '/services/academic-editorial-services/copy-editing-services',
+    description: 'Improve manuscript quality with Pubrica’s Expert Copy Editing Services, ensuring clarity, precision, and adherence to journal guidelines.',
+    keywords: ['Copy Editing Services,Professional copy editing,copy proofing,professional copy editors,copy editor services'],
+    slug: '/services/academic-editorial-services/copy-editing-services/',
 })
 
 const page = () => {
@@ -23,7 +24,7 @@ const page = () => {
             <CommonWhoWeServe {...copyEditingServiceWhoWeServeData} />
             <DevelopmentEditingComprehensive />
             <CopyEditingSectionRecenPublication />
-                
+
             <CommonTestimonial {...copyEditingServiceTestimonialData} />
             <CommonFAQ {...developmentEditingServiceFaqData} />
             <InsightsSection />

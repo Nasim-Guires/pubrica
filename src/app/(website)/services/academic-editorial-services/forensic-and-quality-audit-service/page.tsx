@@ -9,9 +9,10 @@ import InsightsSection from "@/components/services/medical-data-collection/Insig
 import { constructMetadata } from '@/lib/metadata'
 
 export const metadata = constructMetadata({
-    title: 'Forensic & Quality Audit Services for Research Integrity',
-    description: 'Expert forensic and quality audits ensuring data integrity, compliance, accuracy, and transparency across research and organisations.',
-    slug: '/services/academic-editorial-services/forensic-and-quality-audit-service',
+  title: 'Forensic & Quality Audit Services for Research Integrity',
+  description: 'Expert forensic and quality audits ensuring data integrity, compliance, accuracy, and transparency across research and organisations.',
+  keywords: ['Forensic & Quality Audit,Forensic audit services,quality audit services,research integrity audit,data integrity audit'],
+  slug: '/services/academic-editorial-services/forensic-and-quality-audit-service/',
 })
 
 const page = () => {

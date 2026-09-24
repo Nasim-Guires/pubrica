@@ -11,19 +11,19 @@ import { constructMetadata } from '@/lib/metadata'
 import Link from 'next/link'
 
 export const metadata = constructMetadata({
-  title: 'Graphical Abstract Services for Research Authors',
-  description: 'Transform research into engaging graphical abstracts with expert design support to improve visibility and meet journal publication standards.',
-  keywords: ['graphical abstracts', 'graphical abstract service', 'graphical abstract for review paper'],
-  slug: '/services/research-impact/graphical-abstract',
+    title: 'Graphical Abstract Services for Research Authors',
+    description: 'Transform research into engaging graphical abstracts with expert design support to improve visibility and meet journal publication standards.',
+    keywords: ['graphical abstracts,graphical abstract service,graphical abstract for review paper'],
+    slug: '/services/research-impact/graphical-abstract/',
 })
 
- const graphicalAbstractWhoWeServeData = {
+const graphicalAbstractWhoWeServeData = {
     title: "Who We Serve",
     description: (
         <>
             At Pubrica, our{" "}
             <Link
-                href="/services/research-impact/graphical-abstract/sox4-transcription-factor-kidney-fibrosis/" 
+                href="/services/research-impact/graphical-abstract/sox4-transcription-factor-kidney-fibrosis/"
                 className="text-blue-600"
             >
                 graphical abstract
@@ -100,7 +100,7 @@ const page = () => {
             <GraphicalAbstractDesignOptions />
             <CommonTestimonial {...graphicalAbstractTestimonialData} />
             <CommonFAQ {...graphicalAbstractFaqData} />
-            <InsightsSection/>
+            <InsightsSection />
         </>
     )
 }

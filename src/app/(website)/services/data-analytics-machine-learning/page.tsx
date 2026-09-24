@@ -9,22 +9,23 @@ import React from 'react'
 import { constructMetadata } from '@/lib/metadata'
 
 export const metadata = constructMetadata({
-    title: 'Data Analytics & Machine Learning Services | Pubrica',
-    description: 'Advanced data analytics and machine learning services for research and business to drive insights, efficiency, and smarter decisions.',
-    slug: '/services/data-analytics-machine-learning',
+  title: 'Data Analytics & Machine Learning Services | Pubrica',
+  description: 'Advanced data analytics and machine learning services for research and business to drive insights, efficiency, and smarter decisions.',
+  keywords: ['Data Analytics & Machine Learning,Machine learning services,AI data analytics,predictive modeling,healthcare data analytics'],
+  slug: '/services/data-analytics-machine-learning/',
 })
 
 const page = () => {
   return (
-   <>
-   <DataAnalyticsAndMachineLearning/>
-   <DataAnalyticsServicesExtension/>
-   <DataAnalyticsFinalExtensions/>
-   <ToolsUsed/>
-   <SampleWorkShowcase/>
-   <ServiceMatrix/>
-   <AnalyticsFooterSections/>
-   </>
+    <>
+      <DataAnalyticsAndMachineLearning />
+      <DataAnalyticsServicesExtension />
+      <DataAnalyticsFinalExtensions />
+      <ToolsUsed />
+      <SampleWorkShowcase />
+      <ServiceMatrix />
+      <AnalyticsFooterSections />
+    </>
   )
 }
 

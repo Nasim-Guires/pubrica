@@ -15,7 +15,7 @@ export const metadata = constructMetadata({
   title: 'Pre-Submission Manuscript Review Service | Pharma & Research',
   description: 'Improve your Pharma & Research manuscript before submission. Our pre-submission review service offers expert feedback to enhance quality and acceptance.',
   keywords: ['Pre-Submission Peer Review', 'Peer review Pre submissison', 'Journal Peer Reviewing Process', 'sciencetific journal peer review service', 'journal article peer review process'],
-  slug: '/services/publication-support/peer-review-pre-submission',
+  slug: '/services/publication-support/peer-review-pre-submission/',
 })
 
 const page = () => {

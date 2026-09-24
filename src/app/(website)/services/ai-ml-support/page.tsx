@@ -15,8 +15,9 @@ import { constructMetadata } from '@/lib/metadata';
 export const metadata = constructMetadata({
   title: 'Top-tier AI & ML support services to boost your business efficiency.',
   description: 'Discover expert AI & ML support services for advanced data analysis, innovative solutions, and improved project efficiency.',
-  slug: '/services/ai-ml-support',
-});
+  keywords: ['AI & ML support service,AI support services,Machine learning support services,AI and ML services for research,Artificial intelligence in healthcare'],
+  slug: '/services/ai-ml-support/',
+})
 
 const page = () => {
   return (
@@ -25,13 +26,13 @@ const page = () => {
       <OurServicesSection />
       <OurApproachSection />
       <WhoWeServeSection />
-      <IndustriesEmpoweredSection/>
-      <AiMlTechStackSection/>
-      <SampleWorkSection/>
-      <AiMlPackagesSection/>
-      <TestimonialsSection/>
-      <FaqSection/>
-      <InsightsSection/>
+      <IndustriesEmpoweredSection />
+      <AiMlTechStackSection />
+      <SampleWorkSection />
+      <AiMlPackagesSection />
+      <TestimonialsSection />
+      <FaqSection />
+      <InsightsSection />
     </>
   );
 };

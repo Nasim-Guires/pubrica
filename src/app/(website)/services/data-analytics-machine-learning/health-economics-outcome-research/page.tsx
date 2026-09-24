@@ -12,9 +12,9 @@ import { constructMetadata } from '@/lib/metadata'
 export const metadata = constructMetadata({
     title: 'Health Economics and Outcome Research | Pubrica',
     description: 'Expert health economics & outcomes research: PROs, cost-effectiveness, market access & data-driven insights',
-    slug: '/services/data-analytics-machine-learning/health-economics-outcome-research',
+    keywords: ['Health Economics,Scientific health economics research,machine learning health economics research,data analytics health economics research,patient-reported outcome studies'],
+    slug: '/services/data-analytics-machine-learning/health-economics-outcome-research/',
 })
-
 
 const page = () => {
     return (
@@ -37,7 +37,7 @@ const page = () => {
                 title="Frequently Asked Questions – Health Economics & Outcomes Research"
                 faqs={HealthEconomicsOutcomeFaqs}
             />
-            <InsightsSection/>
+            <InsightsSection />
         </>
     )
 }

@@ -11,7 +11,8 @@ import { constructMetadata } from '@/lib/metadata'
 export const metadata = constructMetadata({
     title: 'Visual & Accessibility Editing Services | Research Impact',
     description: 'Expert editing improves research documents, figures, tables, and layouts to meet global accessibility standards for clearer, stronger publications.',
-    slug: '/services/academic-editorial-services/visual-and-accessibility-editing-services',
+    keywords: ['Visual & Accessibility Editing,Visual and Accessibility Editing,Accessible document editing,Academic accessibility services,Manuscript visual enhancement'],
+    slug: '/services/academic-editorial-services/visual-and-accessibility-editing-services/',
 })
 
 

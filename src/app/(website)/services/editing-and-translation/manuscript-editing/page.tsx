@@ -14,8 +14,9 @@ import { constructMetadata } from '@/lib/metadata';
 export const metadata = constructMetadata({
   title: 'Professional Manuscript Editing Service for Research Papers',
   description: 'Elevate your research paper with expert manuscript editing that improves readability, accuracy, and overall scientific rigor for journals.',
-  slug: '/services/editing-and-translation/manuscript-editing',
-});
+  keywords: ['Manuscript Editing Services,Manuscript Editing,scientific manuscript editing,Research paper editing services,Professional editing for journals'],
+  slug: '/services/editing-and-translation/manuscript-editing/',
+})
 
 const page = () => {
   return (
@@ -28,7 +29,7 @@ const page = () => {
       <EditingTranslationManuscriptEditingWhyChooseAndSamples />
       <EditingTranslationManuscriptEditingTypesAndPackages />
       <EditingTranslationManuscriptEditingTestimonialsAndFaq />
-      <InsightsSection/>
+      <InsightsSection />
     </>
   );
 };

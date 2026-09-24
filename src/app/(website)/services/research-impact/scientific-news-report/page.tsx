@@ -12,8 +12,8 @@ import { constructMetadata } from '@/lib/metadata'
 export const metadata = constructMetadata({
   title: 'Scientific News Report Service | Pubrica',
   description: 'Turn your manuscript into media-ready scientific news to boost research visibility, coverage, and citations with Pubrica.',
-  keywords: ['scientific New Report', 'Scientific News Report Service', 'scientific news report', 'manuscript citation', 'research updates'],
-  slug: '/services/research-impact/scientific-news-report',
+  keywords: ['scientific New Report,Scientific News Report Service,scientific news report,manuscript citation,research updates'],
+  slug: '/services/research-impact/scientific-news-report/',
 })
 
 

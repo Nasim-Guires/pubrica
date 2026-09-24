@@ -94,9 +94,9 @@ const LOCAL_SERVICES_DATA = [
 ];
 
 export const metadata = constructMetadata({
-  title: "Scientific Research & Medical Writing Services | Pubrica",
+  title: "Research & Medical Writing Services | Pubrica",
   description:
-    "Explore our full suite of research support: clinical writing, systematic reviews, statistical meta-analyses, and journal formatting audits.",
+    "Pubrica provides medical writing, research support, editing, and publication services to enhance scientific and clinical output.",
   slug: "/services",
 });
 

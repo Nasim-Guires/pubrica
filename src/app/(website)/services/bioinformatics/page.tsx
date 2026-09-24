@@ -13,7 +13,8 @@ import { constructMetadata } from '@/lib/metadata'
 export const metadata = constructMetadata({
     title: 'Bioinformatics Services | Genomic, Proteomic & NGS Analysis',
     description: 'Pubrica delivers expert bioinformatics services for genomics, transcriptomics, proteomics, metabolomics & NGS with global compliance.',
-    slug: '/services/bioinformatics',
+    keywords: ['bioinformatics,Bioinformatics services,NGS data analysis,RNA-seq,DNA sequencing'],
+    slug: '/services/bioinformatics/',
 })
 
 
@@ -37,7 +38,7 @@ const page = () => {
                 title="Frequently Asked Questions – Bioinformatics Services"
                 faqs={bioinformaticsFaqs}
             />
-            <InsightsSection/>  
+            <InsightsSection />
         </>
     )
 }

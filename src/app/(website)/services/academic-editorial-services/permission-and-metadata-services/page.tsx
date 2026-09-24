@@ -10,8 +10,9 @@ import { constructMetadata } from '@/lib/metadata'
 
 export const metadata = constructMetadata({
     title: 'Expert Permission & Metadata Services | Pubrica',
-    description: "Ensure copyright compliance, secure permissions, and optimize metadata with Pubrica’s expert academic editorial support.",
-    slug: '/services/academic-editorial-services/permission-and-metadata-services',
+    description: 'Ensure copyright compliance, secure permissions, and optimize metadata with Pubrica’s expert academic editorial support.',
+    keywords: ['Expert Permission & Metadata,Permission services,metadata services,academic publishing compliance,copyright clearance'],
+    slug: '/services/academic-editorial-services/permission-and-metadata-services/',
 })
 
 const page = () => {

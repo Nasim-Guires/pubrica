@@ -10,8 +10,9 @@ import { constructMetadata } from '@/lib/metadata'
 
 export const metadata = constructMetadata({
     title: 'Expert Revisioning & Localisation Services | Pubrica',
-    description: "Transform your research for global impact with Pubrica’s expert revisioning and localisation services for journals worldwide.",
-    slug: '/services/academic-editorial-services/revisioning-and-localisation-service',
+    description: 'Transform your research for global impact with Pubrica’s expert revisioning and localisation services for journals worldwide.',
+    keywords: ['Expert Revisioning & Localisation,Revisioning services,localisation services,academic editing,manuscript refinement'],
+    slug: '/services/academic-editorial-services/revisioning-and-localisation-service/',
 })
 
 const page = () => {
@@ -28,7 +29,7 @@ const page = () => {
             <CommonFAQ
                 {...revisioningAndLocalisationServiceFaqData}
             />
-            <InsightsSection/>
+            <InsightsSection />
         </>
     )
 }

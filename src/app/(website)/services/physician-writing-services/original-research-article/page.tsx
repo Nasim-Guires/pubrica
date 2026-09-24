@@ -16,11 +16,11 @@ import React from "react";
 import { constructMetadata } from "@/lib/metadata";
 
 export const metadata = constructMetadata({
-  title: "Research Paper Writing Services by Subject Experts",
-  description: "From clinical trials to epidemiological studies, Pubrica delivers publication-ready manuscripts following ICMJE, GCP, and journal standards.",
-  keywords: ["Original research article", "Original research article writing service", "Medical discoveries", "Medical manuscript writing service", "Empirical research article writing"],
-  slug: "/services/physician-writing-services/original-research-article",
-});
+  title: 'Research Paper Writing Services by Subject Experts',
+  description: 'From clinical trials to epidemiological studies, Pubrica delivers publication-ready manuscripts following ICMJE, GCP, and journal standards.',
+  keywords: ['Original research article,Original research article writing service,Medical discoveries,Medical manuscript writing service,Empirical research article writing'],
+  slug: '/services/physician-writing-services/original-research-article/',
+})
 
 const page = () => {
   return (

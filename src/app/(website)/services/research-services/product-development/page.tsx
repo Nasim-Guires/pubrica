@@ -16,7 +16,7 @@ import IndustryVerticals from '@/components/services/research-services/product-d
 export const metadata = constructMetadata({
   title: 'Core Discovery & Intelligence Services for Pharma & Biotech',
   description: 'Pubrica provides evidence-based discovery and intelligence for pharma, nutra, biotech & devices, covering ingredients & patents.',
-  keywords: ['discovery&intelligence', 'prior art search report', 'novelty search report', 'validity search report', 'patent invalidity search report'],
+  keywords: ['discovery&intelligence,prior art search report,novelty search report,validity search report,patent invalidity search report'],
   slug: '/services/research-services/product-development',
 })
 

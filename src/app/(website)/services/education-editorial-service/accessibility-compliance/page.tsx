@@ -11,10 +11,10 @@ import InsightsSection from "@/components/services/medical-data-collection/Insig
 import { constructMetadata } from '@/lib/metadata'
 
 export const metadata = constructMetadata({
-    title: 'Accessibility Compliance Services for Academic Manuscripts',
-    description: 'Ensure your research papers, theses, and academic manuscripts meet WCAG, Section 508, and publisher Accessibility Compliance standards.',
-    keywords: ['Accessibility Compliance', 'publication support services', 'academic manuscript preparation', 'journal submission support', 'scientific publishing'],
-    slug: '/services/education-editorial-service/accessibility-compliance',
+  title: 'Accessibility Compliance Services for Academic Manuscripts',
+  description: 'Ensure your research papers, theses, and academic manuscripts meet WCAG, Section 508, and publisher Accessibility Compliance standards.',
+  keywords: ['Accessibility Compliance,publication support services,academic manuscript preparation,journal submission support,scientific publishing'],
+  slug: '/services/education-editorial-service/accessibility-compliance/',
 })
 
 const page = () => {

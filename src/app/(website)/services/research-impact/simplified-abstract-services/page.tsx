@@ -13,14 +13,13 @@ import { constructMetadata } from '@/lib/metadata'
 import Link from 'next/link'
 
 export const metadata = constructMetadata({
-  title: 'Simplified Abstract Services for Research – Pubrica',
-  description: 'Get clear, jargon-free research summaries with our expert abstract writing services. Ideal for journal submissions, academic publishing, and wider reach.',
-  keywords: ['Simplified abstracts service', 'research abstract', 'simplified abstracts'],
-  slug: '/services/research-impact/simplified-abstract-services',
+    title: 'Simplified Abstract Services for Research – Pubrica',
+    description: 'Get clear, jargon-free research summaries with our expert abstract writing services. Ideal for journal submissions, academic publishing, and wider reach.',
+    keywords: ['Simplified abstracts service,research abstract,simplified abstracts'],
+    slug: '/services/research-impact/simplified-abstract-services/',
 })
 
-
- const simplifiedAbstractServicesWhoWeServeData = {
+const simplifiedAbstractServicesWhoWeServeData = {
     title: "Who We Serve",
     description: (
         <>
@@ -32,7 +31,7 @@ export const metadata = constructMetadata({
                 simplified abstract
             </Link>{" "}
             writing services are tailored for a broad spectrum of academic, scientific, and professional researchers. Whether you’re preparing a{" "}
-            <Link 
+            <Link
                 href="/services/publication-support/journal-submission/"
                 className="text-blue-600 "
             >

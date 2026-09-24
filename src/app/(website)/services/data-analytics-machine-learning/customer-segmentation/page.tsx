@@ -12,7 +12,8 @@ import { constructMetadata } from '@/lib/metadata'
 export const metadata = constructMetadata({
     title: 'Customer Segmentation Research - Pubrica',
     description: 'Pubrica enables data-driven customer segmentation for pharma, biotech, hospitals, and medical devices using AI & analytics.',
-    slug: '/services/data-analytics-machine-learning/customer-segmentation',
+    keywords: ['Customer Segmentation,Customer segmentation services,healthcare customer segmentation,medical market segmentation,biotech market segmentation'],
+    slug: '/services/data-analytics-machine-learning/customer-segmentation/',
 })
 
 

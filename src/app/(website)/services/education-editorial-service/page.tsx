@@ -9,10 +9,10 @@ import InsightsSection from "@/components/services/medical-data-collection/Insig
 import { constructMetadata } from '@/lib/metadata'
 
 export const metadata = constructMetadata({
-    title: 'Education Editorial Services | Pubrica Editing Experts',
-    description: 'Professional education editorial services for research, curriculum, and EdTech content with expert accuracy and global standards.',
-    keywords: ['Education Editorial Services', 'academic editing', 'curriculum editing', 'educational content editing', 'pedagogy editing'],
-    slug: '/services/education-editorial-service',
+  title: 'Education Editorial Services | Pubrica Editing Experts',
+  description: 'Professional education editorial services for research, curriculum, and EdTech content with expert accuracy and global standards.',
+  keywords: ['Education Editorial Services,academic editing,curriculum editing,educational content editing,pedagogy editing'],
+  slug: '/services/education-editorial-service/',
 })
 
 const page = () => {

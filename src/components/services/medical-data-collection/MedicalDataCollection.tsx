@@ -21,7 +21,7 @@ export const MedicalDataCollection: React.FC = () => {
           ========================================================== */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-7 pb-6">
         <div className="space-y-6">
-          <h2 className="text-xl md:text-2xl font-bold text-[#082a32] leading-tight">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#082a32] leading-tight">
             Medical Data Collection: Integrating Clinical Insight and Research
             Precision for Reliable Evidence
           </h2>
@@ -42,7 +42,7 @@ export const MedicalDataCollection: React.FC = () => {
             </div>
 
             {/* Text Content */}
-            <div className="space-y-5 text-xs sm:text-sm md:text-[14px] text-gray-700 leading-relaxed">
+            <div className="space-y-5 text-sm sm:text-base md:text-[16px] text-gray-700 leading-relaxed">
               <p className="text-justify">
                 Accurate medical{" "}
                 <Link
@@ -74,7 +74,7 @@ export const MedicalDataCollection: React.FC = () => {
                   href="/uploads/medical-data-collection/Data-Analytics-Machine-Learning-service.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-red-600 text-white text-xs sm:text-sm font-bold px-4 sm:px-6 py-3 rounded hover:bg-white hover:text-black transition-colors whitespace-nowrap"
+                  className="bg-red-600 text-white text-base font-bold px-6 py-2 rounded hover:bg-white hover:text-black transition-colors"
                 >
                   View Brochure
                 </Link>

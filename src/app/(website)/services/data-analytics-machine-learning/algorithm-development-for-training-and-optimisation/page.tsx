@@ -9,11 +9,11 @@ import InsightsSection from "@/components/services/medical-data-collection/Insig
 import { constructMetadata } from '@/lib/metadata'
 
 export const metadata = constructMetadata({
-    title: 'Healthcare & Life Science Algorithm Development | Pubrica',
-    description: 'Pubrica delivers custom AI, ML, deep learning & optimisation algorithms for healthcare, life sciences, pharma, food & nutraceuticals.',
-    slug: '/services/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation',
+  title: 'Healthcare & Life Science Algorithm Development | Pubrica',
+  description: 'Pubrica delivers custom AI, ML, deep learning & optimisation algorithms for healthcare, life sciences, pharma, food & nutraceuticals.',
+  keywords: ['Algorithm Development,Algorithm development for training and optimisation,scientific algorithm development,AI algorithm development services,machine learning algorithm development'],
+  slug: '/services/data-analytics-machine-learning/algorithm-development-for-training-and-optimisation/',
 })
-
 const page = () => {
     return (
         <>

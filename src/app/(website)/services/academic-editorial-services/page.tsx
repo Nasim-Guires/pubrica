@@ -9,9 +9,10 @@ import { constructMetadata } from '@/lib/metadata'
 import { FAQSection } from '@/components/services/academic-editorial-services/FAQSection'
 
 export const metadata = constructMetadata({
-    title: 'Expert Academic Editorial Services | Pubrica',
-    description: "Pubrica’s Academic Editorial Services provide precise editing, language enhancement, and structural improvement to boost impact.",
-    slug: '/services/academic-editorial-services',
+  title: 'Expert Academic Editorial Services | Pubrica',
+  description: 'Pubrica’s Academic Editorial Services provide precise editing, language enhancement, and structural improvement to boost impact.',
+  keywords: ['Expert Academic Editorial,Academic editing,scholarly manuscript editing,thesis editing,journal submission support'],
+  slug: '/services/academic-editorial-services/',
 })
 
 const page = () => {

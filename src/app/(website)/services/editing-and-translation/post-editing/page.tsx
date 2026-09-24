@@ -11,8 +11,9 @@ import { constructMetadata } from '@/lib/metadata';
 export const metadata = constructMetadata({
   title: 'Expert Post-Editing Services for Authors | Pubrica',
   description: 'Post-editing services from Pubrica involve revisions by experts for smooth, accurate translations of your medical and scientific papers.',
-  slug: '/services/editing-and-translation/post-editing',
-});
+  keywords: ['Post Editing Service,Machine Translation Post-Editing Services,post translation service,Machine Translation,Post-Editing Services'],
+  slug: '/services/editing-and-translation/post-editing/',
+})
 
 const page = () => {
   return (

@@ -12,7 +12,8 @@ import { constructMetadata } from '@/lib/metadata'
 export const metadata = constructMetadata({
     title: 'Scientific Patient Journey & Insights Data Analytics & Machine Learning',
     description: 'Custom analytics extract insights from EMR/EHR files using AI, ML & NLP to reveal disease trends & treatment patterns.',
-    slug: '/services/data-analytics-machine-learning/patient-journey-insights-machine-learning',
+    keywords: ['Patient Journey,Scientific patient journey analytics,patient journey healthcare services,patient journey analytics services,patient journey analytics machine learning'],
+    slug: '/services/data-analytics-machine-learning/patient-journey-insights-machine-learning/',
 })
 
 const page = () => {

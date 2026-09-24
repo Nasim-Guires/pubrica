@@ -14,11 +14,11 @@ import React from "react";
 import { constructMetadata } from "@/lib/metadata";
 
 export const metadata = constructMetadata({
-  title: "Research Grant Proposal Writing Services | Get Expert Help",
-  description: "Create high-quality grant proposals with expert guidance, strategic planning, and funding agency compliance support to improve funding success.",
-  keywords: ["Grant Writing", "grant writing services", "research grant writing services", "grant writing help", "professional grant writing services"],
-  slug: "/services/research-services/grant-writing",
-});
+  title: 'Research Grant Proposal Writing Services | Get Expert Help',
+  description: 'Create high-quality grant proposals with expert guidance, strategic planning, and funding agency compliance support to improve funding success.',
+  keywords: ['Grant Writing,grant writing services,research grant writing services,grant writing help,professional grant writing services'],
+  slug: '/services/research-services/grant-writing/',
+})
 
 const page = () => {
   return (

@@ -29,6 +29,15 @@ export default function Navbar() {
   const [searchQuery, setSearchQuery] = useState("");
   const searchInputRef = useRef<HTMLInputElement>(null);
 
+  // Close menus handler
+  const handleNavClick = () => {
+    setIsOpen(false);
+    setIsSearchOpen(false);
+    if (document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur();
+    }
+  };
+
   // Focus input when search is toggled open
   useEffect(() => {
     if (isSearchOpen && searchInputRef.current) {
@@ -42,6 +51,7 @@ export default function Navbar() {
     if (searchQuery.trim()) {
       // Execute your search routing logic here (e.g., router.push(`/search?q=${searchQuery}`))
       console.log("Searching for:", searchQuery);
+      handleNavClick();
     }
   };
 
@@ -68,7 +78,7 @@ export default function Navbar() {
                   <Mail className="h-3.5 w-3.5 text-gray-300" /> sales@pubrica.com
                 </a>
                 <span className="text-gray-500">|</span>
-                <a href="tel:+919884350006" className="flex items-center gap-1.5 hover:text-white transition-colors font-medium">
+                <a href="tel:+19884350006" className="flex items-center gap-1.5 hover:text-white transition-colors font-medium">
                   <Phone className="h-3.5 w-3.5 text-gray-300" /> +91 9884350006
                 </a>
                 <span className="text-gray-500">|</span>
@@ -95,7 +105,7 @@ export default function Navbar() {
                     <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
                   </a>
                 </div>
-                <Link href="/order-now">
+                <Link href="/order-now" onClick={handleNavClick}>
                   <span className="inline-flex items-center bg-white text-gray-900 px-4 py-1.5 rounded font-bold text-xs tracking-wide hover:bg-gray-100 transition-colors cursor-pointer">
                     Get Expert Help &rarr;
                   </span>
@@ -113,7 +123,7 @@ export default function Navbar() {
           >
             <div className="flex items-center justify-between">
               {/* Logo */}
-              <Link href="/" className="flex items-center text-blue-600 no-underline hover:no-underline">
+              <Link href="/" onClick={handleNavClick} className="flex items-center text-blue-600 no-underline hover:no-underline">
                 <div className="w-[160px] h-[44px] relative flex items-center justify-center">
                   <Image
                     src="/images/logos/pubrica-logo.webp"
@@ -138,6 +148,7 @@ export default function Navbar() {
                       <div key={link.label} className="group px-2 py-1.5">
                         <Link
                           href={link.href}
+                          onClick={handleNavClick}
                           className={cn(
                             "flex items-center gap-0.5 text-[14px] font-semibold text-[#073632]/90 hover:text-[#073632] transition-colors",
                             isActive && "text-[#073632] font-bold"
@@ -147,7 +158,7 @@ export default function Navbar() {
                           <ChevronDown className="h-4 w-4 text-gray-400 transition-transform duration-200 group-hover:rotate-180" />
                         </Link>
 
-                        {/* Mega Menu Container: centered relative to the main navbar container */}
+                        {/* Mega Menu Container */}
                         <div className="absolute left-1/2 -translate-x-1/2 top-full mt-1 w-[90vw] max-w-[950px] rounded-md bg-white shadow-2xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-[100] flex">
                           {/* Left Column: Vertical Sub-links list */}
                           <div className="w-[340px] py-2 border-r border-gray-200 max-h-[420px] overflow-y-auto">
@@ -166,7 +177,7 @@ export default function Navbar() {
                                       : "text-gray-700 hover:bg-gray-100"
                                   )}
                                 >
-                                  <Link href={sublink.href} className="w-full flex items-center justify-between">
+                                  <Link href={sublink.href} onClick={handleNavClick} className="w-full flex items-center justify-between">
                                     <span>{sublink.label}</span>
                                     {hasChildren && (
                                       <ChevronRight className="h-3.5 w-3.5 text-gray-400" />
@@ -190,6 +201,7 @@ export default function Navbar() {
                                     <Link
                                       key={child.href}
                                       href={child.href}
+                                      onClick={handleNavClick}
                                       className="flex items-center gap-2 text-xs text-blue-600 no-underline hover:no-underline font-medium"
                                     >
                                       <CheckCircle2 className="h-3.5 w-3.5 text-[#0066cc]" />
@@ -218,7 +230,7 @@ export default function Navbar() {
                           {/* Third Column: Sample Work Promo Tile */}
                           {selectedSubItem?.sampleWork && (
                             <div className="hidden lg:block w-[220px] p-4 border-l border-gray-200 bg-white">
-                              <Link href="/insights/sample-work" className="block group text-blue-600 no-underline hover:no-underline">
+                              <Link href="/insights/sample-work" onClick={handleNavClick} className="block group text-blue-600 no-underline hover:no-underline">
                                 <div className="bg-[#073632] text-white text-xs font-bold text-center py-2 rounded-t-md">
                                   Sample Work
                                 </div>
@@ -246,6 +258,7 @@ export default function Navbar() {
                     <Link
                       key={link.href}
                       href={link.href}
+                      onClick={handleNavClick}
                       className={cn(
                         "px-2 py-1.5 text-[14px] font-semibold text-[#073632]/90 hover:text-[#073632] transition-colors rounded-md",
                         isActive && "text-[#073632] font-bold"

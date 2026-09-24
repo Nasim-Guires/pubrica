@@ -14,9 +14,9 @@ import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton'
 
 export const metadata = constructMetadata({
     title: 'Expert Digital Production QA Services | Pubrica',
-    description: "Ensure accuracy, consistency, and quality across digital academic outputs with Pubrica’s expert Digital Production QA services.",
-    keywords: ['Digital Production QA', 'academic production quality assurance', 'XML QA services', 'typesetting QA', 'digital publishing quality control'],
-    slug: '/services/education-editorial-service/digital-production-qa-services',
+    description: 'Ensure accuracy, consistency, and quality across digital academic outputs with Pubrica’s expert Digital Production QA services.',
+    keywords: ['Digital Production QA,academic production quality assurance,XML QA services,typesetting QA,digital publishing quality control'],
+    slug: '/services/education-editorial-service/digital-production-qa-services/',
 })
 
 const page = () => {

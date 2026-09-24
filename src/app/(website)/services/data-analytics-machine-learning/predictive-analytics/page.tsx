@@ -12,9 +12,9 @@ import { constructMetadata } from '@/lib/metadata'
 export const metadata = constructMetadata({
     title: 'Best Artificial Intelligence & Machine Learning Support Service',
     description: 'Explore our AI & ML support services for advanced data analysis and innovative solutions. Enhance your projects with our experts.',
-    slug: '/services/data-analytics-machine-learning/predictive-analytics',
+    keywords: ['Best Artificial Intelligence,AI support services,Machine learning support services,AI and ML services for research,Artificial intelligence in healthcare'],
+    slug: '/services/data-analytics-machine-learning/predictive-analytics/',
 })
-
 
 const page = () => {
     return (

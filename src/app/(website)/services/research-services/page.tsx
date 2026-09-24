@@ -14,7 +14,7 @@ import { constructMetadata } from '@/lib/metadata'
 export const metadata = constructMetadata({
   title: 'Clinical Research Paper Writing Services help in the UK and USA.',
   description: "Research services by Pubrica's team of experts create scientific and medical articles valuable to practitioners and authors.",
-  keywords: ['Research services', 'scientific research writing services', 'medical thesis dissertation writing services', 'medical research paper writing service', 'Clinical research writing service'],
+  keywords: ['Research services,scientific research writing services,medical thesis dissertation writing services,medical research paper writing service,Clinical research writing service'],
   slug: '/services/research-services',
 })
 
@@ -47,19 +47,19 @@ export const professionalResearchFAQ = {
 const page = () => {
   return (
     <>
-    <ResearchServicesHero/>
-    <ResearchServicesSections/>
-    <WhoWeServeSection/>
-    <ResearchWorkflowProcess/>
-    <ClinicalResearchProcessTabs/>
-    <ResearchJourneyPhases/>
-    <TestimonialsSection/>
-    <ResearchPackagesSection/>
-    <CommonFAQ
-        title={professionalResearchFAQ.title} 
-        faqs={professionalResearchFAQ.faqs} 
+      <ResearchServicesHero />
+      <ResearchServicesSections />
+      <WhoWeServeSection />
+      <ResearchWorkflowProcess />
+      <ClinicalResearchProcessTabs />
+      <ResearchJourneyPhases />
+      <TestimonialsSection />
+      <ResearchPackagesSection />
+      <CommonFAQ
+        title={professionalResearchFAQ.title}
+        faqs={professionalResearchFAQ.faqs}
       />
-    <InsightsSection/>
+      <InsightsSection />
     </>
   )
 }

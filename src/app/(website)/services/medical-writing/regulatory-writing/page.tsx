@@ -11,10 +11,9 @@ import { constructMetadata } from '@/lib/metadata'
 export const metadata = constructMetadata({
     title: 'Regulatory Writing Services for Pharma, Life Sciences',
     description: 'Pubrica offers expert regulatory writing services for pharma, biotech, and medical devices—compliant, accurate, and ready for global submission.',
-    keywords: ['regulatory writing services', 'regulatory medical writing', 'pharma regulatory documentation writing', 'clinical study report writing', 'medical device CER writing'],
-    slug: '/services/medical-writing/regulatory-writing',
+    keywords: ['regulatory writing services,regulatory medical writing,pharma regulatory documentation writing,clinical study report writing,medical device CER writing'],
+    slug: '/services/medical-writing/regulatory-writing/',
 })
-
 const page = () => {
     return (
         <>

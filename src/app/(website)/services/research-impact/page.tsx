@@ -9,24 +9,24 @@ import React from "react";
 import { constructMetadata } from "@/lib/metadata";
 
 export const metadata = constructMetadata({
-  title: "Manuscript Formatting & Research Impact Services | Pubrica",
-  description: "Pubrica offers Research Impact Services, including scientific illustrations, infographics, and promotion, to broaden the reach of your research",
-  keywords: ["research impact", "citation enhancement", "academic visibility", "publication success", "scholarly influence."],
-  slug: "/services/research-impact",
-});
+  title: 'Manuscript Formatting & Research Impact Services | Pubrica',
+  description: 'Pubrica offers Research Impact Services, including scientific illustrations, infographics, and promotion, to broaden the reach of your research',
+  keywords: ['research impact,citation enhanceme/services/research-impact/nt,academic visibility,publication success,scholarly influence.'],
+  slug: '/services/research-impact/',
+})
 
 
 
 const page = () => {
-  return(
+  return (
     <>
-    <ResearchImpactService/>
-    <ResearchImpactAndStakeholders/>
-    <ResearchPromotionAndProcess/>
-    <TherapeuticComplianceAndSamples/>
-    <TestimonialsCarousel/>
-    <ResearchImpactSection/>
-    <InsightsSection/>
+      <ResearchImpactService />
+      <ResearchImpactAndStakeholders />
+      <ResearchPromotionAndProcess />
+      <TherapeuticComplianceAndSamples />
+      <TestimonialsCarousel />
+      <ResearchImpactSection />
+      <InsightsSection />
     </>
   )
 };

@@ -9,6 +9,7 @@ import PublicationServices from "@/features/services/components/PublicationServi
 import PubricaResourceHub from "@/features/services/components/PubricaResourceHub";
 import CommonFAQ from "@/components/common/FAQ";
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
+import { constructMetadata } from "@/lib/metadata";
 
 const service = PUBLICATION_SUPPORT_SERVICE;
 const faqs = [
@@ -59,10 +60,14 @@ const faqs = [
       "Publish in indexed journals by selecting the right journal for your work, following author guidelines, using robust methodology, providing clear results, writing well, and revising your work based on feedback from peers.",
   },
 ];
-export const metadata = {
-  title: service.title,
-  description: service.shortDescription,
-};
+
+export const metadata = constructMetadata({
+  title: 'Publication Support Services | Avoid Journal Rejections',
+  description: 'Expert publication support for researchers, pharma, and life sciences teams, delivering compliant, submission-ready manuscripts with peer review guidance.',
+  keywords: ['Publication Support Services,Article publication services,research paper publication services,academic journal publication services,scientific journal publication services'],
+  slug: '/services/publication-support/',
+})
+
 
 export default function Page() {
   return (
@@ -79,7 +84,7 @@ export default function Page() {
         title="Frequently Asked Questions"
         faqs={faqs}
       />
-      <InsightsSection/>
+      <InsightsSection />
     </>
   );
 }

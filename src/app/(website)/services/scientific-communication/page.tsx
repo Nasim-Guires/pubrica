@@ -10,8 +10,8 @@ import { constructMetadata } from '@/lib/metadata'
 export const metadata = constructMetadata({
   title: 'Best Scientific Medical Communication Services - Pubrica Experts',
   description: 'Pubrica provides scientific medical communication services for medical device manufacturers, and medico-marketing materials across the globe.',
-  keywords: ['Scientific medical communication', 'Scientific Communication Services', 'healthcare communication service', 'medico marketing solution service', 'clinical research communication service'],
-  slug: '/services/scientific-communication',
+  keywords: ['Scientific medical communication,Scientific Communication Services,healthcare communication service,medico marketing solution service,clinical research communication service'],
+  slug: '/services/scientific-communication/',
 })
 
 const page = () => {

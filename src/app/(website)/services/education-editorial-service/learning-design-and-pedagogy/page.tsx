@@ -15,8 +15,8 @@ import CommonFAQ from '@/components/common/FAQ'
 export const metadata = constructMetadata({
     title: 'Learning Design & Pedagogy Services | Pubrica',
     description: 'Strengthen learning outcomes with expert learning design and pedagogical development services for academic, and digital education content.',
-    keywords: ['Learning Design & Pedagogy', 'Learning Design and Pedagogy', 'Instructional design services', 'Pedagogical framework development', 'Curriculum design services'],
-    slug: '/services/education-editorial-service/learning-design-and-pedagogy',
+    keywords: ['Learning Design & Pedagogy,Learning Design and Pedagogy,Instructional design services,Pedagogical framework development,Curriculum design services'],
+    slug: '/services/education-editorial-service/learning-design-and-pedagogy/',
 })
 
 const faqData = [

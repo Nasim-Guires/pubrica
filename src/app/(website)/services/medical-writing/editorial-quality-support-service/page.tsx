@@ -11,9 +11,9 @@ import { constructMetadata } from '@/lib/metadata'
 
 export const metadata = constructMetadata({
     title: 'Editorial & Quality Support Service | Pubrica',
-    description: "Enhance clarity, compliance & impact of scientific documents with Pubrica’s expert editorial support.",
-    keywords: ['editorial', 'Editorial support', 'scientific editing', 'journal formatting', 'quality check'],
-    slug: '/services/medical-writing/editorial-quality-support-service',
+    description: 'Enhance clarity, compliance & impact of scientific documents with Pubrica’s expert editorial support.',
+    keywords: ['editorial,Editorial support,scientific editing,journal formatting,quality check'],
+    slug: '/services/medical-writing/editorial-quality-support-service/',
 })
 
 const page = () => {
@@ -35,7 +35,7 @@ const page = () => {
                 title={editorialQualitySupportFAQs.title}
                 faqs={editorialQualitySupportFAQs.faqs}
             />
-            <InsightsSection/>
+            <InsightsSection />
         </>
     )
 }
