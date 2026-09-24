@@ -214,9 +214,8 @@ function KeyValueTable({ pairs }: { pairs: { key: string; value: string }[] }) {
       {pairs.map((pair, i) => (
         <div
           key={i}
-          className={`flex items-center justify-between gap-4 px-4 py-2.5 text-sm ${
-            i % 2 === 1 ? "bg-slate-50" : ""
-          } ${i !== 0 ? "border-t border-slate-100" : ""}`}
+          className={`flex items-center justify-between gap-4 px-4 py-2.5 text-sm ${i % 2 === 1 ? "bg-slate-50" : ""
+            } ${i !== 0 ? "border-t border-slate-100" : ""}`}
         >
           <span className="font-semibold text-slate-700">{pair.key}</span>
           <span className="text-right text-slate-600">{pair.value}</span>
@@ -417,7 +416,7 @@ function renderNode(node: LexicalNode, key: number): React.ReactNode {
           </span>
         );
       }
-
+      
       if (!isImage) {
         return (
           <a
@@ -436,6 +435,7 @@ function renderNode(node: LexicalNode, key: number): React.ReactNode {
       const height = node.value?.height || 450;
       return (
         <span key={key} className="block relative my-6 rounded-lg overflow-hidden">
+         {/* <h1>ihfewiohfw</h1> */}
           <Image
             src={src}
             alt={node.value?.altText || node.value?.title || ""}
@@ -452,6 +452,8 @@ function renderNode(node: LexicalNode, key: number): React.ReactNode {
         <div key={key} className="my-6 overflow-x-auto rounded-lg border border-slate-200">
           <table className="w-full border-collapse text-sm md:text-base">
             <tbody>{renderChildren(node.children)}</tbody>
+
+
           </table>
         </div>
       );
@@ -467,9 +469,8 @@ function renderNode(node: LexicalNode, key: number): React.ReactNode {
           key={key}
           colSpan={node.colSpan && node.colSpan > 1 ? node.colSpan : undefined}
           rowSpan={node.rowSpan && node.rowSpan > 1 ? node.rowSpan : undefined}
-          className={`border border-slate-200 px-4 py-2.5 align-top text-slate-700 ${
-            isHeader ? "bg-slate-50 font-semibold text-left" : ""
-          }`}
+          className={`border border-slate-200 px-4 py-2.5 align-top text-slate-700 ${isHeader ? "bg-slate-50 font-semibold text-left" : ""
+            }`}
         >
           {renderChildren(node.children)}
         </Tag>

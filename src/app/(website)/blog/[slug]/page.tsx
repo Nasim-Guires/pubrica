@@ -42,7 +42,6 @@ export default async function BlogDetailsPage({ params }: BlogDetailsPageProps) 
   const { docs: otherPosts } = await getPosts({ source: "blog", limit: 6 });
   const otherBlogs = otherPosts.filter((p) => p.slug !== slug).slice(0, 5);
   const bannerImage = mediaUrl(post.heroImage) || "/images/blog/default.webp";
-
   return (
     <div className="min-h-screen bg-[#f8f9fa] text-slate-800 font-sans pb-10">
       {/* Banner Header */}
@@ -112,26 +111,42 @@ export default async function BlogDetailsPage({ params }: BlogDetailsPageProps) 
             </div>
 
             {/* Interesting Blogs */}
+            {/* Interesting Blogs */}
             {otherBlogs.length > 0 && (
-              <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
-                <h4 className="text-base font-bold text-slate-900 mb-4 border-b border-slate-100 pb-2">
+              <div className="bg-white p-5 rounded-xl border border-slate-100 shadow-sm">
+                <h4 className="text-base font-bold text-slate-900 mb-5">
                   Interesting Blogs
                 </h4>
                 <div className="flex flex-col gap-4">
                   {otherBlogs.map((b) => {
                     const thumb = mediaUrl(b.heroImage) || "/images/blog/default.webp";
                     return (
-                      <Link key={b.id} href={`/blog/${b.slug}`} className="group flex gap-3 items-start">
-                        <div className="relative w-16 h-16 flex-shrink-0 rounded overflow-hidden">
-                          <Image src={thumb} alt={b.title} fill className="object-cover" />
+                      <Link
+                        key={b.id}
+                        href={`/blog/${b.slug}`}
+                        className="group flex gap-3 items-start pb-4 border-b border-slate-100 last:border-b-0 last:pb-0"
+                      >
+                        {/* Thumbnail */}
+                        <div className="relative w-16 h-14 flex-shrink-0 rounded overflow-hidden bg-slate-100">
+                          <Image
+                            src={thumb}
+                            alt={b.title}
+                            fill
+                            className="object-cover transition-transform duration-300 group-hover:scale-105"
+                          />
                         </div>
-                        <div>
-                          <h5 className="text-xs font-semibold text-slate-800 group-hover:text-[#004d40] leading-snug line-clamp-2">
+
+                        {/* Title & Metadata */}
+                        <div className="flex-1 min-w-0">
+                          <h5 className="text-sm font-semibold text-slate-700 group-hover:text-emerald-700 leading-snug line-clamp-3 transition-colors">
                             {b.title}
                           </h5>
-                          <span className="text-[10px] text-slate-400 mt-1 block">
-                            📅 {formatDate(b.publishing?.publishedAt)}
-                          </span>
+                          <div className="flex items-center gap-2 text-[11px] text-slate-400 mt-2">
+                            <span className="flex items-center gap-1">
+                              🕒 {formatDate(b.publishing?.publishedAt)}
+                            </span>
+                            <span>💬 0</span>
+                          </div>
                         </div>
                       </Link>
                     );

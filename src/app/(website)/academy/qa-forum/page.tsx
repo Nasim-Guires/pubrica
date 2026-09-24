@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { unstable_cache } from "next/cache";
 import { getPosts } from "@/lib/payload";
 import type { LexicalNode, PayloadPost } from "@/lib/payload/types";
 
@@ -50,15 +51,6 @@ function formatDate(iso?: string) {
   });
 }
 
-/** Q&A forum posts open with a "Q & A Forum | <Topic>" marker paragraph, then
- *  repeat the question as an h1. Extract the topic and a clean answer preview
- *  that skips both of those instead of reusing the generic excerpt helper.
- *
- *  Some posts in this dataset have content merged in from other Q&A entries
- *  (multiple unrelated "Q:" headings in one post's body). Rather than blindly
- *  grabbing the first paragraphs — which can land on a different question's
- *  answer — find the heading that actually matches this post's own title and
- *  read the preview from directly under it. */
 function normalizeForMatch(s: string): string {
   return s
     .toLowerCase()
@@ -108,6 +100,19 @@ function parseQaPost(post: PayloadPost): QaEntry | null {
   };
 }
 
+/**
+ * Caches all valid parsed Q&A entries in server memory for fast filtering & pagination.
+ * Revalidates every hour or when triggered by Next.js cache tags.
+ */
+const getParsedQaEntries = unstable_cache(
+  async () => {
+    const { docs } = await getPosts({ source: "academy", limit: 2000 });
+    return docs.map(parseQaPost).filter((e): e is QaEntry => e !== null);
+  },
+  ["qa-forum-all-parsed-entries"],
+  { revalidate: 3600 }
+);
+
 interface QaForumPageProps {
   searchParams: Promise<{ topic?: string; page?: string }>;
 }
@@ -116,21 +121,32 @@ export default async function QaForumPage({ searchParams }: QaForumPageProps) {
   const { topic: topicParam, page: pageParam } = await searchParams;
   const page = Math.max(1, Number(pageParam) || 1);
 
-  const { docs } = await getPosts({ source: "academy", limit: 1069 });
-  const allEntries = docs.map(parseQaPost).filter((e): e is QaEntry => e !== null);
+  // Retrieve cached parsed Q&A list instantly without hitting DB or parsing AST on every request
+  const allEntries = await getParsedQaEntries();
 
-
+  // Compute topic facets dynamically
   const topicCounts = new Map<string, number>();
   for (const entry of allEntries) {
     topicCounts.set(entry.topic, (topicCounts.get(entry.topic) ?? 0) + 1);
   }
   const topics = Array.from(topicCounts.entries()).sort((a, b) => b[1] - a[1]);
 
+  // Filter entries in memory
   const filtered = topicParam ? allEntries.filter((e) => e.topic === topicParam) : allEntries;
   const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   const pageEntries = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
 
-  const topicQuery = (t?: string) => (t ? `?topic=${encodeURIComponent(t)}` : "");
+  const getPaginationUrl = (targetPage: number) => {
+    const params = new URLSearchParams();
+    if (topicParam) params.set("topic", topicParam);
+    params.set("page", targetPage.toString());
+    return `/academy/qa-forum?${params.toString()}`;
+  };
+
+  const getTopicUrl = (t?: string) => {
+    if (!t) return "/academy/qa-forum";
+    return `/academy/qa-forum?topic=${encodeURIComponent(t)}`;
+  };
 
   return (
     <div className="bg-[#f8f9fa] min-h-screen text-slate-800 font-sans pb-10">
@@ -157,7 +173,7 @@ export default async function QaForumPage({ searchParams }: QaForumPageProps) {
               {topics.map(([topic, count]) => (
                 <Link
                   key={topic}
-                  href={`/academy/qa-forum${topicQuery(topic)}`}
+                  href={getTopicUrl(topic)}
                   className={`text-xs px-2.5 py-1.5 rounded transition-colors ${topicParam === topic ? "bg-[#0b2825] text-white font-semibold" : "text-slate-600 hover:bg-slate-50"
                     }`}
                 >
@@ -208,7 +224,7 @@ export default async function QaForumPage({ searchParams }: QaForumPageProps) {
           {totalPages > 1 && (
             <div className="flex justify-center items-center gap-3 mt-6">
               <Link
-                href={`/academy/qa-forum${topicQuery(topicParam)}${topicParam ? "&" : "?"}page=${page - 1}`}
+                href={getPaginationUrl(page - 1)}
                 className={`px-4 py-2 rounded text-xs font-semibold border transition-colors ${page > 1
                     ? "border-slate-200 text-slate-700 hover:border-emerald-700 hover:text-emerald-700"
                     : "border-slate-100 text-slate-300 pointer-events-none"
@@ -220,7 +236,7 @@ export default async function QaForumPage({ searchParams }: QaForumPageProps) {
                 Page {page} of {totalPages}
               </span>
               <Link
-                href={`/academy/qa-forum${topicQuery(topicParam)}${topicParam ? "&" : "?"}page=${page + 1}`}
+                href={getPaginationUrl(page + 1)}
                 className={`px-4 py-2 rounded text-xs font-semibold transition-colors ${page < totalPages
                     ? "bg-[#0b2825] text-white hover:bg-[#123633]"
                     : "bg-slate-100 text-slate-300 pointer-events-none"
