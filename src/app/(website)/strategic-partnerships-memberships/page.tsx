@@ -2,46 +2,17 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import HeroBanner from "@/components/common/HeroBanner";
+import { constructMetadata } from "@/lib/metadata";
 
 // ----------------------------------------------------------------------------
 // SEO METADATA
 // ----------------------------------------------------------------------------
-export const metadata: Metadata = {
-  title: "Strategic Partnerships & Memberships | Pubrica",
-  description:
-    "Pubrica has alliances with several institutions and is a member of many elite organizations including ALPSP, STM, SSP, CASE, and KCSE. Learn more about our strategic partnerships and memberships in scholarly publishing.",
-  keywords: [
-    "Pubrica partnerships",
-    "Pubrica memberships",
-    "ALPSP",
-    "STM",
-    "Society for Scholarly Publishing",
-    "SSP",
-    "Council of Asian Science Editors",
-    "CASE",
-    "Korean Council of Science Editors",
-    "KCSE",
-    "scholarly publishing partnerships",
-  ],
-  alternates: {
-    canonical: "https://pubrica.com/strategic-partnerships-memberships/",
-  },
-  openGraph: {
-    title: "Strategic Partnerships & Memberships | Pubrica",
-    description:
-      "Pubrica has alliances with several institutions and is a member of many elite organizations including ALPSP, STM, SSP, CASE, and KCSE.",
-    url: "https://pubrica.com/strategic-partnerships-memberships/",
-    siteName: "Pubrica",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Strategic Partnerships & Memberships | Pubrica",
-    description:
-      "Pubrica has alliances with several institutions and is a member of many elite organizations including ALPSP, STM, SSP, CASE, and KCSE.",
-  },
-};
-
+export const metadata = constructMetadata({
+  title: 'Strategic partnerships memberships - Pubrica',
+  description: 'MEET THE EXPERTS',
+  keywords: [],
+  slug: '/strategic-partnerships-memberships/',
+})
 // ----------------------------------------------------------------------------
 // STATIC DATA
 // ----------------------------------------------------------------------------

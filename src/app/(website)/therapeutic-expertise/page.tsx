@@ -3,12 +3,14 @@ import Link from "next/link";
 import Image from "next/image";
 import HeroBanner from "@/components/common/HeroBanner";
 import { PlusCircle } from "lucide-react";
+import { constructMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Therapeutic Expertise | Niche Areas - Pubrica",
-  description:
-    "Explore Pubrica’s clinical research in therapeutics, niche therapeutic services, top focus areas, and medical publishing support.",
-};
+export const metadata = constructMetadata({
+  title: 'Advanced Clinical Therapeutics Research Topics',
+  description: 'Explore advanced clinical therapeutics research with focus on therapeutic areas, drug development, clinical trials, and patient care innovations.',
+  keywords: [],
+  slug: '/therapeutic-expertise/',
+})
 
 export interface NavSubItem {
   id: string;
