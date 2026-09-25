@@ -10,7 +10,7 @@ export const metadata = constructMetadata({
   title: 'Expert Surgical Editing & Publication Support | Pubrica',
   description: 'Professional editing and publication support for surgical research to boost clarity, impact, and journal acceptance.',
   keywords: ['surgical editing & publication'],
-  slug: '/subject-matter-experts/surgery',
+  slug: '/subject-matter-experts/surgery/',
 })
 
 const page = () => {

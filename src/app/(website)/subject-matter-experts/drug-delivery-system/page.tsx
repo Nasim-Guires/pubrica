@@ -8,11 +8,11 @@ import InsightsSection from "@/components/services/medical-data-collection/Insig
 import { constructMetadata } from '@/lib/metadata';
 
 export const metadata = constructMetadata({
-  title: "Expert Drug Delivery System Research & Publishing Services",
-  description: "Pubrica provides expert support in drug delivery system research, from manuscript writing to regulatory compliance for journals.",
-  keywords: ["Drug Delivery System"],
-  slug: "/subject-matter-experts/drug-delivery-system",
-});
+  title: 'Expert Drug Delivery System Research & Publishing Services',
+  description: 'Pubrica provides expert support in drug delivery system research, from manuscript writing to regulatory compliance for journals.',
+  keywords: [],
+  slug: '/subject-matter-experts/drug-delivery-system/',
+})
 
 const page = () => {
     return (

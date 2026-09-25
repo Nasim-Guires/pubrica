@@ -8,12 +8,11 @@ import InsightsSection from "@/components/services/medical-data-collection/Insig
 import { constructMetadata } from '@/lib/metadata';
 
 export const metadata = constructMetadata({
-  title: "Enzyme Research Writing, Editing and Publication Support",
-  description: "Expert support in writing, editing, and publishing enzyme research. We help improve clarity, structure, and journal acceptance of your manuscript.",
-  keywords: ["Enzyme Research Writing"],
-  slug: "/subject-matter-experts/enzymes",
-});
-
+  title: 'Enzyme Research Writing, Editing and Publication Support',
+  description: 'Expert support in writing, editing, and publishing enzyme research. We help improve clarity, structure, and journal acceptance of your manuscript.',
+  keywords: ['Enzyme Research Writing'],
+  slug: '/subject-matter-experts/enzymes/',
+})
 
 const page = () => {
     return (

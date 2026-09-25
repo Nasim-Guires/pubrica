@@ -10,7 +10,7 @@ export const metadata = constructMetadata({
   title: 'Comprehensive Neuroscience Research Support | Pubrica',
   description: 'Pubrica offers expert neuroscience research, writing, and publication support by PhD-level specialists worldwide.',
   keywords: ['Neuroscience'],
-  slug: '/subject-matter-experts/neuroscience',
+  slug: '/subject-matter-experts/neuroscience/',
 })
 
 const page = () => {

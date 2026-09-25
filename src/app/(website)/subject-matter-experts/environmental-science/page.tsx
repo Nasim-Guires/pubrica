@@ -8,11 +8,11 @@ import InsightsSection from "@/components/services/medical-data-collection/Insig
 import { constructMetadata } from '@/lib/metadata';
 
 export const metadata = constructMetadata({
-  title: "Environmental Science Research & Sustainable Solutions | Pubrica",
-  description: "Explore the latest in environmental science with Pubrica’s expertise in sustainable agriculture, climate change, pollution control, and more.",
-  keywords: ["Environmental Science Research"],
-  slug: "/subject-matter-experts/environmental-science",
-});
+  title: 'Environmental Science Research & Sustainable Solutions | Pubrica',
+  description: 'Explore the latest in environmental science with Pubrica’s expertise in sustainable agriculture, climate change, pollution control, and more.',
+  keywords: ['Environmental Science Research'],
+  slug: '/subject-matter-experts/environmental-science/',
+})
 
 
 const page = () => {

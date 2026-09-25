@@ -10,7 +10,7 @@ export const metadata = constructMetadata({
   title: 'Robotics Research & Publication Services | Pubrica',
   description: 'Expert robotics research, editing, and publication support for high-impact scientific and engineering journals worldwide.',
   keywords: ['Robotics'],
-  slug: '/subject-matter-experts/robotics',
+  slug: '/subject-matter-experts/robotics/',
 })
 
 const page = () => {

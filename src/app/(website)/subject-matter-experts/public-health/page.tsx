@@ -10,7 +10,7 @@ export const metadata = constructMetadata({
   title: 'Public Health Research & Publication Support | Pubrica',
   description: 'Expert public health research, editing, and publication support for global health, policy, and population studies.',
   keywords: ['Public Health'],
-  slug: '/subject-matter-experts/public-health',
+  slug: '/subject-matter-experts/public-health/',
 })
 
 const page = () => {

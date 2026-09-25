@@ -10,7 +10,7 @@ export const metadata = constructMetadata({
   title: 'Sensor Technology Research & Healthcare Applications | Pubrica',
   description: 'Advanced sensor technology research for healthcare, IoT, and smart systems with expert publication and editing support.',
   keywords: ['Sensor Technology'],
-  slug: '/subject-matter-experts/sensor-technology',
+  slug: '/subject-matter-experts/sensor-technology/',
 })
 
 const page = () => {

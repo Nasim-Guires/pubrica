@@ -171,20 +171,24 @@ export default function MedicinalChemistryPage() {
         const CardIcon = card.icon;
 
         return (
-            <Link
+            <div
                 key={idx}
-                href={card.href}
                 className="group relative bg-slate-100 border border-gray-300 border-b-4 border-b-[#12433e] rounded-none overflow-hidden min-h-[18rem] pb-12 cursor-pointer block transition-all duration-300 hover:bg-white hover:border-[#12433e] hover:shadow-lg"
             >
                 {/* Background Image Container */}
-                <div className="relative h-44 w-full bg-gray-200 overflow-hidden rounded-none">
-                    <Image
-                        src={card.imageUrl}
-                        alt={card.title}
-                        fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                </div>
+                <Link
+                    href={card.href}
+                    className="absolute inset-x-0 top-0 z-0"
+                >
+                    <div className="relative h-44 w-full bg-gray-200 overflow-hidden rounded-none">
+                        <Image
+                            src={card.imageUrl}
+                            alt={card.title}
+                            fill
+                            className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                    </div>
+                </Link>
 
                 {/* Floating Center Circle Icon */}
                 <div className="absolute top-[5.5rem] md:top-[9.5rem] left-1/2 -translate-x-1/2 z-20 bg-white p-2.5 rounded-full border border-gray-200 shadow-sm transition-all duration-300 ease-in-out md:group-hover:top-14 md:group-hover:scale-110 md:group-hover:border-[#12433e]">
@@ -203,15 +207,23 @@ export default function MedicinalChemistryPage() {
 
                 {/* Content Panel */}
                 <div className="absolute inset-x-0 bottom-0 top-28 md:top-40 z-10 bg-white md:bg-slate-100 md:group-hover:bg-white pt-7 md:pt-8 md:group-hover:pt-14 pb-4 px-4 flex flex-col items-center justify-start text-center transition-all duration-300 ease-in-out md:group-hover:top-14">
-                    <h3 className="text-sm md:text-base font-bold text-[#12433e] md:text-gray-900 md:group-hover:text-[#12433e] transition-colors duration-300 w-full break-words">
-                        {card.title}
-                    </h3>
 
+                    {/* Card Title Link */}
+                    <Link
+                        href={card.href}
+                        className="w-full"
+                    >
+                        <h3 className="text-sm md:text-base font-bold text-[#12433e] md:text-gray-900 md:group-hover:text-[#12433e] transition-colors duration-300 w-full break-words">
+                            {card.title}
+                        </h3>
+                    </Link>
+
+                    {/* Description */}
                     <p className="text-xs text-gray-600 mt-1 md:mt-2 leading-relaxed opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 max-w-[95%]">
                         {card.desc}
                     </p>
                 </div>
-            </Link>
+            </div>
         );
     };
 

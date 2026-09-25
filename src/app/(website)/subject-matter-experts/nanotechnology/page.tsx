@@ -10,7 +10,7 @@ export const metadata = constructMetadata({
   title: 'Nanotechnology Research & Publishing Services | Pubrica',
   description: 'Expert nanotechnology research, editing, and publishing support for advanced scientific innovation and global impact.',
   keywords: ['nanotechnology research'],
-  slug: '/subject-matter-experts/nanotechnology',
+  slug: '/subject-matter-experts/nanotechnology/',
 })
 
 const page = () => {

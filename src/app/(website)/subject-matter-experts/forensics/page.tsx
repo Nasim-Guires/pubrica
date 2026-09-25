@@ -10,7 +10,7 @@ export const metadata = constructMetadata({
   title: 'Forensic Science Research & Publication Services | Pubrica',
   description: 'Expert forensic research, analysis, and publication services covering pathology, toxicology, DNA, and digital forensics.',
   keywords: ['Forensic Science Research'],
-  slug: '/subject-matter-experts/forensics',
+  slug: '/subject-matter-experts/forensics/',
 })
 
 const page = () => {

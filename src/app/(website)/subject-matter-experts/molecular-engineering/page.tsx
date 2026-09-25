@@ -10,7 +10,7 @@ export const metadata = constructMetadata({
   title: 'Precision Molecular Engineering Solutions for Innovation | Pubrica',
   description: 'Explore cutting-edge solutions in biomolecular engineering, including synthetic biology, nanotech, and advanced bioprocessing.',
   keywords: ['molecular engineering'],
-  slug: '/subject-matter-experts/molecular-engineering',
+  slug: '/subject-matter-experts/molecular-engineering/',
 })
 
 const page = () => {

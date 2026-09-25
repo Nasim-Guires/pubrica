@@ -10,7 +10,7 @@ export const metadata = constructMetadata({
   title: 'Production Engineering Research & Publication Services | Pubrica',
   description: 'Expert production engineering research, publication support, automation, quality, and Industry 4.0 solutions.',
   keywords: ['Production Engineering'],
-  slug: '/subject-matter-experts/production-engineering',
+  slug: '/subject-matter-experts/production-engineering/',
 })
 
 const page = () => {

@@ -10,7 +10,7 @@ export const metadata = constructMetadata({
   title: 'Expert Editing & Publication Support for Tissue Engineering',
   description: 'Maximize impact with expert editing and publication support in tissue engineering research for groundbreaking discoveries.',
   keywords: ['Tissue Engineering'],
-  slug: '/subject-matter-experts/tissue-engineering',
+  slug: '/subject-matter-experts/tissue-engineering/',
 })
 
 const page = () => {

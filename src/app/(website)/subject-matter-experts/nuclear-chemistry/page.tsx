@@ -10,7 +10,7 @@ export const metadata = constructMetadata({
   title: 'Expert Nuclear Chemistry Editing & Research Publication Support',
   description: 'Get expert research, editing, and publication support in nuclear chemistry, including radiopharmaceuticals and waste management.',
   keywords: ['Expert Nuclear Chemistry'],
-  slug: '/subject-matter-experts/nuclear-chemistry',
+  slug: '/subject-matter-experts/nuclear-chemistry/',
 })
 
 const page = () => {

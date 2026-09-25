@@ -11,7 +11,7 @@ export const metadata = constructMetadata({
   title: 'Expert Medical Animation Services for Healthcare & Education',
   description: 'Pubrica offers high-quality medical animations for education, research, and patient care, ensuring clarity and engagement',
   keywords: ['Medical Animation'],
-  slug: '/subject-matter-experts/medical-animation',
+  slug: '/subject-matter-experts/medical-animation/',
 })
 
 const page = () => {

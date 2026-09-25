@@ -8,11 +8,11 @@ import CardiologySection from '@/components/subject-matter-experts/cell-biology/
 import { constructMetadata } from '@/lib/metadata';
 
 export const metadata = constructMetadata({
-  title: "Comprehensive Cell Biology Research & Publication Support",
-  description: "Advanced Cell Biology research, writing, and publication support delivered by Pubrica’s expert PhD editors worldwide.",
-  keywords: ["Cell Biology"],
-  slug: "/subject-matter-experts/cell-biology",
-});
+  title: 'Comprehensive Cell Biology Research & Publication Support',
+  description: 'Advanced Cell Biology research, writing, and publication support delivered by Pubrica’s expert PhD editors worldwide.',
+  keywords: ['Cell Biology'],
+  slug: '/subject-matter-experts/cell-biology/',
+})
 
 const page = () => {
     return (

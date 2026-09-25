@@ -10,7 +10,7 @@ export const metadata = constructMetadata({
   title: 'Advanced Nanobiotechnology Solutions for Healthcare & Industry',
   description: 'Transforming Healthcare, Sustainability & Industry with Precision Nanobiotechnology Research, Drug Delivery, and Innovations.',
   keywords: ['Nano Biotechnology'],
-  slug: '/subject-matter-experts/nanobiotechnology',
+  slug: '/subject-matter-experts/nanobiotechnology/',
 })
 
 const page = () => {

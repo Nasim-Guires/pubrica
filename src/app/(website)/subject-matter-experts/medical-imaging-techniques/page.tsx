@@ -10,7 +10,7 @@ export const metadata = constructMetadata({
   title: 'Advanced Medical Imaging Techniques & Research Support',
   description: 'Expert support in medical imaging research, publishing, and clinical applications for accurate, high-impact results.',
   keywords: ['Medical Imaging Techniques'],
-  slug: '/subject-matter-experts/medical-imaging-techniques',
+  slug: '/subject-matter-experts/medical-imaging-techniques/',
 })
 
 const page = () => {

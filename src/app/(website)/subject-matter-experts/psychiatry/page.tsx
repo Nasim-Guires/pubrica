@@ -10,7 +10,7 @@ export const metadata = constructMetadata({
   title: 'Psychiatry Research Services | Pubrica Experts',
   description: 'Expert psychiatry research, clinical analysis, writing, and publication support for advanced mental health solutions.',
   keywords: ['psychiatry'],
-  slug: '/subject-matter-experts/psychiatry',
+  slug: '/subject-matter-experts/psychiatry/',
 })
 
 const page = () => {

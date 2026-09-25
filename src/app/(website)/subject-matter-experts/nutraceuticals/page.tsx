@@ -10,7 +10,7 @@ export const metadata = constructMetadata({
   title: 'Nutraceuticals Research & Publication Services | Pubrica',
   description: 'Expert nutraceutical research, writing, and publication support for functional foods, supplements, and personalized nutrition',
   keywords: ['nutraceuticals'],
-  slug: '/subject-matter-experts/nutraceuticals',
+  slug: '/subject-matter-experts/nutraceuticals/',
 })
 
 const page = () => {

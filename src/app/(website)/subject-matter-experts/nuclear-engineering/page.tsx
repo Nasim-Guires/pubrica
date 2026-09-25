@@ -10,7 +10,7 @@ export const metadata = constructMetadata({
   title: 'Nuclear Engineering Consulting for Reactor Design & Safety',
   description: 'Advanced nuclear engineering services for reactor design, safety, modelling, and sustainable energy solutions.',
   keywords: ['nuclear engineering'],
-  slug: '/subject-matter-experts/nuclear-engineering',
+  slug: '/subject-matter-experts/nuclear-engineering/',
 })
 
 const page = () => {

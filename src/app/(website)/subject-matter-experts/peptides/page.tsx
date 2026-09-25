@@ -10,7 +10,7 @@ export const metadata = constructMetadata({
   title: 'Peptide Research & Therapeutics - Innovation in Medicine | Pubrica',
   description: 'Explore peptide-based innovations in therapeutics, vaccines, diagnostics, and drug delivery to advance modern healthcare.',
   keywords: ['Peptide Research'],
-  slug: '/subject-matter-experts/peptides',
+  slug: '/subject-matter-experts/peptides/',
 })
 
 const page = () => {

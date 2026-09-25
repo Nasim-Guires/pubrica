@@ -10,7 +10,7 @@ export const metadata = constructMetadata({
   title: 'Genomics Publication & Editing Services | Pubrica',
   description: 'Pubrica empowers genomic research with expert editing, publication support, and high-impact journal guidance',
   keywords: ['Genomics Publication'],
-  slug: '/subject-matter-experts/genomics',
+  slug: '/subject-matter-experts/genomics/',
 })
 
 const page = () => {

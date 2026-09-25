@@ -10,7 +10,7 @@ export const metadata = constructMetadata({
   title: 'Life Sciences Research Services | Pubrica Experts',
   description: 'Expert life sciences research support, data analysis, writing, and publication services for impactful scientific outcomes.',
   keywords: ['life science'],
-  slug: '/subject-matter-experts/life-sciences',
+  slug: '/subject-matter-experts/life-sciences/',
 })
 
 const page = () => {

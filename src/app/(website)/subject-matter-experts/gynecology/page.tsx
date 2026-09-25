@@ -11,7 +11,7 @@ export const metadata = constructMetadata({
   title: 'Comprehensive Gynaecology Research & Publication Support',
   description: 'Pubrica offers expert research, writing, and publication support in gynaecology, empowering global women’s health research.',
   keywords: ['Gynaecology Research'],
-  slug: '/subject-matter-experts/gynecology',
+  slug: '/subject-matter-experts/gynecology/',
 })
 
 const page = () => {

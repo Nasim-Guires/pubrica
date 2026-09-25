@@ -10,7 +10,7 @@ export const metadata = constructMetadata({
   title: 'Medical & Pharmaceutical Chemistry Services | Pubrica Experts',
   description: 'Pubrica offers expert services in drug discovery, formulation, regulatory compliance & personalized medicine to enhance healthcare.',
   keywords: ['Medical & Pharmaceutical Chemistry'],
-  slug: '/subject-matter-experts/medicinal-and-pharmaceutical-chemistry',
+  slug: '/subject-matter-experts/medicinal-and-pharmaceutical-chemistry/',
 })
 
 const page = () => {

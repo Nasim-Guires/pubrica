@@ -10,7 +10,7 @@ export const metadata = constructMetadata({
   title: 'Protein Engineering Solutions for Research & Healthcare | Pubrica',
   description: 'Advanced protein engineering services for drug development, diagnostics, and industrial applications at Pubrica.',
   keywords: ['Protein Engineering Solutions'],
-  slug: '/subject-matter-experts/protein-engineering',
+  slug: '/subject-matter-experts/protein-engineering/',
 })
 
 const page = () => {

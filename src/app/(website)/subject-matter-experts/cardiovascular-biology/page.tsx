@@ -8,11 +8,11 @@ import InsightsSection from "@/components/services/medical-data-collection/Insig
 import { constructMetadata } from '@/lib/metadata';
 
 export const metadata = constructMetadata({
-  title: "Comprehensive Cardiovascular Biology Research Support",
-  description: "Expert research, writing, and publication support in cardiovascular biology to advance heart and vascular science.",
-  keywords: ["Cardiovascular Biology"],
-  slug: "/subject-matter-experts/cardiovascular-biology",
-});
+  title: 'Comprehensive Cardiovascular Biology Research Support',
+  description: 'Expert research, writing, and publication support in cardiovascular biology to advance heart and vascular science.',
+  keywords: ['Cardiovascular Biology'],
+  slug: '/subject-matter-experts/cardiovascular-biology/',
+})
 
 
 const page = () => {

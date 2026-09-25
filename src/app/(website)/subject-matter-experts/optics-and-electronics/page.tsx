@@ -10,7 +10,7 @@ export const metadata = constructMetadata({
   title: 'Optics & Electronics Research and Innovation | Pubrica',
   description: 'Advanced optics and electronics research services supporting healthcare, imaging, and next-generation technologies.',
   keywords: ['Optics and Electronics'],
-  slug: '/subject-matter-experts/optics-and-electronics',
+  slug: '/subject-matter-experts/optics-and-electronics/',
 })
 
 const page = () => {

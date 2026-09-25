@@ -8,11 +8,11 @@ import InsightsSection from "@/components/services/medical-data-collection/Insig
 import { constructMetadata } from '@/lib/metadata';
 
 export const metadata = constructMetadata({
-  title: "Data Mining Research & Publication Support | Pubrica",
-  description: "End-to-end Data Mining support for research, data analysis, & manuscript publication in top journals. Unlock insights & drive innovation.",
-  keywords: ["Data Mining Research"],
-  slug: "/subject-matter-experts/data-mining",
-});
+  title: 'Data Mining Research & Publication Support | Pubrica',
+  description: 'End-to-end Data Mining support for research, data analysis, & manuscript publication in top journals. Unlock insights & drive innovation.',
+  keywords: ['Data Mining Research'],
+  slug: '/subject-matter-experts/data-mining/',
+})
 
 
 const page = () => {

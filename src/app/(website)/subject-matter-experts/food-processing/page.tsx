@@ -8,11 +8,11 @@ import InsightsSection from "@/components/services/medical-data-collection/Insig
 import { constructMetadata } from '@/lib/metadata';
 
 export const metadata = constructMetadata({
-  title: "Food Processing Editing & Publication Support Services| Pubrica",
-  description: "Expert food processing editing, modelling, and publication support to improve research quality, clarity, and success.",
-  keywords: ["food processing"],
-  slug: "/subject-matter-experts/food-processing",
-});
+  title: 'Food Processing Editing & Publication Support Services| Pubrica',
+  description: 'Expert food processing editing, modelling, and publication support to improve research quality, clarity, and success.',
+  keywords: ['food processing'],
+  slug: '/subject-matter-experts/food-processing/',
+})
 
 const page = () => {
     return (

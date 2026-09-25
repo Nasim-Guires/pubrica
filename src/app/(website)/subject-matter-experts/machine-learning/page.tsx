@@ -10,7 +10,7 @@ export const metadata = constructMetadata({
   title: 'Machine Learning Research, Development & Publication Support',
   description: 'Pubrica offers complete support for machine learning research, from algorithm development to manuscript writing and publication.',
   keywords: ['Machine Learning'],
-  slug: '/subject-matter-experts/machine-learning',
+  slug: '/subject-matter-experts/machine-learning/',
 })
 
 const page = () => {

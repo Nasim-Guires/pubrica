@@ -10,7 +10,7 @@ export const metadata = constructMetadata({
   title: 'Empowering Neurology Research & Publication | Pubrica',
   description: 'Expert neurology writing, editing, and publication support for clinicians and researchers at Pubrica.',
   keywords: ['empowering neurology'],
-  slug: '/subject-matter-experts/neurology',
+  slug: '/subject-matter-experts/neurology/',
 })
 
 const page = () => {

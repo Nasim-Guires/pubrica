@@ -10,7 +10,7 @@ export const metadata = constructMetadata({
   title: 'Expert Radiology Research & Publication Support | Pubrica',
   description: 'Expert radiology research, editing, and publication support for medical imaging and diagnostic excellence.',
   keywords: ['expert radiology'],
-  slug: '/subject-matter-experts/radiology',
+  slug: '/subject-matter-experts/radiology/',
 })
 
 const page = () => {

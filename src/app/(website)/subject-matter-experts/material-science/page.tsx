@@ -12,7 +12,6 @@ export const metadata = constructMetadata({
   keywords: ['Material Science'],
   slug: '/subject-matter-experts/material-science/',
 })
-
 const page = () => {
     return (
         <>

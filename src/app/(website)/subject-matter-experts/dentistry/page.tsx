@@ -8,11 +8,11 @@ import InsightsSection from "@/components/services/medical-data-collection/Insig
 import { constructMetadata } from '@/lib/metadata';
 
 export const metadata = constructMetadata({
-  title: "Comprehensive Dentistry Research & Publication Support | Pubrica",
-  description: "Get expert research, writing, and publication support in dentistry from Pubrica’s dental science specialists.",
-  keywords: ["Comprehensive Dentistry"],
-  slug: "/subject-matter-experts/dentistry",
-});
+  title: 'Comprehensive Dentistry Research & Publication Support | Pubrica',
+  description: 'Get expert research, writing, and publication support in dentistry from Pubrica’s dental science specialists.',
+  keywords: ['Comprehensive Dentistry'],
+  slug: '/subject-matter-experts/dentistry/',
+})
 
 
 const page = () => {
