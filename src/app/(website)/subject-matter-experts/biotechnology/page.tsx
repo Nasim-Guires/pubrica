@@ -10,11 +10,11 @@ import InsightsSection from "@/components/services/medical-data-collection/Insig
 import { constructMetadata } from '@/lib/metadata';
 
 export const metadata = constructMetadata({
-  title: "Empowering Biotechnology Research & Innovation | Pubrica",
-  description: "Biotechnology experts focus on using biological systems and organisms to develop products and technologies for medical, and agricultural.",
-  keywords: ["Empowering Biotechnology"],
-  slug: "/subject-matter-experts/biotechnology",
-});
+  title: 'Empowering Biotechnology Research & Innovation | Pubrica',
+  description: 'Biotechnology experts focus on using biological systems and organisms to develop products and technologies for medical, and agricultural.',
+  keywords: ['Empowering Biotechnology'],
+  slug: '/subject-matter-experts/biotechnology/',
+})
 
 const page = () => {
     return (

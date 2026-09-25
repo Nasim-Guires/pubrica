@@ -1,12 +1,14 @@
 import HeroBanner from "@/components/common/HeroBanner";
+import { constructMetadata } from "@/lib/metadata";
 import type { Metadata } from "next";
 import Link from "next/link";
 
-export const metadata: Metadata = {
-  title: "Subject Matter Experts Across All Disciplines | Pubrica",
-  description:
-    "Explore our subject matter experts in medical and scientific writing across life sciences, engineering, technology, and therapeutic disciplines.",
-};
+export const metadata = constructMetadata({
+  title: 'Subject Matter Experts - Pubrica',
+  description: 'Across all disciplines',
+  keywords: [],
+  slug: '/subject-matter-experts/',
+})
 
 interface SubjectItem {
   title: string;

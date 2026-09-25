@@ -8,11 +8,11 @@ import InsightsSection from "@/components/services/medical-data-collection/Insig
 import { constructMetadata } from '@/lib/metadata';
 
 export const metadata = constructMetadata({
-  title: "Empowering Agriculture Research & Sustainable Innovation",
-  description: "Expert support for research, publishing, and innovative solutions advancing sustainable agriculture worldwide.",
-  keywords: ["agriculture"],
-  slug: "/subject-matter-experts/agriculture",
-});
+  title: 'Empowering Agriculture Research & Sustainable Innovation',
+  description: 'Expert support for research, publishing, and innovative solutions advancing sustainable agriculture worldwide.',
+  keywords: ['agriculture'],
+  slug: '/subject-matter-experts/agriculture/',
+})
 
 const page = () => {
     return (

@@ -9,7 +9,8 @@ import { constructMetadata } from '@/lib/metadata'
 export const metadata = constructMetadata({
   title: 'IoT Subject Matter Experts - Pubrica',
   description: 'Subject matter Support for internet of things scientific research - Pubrica',
-  slug: '/subject-matter-experts/internet-of-things',
+  keywords: [],
+  slug: '/subject-matter-experts/internet-of-things/',
 })
 
 const page = () => {

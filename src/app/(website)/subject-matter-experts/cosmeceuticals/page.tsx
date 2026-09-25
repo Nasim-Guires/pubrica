@@ -8,11 +8,11 @@ import InsightsSection from "@/components/services/medical-data-collection/Insig
 import { constructMetadata } from '@/lib/metadata';
 
 export const metadata = constructMetadata({
-  title: "Cosmeceutical Research & Publishing Support | Pubrica",
-  description: "Expert cosmeceutical research, editing, regulatory, and publishing support for skincare innovation and clinical success.",
-  keywords: ["Cosmeceutical Research"],
-  slug: "/subject-matter-experts/cosmeceuticals",
-});
+  title: 'Cosmeceutical Research & Publishing Support | Pubrica',
+  description: 'Expert cosmeceutical research, editing, regulatory, and publishing support for skincare innovation and clinical success.',
+  keywords: ['Cosmeceutical Research'],
+  slug: '/subject-matter-experts/cosmeceuticals/',
+})
 
 const page = () => {
     return (

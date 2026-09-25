@@ -10,7 +10,7 @@ export const metadata = constructMetadata({
   title: 'Material Science Research & Publication Support | Pubrica',
   description: 'Pubrica offers expert material science editing, research support, journal submission, and publication services for global researchers',
   keywords: ['Material Science'],
-  slug: '/subject-matter-experts/material-science',
+  slug: '/subject-matter-experts/material-science/',
 })
 
 const page = () => {

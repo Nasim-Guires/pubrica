@@ -8,11 +8,11 @@ import InsightsSection from "@/components/services/medical-data-collection/Insig
 import { constructMetadata } from '@/lib/metadata';
 
 export const metadata = constructMetadata({
-  title: "Animal Science Research, Data Science & Publishing Support | Pubrica",
+  title: 'Animal Science Research, Data Science & Publishing Support | Pubrica',
   description: "Pubrica's Animal Science experts provide guidance on studies on animal care, production, advanced research, and its applications in research",
-  keywords: ["Animal Science Research"],
-  slug: "/subject-matter-experts/animal-science",
-});
+  keywords: ['Animal Science Research'],
+  slug: '/subject-matter-experts/animal-science/',
+})
 
 const page = () => {
     return (

@@ -8,11 +8,11 @@ import InsightsSection from "@/components/services/medical-data-collection/Insig
 import { constructMetadata } from '@/lib/metadata';
 
 export const metadata = constructMetadata({
-  title: "Cloud Computing Research & Publication Services | Pubrica",
-  description: "Expert cloud computing research, editing, and publication support for scalable, secure, and innovative technologies.",
-  keywords: ["Cloud computing"],
-  slug: "/subject-matter-experts/cloud-computing",
-});
+  title: 'Cloud Computing Research & Publication Services | Pubrica',
+  description: 'Expert cloud computing research, editing, and publication support for scalable, secure, and innovative technologies.',
+  keywords: ['Cloud computing'],
+  slug: '/subject-matter-experts/cloud-computing/',
+})
 
 const page = () => {
     return (

@@ -8,11 +8,11 @@ import InsightsSection from "@/components/services/medical-data-collection/Insig
 import { constructMetadata } from '@/lib/metadata';
 
 export const metadata = constructMetadata({
-  title: "Biomedical Imaging Solutions for Advanced Research support",
-  description: "Advanced biomedical imaging support for research and clinical innovation. We help improve data quality, analysis, clarity, and publication success.",
-  keywords: ["biomedical imaging"],
-  slug: "/subject-matter-experts/biomedical-imaging",
-});
+  title: 'Biomedical Imaging Solutions for Advanced Research support',
+  description: 'Advanced biomedical imaging support for research and clinical innovation. We help improve data quality, analysis, clarity, and publication success.',
+  keywords: ['biomedical imaging'],
+  slug: '/subject-matter-experts/biomedical-imaging/',
+})
 
 
 const page = () => {

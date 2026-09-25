@@ -9,11 +9,11 @@ import WhatClientsSays, { Testimonial } from '@/components/common/WhatClientsSay
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
 
 export const metadata = constructMetadata({
-    title: "Algorithm Research for Design, Analysis & System Performance",
-    description: "Explore algorithm research focused on design, analysis, and optimization to solve complex problems with efficient, scalable and high-performance solutions.",
-    keywords: ["algorithm"],
-    slug: "/subject-matter-experts/algorithm",
-});
+    title: 'Algorithm Research for Design, Analysis & System Performance',
+    description: 'Explore algorithm research focused on design, analysis, and optimization to solve complex problems with efficient, scalable and high-performance solutions.',
+    keywords: ['algorithm'],
+    slug: '/subject-matter-experts/algorithm/',
+})
 
 const testimonials: Testimonial[] = [
     {

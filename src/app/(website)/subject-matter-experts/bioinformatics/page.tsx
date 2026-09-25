@@ -8,11 +8,11 @@ import InsightsSection from "@/components/services/medical-data-collection/Insig
 import { constructMetadata } from '@/lib/metadata';
 
 export const metadata = constructMetadata({
-  title: "Biological Data Research and Analysis Insight Support",
-  description: "Expert bioinformatics analysis, research support, and publication services for genomics, proteomics, and clinical studies.",
-  keywords: ["transforming biological data into scientific discovery"],
-  slug: "/subject-matter-experts/bioinformatics",
-});
+  title: 'Biological Data Research and Analysis Insight Support',
+  description: 'Expert bioinformatics analysis, research support, and publication services for genomics, proteomics, and clinical studies.',
+  keywords: ['transforming biological data into scientific discovery'],
+  slug: '/subject-matter-experts/bioinformatics/',
+})
 
 
 const page = () => {

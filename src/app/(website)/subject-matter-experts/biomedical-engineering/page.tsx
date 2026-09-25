@@ -9,11 +9,11 @@ import InsightsSection from "@/components/services/medical-data-collection/Insig
 import { constructMetadata } from '@/lib/metadata';
 
 export const metadata = constructMetadata({
-  title: "Biomedical Engineering Research & Publication Support | Pubrica",
-  description: "Expert biomedical engineering research, writing, editing, and publication support to advance innovation in healthcare.",
-  keywords: ["Biomedical Engineering"],
-  slug: "/subject-matter-experts/biomedical-engineering",
-});
+  title: 'Biomedical Engineering Research & Publication Support | Pubrica',
+  description: 'Expert biomedical engineering research, writing, editing, and publication support to advance innovation in healthcare.',
+  keywords: ['Biomedical Engineering'],
+  slug: '/subject-matter-experts/biomedical-engineering/',
+})
 
 const page = () => {
     return (
