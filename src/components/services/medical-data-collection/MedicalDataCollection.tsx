@@ -74,7 +74,7 @@ export const MedicalDataCollection: React.FC = () => {
                   href="/uploads/medical-data-collection/Data-Analytics-Machine-Learning-service.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-red-600 text-white text-base font-bold px-6 py-2 rounded hover:bg-white hover:text-black transition-colors"
+                  className="bg-red-600 text-white text-sm font-bold px-6 py-2 rounded hover:bg-white hover:text-black transition-colors"
                 >
                   View Brochure
                 </Link>

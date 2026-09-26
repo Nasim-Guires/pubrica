@@ -342,7 +342,7 @@ export default function PubricaProcessAndCompliance() {
             </div>
 
             {/* Accordion Process List */}
-            <div className="space-y-2">
+            <div className="space-y-2 mb-2">
               {processSteps.map((step) => {
                 const isOpen = openProcess === step.id;
                 return (
