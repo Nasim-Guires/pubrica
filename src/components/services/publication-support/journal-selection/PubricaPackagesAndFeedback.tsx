@@ -101,8 +101,8 @@ export default function PubricaPackagesAndFeedback() {
       {/* ---------------------------------------------------- */}
       {/* SECTION 1: OUR PACKAGES                              */}
       {/* ---------------------------------------------------- */}
-      <section className="py-6 px-4 sm:px-8 lg:px-12 max-w-7xl mx-auto bg-white">
-        <h2 className="text-3xl font-extrabold text-[#0d3b44] text-center mb-6">
+      <section className="py-3 px-4 sm:px-8 lg:px-2 max-w-7xl mx-auto bg-white">
+        <h2 className="text-3xl font-extrabold text-[#0d3b44] text-center mb-1">
           Our Packages
         </h2>
 
@@ -110,7 +110,7 @@ export default function PubricaPackagesAndFeedback() {
           <CommonPackages packages={publicationPackages} />
         </div>
 
-        <div className="mt-3 sm:mt-14 text-center relative">
+        <div className="mt-1 sm:mt-14 text-center relative">
           <GetFreeQuoteButton />
         </div>
       </section>

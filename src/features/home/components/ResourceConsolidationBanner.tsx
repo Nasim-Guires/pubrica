@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function ResourceConsolidationBanner() {
   return (
-    <section className="relative w-full py-7 select-none overflow-hidden">
+    <section className="relative w-full py-8 select-none overflow-hidden">
       <Image
         src="/images/home/bg-1-min-scaled-1.jpg"
         alt=""
@@ -14,31 +14,30 @@ export default function ResourceConsolidationBanner() {
         sizes="100vw"
       />
       <div className="absolute inset-0 bg-black/50" />
-      <Container className="relative z-10 flex justify-center items-center">
-        {/* Centered Floating Resource Container Card */}
-        <div className="w-full max-w-5xl bg-white shadow-xl border border-gray-100 px-6 py-6 md:px-16 md:py-6 text-center flex flex-col items-center justify-center">
+      <div className="relative z-10 w-full px-4 sm:px-8 max-w-[1500px] mx-auto flex justify-center items-center">
+        {/* Full-Width White Floating Container Card */}
+        <div className="w-full bg-white shadow-xl border border-gray-100 px-4 py-8 sm:px-6 md:px-12 md:py-10 text-center flex flex-col items-center justify-center">
 
-          {/* Main Content Heading */}
-          <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight text-gray-950 font-display leading-tight">
+          {/* Heading - Responsive (2 balanced lines on mobile, strictly 1 line on desktop) */}
+          <h2 className="text-xl sm:text-2xl lg:text-[28px] font-bold tracking-tight text-gray-950 font-display leading-snug text-balance md:whitespace-nowrap">
             Pubrica – A Consolidated Place for Resources
           </h2>
 
-          {/* Core Content Body Paragraph */}
-          <p className="text-xs md:text-sm text-gray-600 leading-relaxed font-sans max-w-4xl mt-6">
-            We have a global network with a diverse range of collaborations with prominent universities and industries.
-            We also have access to various databases, supported by esteemed clinical experts and leading institutions.
-            With over 20 years of expertise, we reinvent ourselves every day and continue to excel in the field of research and development.
+          {/* Description Paragraph - Exact 2-Line Break on Desktop */}
+          <p className="text-xs md:text-sm lg:text-[13px] text-gray-700 leading-relaxed font-sans mt-4 sm:mt-5 text-center">
+            We have a global network with a diverse range of collaborations with prominent universities and industries. We also have access to various databases, supported by esteemed clinical experts and leading <br className="hidden md:block" />
+            institutions. With over 20 years of expertise, we reinvent ourselves every day and continue to excel in the field of research and development.
           </p>
 
-          {/* Action Button Accent */}
+          {/* Action CTA Button */}
           <Link
             href="/services/"
-            className="mt-8 bg-emerald-950 text-white font-medium text-xs tracking-wide uppercase px-8 py-3 rounded shadow-md hover:bg-emerald-900 transition-all duration-300 transform hover:-translate-y-0.5 inline-block"
+            className="mt-6 bg-[#0e302e] hover:bg-[#071f1e] text-white font-medium text-xs tracking-wide px-7 py-3 rounded-tl-xl rounded-br-xl rounded-tr-md rounded-bl-md shadow-md transition-all duration-300 inline-block"
           >
             Read more
           </Link>
         </div>
-      </Container>
+      </div>
     </section>
   );
 }

@@ -128,8 +128,8 @@ export default function PackagesAndTestimonialsSection() {
       {/* ========================================== */}
       {/* SECTION 1: OUR PACKAGES                   */}
       {/* ========================================== */}
-      <section className="max-w-6xl mx-auto px-4 py-6">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center text-[#0c3547] mb-10">
+      <section className="max-w-6xl mx-auto px-2 py-2">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center text-[#0c3547] mb-1">
           Our Packages
         </h2>
 

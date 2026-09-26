@@ -437,7 +437,7 @@ export default function ServicesResearchProductDevelopment({
                   We bring the depth of scientific rigor and cross-functional expertise needed to guide your discovery process with precision and speed.
                 </p>
 
-                <div className="pt-2">
+                <div className="pt-1 mb-3">
                   <GetFreeQuoteButton />
                 </div>
               </div>
@@ -487,24 +487,27 @@ export default function ServicesResearchProductDevelopment({
             {visibleServices.map((service) => (
               <article
                 key={service.id}
-                className="bg-white rounded-lg p-5 border border-gray-200/80 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between"
+                className="group relative bg-white rounded-xl p-6 border border-slate-200/80 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ease-out flex flex-col justify-between overflow-hidden"
               >
+                {/* Subtle top border accent on hover */}
+                <div className="absolute top-0 left-0 right-0 h-1 bg-[#1b2b28] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
                 <div>
                   {/* Icon Section Image Component */}
-                  <div className="w-10 h-10 mb-4 bg-emerald-50 rounded flex items-center justify-center border border-emerald-300 relative overflow-hidden">
+                  <div className="w-12 h-12 mb-5 bg-emerald-50/70 rounded-lg flex items-center justify-center border border-emerald-100/80 group-hover:bg-emerald-100/60 group-hover:border-emerald-200 transition-colors duration-300 relative overflow-hidden">
                     <Image
                       src={service.iconPlaceholder}
                       alt={service.title}
                       fill
-                      className="object-contain p-1.5"
+                      className="object-contain p-2.5 transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>
 
-                  <h4 className="text-xs sm:text-sm font-bold text-[#1b2b28] mb-2 leading-snug">
+                  <h4 className="text-sm sm:text-base font-semibold text-[#1b2b28] mb-2 leading-snug group-hover:text-emerald-950 transition-colors">
                     {service.title}
                   </h4>
 
-                  <div className="text-[11px] sm:text-xs text-gray-600 leading-relaxed">
+                  <div className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal">
                     {service.description}
                   </div>
                 </div>

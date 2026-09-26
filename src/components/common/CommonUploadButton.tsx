@@ -21,7 +21,7 @@ const CommonUploadButton = ({
                 href={href}
                 target={target}
                 rel={rel}
-                className={`bg-red-600 hover:bg-white text-white hover:text-black px-5 py-2.5 rounded-md font-semibold transition-colors cursor-pointer inline-flex items-center justify-center select-none ${className}`}
+                className={`bg-red-600 text-white text-sm font-bold px-6 py-2 rounded hover:bg-white hover:text-black transition-colors${className}`}
             >
                 {children}
             </Link>

@@ -30,9 +30,10 @@ export default function HomeHeroWithAbout() {
 
         <Container className="relative z-10 max-w-7xl mx-auto flex flex-col items-center px-4">
           {/* Headline */}
-          <h1 className="text-3xl sm:text-4xl lg:text-[44px] font-bold tracking-tight leading-[1.25] text-white text-center max-w-4xl font-display drop-shadow-md">
-            Achieving Impactful Results with Pubrica’s Research and Publication
-            Support
+          <h1 className="text-3xl sm:text-4xl lg:text-[40px] font-bold tracking-tight leading-[1.25] text-white text-center font-poppins drop-shadow-md">
+            Achieving Impactful Results with Pubrica’s Research and
+            <br />
+            Publication Support
           </h1>
 
           {/* Paragraph */}

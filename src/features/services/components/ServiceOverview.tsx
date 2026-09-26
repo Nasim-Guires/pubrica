@@ -306,7 +306,7 @@ export default function ServiceOverview() {
           <div className="pt-2 flex justify-center sm:justify-start">
             <Link
               href="/order-now/"
-              className="bg-red-600 text-white px-5 py-2.5 rounded-md font-semibold cursor-pointer inline-flex items-center justify-center select-none hover:bg-white hover:text-black"
+              className="bg-red-600 text-white text-sm font-bold px-6 py-2 rounded hover:bg-white hover:text-black transition-colors"
             >
               Upload Your Manuscript
             </Link>

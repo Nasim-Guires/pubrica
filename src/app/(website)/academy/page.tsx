@@ -46,7 +46,7 @@ const KNOWLEDGE_CATEGORIES = [
     icon: FileSignature,
     description:
       'Explore hundreds of articles, videos, and other resources used by 4 million students every month.',
-    viewMoreUrl: '/academy/articles',
+    viewMoreUrl: '/',
     links: [
       {
         label: 'Manuscript Guidelines',

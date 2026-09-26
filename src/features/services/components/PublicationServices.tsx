@@ -133,7 +133,7 @@ export default function PublicationServices() {
   };
 
   return (
-    <section className="bg-[#f2f4f3] py-7 px-4 sm:px-6 lg:px-8 font-sans text-slate-800">
+    <section className="py-2 px-2 sm:px-6 lg:px-8 font-sans text-slate-800">
       <div className="max-w-7xl mx-auto">
         {/* ================= COMPLIANCE SECTION ================= */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center mb-24">
@@ -204,9 +204,9 @@ export default function PublicationServices() {
       </div>
 
       {/* ================= PRICING & PACKAGES SECTION ================= */}
-      <div className="w-full bg-transparent py-6 px-4 sm:px-6">
+      <div className="w-full bg-transparent py-3 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-5xl font-black text-[#0d4f60] mb-6">
+          <h2 className="text-3xl sm:text-5xl font-black mb-3">
             Our Packages
           </h2>
           <CommonPackages
@@ -216,7 +216,7 @@ export default function PublicationServices() {
             packages={publishingPackages}
             buttonText="Request Package Info"
           />
-          <div className="text-center mt-6">
+          <div className="text-center mt-2">
             <GetFreeQuoteButton />
           </div>
         </div>

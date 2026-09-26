@@ -322,14 +322,14 @@ export default function JournalSubmissionPage() {
         {/* Action Buttons */}
         <div className="flex flex-wrap items-center gap-8">
           <GetFreeQuoteButton />
-          <a
+          {/* <a
             href="/uploads/publication-support-services_compressed.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-red-600 text-white text-sm font-bold px-6 py-2 rounded hover:bg-white hover:text-black transition-colors"
           >
             View Brochure
-          </a>
+          </a> */}
         </div>
       </section>
 

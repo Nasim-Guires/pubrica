@@ -1,3 +1,4 @@
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -90,13 +91,8 @@ export default function IndustryVerticals() {
         </div>
 
         {/* CTA Button */}
-        <div className="mt-10">
-          <Link
-            href="/order-now"
-            className="inline-block bg-[#b30000] hover:bg-[#8d0000] text-white font-semibold py-3 px-8 rounded-full transition-colors duration-300 text-sm md:text-base shadow-md"
-          >
-            Get a Free Quote
-          </Link>
+        <div className="mt-4">
+          <GetFreeQuoteButton />
         </div>
       </div>
     </section>

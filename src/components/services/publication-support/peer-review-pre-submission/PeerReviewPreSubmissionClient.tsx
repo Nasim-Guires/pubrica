@@ -153,7 +153,7 @@ export default function PeerReviewPreSubmissionClient() {
           </p>
 
           {/* Action Buttons */}
-          <div className="flex flex-wrap items-center gap-8 mt-6 mb-10">
+          <div className="flex flex-wrap items-center gap-8 mt-6 mb-5">
             <GetFreeQuoteButton />
             <CommonUploadButton
               href="/uploads/publication-support/peer-review-pre-submission/Pre-Submission-Peer-Review-Matters.pdf"

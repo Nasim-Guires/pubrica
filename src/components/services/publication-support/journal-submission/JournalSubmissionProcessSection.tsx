@@ -78,7 +78,7 @@ const processSteps = [
 
 export default function JournalSubmissionProcessSection() {
   return (
-    <div className="w-full font-poppins text-gray-800 bg-white">
+    <div className="w-full font-poppins text-gray-800 bg-white  ">
       {/* ========================================== */}
       {/* SECTION 1: WHO WE SERVE                    */}
       {/* ========================================== */}
@@ -130,7 +130,7 @@ export default function JournalSubmissionProcessSection() {
       {/* ========================================== */}
       {/* SECTION 2: HOW OUR SERVICE WORKS           */}
       {/* ========================================== */}
-      <section className="py-6 md:py-8 px-4 md:px-8 bg-[#EAEAEA] w-full text-center font-poppins overflow-hidden">
+      <section className="py-6 md:py-8 px-4 md:px-8  w-full text-center font-poppins overflow-hidden bg-gray-50">
         {/* Headings inside the section */}
         <h2 className="text-2xl md:text-3xl font-bold text-[#0B353D] mb-1">
           How Our Journal Article Submission Service Works

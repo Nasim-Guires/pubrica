@@ -22,7 +22,6 @@ function formatDate(iso?: string) {
 export default async function ManuscriptGuidelinesPage() {
   const { docs } = await getPosts({ source: "academy", urlPathPrefix: "manuscript-guidelines/", limit: 20 });
   const articles = docs.filter((post) => post.urlPath !== "manuscript-guidelines" && post.heroImage);
-
   return (
     <section className="bg-gray-50 py-6 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
