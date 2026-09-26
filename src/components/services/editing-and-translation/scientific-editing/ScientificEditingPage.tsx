@@ -226,7 +226,7 @@ export default function ScientificEditingPage() {
                   </div>
                 </div>
 
-                <div className="pt-2">
+                <div className=" mb-3">
                   <GetFreeQuoteButton />
                 </div>
               </div>

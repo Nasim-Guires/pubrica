@@ -29,7 +29,7 @@ import ServiceBanner, { BannerProps } from "@/components/common/ServiceBanner";
 
 const EditingAndTranslationPageClient = () => {
   const [activeIndex, setActiveIndex] = useState(-1);
-   type CardId = "proofreading" | "manuscript";
+  type CardId = "proofreading" | "manuscript";
 
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -905,6 +905,7 @@ const EditingAndTranslationPageClient = () => {
         title="Our Editing & Translation Packages"
         packages={packages}
       />
+      <GetFreeQuoteButton />
 
       {/* Testimonials */}
       <CommonTestimonial

@@ -177,7 +177,7 @@ export default function ScientificEditingServices() {
         packages={packages}
       />
 
-      <div className="my-1 flex justify-center w-full px-1">
+      <div className=" flex justify-center w-full">
         <GetFreeQuoteButton />
       </div>
 
