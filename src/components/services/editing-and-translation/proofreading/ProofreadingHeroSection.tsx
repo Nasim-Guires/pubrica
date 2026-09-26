@@ -128,7 +128,7 @@ export default function ProofreadingHeroSection() {
                 </p>
 
                 {/* CTA Button */}
-                <div className="pt-2">
+                <div className="pt-2 mb-3">
                   <GetFreeQuoteButton />
                 </div>
               </div>

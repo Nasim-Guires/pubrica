@@ -114,7 +114,7 @@ export const ThesisEditingHeroAndOverview: React.FC = () => {
                 </div>
 
                 {/* Call to Action Button */}
-                <div className="pt-2">
+                <div className="pt-2 mb-3">
                   <GetFreeQuoteButton />
                 </div>
               </div>

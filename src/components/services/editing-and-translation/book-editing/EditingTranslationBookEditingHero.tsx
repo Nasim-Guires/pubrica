@@ -128,7 +128,7 @@ export const EditingTranslationBookEditingHero: React.FC = () => {
         </div>
 
         {/* Closing Paragraph & CTA */}
-        <div className="mt-8 space-y-6">
+        <div className="mt-3 space-y-3">
           <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
             Let the Pubrica experts take your academic book to the next level.
             With our experienced team and dedicated support, we ensure your book

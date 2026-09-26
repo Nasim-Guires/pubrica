@@ -259,7 +259,7 @@ export default function CaseReportWritingService() {
           <div className="lg:col-span-5 relative mt-6 lg:mt-0">
             {/* Dark green decorative block */}
             <div className="absolute top-6 -left-6 w-full h-full bg-[#0e3b38] rounded-xl -z-10 hidden sm:block"></div>
-            <div className="relative rounded-xl overflow-hidden shadow-lg h-64 sm:h-80 w-full bg-slate-100">
+            <div className="relative rounded-xl overflow-hidden h-64 sm:h-80 w-full ">
               <Image
                 src="/images/physician-writing-services/case-report/Professional-Journal-ready-Case-Report-Writing-intro.webp" // Note: Replace with the actual image path you intend to use
                 alt="Hand writing a medical case report"

@@ -173,12 +173,15 @@ export default function PubricaServicesAndAudience() {
   return (
     <div className="w-full bg-slate-50 text-slate-800 font-sans py-6 px-4 sm:px-6 lg:px-8 space-y-20">
       {/* SECTION 1: OUR SERVICES */}
-      <section className="max-w-6xl mx-auto space-y-6">
-        <div className="space-y-2">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#003B46]">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="mb-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#003B46] tracking-tight">
             Our Services
           </h2>
-          <p className="text-slate-600 text-sm sm:text-base leading-relaxed max-w-4xl">
+
+          <div className="mt-3 h-1 w-12 bg-[#003B46]" />
+
+          <p className="mt-4 text-slate-600 text-sm sm:text-base leading-7 max-w-4xl">
             At Pubrica, we offer comprehensive Manuscript Proofreading Services
             that can help you polish your writing from start to finish. Our
             experts will make sure your writing is clear, consistent, and ready
@@ -186,42 +189,44 @@ export default function PubricaServicesAndAudience() {
           </p>
         </div>
 
-        {/* 4 Column Grid */}
+        {/* Services Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {servicesData.map((service) => (
             <div
               key={service.id}
-              className="bg-white border border-slate-200 rounded-md p-5 shadow-xs hover:shadow-md transition-shadow relative flex flex-col justify-between"
+              className="group bg-white border border-slate-200 rounded-lg p-5 flex flex-col h-full transition-all duration-200 hover:border-slate-300 hover:shadow-sm"
             >
-              <div className="space-y-4">
-                {/* Icon Box */}
-                <div className="w-12 h-12 bg-slate-100/80 rounded-md flex items-center justify-center overflow-hidden p-1.5">
+              <div className="flex flex-col h-full">
+                {/* Icon */}
+                <div className="w-11 h-11 bg-slate-50 border border-slate-200 rounded-md flex items-center justify-center mb-5">
                   <Image
                     src={service.iconSrc}
                     alt={service.title}
-                    width={32}
-                    height={32}
-                    className="w-8 h-8 object-contain"
+                    width={30}
+                    height={30}
+                    className="w-7 h-7 object-contain"
                   />
                 </div>
 
                 {/* Service Title */}
-                <h3 className="font-bold text-slate-900 text-sm sm:text-base">
+                <h3 className="font-semibold text-slate-900 text-sm sm:text-base leading-6 mb-3">
                   {service.title}
                 </h3>
 
-                {/* Description with Vertical Accent Line */}
-                <div className="relative pl-3 border-l-2 border-slate-800 text-xs text-slate-600 leading-relaxed min-h-[60px]">
+                {/* Description */}
+                <div className="relative pl-3 border-l-2 border-[#003B46] text-xs sm:text-sm text-slate-600 leading-6">
                   <span>{service.description}</span>
+
                   {service.highlightText && service.linkUrl && (
                     <Link
                       href={service.linkUrl}
-                      className="text-blue-600  cursor-pointer inline"
+                      className="text-blue-600 hover:text-blue-800 transition-colors"
                     >
                       {" "}
                       {service.highlightText}
                     </Link>
                   )}
+
                   {service.afterHighlight && (
                     <span>{service.afterHighlight}</span>
                   )}

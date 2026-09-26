@@ -75,7 +75,7 @@ export const PostEditingServicesAndWhoWeServe: React.FC = () => {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 sm:w-80 sm:h-80 bg-slate-100 rounded-full -z-0" />
 
             <div className="relative z-10 w-full max-w-md h-[320px]">
-              <div className="absolute inset-y-0 left-2 right-2 rounded-2xl overflow-hidden shadow-xl border-2 border-white">
+              <div className="absolute inset-y-0 left-2 right-2 overflow-hidden">
                 <Image
                   src="/images/editing-and-translation/post-editing/Our-Post-Editing-Services.png"
                   alt="Our post-editing services"

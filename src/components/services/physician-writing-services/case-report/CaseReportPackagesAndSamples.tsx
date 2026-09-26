@@ -98,8 +98,8 @@ const packages: PackageItem[] = [
 
 export default function CaseReportPackagesAndSamples() {
   return (
-    <div className="w-full bg-white text-slate-800 font-sans py-6 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto space-y-16">
+    <div className="w-full bg-white text-slate-800 font-sans py-3 px-4 sm:px-6 lg:px-3">
+      <div className="max-w-6xl mx-auto space-y-5">
 
         {/* ==========================================
             1. SAMPLE WORK CALLOUT BANNER

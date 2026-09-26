@@ -78,7 +78,7 @@ export default function TranslationEditingHero() {
                 </div>
 
                 {/* CTA Button */}
-                <div className="pt-2">
+                <div className="pt-2 mb-3">
                   <GetFreeQuoteButton />
                 </div>
               </div>

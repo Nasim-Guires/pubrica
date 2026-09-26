@@ -121,7 +121,7 @@ export const EditingTranslationManuscriptEditingOverview: React.FC = () => {
                 <GetFreeQuoteButton />
                 <Link
                   href="/uploads/editing-and-translation/manuscript-editing/Journal-Manuscript-Formatting.pdf"
-                  className="bg-red-600 hover:bg-white hover:text-black text-white font-semibold py-2.5 px-6 rounded-md transition-colors duration-200 text-sm sm:text-base shadow-sm inline-flex items-center justify-center select-none"
+                  className="bg-red-600 text-white text-sm font-bold px-6 py-2 rounded hover:bg-white hover:text-black transition-colors"
                 >
                   View Brochure
                 </Link>

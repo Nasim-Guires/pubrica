@@ -123,7 +123,7 @@ export const ResearchServicesHero: React.FC<ResearchHeroProps> = ({
                 </div>
 
                 {/* Action Button */}
-                <div className="pt-2">
+                <div className="pt-2  mb-3">
                   <CommonUploadButton
                     href={brochureUrl}
                     target="_blank"

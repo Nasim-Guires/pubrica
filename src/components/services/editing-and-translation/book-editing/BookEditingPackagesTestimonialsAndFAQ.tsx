@@ -5,6 +5,7 @@ import Image from "next/image";
 import CommonPackages, { PackageItem } from "@/components/common/CommonPackages";
 import CommonTestimonial from "@/components/common/CommonTestimonials";
 import CommonFAQ from "@/components/common/FAQ";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 // --- Interfaces ---
 interface PackageCard {
@@ -164,12 +165,18 @@ export const BookEditingPackagesTestimonialsAndFAQ: React.FC = () => {
       {/* ------------------------------------------------------------- */}
       {/* 1. BOOK EDITING SERVICES - OUR PACKAGES SECTION */}
       {/* ------------------------------------------------------------- */}
-      <CommonPackages
-        title="Book Editing Services – Our Packages"
-        subtitle="Take the Complete Pack or Simply Get Your Book Edited"
-        description="We offer a range of book editing packages designed to meet the unique needs of authors, from first-time writers to seasoned professionals. Each package is tailored to ensure your manuscript is polished, coherent, and ready for publication while preserving your unique voice and style."
-        packages={packages}
-      />
+      <div className="bg-white">
+        <CommonPackages
+          title="Book Editing Services – Our Packages"
+          subtitle="Take the Complete Pack or Simply Get Your Book Edited"
+          description="We offer a range of book editing packages designed to meet the unique needs of authors, from first-time writers to seasoned professionals. Each package is tailored to ensure your manuscript is polished, coherent, and ready for publication while preserving your unique voice and style."
+          packages={packages}
+        />
+        <div>
+          <GetFreeQuoteButton />
+        </div>
+        
+      </div>
 
       {/* ------------------------------------------------------------- */}
       {/* 2. TESTIMONIALS SECTION */}

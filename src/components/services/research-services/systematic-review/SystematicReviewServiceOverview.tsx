@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import HeroBanner from "@/components/common/HeroBanner";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 export const SystematicReviewOverview: React.FC = () => {
   return (
@@ -101,7 +102,7 @@ export const SystematicReviewOverview: React.FC = () => {
 
                 {/* CTA Button placeholder element */}
                 <div className="pt-2">
-                  {/* <GetFreeQuoteButton /> */}
+                  <GetFreeQuoteButton />
                 </div>
               </div>
             </div>

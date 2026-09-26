@@ -125,7 +125,7 @@ export const EditingTranslationManuscriptEditingTestimonialsAndFaq: React.FC =
         key={key}
         className="bg-white border border-slate-300 rounded-xl p-5 sm:p-6 shadow-sm flex flex-col justify-between relative"
       >
-        <div className="bg-slate-200/80 rounded-lg p-4 sm:p-5 flex gap-4 items-center mb-6 min-h-[140px]">
+        <div className="bg-slate-200/80 rounded-lg p-4 sm:p-5 flex gap-4 items-center mb-4 min-h-[140px]">
           <div className="w-20 h-24 relative flex-shrink-0 border border-slate-300 shadow-sm rounded overflow-hidden">
             <Image
               src={item.journalCoverSrc}
@@ -160,8 +160,8 @@ export const EditingTranslationManuscriptEditingTestimonialsAndFaq: React.FC =
     );
 
     return (
-      <div className="w-full bg-slate-50 py-6 sm:py-7 text-slate-800">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-16">
+      <div className="w-full bg-slate-50 py-2 sm:py-7 text-slate-800">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-7">
           {/* SECTION 1: Testimonials */}
           <CommonTestimonial
             title="What Our Clients Say"

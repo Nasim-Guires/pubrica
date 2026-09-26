@@ -132,7 +132,7 @@ export default function OriginalResearchArticle() {
                 </div>
 
                 {/* CTA Button */}
-                <div className="pt-4">
+                <div className="pt-2 mb-3">
                   <GetFreeQuoteButton />
                 </div>
               </div>

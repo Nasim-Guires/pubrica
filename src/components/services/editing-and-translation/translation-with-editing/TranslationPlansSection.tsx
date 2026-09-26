@@ -64,10 +64,17 @@ const packages: PackageItem[] = [
 
 export default function TranslationPlansSection() {
   return (
-    <CommonPackages
-      title="Choose the Translation with Editing Plan You Need"
-      description="Choose the Pubrica Translation with Editing plan that fits your research needs, whether it's a short manuscript, a full-length paper, or a comprehensive academic project. We ensure accurate translation, clear editing, and submission-ready quality."
-      packages={packages}
-    />
+    <>
+      <section>
+        <CommonPackages
+          title="Choose the Translation with Editing Plan You Need"
+          description="Choose the Pubrica Translation with Editing plan that fits your research needs, whether it's a short manuscript, a full-length paper, or a comprehensive academic project. We ensure accurate translation, clear editing, and submission-ready quality."
+          packages={packages}
+        />
+        <div className="mb-3">
+          <GetFreeQuoteButton />
+        </div>
+      </section>
+    </>
   );
 }
