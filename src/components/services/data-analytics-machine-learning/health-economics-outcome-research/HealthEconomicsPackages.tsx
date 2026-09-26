@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import CommonPackages, { PackageItem } from "@/components/common/CommonPackages";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 const packagesData: PackageItem[] = [
   {
@@ -71,10 +72,15 @@ const packagesData: PackageItem[] = [
 
 export default function HealthEconomicsPackages() {
   return (
-    <CommonPackages
-      title="Health Economics & Outcome Research – Our Packages"
-      description="At Pubrica, we offer tailored Health Economics & Outcome Research packages designed to meet the needs of researchers, pharmaceutical companies, healthcare providers, and policymakers. Our evidence-based solutions help demonstrate product value, inform decision-making, and improve patient outcomes."
-      packages={packagesData}
-    />
+    <>
+      <div>
+        <CommonPackages
+          title="Health Economics & Outcome Research – Our Packages"
+          description="At Pubrica, we offer tailored Health Economics & Outcome Research packages designed to meet the needs of researchers, pharmaceutical companies, healthcare providers, and policymakers. Our evidence-based solutions help demonstrate product value, inform decision-making, and improve patient outcomes."
+          packages={packagesData}
+        />
+        <GetFreeQuoteButton />
+      </div>
+    </>
   );
 }
