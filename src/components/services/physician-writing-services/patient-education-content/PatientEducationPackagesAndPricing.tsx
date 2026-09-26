@@ -283,11 +283,11 @@ export default function PatientEducationPackagesAndPricing() {
           </div>
 
           {/* 3-Column Package Grid */}
-          <div className="relative max-w-7xl mx-0 p-0 m-0">
+          <div className="relative max-w-6xl mx-0 p-0 m-0">
             <CommonPackages packages={packages} />
 
             {/* Floating Centered CTA Button directly below cards */}
-            <div className="mt-2 text-center">
+            <div className="">
               <GetFreeQuoteButton />
             </div>
           </div>

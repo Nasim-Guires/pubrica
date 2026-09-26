@@ -94,7 +94,7 @@ const packages: PackageItem[] = [
 export default function EditorialPackagesSection() {
   return (
     <section className="w-full bg-white text-slate-800 font-sans py-2 px-1 sm:px-6 lg:px-1">
-      <div className="max-w-6xl mx-auto space-y-10">
+      <div className="max-w-6xl mx-auto space-y-4">
         {/* Section Header */}
 
         {/* Pricing Cards Container */}
@@ -106,7 +106,7 @@ export default function EditorialPackagesSection() {
           />
 
           {/* Bottom Call To Action Button */}
-          <div className="flex justify-center pt-8">
+          <div className="flex justify-center pt-1">
             <GetFreeQuoteButton />
           </div>
         </div>

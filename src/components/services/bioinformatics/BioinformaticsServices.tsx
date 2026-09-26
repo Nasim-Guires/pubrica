@@ -138,7 +138,7 @@ export default function BioinformaticsServices() {
   };
 
   return (
-    <section className="w-full bg-slate-50 py-6 text-slate-800 font-sans">
+    <section className="w-full  py-6 text-slate-800 font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
 
         {/* ------------------------------------------------------------------
@@ -229,7 +229,7 @@ export default function BioinformaticsServices() {
            7. OUR PACKAGES
            ------------------------------------------------------------------ */}
         {/* SINGLE COMBINED SECTION WITH MINIMAL SPACING */}
-        <section className="w-full bg-[#f8fafc] py-4">
+        <section className="w-full py-4">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
 
             {/* Packages Component */}
