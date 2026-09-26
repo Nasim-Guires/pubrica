@@ -150,7 +150,7 @@ export default function PosterPreparationPage() {
                   partner, delivering a poster that represents the quality of your research and its clarity.
                 </p>
 
-                <div className="flex flex-wrap items-center gap-4 pt-2">
+                <div className="flex flex-wrap items-center gap-4 mb-3">
                   <GetFreeQuoteButton />
                   <Link
                     href="/uploads/Poster-Preparation-Services-_compressed.pdf"

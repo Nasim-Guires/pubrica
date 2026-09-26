@@ -129,7 +129,7 @@ export default function ManuscriptFormattingService() {
                   Pubrica assures that your manuscript will be technically aligned with the required journal template and style, reducing avoidable errors and increasing submission success. Our team helps create a seamless transition from scientific writing to a formatted submission.
                 </p>
 
-                <div className="pt-2">
+                <div className="mb-4 text-center sm:text-left">
                   <Link
                     href="/order-now/"
                     className="bg-red-600 text-white text-sm font-bold px-6 py-2 rounded hover:bg-white hover:text-black transition-colors inline-block"

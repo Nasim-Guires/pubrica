@@ -75,11 +75,11 @@ export default function PosterServicePackagesSection() {
   ];
 
   return (
-    <section className="w-full bg-white py-6 px-4 md:px-8 font-sans text-gray-800">
+    <section className="w-full bg-white py-3 px-4 md:px-8 font-sans text-gray-800">
       <div className="max-w-6xl mx-auto">
         {/* Header Section */}
-        <div className="text-center mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#0f172a] mb-3">
+        <div className="text-center mb-1">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#0f172a] mb-2">
             Poster Preparation Service Packages
           </h2>
           <p className="text-gray-600 text-xs md:text-sm max-w-4xl mx-auto leading-relaxed">

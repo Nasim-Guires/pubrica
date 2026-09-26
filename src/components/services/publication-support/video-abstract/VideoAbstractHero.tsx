@@ -83,7 +83,7 @@ export default function VideoAbstractHero() {
                   services for scientific research that are intended to promote your research successfully, enhancing visibility and engagement with your research.
                 </p>
 
-                <div className="pt-2">
+                <div className="mb-3">
                   <CommonUploadButton />
                 </div>
               </div>

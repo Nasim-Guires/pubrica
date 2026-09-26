@@ -136,11 +136,11 @@ export default function PackagesAndPricing() {
     footerDisclaimerSegments: [],
   };
   return (
-    <div className="w-full bg-[#f8fafc] font-sans text-gray-800 py-6 space-y-16 antialiased">
+    <div className="w-full  font-sans text-gray-800 py-3 space-y-3 antialiased">
       {/* ============================================================ */}
       {/* SECTION 1: SAMPLE WORK / REPORT DOWNLOAD BANNER               */}
       {/* ============================================================ */}
-      <div className="space-y-12">
+      <div className="space-y-3">
         {/* Sample Work Section */}
         <PubricaSampleWorkCard {...manuscriptFormattingSampleWork} />
 

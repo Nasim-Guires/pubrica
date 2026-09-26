@@ -77,7 +77,7 @@ export default function WhatWeDoAndWhoWeServe() {
   };
 
   return (
-    <section className="w-full bg-white py-6 font-sans text-gray-800 antialiased">
+    <section className="w-full bg-white py-3 font-sans text-gray-800 antialiased">
       <div className="max-w-6xl mx-auto px-4 md:px-8 space-y-16">
 
         {/* ============================================================ */}
@@ -164,7 +164,7 @@ export default function WhatWeDoAndWhoWeServe() {
               </p>
 
               {/* Call to Action Button */}
-              <div className="pt-3">
+              <div className="pt-1">
                 <GetFreeQuoteButton />
               </div>
             </div>
@@ -189,7 +189,7 @@ export default function WhatWeDoAndWhoWeServe() {
         {/* ============================================================ */}
         {/* SECTION 2: WHO WE SERVE (INDEPENDENT ACCORDION COLUMNS)      */}
         {/* ============================================================ */}
-        <div className="pt-2">
+        <div className="pt-">
           <h2 className="text-2xl md:text-3xl font-bold text-[#0c3830] mb-1.5">
             Who We Serve
           </h2>

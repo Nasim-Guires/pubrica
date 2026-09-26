@@ -161,10 +161,10 @@ export default function VideoAbstractOverview() {
           <div className="lg:col-span-5 relative flex justify-center lg:justify-end w-full">
             <div className="relative w-full max-w-[280px] sm:max-w-[340px] md:max-w-[380px] h-[240px] sm:h-[290px] md:h-[320px] mx-auto lg:mx-0">
               {/* Back Soft Background Blob */}
-              <div className="absolute inset-0 w-full h-full bg-emerald-100/60 rounded-full blur-xl -z-10" />
+              <div className="absolute inset-0 w-full h-full rounded-full blur-xl -z-10" />
 
               {/* Centered Image Card */}
-              <div className="relative w-full h-full rounded-xl overflow-hidden shadow-lg">
+              <div className="relative w-full h-full rounded-xl overflow-hidden">
                 <Image
                   src={`${PAGE_IMAGES}/video-abstracts-services.png`}
                   alt="Video Abstract Editing"
