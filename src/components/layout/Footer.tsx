@@ -85,6 +85,7 @@ export default function Footer() {
           {/* Brand & Description Column */}
           <div className="lg:col-span-4 flex flex-col items-start">
             <div className="mb-4">
+              <Link href="/">
               <Image
                 src="/images/logos/pubrica-logo.webp"
                 alt="Pubrica Knowledge Works"
@@ -93,6 +94,7 @@ export default function Footer() {
                 priority
                 className="object-contain h-auto"
               />
+              </Link>
             </div>
 
             <h4 className="text-[11px] font-bold uppercase tracking-wider text-white mb-3">
