@@ -65,7 +65,7 @@ const InsightsPage = async () => {
                 fill
                 priority
                 sizes="(max-w-7xl) 100vw, 500px"
-                className="object-cover filter grayscale contrast-125"
+                className="object-cover filter "
               />
             </div>
           </div>

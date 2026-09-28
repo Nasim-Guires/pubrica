@@ -9,6 +9,7 @@ export interface PayloadMedia {
   mimeType?: string | null;
   width?: number | null;
   height?: number | null;
+  thumbnailURL:string;
 }
 
 export interface PayloadCategory {

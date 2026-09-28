@@ -11,10 +11,25 @@ export const metadata: Metadata = {
   description: "Explore Pubrica's open calls for papers across therapeutic areas and research fields.",
 };
 
-// The Payload "call-for-papers" source also includes a bare index stub
-// (slug "call-for-papers", no urlPath) — exclude it, it isn't a real topic.
+// Available fallback images in /images/API/
+const FALLBACK_IMAGES = [
+  "/images/API/Microcirculation.webp",
+  "/images/API/Computed.webp",
+  "/images/API/Microvascular-Mechanisms.webp",
+  "/images/API/Heart-Disease.webp",
+  "/images/API/Obesity.webp",
+  "/images/API/Endocrinology-diabetes-Metabolism -3.webp",
+  "/images/API/protein-degradation.webp",
+  "/images/API/Clinical-and-Health-psychology.webp",
+  "/images/API/Molecular-Biology.webp",
+  "/images/API/Molecular-Neurodegeneration.png",
+  "/images/API/Pharmaceutical-Sciences.webp",
+  "/images/API/Molecular-and-Cellular-Probes.webp",
+];
+//
 const INDEX_SLUG = "call-for-papers";
-
+//
+//
 export default async function CallForPapersPage() {
   const { docs } = await getPosts({ source: "call-for-papers", limit: 50 });
   const topics = docs.filter((post) => post.slug !== INDEX_SLUG);
@@ -30,8 +45,13 @@ export default async function CallForPapersPage() {
 
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {topics.map((post) => {
-            const image = mediaUrl(post.heroImage) || "/images/blog/default.webp";
+          {topics.map((post, index) => {
+            // Priority 1: API Hero Image
+            // Priority 2: Cyclic fallback from the available image list using index % length
+            const image =
+              mediaUrl(post.heroImage?.thumbnailURL) ||
+              FALLBACK_IMAGES[index % FALLBACK_IMAGES.length];
+
             return (
               <Link
                 key={post.id}

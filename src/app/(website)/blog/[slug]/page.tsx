@@ -25,12 +25,16 @@ function formatDate(iso?: string) {
 export async function generateMetadata({ params }: BlogDetailsPageProps): Promise<Metadata> {
   const { slug } = await params;
   const post = await getPostBySlug(slug, "blog");
+  
   if (!post) return {};
   return {
     title: post.seo?.metaTitle || post.title,
     description: getDescription(post),
   };
+
+
 }
+
 
 export default async function BlogDetailsPage({ params }: BlogDetailsPageProps) {
   const { slug } = await params;
