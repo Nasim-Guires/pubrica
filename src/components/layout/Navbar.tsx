@@ -2,7 +2,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import {
   Menu,
   ChevronDown,
@@ -20,6 +20,7 @@ import Image from "next/image";
 
 export default function Navbar() {
   const pathname = usePathname();
+  const router = useRouter();
   const isHome = pathname === "/";
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubcategory, setActiveSubcategory] = useState<string>("AI and ML Services");
@@ -45,12 +46,12 @@ export default function Navbar() {
     }
   }, [isSearchOpen]);
 
-  // Optional: Submit handler for search
   const handleSearchSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (searchQuery.trim()) {
-      // Execute your search routing logic here (e.g., router.push(`/search?q=${searchQuery}`))
-      console.log("Searching for:", searchQuery);
+    const trimmed = searchQuery.trim();
+    if (trimmed) {
+      router.push(`/search?q=${encodeURIComponent(trimmed)}`);
+      setSearchQuery("");
       handleNavClick();
     }
   };

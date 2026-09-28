@@ -158,7 +158,7 @@ export default async function QaForumPage({ searchParams }: QaForumPageProps) {
         </p>
       </section>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 grid grid-cols-1 lg:grid-cols-12 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         <aside className="lg:col-span-3 flex flex-col gap-6">
           <div className="bg-white p-5 rounded-md border border-gray-200/80 shadow-xs">
             <h4 className="text-sm font-bold text-[#0b2825] mb-3">Q &amp; A Topics</h4>

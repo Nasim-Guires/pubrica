@@ -537,12 +537,35 @@ function normalizeForMatch(s: string): string {
 }
 
 /**
+ * The WordPress → Payload migration baked the old theme's "Enquire Now" /
+ * "Interesting Blogs" sidebar widget into the article body itself, as a
+ * trailing run of nodes: an h3 "Enquire Now", an h2 "Interesting Blogs", then
+ * repeating (paragraph link, upload image) pairs for each related post. Every
+ * detail page already renders a real, properly laid-out version of this
+ * widget in its own sidebar, so this trailing copy is pure duplicate junk —
+ * and rendered inline in the article column it shows up as raw links and
+ * full-width images with no card styling. Drop it and everything after it.
+ */
+function stripTrailingRelatedBlogsJunk(children: LexicalNode[]): LexicalNode[] {
+  const idx = children.findIndex(
+    (node, i) =>
+      node.type === "heading" &&
+      node.tag === "h3" &&
+      headingText(node).trim().toLowerCase() === "enquire now" &&
+      children[i + 1]?.type === "heading" &&
+      children[i + 1]?.tag === "h2" &&
+      headingText(children[i + 1]).trim().toLowerCase() === "interesting blogs"
+  );
+  return idx === -1 ? children : children.slice(0, idx);
+}
+
+/**
  * Payload post content commonly repeats the post title as its own leading H1.
  * Since every detail page already renders the title separately, drop that
  * leading heading here so it isn't shown (or excerpted) twice.
  */
 function getBodyChildren(content?: LexicalContent | null, title?: string): LexicalNode[] {
-  let children = content?.root?.children ?? [];
+  let children = stripTrailingRelatedBlogsJunk(content?.root?.children ?? []);
 
   // Q&A forum posts open with a "Q & A Forum | <Topic>" marker paragraph,
   // then repeat the question as a heading prefixed with "Q: ". Some posts in

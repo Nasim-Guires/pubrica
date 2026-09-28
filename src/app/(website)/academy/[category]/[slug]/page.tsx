@@ -58,7 +58,7 @@ export default async function AcademyArticlePage({ params }: AcademyArticlePageP
       </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           <main className="lg:col-span-8 bg-white p-6 md:p-10 rounded-md border border-gray-200/80 shadow-xs">
             <Link
               href="/academy/articles"

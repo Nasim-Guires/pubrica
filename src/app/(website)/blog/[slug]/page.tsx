@@ -61,7 +61,7 @@ export default async function BlogDetailsPage({ params }: BlogDetailsPageProps) 
 
       {/* Main Grid Section */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-5">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Main Content Area */}
           <main className="lg:col-span-8 bg-white p-6 md:p-10 rounded-2xl border border-slate-100 shadow-sm">
             <h1 className="text-2xl md:text-3xl font-extrabold text-slate-900 mb-2 leading-snug">

@@ -32,7 +32,7 @@ export default function GenexInCancerProgressionPage() {
       </section>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-5">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           <main className="lg:col-span-8 bg-white p-6 md:p-10 rounded-2xl border border-slate-100 shadow-sm">
             <p className="text-sm text-slate-600 leading-relaxed mb-6">
               This sample response addresses editorial comments on a manuscript titled &ldquo;The Role of Gene X in Cancer Progression.&rdquo; The author, Marry Anne, expresses gratitude for the thorough review and constructive feedback from reviewers. The response includes specific actions taken to address major comments, such as providing a rationale for the control group selection, revising a figure for clarity, and expanding the discussion to include a comparison with previous studies. Marry Anne concludes by expressing hope that the revisions have strengthened the manuscript and requests feedback on the next steps in the review process.

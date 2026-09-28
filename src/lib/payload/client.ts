@@ -41,6 +41,22 @@ export function mediaUrl(media?: PayloadMedia | string | null): string | null {
   return `${PAYLOAD_URL}${raw}`;
 }
 
+/** Base route for each post source — academy links use the post's full urlPath, everything else uses its bare slug. */
+const SOURCE_BASE_PATH: Record<PostSource, string> = {
+  blog: "/blog",
+  academy: "/academy",
+  insights: "/insights",
+  career: "/careers",
+  "call-for-papers": "/call-for-papers",
+};
+
+/** The canonical detail-page URL for a post, routed by its source. */
+export function postHref(post: Pick<PayloadPost, "source" | "slug" | "urlPath">): string {
+  const base = SOURCE_BASE_PATH[post.source] ?? "/blog";
+  const path = post.source === "academy" ? post.urlPath || post.slug : post.slug;
+  return `${base}/${path}`;
+}
+
 export interface GetPostsParams {
   source: PostSource;
   page?: number;
@@ -72,6 +88,24 @@ export async function getPosts({
   if (urlPathPrefix) params["where[urlPath][like]"] = urlPathPrefix;
 
   return payloadFetch<PayloadListResponse<PayloadPost>>("/api/posts", params);
+}
+
+export interface SearchPostsParams {
+  q: string;
+  page?: number;
+  limit?: number;
+}
+
+/** Site-wide title search across every published post, used by the header search bar. */
+export async function searchPosts({ q, page = 1, limit = 12 }: SearchPostsParams): Promise<PayloadListResponse<PayloadPost>> {
+  return payloadFetch<PayloadListResponse<PayloadPost>>("/api/posts", {
+    "where[title][like]": q,
+    "where[publishing.status][equals]": "published",
+    sort: "-publishing.publishedAt",
+    depth: 1,
+    page,
+    limit,
+  });
 }
 
 export async function getPostBySlug(

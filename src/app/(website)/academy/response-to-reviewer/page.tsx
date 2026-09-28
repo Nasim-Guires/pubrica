@@ -54,7 +54,7 @@ export default function ResponseToReviewerPage() {
 
                 {/* Main Content Area */}
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-5">
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
 
                         {/* Left Column: Sample Response Content & PDF Viewer Frame */}
                         <article className="lg:col-span-8 space-y-6">
