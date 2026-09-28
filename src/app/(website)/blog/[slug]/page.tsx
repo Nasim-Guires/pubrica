@@ -39,6 +39,7 @@ export default async function BlogDetailsPage({ params }: BlogDetailsPageProps) 
     notFound();
   }
 
+
   const { docs: otherPosts } = await getPosts({ source: "blog", limit: 6 });
   const otherBlogs = otherPosts.filter((p) => p.slug !== slug).slice(0, 5);
   const bannerImage = mediaUrl(post.heroImage) || "/images/blog/default.webp";

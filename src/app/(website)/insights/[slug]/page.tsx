@@ -36,6 +36,8 @@ function formatDate(iso?: string) {
 export async function generateMetadata({ params }: InsightRouteProps): Promise<Metadata> {
   const { slug } = await params;
   const hub = getInsightHub(slug);
+  // console.log("check", hub)
+
 
   if (hub) {
     return { title: `${hub.label} | Pubrica Insights`, description: hub.description };
@@ -65,6 +67,8 @@ export default async function InsightRoutePage({ params, searchParams }: Insight
       page,
       limit: HUB_PAGE_SIZE,
     });
+
+
 
     return (
       <div className="min-h-screen bg-[#f8f9fa] text-slate-800 font-sans pb-10">
@@ -175,8 +179,8 @@ export default async function InsightRoutePage({ params, searchParams }: Insight
     notFound();
   }
 
+  // here the log
   const bannerImage = mediaUrl(post.heroImage) || "/images/blog/default.webp";
-
   return (
     <div className="min-h-screen bg-[#f8f9fa] text-slate-800 font-sans pb-10">
       {/* Banner Header */}
@@ -200,14 +204,16 @@ export default async function InsightRoutePage({ params, searchParams }: Insight
             {post.author && <span>✍️ {post.author}</span>}
           </div>
 
+
+            //issue
           <LexicalRenderer content={post.content} title={post.title} />
 
-          {(post.categories?.length || post.tags?.length) && (
+          {/* {(post.categories?.length || post.tags?.length) && (
             <div className="mt-8 pt-6 border-t border-slate-100 flex flex-wrap gap-2">
               {post.categories?.map((c) => (
                 <span
                   key={c.id}
-                  className="text-[11px] font-semibold bg-emerald-50 text-[#004d40] px-2.5 py-1 rounded-full"
+                  className="text-[11px] font-semibold bg-emerald-50 text-red-600 px-2.5 py-1 rounded-full"
                 >
                   {c.name}
                 </span>
@@ -221,7 +227,7 @@ export default async function InsightRoutePage({ params, searchParams }: Insight
                 </span>
               ))}
             </div>
-          )}
+          )} */}
         </main>
       </div>
     </div>

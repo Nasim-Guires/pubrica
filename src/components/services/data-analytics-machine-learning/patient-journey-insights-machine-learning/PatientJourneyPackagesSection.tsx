@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import CommonPackages, { PackageItem } from "@/components/common/CommonPackages";
+import GetFreeQuoteButton from "@/components/common/GetFreeQuoteButton";
 
 export default function PatientJourneyPackagesSection() {
   const packagesData: PackageItem[] = [
@@ -75,10 +76,13 @@ export default function PatientJourneyPackagesSection() {
   ];
 
   return (
-    <CommonPackages
-      title="Patient Journey & Insights – Machine Learning Packages"
-      description="At Pubrica, we provide tailored packages to meet the diverse needs of healthcare organizations, researchers, and life science companies. Each package combines data-driven insights with regulatory-compliant machine learning solutions to optimize patient outcomes, treatment strategies, and market intelligence."
-      packages={packagesData}
-    />
+    <>
+      <CommonPackages
+        title="Patient Journey & Insights – Machine Learning Packages"
+        description="At Pubrica, we provide tailored packages to meet the diverse needs of healthcare organizations, researchers, and life science companies. Each package combines data-driven insights with regulatory-compliant machine learning solutions to optimize patient outcomes, treatment strategies, and market intelligence."
+        packages={packagesData}
+      />
+      <GetFreeQuoteButton />
+    </>
   );
 }

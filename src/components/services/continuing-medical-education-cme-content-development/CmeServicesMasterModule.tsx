@@ -6,6 +6,7 @@ import Link from 'next/link';
 import ServiceBanner from '@/components/common/ServiceBanner';
 import { PubricaSampleWorkCard } from '@/components/common/PubricaSampleWorkCardProps';
 import CommonPackages, { PackageItem } from '@/components/common/CommonPackages';
+import GetFreeQuoteButton from '@/components/common/GetFreeQuoteButton';
 
 // --- DATA STRUCTURES ---
 
@@ -163,7 +164,7 @@ export default function CmeServicesMasterModule() {
     const currentWorkflowStep = workflowSteps[activeTab];
 
     return (
-        <div className="w-full bg-white space-y-16 py-8">
+        <div className="w-full bg-white space-y-8 py-8">
 
             {/* ==================== 0. SERVICE BANNER ==================== */}
             <ServiceBanner
@@ -333,6 +334,7 @@ export default function CmeServicesMasterModule() {
                 description="At Pubrica, we offer flexible and comprehensive CME packages tailored to meet the needs of healthcare institutions, professional associations, and individual healthcare professionals. Our packages are designed to streamline program development, ensure compliance, and deliver engaging, evidence-based learning experiences."
                 packages={packagesData}
             />
+            <GetFreeQuoteButton/>
         </div>
     );
 }

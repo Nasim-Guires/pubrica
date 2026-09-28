@@ -166,7 +166,7 @@ export default function DevelopmentEditingServicePage() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
           {/* Left Side: Actual Image Container */}
           <div className="md:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-sm h-80 rounded-2xl overflow-hidden shadow-md">
+            <div className="relative w-full max-w-sm h-80  overflow-hidden">
               <Image
                 src="/images/academic-editorial-services/copy-editing-services/Types-of-Copy-Editing-Services-We-Offer-11.webp"
                 alt="Types of Copy Editing Services We Offer"

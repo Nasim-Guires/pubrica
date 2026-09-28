@@ -98,7 +98,7 @@ export default function InterpretationReportingVisualisation() {
             />
 
             {/* 2. OVERVIEW / INTRO SECTION WITH CTA */}
-            <section className="max-w-6xl mx-auto py-6 px-4 sm:px-6 md:px-8">
+            <section className="max-w-6xl mx-auto py-3 px-4 sm:px-6 md:px-8">
                 <h2 className="text-2xl md:text-3xl font-bold text-[#1b3d36] mb-6 leading-tight">
                     Turn your complex research data into clear, compelling, and publication-ready insights with Pubrica’s expert Interpretation, Reporting, and Visualisation services.
                 </h2>
@@ -113,7 +113,7 @@ export default function InterpretationReportingVisualisation() {
                             Whether you are preparing a clinical trial report, academic manuscript, regulatory submission, or business intelligence dashboard, we transform raw data into clear narratives, structured reports, and intuitive visualisations that drive decision-making.
                         </p>
 
-                        <div className="pt-4">
+                        <div className="pt-1">
                             <GetFreeQuoteButton />
                         </div>
                     </div>

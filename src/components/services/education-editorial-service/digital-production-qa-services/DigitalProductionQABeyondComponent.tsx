@@ -42,7 +42,7 @@ export default function DigitalProductionQABeyondComponent() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-24">
         {/* Left Column: Images */}
         <div className="lg:col-span-5 relative flex flex-col items-center">
-          <div className="relative w-full h-[320px] rounded-2xl overflow-hidden shadow-lg">
+          <div className="relative w-full h-[320px] overflow-hidden">
             <Image
               src="/images/education-editorial-service/digital-production-qa-services/Why-Choose-Pubrica-for-Digital-Production-QA.webp"
               alt="Why Choose Pubrica for Digital Production QA"

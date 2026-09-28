@@ -12,6 +12,7 @@ const FORMAT_STRIKETHROUGH = 4;
 const FORMAT_UNDERLINE = 8;
 const FORMAT_CODE = 16;
 
+
 function renderText(node: LexicalNode, key: number): React.ReactNode {
   let text: React.ReactNode = node.text ?? "";
   const format = Number(node.format ?? 0);
@@ -393,49 +394,59 @@ function renderNode(node: LexicalNode, key: number): React.ReactNode {
       const isPdf = node.value?.mimeType === "application/pdf";
 
       if (isPdf) {
+        const pdfTitle = node.value?.title || node.value?.filename || "PDF document";
+
         return (
-          <span key={key} className="block my-6">
-            <span className="flex items-center justify-between bg-slate-50 border border-slate-200 rounded-t-lg px-4 py-2">
-              <span className="text-xs font-medium text-slate-600 truncate">
-                📄 {node.value?.title || node.value?.filename || "PDF document"}
+          <div key={key} className="my-6 rounded-lg overflow-hidden border border-slate-700 bg-[#323639] shadow-xl">
+            {/* Header bar */}
+            <div className="flex items-center justify-between bg-[#2a2e31] px-4 py-2 border-b border-slate-700">
+              <span className="text-xs font-medium text-slate-300 truncate flex items-center gap-1.5">
+                📄 {pdfTitle}
               </span>
               <a
                 href={src}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs font-semibold text-[#004d40] underline hover:text-[#00332a] flex-shrink-0 ml-3"
+                className="text-xs font-semibold text-teal-400 hover:text-teal-300 underline flex-shrink-0 ml-3 transition-colors"
               >
                 Open in new tab
               </a>
-            </span>
+            </div>
+
+            PDF Viewer - native URL flags enable the toolbar & thumbnail sidebar
             <iframe
-              src={`https://docs.google.com/viewer?url=${encodeURIComponent(src)}&embedded=true`}
-              title={node.value?.title || node.value?.filename || "PDF preview"}
-              className="w-full h-[600px] border border-t-0 border-slate-200 rounded-b-lg"
+              src={`${src}#toolbar=1&navpanes=1&view=FitH`}
+              title={pdfTitle}
+              className="w-full h-[650px] border-none bg-[#323639]"
             />
-          </span>
-        );
-      }
-      
-      if (!isImage) {
-        return (
-          <a
-            key={key}
-            href={src}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="my-4 flex items-center gap-2 text-sm font-medium text-[#004d40] underline hover:text-[#00332a]"
-          >
-            📎 {node.value?.title || node.value?.filename || "Download attachment"}
-          </a>
+          </div>
         );
       }
 
+      if (!isImage) {
+        return (
+          <>
+            <a
+              key={key}
+              href={src}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="my-4 flex items-center gap-2 text-sm font-medium text-[#004d40] underline hover:text-[#00332a]"
+            >
+              📎 {node.value?.title || node.value?.filename || "Download attachment"}
+            </a>
+          </>
+        );
+      }
+
+
+      //here is the one image
       const width = node.value?.width || 800;
       const height = node.value?.height || 450;
       return (
         <span key={key} className="block relative my-6 rounded-lg overflow-hidden">
-         {/* <h1>ihfewiohfw</h1> */}
+          {/* <h1>ihfewiohfw</h1> */}
+
           <Image
             src={src}
             alt={node.value?.altText || node.value?.title || ""}

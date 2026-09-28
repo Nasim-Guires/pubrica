@@ -159,8 +159,8 @@ export default function OurPackages(): React.ReactElement {
         </div>
 
         {/* CTA Banner Button */}
-        <div className="pt-6 text-center max-w-2xl mx-auto">
-          <Link href="/order-now/" className="inline-block w-full py-3.5 px-8 bg-[#ba0000] text-white font-bold text-base rounded-md shadow-md text-center">
+        <div className="pt-2 text-center max-w-2xl mx-auto">
+          <Link href="/order-now/" className="inline-block w-full py-3.5 px-8 bg-red-600 text-white font-bold text-base rounded-md shadow-md text-center hover:text-black  hover:bg-white">
             Starts From $ 130
           </Link>
         </div>

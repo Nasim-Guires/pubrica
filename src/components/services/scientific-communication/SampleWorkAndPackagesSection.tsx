@@ -131,7 +131,7 @@ export default function SampleWorkAndPackagesSection() {
             packages={packagesData}
           />
           {/* CTA Button */}
-          <div className="text-center mb-14">
+          <div className="text-center mb-2">
             <GetFreeQuoteButton />
           </div>
 
