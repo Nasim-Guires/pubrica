@@ -40,6 +40,7 @@ export default async function BlogSection({ searchParams }: BlogSectionProps = {
   const posts = allPosts.filter((p) => p.urlPath);
 
   return (
+    
     <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 mt-12">
       <div className="flex justify-between items-center mb-2">
         <div className="flex items-center gap-4 w-full">

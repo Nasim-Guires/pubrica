@@ -158,10 +158,11 @@ export default async function InsightRoutePage({ params, searchParams }: Insight
     const items = STATIC_HUB_ITEMS[staticHub.slug] ?? [];
     return (
       <div className="min-h-screen bg-[#f8f9fa] text-slate-800 font-sans pb-10">
-        <section className="bg-[#0b2825] text-white py-6 px-4 text-center">
-          <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-2">{staticHub.label}</h1>
-          <p className="text-gray-300 text-sm max-w-xl mx-auto">{staticHub.description}</p>
-        </section>
+        <HeroBanner
+          title={staticHub.label}
+          description={staticHub.description}
+          headingAs="h1"
+        />
 
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="mb-6">
