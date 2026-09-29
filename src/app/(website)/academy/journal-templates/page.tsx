@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { getPosts, mediaUrl, getDescription } from "@/lib/payload";
+import HeroBanner from "@/components/common/HeroBanner";
 
 export const revalidate = 300;
 
@@ -39,12 +40,11 @@ export default async function JournalTemplatesPage({ searchParams }: JournalTemp
 
   return (
     <div className="bg-[#f9fbfb] min-h-screen text-gray-800 font-sans pb-10">
-      <section className="bg-[#0b2825] text-white py-6 text-center px-4">
-        <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-2">Journal Templates</h1>
-        <p className="text-gray-300 text-sm max-w-xl mx-auto">
-          Formatting templates and submission guidance for leading academic and medical journals.
-        </p>
-      </section>
+      <HeroBanner
+        title="Journal Templates"
+        description=""
+        headingAs="h1"
+      />
 
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="mb-6">
@@ -84,21 +84,19 @@ export default async function JournalTemplatesPage({ searchParams }: JournalTemp
           <div className="flex justify-center items-center gap-3 mt-10">
             <Link
               href={`/academy/journal-templates?page=${page - 1}`}
-              className={`px-4 py-2 rounded text-xs font-semibold border transition-colors ${
-                hasPrevPage
+              className={`px-4 py-2 rounded text-xs font-semibold border transition-colors ${hasPrevPage
                   ? "border-slate-200 text-slate-700 hover:border-emerald-700 hover:text-emerald-700"
                   : "border-slate-100 text-slate-300 pointer-events-none"
-              }`}
+                }`}
             >
               &larr; Previous
             </Link>
             <Link
               href={`/academy/journal-templates?page=${page + 1}`}
-              className={`px-4 py-2 rounded text-xs font-semibold transition-colors ${
-                hasNextPage
+              className={`px-4 py-2 rounded text-xs font-semibold transition-colors ${hasNextPage
                   ? "bg-[#0b2825] text-white hover:bg-[#123633]"
                   : "bg-slate-100 text-slate-300 pointer-events-none"
-              }`}
+                }`}
             >
               Next &rarr;
             </Link>

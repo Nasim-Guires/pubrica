@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { unstable_cache } from "next/cache";
 import { getPosts } from "@/lib/payload";
 import type { LexicalNode, PayloadPost } from "@/lib/payload/types";
+import HeroBanner from "@/components/common/HeroBanner";
 
 export const revalidate = 300;
 
@@ -150,13 +151,11 @@ export default async function QaForumPage({ searchParams }: QaForumPageProps) {
 
   return (
     <div className="bg-[#f8f9fa] min-h-screen text-slate-800 font-sans pb-10">
-      <section className="bg-[#0b2825] text-white py-6 px-4 text-center">
-        <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-2">Researchers Q &amp; A</h1>
-        <p className="text-gray-300 text-sm max-w-2xl mx-auto">
-          Get all your inquiries about research writing and publishing addressed by experienced researchers and
-          publication specialists.
-        </p>
-      </section>
+      <HeroBanner
+        title="Researchers Q & A"
+        description="Get all your inquiries about research writing and publishing addressed by experienced researchers and publication specialists."
+        headingAs="h1"
+      />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         <aside className="lg:col-span-3 flex flex-col gap-6">
@@ -226,8 +225,8 @@ export default async function QaForumPage({ searchParams }: QaForumPageProps) {
               <Link
                 href={getPaginationUrl(page - 1)}
                 className={`px-4 py-2 rounded text-xs font-semibold border transition-colors ${page > 1
-                    ? "border-slate-200 text-slate-700 hover:border-emerald-700 hover:text-emerald-700"
-                    : "border-slate-100 text-slate-300 pointer-events-none"
+                  ? "border-slate-200 text-slate-700 hover:border-emerald-700 hover:text-emerald-700"
+                  : "border-slate-100 text-slate-300 pointer-events-none"
                   }`}
               >
                 &larr; Previous
@@ -238,8 +237,8 @@ export default async function QaForumPage({ searchParams }: QaForumPageProps) {
               <Link
                 href={getPaginationUrl(page + 1)}
                 className={`px-4 py-2 rounded text-xs font-semibold transition-colors ${page < totalPages
-                    ? "bg-[#0b2825] text-white hover:bg-[#123633]"
-                    : "bg-slate-100 text-slate-300 pointer-events-none"
+                  ? "bg-[#0b2825] text-white hover:bg-[#123633]"
+                  : "bg-slate-100 text-slate-300 pointer-events-none"
                   }`}
               >
                 Next &rarr;

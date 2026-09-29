@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { getPosts, mediaUrl } from "@/lib/payload";
+import HeroBanner from "@/components/common/HeroBanner";
 
 export const revalidate = 300;
 
@@ -36,12 +37,11 @@ export default async function CallForPapersPage() {
 
   return (
     <div className="min-h-screen bg-[#f8f9fa] text-slate-800 font-sans pb-10">
-      <section className="bg-[#0b2825] text-white py-6 px-4 text-center">
-        <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-2">Call for Papers</h1>
-        <p className="text-gray-300 text-sm max-w-xl mx-auto">
-          Explore Pubrica&apos;s open calls for papers across therapeutic areas and research fields.
-        </p>
-      </section>
+      <HeroBanner
+        title="Call for Papers"
+        description="Explore Pubrica's open calls for papers across therapeutic areas and research fields."
+        headingAs="h1"
+      />
 
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
