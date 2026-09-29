@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { Phone, MessageSquare, Mail, Calendar, User, ChevronRight } from "lucide-react";
 import { getPostBySlug, getDescription } from "@/lib/payload";
 import { LexicalRenderer } from "@/lib/payload/lexical";
+import HeroBanner from "@/components/common/HeroBanner";
 
 export const revalidate = 300;
 
@@ -54,14 +55,10 @@ export default async function AcademyFlatArticlePage({
     <div className="bg-[#f8f9fa] min-h-screen text-[#333333] font-sans pb-16">
 
       {/* TOP HERO BANNER */}
-      <section className="relative w-full h-56 sm:h-64 bg-[#0d3b36] overflow-hidden flex items-center justify-center border-b border-teal-900/40">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0a2f2b] via-[#0d3b36] to-[#0a2f2b] opacity-90" />
-        <div className="relative z-10 text-center px-4">
-          <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-wide drop-shadow-md">
-            {pageHeaderTitle}
-          </h1>
-        </div>
-      </section>
+      <HeroBanner
+        title={pageHeaderTitle}
+        headingAs="h1"
+      />
 
       {/* MAIN CONTENT GRID */}
       <div className="max-w-[1340px] mx-auto pt-10 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row gap-8">
@@ -173,8 +170,8 @@ export default async function AcademyFlatArticlePage({
                   key={page}
                   href={`/academy/${slug}/?page=${page}`}
                   className={`w-9 h-9 flex items-center justify-center font-medium text-sm border transition-colors ${isActive
-                      ? "bg-[#3182ce] text-white border-[#3182ce]"
-                      : "bg-white text-gray-700 hover:bg-gray-100 border-gray-300"
+                    ? "bg-[#3182ce] text-white border-[#3182ce]"
+                    : "bg-white text-gray-700 hover:bg-gray-100 border-gray-300"
                     }`}
                 >
                   {page}
@@ -192,7 +189,7 @@ export default async function AcademyFlatArticlePage({
         </main>
 
         {/* FLOATING ACTION BUTTONS */}
-   
+
       </div>
     </div>
   );

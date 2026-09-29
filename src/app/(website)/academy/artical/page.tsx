@@ -26,7 +26,7 @@ export default async function ArticalIndexPage() {
 
   return (
     <section className="bg-white py-6 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-      <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-8">Articles</h1>
+      {/* <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-8">Articles</h1> */}
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {articles.map((post) => {
@@ -53,7 +53,7 @@ export default async function ArticalIndexPage() {
                 <h3 className="text-sm font-bold text-gray-900 group-hover:text-emerald-700 transition-colors duration-200 leading-snug line-clamp-3">
                   {post.title}
                 </h3>
-                <p className="text-xs text-slate-500 mt-1.5 line-clamp-2">{getDescription(post)}</p>
+                {/* <p className="text-xs text-slate-500 mt-1.5 line-clamp-2">{getDescription(post)}</p> */}
               </div>
             </Link>
           );

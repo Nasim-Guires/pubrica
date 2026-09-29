@@ -71,7 +71,7 @@ const InsightsPage = async () => {
           </div>
         </div>
       </section>
-
+    
       {/* 2. CATEGORIES CAROUSEL */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 overflow-hidden">
         <div className="flex items-center gap-4 mb-8">

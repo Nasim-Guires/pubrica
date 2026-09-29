@@ -7,6 +7,7 @@ import { ArrowLeft } from "lucide-react";
 import { EnquireNowForm } from "@/components/common/EnquireNowForm";
 import { getPostBySlug, getPosts, mediaUrl, getDescription, getFaqQuestionOverrides } from "@/lib/payload";
 import { LexicalRenderer } from "@/lib/payload/lexical";
+import HeroBanner from "@/components/common/HeroBanner";
 
 export const revalidate = 300;
 
@@ -48,14 +49,11 @@ export default async function AcademyArticlePage({ params }: AcademyArticlePageP
 
   return (
     <div className="bg-[#f9fbfb] min-h-screen text-gray-800 font-sans pb-10">
-      <section className="bg-[#0b2825] text-white py-6 px-4 text-center">
-        <div className="max-w-4xl mx-auto">
-          <span className="text-xs font-bold tracking-wider text-emerald-400 uppercase">
-            {post.categories?.[0]?.name || "Academy"}
-          </span>
-          <h1 className="text-2xl md:text-4xl font-bold tracking-tight mt-2">{post.title}</h1>
-        </div>
-      </section>
+      <HeroBanner
+        title={post.title}
+        description={post.categories?.[0]?.name || "Academy"}
+        headingAs="h1"
+      />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">

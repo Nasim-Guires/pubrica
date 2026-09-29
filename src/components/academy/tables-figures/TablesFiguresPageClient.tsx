@@ -68,6 +68,8 @@ const Page = () => {
         (item) => item.page === activePage
     );
 
+    console.log("table",visibleCards)
+
     return (
         <section className="bg-white py-6 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
             {/* Header & Arrow Controls */}

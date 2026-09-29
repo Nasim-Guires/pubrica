@@ -234,9 +234,9 @@ const Page = () => {
     <section className="bg-white py-6 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
       {/* Title & Arrow Navigation */}
       <div className="flex justify-between items-center mb-6">
-        <h2 className="text-2xl sm:text-3xl font-bold text-gray-100">
+        {/* <h2 className="text-2xl sm:text-3xl font-bold text-gray-100">
           Journal Selection
-        </h2>
+        </h2> */}
 
         <div className="flex gap-2">
           <button
