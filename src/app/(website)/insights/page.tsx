@@ -39,7 +39,9 @@ const InsightsPage = async () => {
     limit: 4,
   });
 
-  
+
+  console.log("blogPosts", checklistPosts)
+
 
   return (
     <div className="bg-[#f8f9fa] min-h-screen text-slate-800 font-sans pb-10">
@@ -71,7 +73,7 @@ const InsightsPage = async () => {
           </div>
         </div>
       </section>
-    
+
       {/* 2. CATEGORIES CAROUSEL */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 overflow-hidden">
         <div className="flex items-center gap-4 mb-8">
