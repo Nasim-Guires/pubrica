@@ -2,107 +2,140 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { getPosts, mediaUrl, getDescription } from "@/lib/payload";
-import HeroBanner from "@/components/common/HeroBanner";
+import { mediaUrl, getDescription } from "@/lib/payload";
+import { getPostSummaries } from "@/lib/payload/summaries";
+import {
+  JOURNAL_TEMPLATES_CATEGORY,
+  JOURNAL_TEMPLATES_HERO_IMAGE,
+  journalTemplateExcerpts,
+  journalTemplateSidebar,
+} from "@/lib/academy/journalTemplates";
+import JournalFilterList from "@/components/academy/journal-templates/JournalFilterList";
 
 export const revalidate = 300;
 
 const PAGE_SIZE = 12;
+const BASE_PATH = "/academy/journal-templates/";
 
 export const metadata: Metadata = {
-  title: "Journal Templates | Pubrica Academy",
-  description: "Formatting templates for leading academic and medical journals.",
+  title: { absolute: "Journal Templates - Pubrica" },
+  description:
+    "Journal Templates – Pubrica provide structured, journal-specific formats to help authors prepare manuscripts accurately and efficiently.",
 };
 
-function formatDate(iso?: string) {
-  if (!iso) return "";
-  return new Date(iso).toLocaleDateString("en-US", {
-    month: "long",
-    day: "numeric",
-    year: "numeric",
-  });
+interface JournalTemplatesPageProps {
+  searchParams: Promise<{ _page?: string }>;
 }
 
-interface JournalTemplatesPageProps {
-  searchParams: Promise<{ page?: string }>;
+/** Fallback for posts without a snapshotted live excerpt: first 20 words, as WordPress trims. */
+function trimWords(text: string, count = 20) {
+  const words = text.trim().split(/\s+/);
+  return words.length > count ? `${words.slice(0, count).join(" ")} ...` : text;
+}
+
+const pageHref = (n: number) => (n <= 1 ? BASE_PATH : `${BASE_PATH}?_page=${n}`);
+
+/** Bootstrap-style pager used by the live page: up to 5 numbers, plus ‹ « and › ». */
+function Pagination({ page, totalPages }: { page: number; totalPages: number }) {
+  if (totalPages <= 1) return null;
+  const start = Math.max(1, Math.min(page - 2, totalPages - 4));
+  const numbers = Array.from({ length: Math.min(5, totalPages) }, (_, i) => start + i);
+  const item = "block border border-[#dddddd] px-[12px] py-[6px] text-[15px] leading-[21.4px] -ml-px";
+  const link = `${item} bg-white text-[#337ab7] hover:bg-[#eeeeee]`;
+  return (
+    <ul className="mt-[20px] flex">
+      {page > 1 && (
+        <>
+          <li><Link href={pageHref(1)} className={link}>«</Link></li>
+          <li><Link href={pageHref(page - 1)} className={link}>‹</Link></li>
+        </>
+      )}
+      {numbers.map((n) => (
+        <li key={n}>
+          {n === page ? (
+            <span className={`${item} border-[#337ab7] bg-[#337ab7] text-white`}>{n}</span>
+          ) : (
+            <Link href={pageHref(n)} className={link}>{n}</Link>
+          )}
+        </li>
+      ))}
+      {page < totalPages && (
+        <>
+          <li><Link href={pageHref(page + 1)} className={link}>›</Link></li>
+          <li><Link href={pageHref(totalPages)} className={link}>»</Link></li>
+        </>
+      )}
+    </ul>
+  );
 }
 
 export default async function JournalTemplatesPage({ searchParams }: JournalTemplatesPageProps) {
-  const { page: pageParam } = await searchParams;
-  const page = Math.max(1, Number(pageParam) || 1);
+  const { _page } = await searchParams;
 
-  const { docs: posts, hasNextPage, hasPrevPage } = await getPosts({
-    source: "academy",
-    urlPathPrefix: "journals-templates/",
-    page,
-    limit: PAGE_SIZE,
-  });
+  // All journal templates (small, card fields only); paginated here as on the live page.
+  const { docs } = await getPostSummaries({ source: "academy", urlPathPrefix: "journals-templates/", limit: 200 });
+  const totalPages = Math.max(1, Math.ceil(docs.length / PAGE_SIZE));
+  const page = Math.min(totalPages, Math.max(1, Number(_page) || 1));
+  const posts = docs.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
 
   return (
-    <div className="bg-[#f9fbfb] min-h-screen text-gray-800 font-sans pb-10">
-      <HeroBanner
-        title="Journal Templates"
-        description=""
-        headingAs="h1"
-      />
-
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <div className="mb-6">
-          <Link href="/academy" className="text-xs font-semibold text-blue-600 no-underline hover:no-underline">
-            &larr; Back to Academy
-          </Link>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {posts.map((post) => {
-            const image = mediaUrl(post.heroImage) || "/images/academy/Forensics-2.webp";
-            const desc = getDescription(post);
-            return (
-              <Link
-                key={post.id}
-                href={`/academy/${post.urlPath}`}
-                className="bg-white border border-gray-200/80 rounded-md overflow-hidden shadow-xs hover:shadow-md transition-shadow block"
-              >
-                <div className="relative aspect-[16/10] w-full bg-gray-100 overflow-hidden">
-                  <Image src={image} alt={post.title} fill className="object-cover" />
-                </div>
-                <div className="p-5">
-                  <h3 className="text-sm md:text-base font-bold text-[#0b2825] leading-snug mb-2 line-clamp-2">
-                    {post.title}
-                  </h3>
-                  <p className="text-xs text-gray-500 line-clamp-2 mb-3">{desc}</p>
-                  <span className="text-[11px] text-gray-400">
-                    {formatDate(post.publishing?.publishedAt)}
-                  </span>
-                </div>
-              </Link>
-            );
-          })}
-        </div>
-
-        {(hasPrevPage || hasNextPage) && (
-          <div className="flex justify-center items-center gap-3 mt-10">
-            <Link
-              href={`/academy/journal-templates?page=${page - 1}`}
-              className={`px-4 py-2 rounded text-xs font-semibold border transition-colors ${hasPrevPage
-                  ? "border-slate-200 text-slate-700 hover:border-emerald-700 hover:text-emerald-700"
-                  : "border-slate-100 text-slate-300 pointer-events-none"
-                }`}
-            >
-              &larr; Previous
-            </Link>
-            <Link
-              href={`/academy/journal-templates?page=${page + 1}`}
-              className={`px-4 py-2 rounded text-xs font-semibold transition-colors ${hasNextPage
-                  ? "bg-[#0b2825] text-white hover:bg-[#123633]"
-                  : "bg-slate-100 text-slate-300 pointer-events-none"
-                }`}
-            >
-              Next &rarr;
-            </Link>
-          </div>
-        )}
+    <div className="bg-[#fcfcfc] font-sans">
+      {/* Hero */}
+      <section className="relative h-[280px] w-full overflow-hidden">
+        <Image src={JOURNAL_TEMPLATES_HERO_IMAGE} alt="" fill priority sizes="100vw" className="object-cover object-left-top" />
+        <div className="absolute inset-0 bg-black/50" />
       </section>
+
+      <div className="flex flex-col lg:flex-row gap-[30px] px-4 lg:px-[30px] pt-[60px] pb-[60px]">
+        {/* Sidebar */}
+        <aside className="self-start w-full lg:w-[423px] lg:shrink-0 border border-[#626262] p-[20px]">
+          <h3 className="text-[15px] font-normal leading-[15px] text-black">FILTER BY:</h3>
+          <div className="mt-[10px] h-px w-4/5 bg-[#c9c9c9]" />
+          <h1 className="mt-[29px] text-[20px] font-medium leading-[20px] text-black">Journal Template</h1>
+          <div className="mt-[20px]">
+            <JournalFilterList journals={journalTemplateSidebar} />
+          </div>
+        </aside>
+
+        {/* Cards */}
+        <div className="flex-1">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[20px]">
+            {posts.map((post) => {
+              const href = `/academy/${post.urlPath}/`;
+              const image = mediaUrl(post.heroImage);
+              const excerpt = journalTemplateExcerpts[post.urlPath ?? ""] ?? trimWords(getDescription(post, 1000));
+              return (
+                <div key={post.id} className="self-start overflow-hidden rounded-[5px] border border-[#e8f2fc] bg-[#f8f8f8] pb-[31px]">
+                  <Link href={href} className="relative block h-[190px] w-full">
+                    {image && (
+                      <Image
+                        src={image}
+                        alt={post.heroImage?.altText || post.title}
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 370px"
+                        className="object-cover"
+                      />
+                    )}
+                  </Link>
+                  <div className="mt-[10px] mb-[10px] pl-[10px] text-[15px] leading-[28px] capitalize">
+                    <a href={JOURNAL_TEMPLATES_CATEGORY.href} className="text-[#295153]">
+                      {JOURNAL_TEMPLATES_CATEGORY.label}
+                    </a>
+                  </div>
+                  <h4 className="mb-[10px] px-[10px] text-[18px] font-semibold leading-[19.8px]">
+                    <Link href={href} className="text-[#295153]">
+                      {post.title.trim()}
+                    </Link>
+                  </h4>
+                  <div className="px-[10px] text-[15px] leading-[28px] text-[#626262]">{excerpt}</div>
+                </div>
+              );
+            })}
+          </div>
+
+          <Pagination page={page} totalPages={totalPages} />
+        </div>
+      </div>
     </div>
   );
 }

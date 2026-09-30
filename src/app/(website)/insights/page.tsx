@@ -2,12 +2,12 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
-  newsCategories,
   infographics,
   storyboards,
   sampleWorks,
   factSheets,
 } from "@/lib/data-insight";
+import { allNewsCards } from "@/lib/insights/cardPages";
 import { mediaUrl, getDescription } from "@/lib/payload";
 import { getPostSummaries } from "@/lib/payload/summaries";
 import CategoriesCarousel from "@/components/insight/CategoriesCarousel";
@@ -79,12 +79,12 @@ const InsightsPage = async () => {
 
       {/* 2. CATEGORIES CAROUSEL */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 overflow-hidden">
-        <div className="flex items-center gap-4 mb-8">
-          <h2 className="text-2xl font-bold text-slate-900 whitespace-nowrap">All News</h2>
-          <div className="h-[1px] w-full bg-slate-200"></div>
+        <div className="flex items-center gap-8 mb-8">
+          <h2 className="text-[40px] font-medium leading-[50px] text-[#161922] whitespace-nowrap">All News</h2>
+          <div className="h-[2px] w-full bg-[#515151]"></div>
         </div>
 
-        <CategoriesCarousel categories={newsCategories} />
+        <CategoriesCarousel categories={allNewsCards} />
       </section>
 
       {/* 3. BLOG SECTION (live from Payload — always reflects the latest posts) */}

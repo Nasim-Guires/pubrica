@@ -29,11 +29,35 @@ const FALLBACK_IMAGES = [
 ];
 //
 const INDEX_SLUG = "call-for-papers";
-//
+
+// Card order on pubrica.com/call-for-papers/ — FALLBACK_IMAGES above follows the
+// same order, so each card's image, title and link line up as on the live page.
+const LIVE_CARD_ORDER = [
+  "microcirculation-under-inflammation",
+  "computed-tomography-for-congenital-heart-disease",
+  "microvascular-function",
+  "focus-issue-on-right-heart-disease",
+  "focus-on-obesity",
+  "endocrinology-diabetes-and-metabolism",
+  "approaches-for-targeted-protein-degradation-from-biology-to-drug-development",
+  "neuromodulation-interventions-in-clinical-and-health-psychology",
+  "applications-of-modern-molecular-biology-to-vaccine-development",
+  "molecular-mechanisms-of-neurodegeneration-in-parkinsons-disease",
+  "parenteral-drug-delivery-and-manufacturing-technology",
+  "liquid-biopsy-technologies-in-precision-oncology",
+];
+
+function liveOrder(slug: string) {
+  const i = LIVE_CARD_ORDER.indexOf(slug);
+  return i === -1 ? LIVE_CARD_ORDER.length : i;
+}
 //
 export default async function CallForPapersPage() {
   const { docs } = await getPosts({ source: "call-for-papers", limit: 50 });
-  const topics = docs.filter((post) => post.slug !== INDEX_SLUG);
+  // Any post not on the live page yet keeps its CMS order after the live cards.
+  const topics = docs
+    .filter((post) => post.slug !== INDEX_SLUG)
+    .sort((a, b) => liveOrder(a.slug) - liveOrder(b.slug));
 
   return (
     <div className="min-h-screen bg-[#f8f9fa] text-slate-800 font-sans pb-10">
@@ -55,7 +79,8 @@ export default async function CallForPapersPage() {
             return (
               <Link
                 key={post.id}
-                href={`/call-for-papers/${post.slug}`}
+                href={`/call-for-papers/${post.slug}/`}
+                target="_blank"
                 className="group flex flex-col border border-slate-200 rounded-xl overflow-hidden hover:shadow-md transition-shadow bg-white"
               >
                 <div className="h-40 overflow-hidden relative bg-[#0b2825]">
