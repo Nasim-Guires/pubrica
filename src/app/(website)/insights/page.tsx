@@ -8,7 +8,8 @@ import {
   sampleWorks,
   factSheets,
 } from "@/lib/data-insight";
-import { getPosts, mediaUrl, getDescription } from "@/lib/payload";
+import { mediaUrl, getDescription } from "@/lib/payload";
+import { getPostSummaries } from "@/lib/payload/summaries";
 import CategoriesCarousel from "@/components/insight/CategoriesCarousel";
 import ImageLightboxGrid from "@/components/insight/ImageLightboxGrid";
 import { constructMetadata } from "@/lib/metadata";
@@ -32,15 +33,17 @@ function formatDate(iso?: string) {
 }
 
 const InsightsPage = async () => {
-  const { docs: blogPosts } = await getPosts({ source: "blog", limit: 3 });
-  const { docs: checklistPosts } = await getPosts({
-    source: "insights",
-    urlPathPrefix: "checklist/",
-    limit: 4,
-  });
+  // Independent queries — fetch in parallel rather than one after the other.
+  const [{ docs: blogPosts }, { docs: checklistPosts }] = await Promise.all([
+    getPostSummaries({ source: "blog", limit: 3 }),
+    getPostSummaries({
+      source: "insights",
+      urlPathPrefix: "checklist/",
+      limit: 4,
+    }),
+  ]);
 
 
-  console.log("blogPosts", checklistPosts)
 
 
   return (

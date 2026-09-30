@@ -5,7 +5,8 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { ArrowLeft } from "lucide-react";
 import { EnquireNowForm } from "@/components/common/EnquireNowForm";
-import { getPostBySlug, getPosts, mediaUrl, getDescription, getFaqQuestionOverrides } from "@/lib/payload";
+import { mediaUrl, getDescription, getFaqQuestionOverrides } from "@/lib/payload";
+import { getPostDetail, getPostSummaries } from "@/lib/payload/summaries";
 import { LexicalRenderer } from "@/lib/payload/lexical";
 import HeroBanner from "@/components/common/HeroBanner";
 
@@ -26,7 +27,7 @@ function formatDate(iso?: string) {
 
 export async function generateMetadata({ params }: AcademyArticlePageProps): Promise<Metadata> {
   const { slug } = await params;
-  const post = await getPostBySlug(slug, "academy");
+  const post = await getPostDetail(slug, "academy");
   if (!post) return {};
   return {
     title: post.seo?.metaTitle || post.title,
@@ -36,7 +37,11 @@ export async function generateMetadata({ params }: AcademyArticlePageProps): Pro
 
 export default async function AcademyArticlePage({ params }: AcademyArticlePageProps) {
   const { category, slug } = await params;
-  const post = await getPostBySlug(slug, "academy");
+  // Fetched in parallel — the recent-posts list doesn't depend on the post.
+  const [post, { docs: otherPosts }] = await Promise.all([
+    getPostDetail(slug, "academy"),
+    getPostSummaries({ source: "academy", limit: 6 }),
+  ]);
 
   // Guard against stale/incorrect category segments in a URL — only serve
   // the post at its real urlPath, not any category prefix paired with the slug.
@@ -44,7 +49,6 @@ export default async function AcademyArticlePage({ params }: AcademyArticlePageP
     notFound();
   }
 
-  const { docs: otherPosts } = await getPosts({ source: "academy", limit: 6 });
   const recentPosts = otherPosts.filter((p) => p.slug !== slug).slice(0, 5);
 
   return (

@@ -14,7 +14,8 @@ import {
   TrendingUp,
   Mail,
 } from 'lucide-react';
-import { getPosts, mediaUrl, getDescription } from '@/lib/payload';
+import { mediaUrl, getDescription } from '@/lib/payload';
+import { getPostSummaries } from '@/lib/payload/summaries';
 import { constructMetadata } from '@/lib/metadata';
 
 export const metadata = constructMetadata({
@@ -180,7 +181,7 @@ function formatDate(iso?: string) {
 }
 
 export default async function PubricaKnowledgeBase() {
-  const { docs } = await getPosts({ source: "academy", limit: 40 });
+  const { docs } = await getPostSummaries({ source: "academy", limit: 40 });
   // Real articles live under a nested urlPath (e.g. "peer-review/slug");
   // top-level entries are migrated section-index pages, not articles.
   const articles = docs.filter((p) => p.urlPath?.includes("/"));

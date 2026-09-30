@@ -3,7 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { Phone, MessageSquare, Mail, Calendar, User, ChevronRight } from "lucide-react";
-import { getPostBySlug, getDescription } from "@/lib/payload";
+import { getDescription } from "@/lib/payload";
+import { getPostDetail } from "@/lib/payload/summaries";
 import { LexicalRenderer } from "@/lib/payload/lexical";
 import HeroBanner from "@/components/common/HeroBanner";
 
@@ -25,7 +26,7 @@ function formatDate(iso?: string) {
 
 export async function generateMetadata({ params }: AcademyFlatArticlePageProps): Promise<Metadata> {
   const { category: slug } = await params;
-  const post = await getPostBySlug(slug, "academy");
+  const post = await getPostDetail(slug, "academy");
   if (!post) return {};
   return {
     title: post.seo?.metaTitle || post.title,
@@ -41,7 +42,7 @@ export default async function AcademyFlatArticlePage({
   const resolvedSearchParams = searchParams ? await searchParams : {};
   const currentPage = Number(resolvedSearchParams.page) || 1;
 
-  const post = await getPostBySlug(slug, "academy");
+  const post = await getPostDetail(slug, "academy");
 
   if (!post || post.urlPath !== slug) {
     notFound();

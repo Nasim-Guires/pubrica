@@ -4,7 +4,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { EnquireNowForm } from "@/components/common/EnquireNowForm";
-import { getPostBySlug, getPosts, mediaUrl, getDescription } from "@/lib/payload";
+import { mediaUrl, getDescription } from "@/lib/payload";
+import { getPostDetail, getPostSummaries } from "@/lib/payload/summaries";
 import { LexicalRenderer } from "@/lib/payload/lexical";
 import { getInsightHub, getStaticInsightHub } from "@/lib/payload/insightHubs";
 import { infographics, storyboards, factSheets } from "@/lib/data-insight";
@@ -48,7 +49,7 @@ export async function generateMetadata({ params }: InsightRouteProps): Promise<M
   if (staticHub) {
     return { title: `${staticHub.label} | Pubrica Insights`, description: staticHub.description };
   }
-  const post = await getPostBySlug(slug, "insights");
+  const post = await getPostDetail(slug, "insights");
   if (!post) return {};
   return {
     title: post.seo?.metaTitle || post.title,
@@ -69,7 +70,7 @@ export default async function InsightRoutePage({ params, searchParams }: Insight
   if (hub) {
     const { page: pageParam } = await searchParams;
     const page = Math.max(1, Number(pageParam) || 1);
-    const { docs: posts, hasNextPage, hasPrevPage } = await getPosts({
+    const { docs: posts, hasNextPage, hasPrevPage } = await getPostSummaries({
       source: "insights",
       urlPathPrefix: `${hub.slug}/`,
       page,
@@ -225,12 +226,15 @@ export default async function InsightRoutePage({ params, searchParams }: Insight
   }
 
   // Not a hub — treat as a single insight post detail page.
-  const post = await getPostBySlug(slug, "insights");
+  // Fetched in parallel — the recent-posts list doesn't depend on the post.
+  const [post, { docs: otherPosts }] = await Promise.all([
+    getPostDetail(slug, "insights"),
+    getPostSummaries({ source: "insights", limit: 6 }),
+  ]);
   if (!post) {
     notFound();
   }
 
-  const { docs: otherPosts } = await getPosts({ source: "insights", limit: 6 });
   const recentPosts = otherPosts.filter((p) => p.slug !== slug).slice(0, 5);
   const bannerImage = mediaUrl(post.heroImage) || "/images/blog/default.webp";
   return (
