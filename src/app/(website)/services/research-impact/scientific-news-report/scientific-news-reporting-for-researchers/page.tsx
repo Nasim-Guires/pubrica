@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/research-impact__scientific-news-report__scientific-news-reporting-for-researchers';
 
 export const metadata: Metadata = {
-  title: "Scientific News Reporting for Research Visibility",
+  title: { absolute: "Scientific News Reporting for Research Visibility" },
   description: "Scientific news reporting services that translate research into clear stories, improving research visibility and public understanding.",
 };
 

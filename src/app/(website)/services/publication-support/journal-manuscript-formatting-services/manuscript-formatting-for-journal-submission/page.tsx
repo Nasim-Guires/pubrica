@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/publication-support__journal-manuscript-formatting-services__manuscript-formatting-for-journal-submission';
 
 export const metadata: Metadata = {
-  title: "Manuscript Formatting for Successful Journal Submission | Pubrica",
+  title: { absolute: "Manuscript Formatting for Successful Journal Submission | Pubrica" },
   description: "A comprehensive guide to manuscript formatting, enhancing clarity, and speeding up journal submission and publication.",
 };
 

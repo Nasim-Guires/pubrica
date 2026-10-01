@@ -12,7 +12,7 @@ import React from "react";
 import { constructMetadata } from "@/lib/metadata";
 
 export const metadata = constructMetadata({
-  title: 'Meta-Analysis Services for Life Sci, Pharma, and Research',
+  title: "Systematic Review Writing Services for Research Excellence",
   description: 'Expert meta-analysis services with systematic reviews, statistical analysis, and publication support to help researchers publish in high-impact journals.',
   keywords: ['Meta Analysis,Meta-analysis research,statistical data analysis,systematic review,meta-analysis'],
   slug: '/services/research-services/systematic-review/',

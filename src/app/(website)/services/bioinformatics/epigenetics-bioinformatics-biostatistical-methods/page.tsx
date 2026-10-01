@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/bioinformatics__epigenetics-bioinformatics-biostatistical-methods';
 
 export const metadata: Metadata = {
-  title: "Epigenetics Bioinformatics for Research Teams | Pubrica",
+  title: { absolute: "Epigenetics Bioinformatics for Research Teams | Pubrica" },
   description: "Explore epigenetics, bioinformatics, and biostatistical methods powering epigenomic research, NGS analysis, and multi-omics insights.",
 };
 

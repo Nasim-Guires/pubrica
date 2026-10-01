@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/publication-support__journal-selection__understanding-cope-publication-ethics';
 
 export const metadata: Metadata = {
-  title: "Understanding COPE: Ethics in Academic Publishing",
+  title: { absolute: "Understanding COPE: Ethics in Academic Publishing" },
   description: "Learn about COPE’s role in ensuring ethical standards and integrity in academic publishing and research.",
 };
 

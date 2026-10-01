@@ -3,7 +3,7 @@ import SimpleSubjectPage from '@/components/subject-matter-experts/SimpleSubject
 import { SERVICES_EXPERTISE } from '@/lib/subject-matter-experts/servicesExpertise';
 
 export const metadata: Metadata = {
-  title: 'Biomaterials - Pubrica',
+  title: { absolute: "Biomaterials - Pubrica" },
   description: 'Subject matter experts in biomaterials — publication and writing support for biomaterial engineering, tissue engineering, and drug delivery research.',
 };
 

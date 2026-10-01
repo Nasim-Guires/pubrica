@@ -3,7 +3,7 @@ import SimpleSubjectPage from '@/components/subject-matter-experts/SimpleSubject
 import { SERVICES_EXPERTISE } from '@/lib/subject-matter-experts/servicesExpertise';
 
 export const metadata: Metadata = {
-  title: 'Biostatistical Programming - Pubrica',
+  title: { absolute: "Biostatistical Programming - Pubrica" },
   description: 'Subject matter experts in biostatistical programming — descriptive and comparative analytics, advanced statistical modeling, and disease surveillance publication support.',
 };
 

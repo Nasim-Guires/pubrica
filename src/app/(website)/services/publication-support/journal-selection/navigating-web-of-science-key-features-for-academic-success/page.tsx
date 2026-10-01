@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/publication-support__journal-selection__navigating-web-of-science-key-features-for-academic-success';
 
 export const metadata: Metadata = {
-  title: "Web of Science Features for Academic Publishing Success",
+  title: { absolute: "Web of Science Features for Academic Publishing Success" },
   description: "Discover how Web of Science enhances academic research visibility, citation tracking, and journal impact for researchers.",
 };
 

@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/editing-and-translation__manuscript-editing__manuscript-editing-importance-guide';
 
 export const metadata: Metadata = {
-  title: "Manuscript Editing: Importance & Benefits for Research",
+  title: { absolute: "Manuscript Editing: Importance & Benefits for Research" },
   description: "Learn why manuscript editing improves clarity, professionalism, and publication success for research papers.",
 };
 

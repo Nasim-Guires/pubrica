@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/publication-support__art-work-preparation__cdsco-clinical-trial-approval-process-india';
 
 export const metadata: Metadata = {
-  title: "India CDSCO Clinical Trial Approval: Step-by-Step Guide",
+  title: { absolute: "India CDSCO Clinical Trial Approval: Step-by-Step Guide" },
   description: "Understand the step-by-step CDSCO clinical trial approval process under NDCTR 2019 and essential documentation requirements.",
 };
 

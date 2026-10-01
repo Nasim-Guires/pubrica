@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/physician-writing-services__research-proposal__research-design-types-methods-best-practices';
 
 export const metadata: Metadata = {
-  title: "Research Design: Types, Methods & Best Practices",
+  title: { absolute: "Research Design: Types, Methods & Best Practices" },
   description: "Learn research design types, methods, and best practices to ensure valid, reliable, and structured research.",
 };
 

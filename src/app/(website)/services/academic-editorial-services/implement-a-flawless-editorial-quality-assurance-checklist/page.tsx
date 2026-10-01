@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/academic-editorial-services__implement-a-flawless-editorial-quality-assurance-checklist';
 
 export const metadata: Metadata = {
-  title: "How to Implement a Flawless Editorial Quality Assurance Checklist",
+  title: { absolute: "How to Implement a Flawless Editorial Quality Assurance Checklist" },
   description: "Learn how to create and implement an editorial QA checklist to ensure content quality, accuracy, and SEO optimization for publications.",
 };
 

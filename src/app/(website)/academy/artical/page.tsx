@@ -7,7 +7,7 @@ import { getPosts, mediaUrl, getDescription } from "@/lib/payload";
 export const revalidate = 300;
 
 export const metadata: Metadata = {
-  title: "Academy Articles - Pubrica",
+  title: { absolute: "Academy Articles - Pubrica" },
   description: "Writing and grammar guidance for researchers — parallel construction, tense, phrasing, and more from Pubrica Academy.",
   alternates: {
     canonical: "https://pubrica.com/academy/artical/",

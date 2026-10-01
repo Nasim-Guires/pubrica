@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import BrochureGrid from '@/components/packs/BrochureGrid';
 
 export const metadata: Metadata = {
-  title: 'Research Services Brochures - Pubrica',
+  title: { absolute: "Research Services Brochures - Pubrica" },
   description: 'Download Pubrica research services brochures — literature review, meta-analysis, systematic review, and more.',
 };
 

@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/publication-support__poster-preparation__how-to-design-a-research-poster';
 
 export const metadata: Metadata = {
-  title: "How to Design a Research Poster: Step-by-Step Guide",
+  title: { absolute: "How to Design a Research Poster: Step-by-Step Guide" },
   description: "Learn how to structure, lay out, and print a research poster that gets noticed. A step-by-step guide covering size, sections, and design best practices.",
 };
 

@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/research-services__meta-analysis__network-meta-analysis-guide';
 
 export const metadata: Metadata = {
-  title: "Network Meta-Analysis: Methods, Assumptions & Applications",
+  title: { absolute: "Network Meta-Analysis: Methods, Assumptions & Applications" },
   description: "Learn network meta-analysis methods and assumptions, including mixed treatment comparison and indirect treatment comparison meta-analysis applications.",
 };
 

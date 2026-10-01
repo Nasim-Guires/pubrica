@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/research-services__meta-analysis__individual-participant-data-meta-analysis';
 
 export const metadata: Metadata = {
-  title: "Overview of Individual Participant Data (IPD) Meta-Analysis",
+  title: { absolute: "Overview of Individual Participant Data (IPD) Meta-Analysis" },
   description: "Explore IPD Meta-Analysis, its methods, benefits, and applications in clinical research for more accurate and reliable evidence synthesis results.",
 };
 

@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import GuideLayout from '@/components/guides/GuideLayout';
 
 export const metadata: Metadata = {
-  title: 'ICH Guidelines: The Complete Guide - Pubrica',
+  title: { absolute: "ICH Guidelines? | Global Harmonization in Pharmaceuticals" },
   description:
     'A complete guide to ICH Guidelines — what they are, why they matter, their four categories, and how they vary by region.',
 };

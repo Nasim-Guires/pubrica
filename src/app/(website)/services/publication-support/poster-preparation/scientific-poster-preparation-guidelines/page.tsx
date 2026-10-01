@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/publication-support__poster-preparation__scientific-poster-preparation-guidelines';
 
 export const metadata: Metadata = {
-  title: "Scientific Poster Guidelines for Research Communication",
+  title: { absolute: "Scientific Poster Guidelines for Research Communication" },
   description: "Enhance audience understanding with organized layouts, compelling graphics, concise messaging, well-structured research displays, and clear data presentation.",
 };
 

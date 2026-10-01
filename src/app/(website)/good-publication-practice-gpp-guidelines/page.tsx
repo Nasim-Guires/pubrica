@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import GuideLayout from '@/components/guides/GuideLayout';
 
 export const metadata: Metadata = {
-  title: 'Good Publication Practice (GPP) Guidelines - Pubrica',
+  title: { absolute: "Good Publication Practice (GPP) Guidelines | Pubrica" },
   description:
     'Good Publication Practice (GPP) guidelines for transparent, accurate, and ethical medical and scientific publishing.',
 };

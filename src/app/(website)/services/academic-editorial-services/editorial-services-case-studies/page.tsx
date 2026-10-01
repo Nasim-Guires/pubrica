@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/academic-editorial-services__editorial-services-case-studies';
 
 export const metadata: Metadata = {
-  title: "Case Study Editorial Services | Quality & Accuracy",
+  title: { absolute: "Case Study Editorial Services | Quality & Accuracy" },
   description: "Discover how editorial services improve case study clarity, structure, and academic standards for successful publication.",
 };
 

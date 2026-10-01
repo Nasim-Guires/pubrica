@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/publication-support__journal-submission__mastering-journal-submission-guideline-with-ease';
 
 export const metadata: Metadata = {
-  title: "Mastering Journal Submission Guidelines Easily",
+  title: { absolute: "Mastering Journal Submission Guidelines Easily" },
   description: "Learn how to follow journal submission guidelines for clear, ethical, and successful research publishing.",
 };
 

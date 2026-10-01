@@ -19,8 +19,7 @@ const BASE_PATH = "/academy/journal-templates/";
 
 export const metadata: Metadata = {
   title: { absolute: "Journal Templates - Pubrica" },
-  description:
-    "Journal Templates – Pubrica provide structured, journal-specific formats to help authors prepare manuscripts accurately and efficiently.",
+  description: "Formatting templates for leading academic and medical journals.",
 };
 
 interface JournalTemplatesPageProps {

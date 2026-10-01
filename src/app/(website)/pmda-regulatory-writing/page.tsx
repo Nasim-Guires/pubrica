@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import GuideLayout from '@/components/guides/GuideLayout';
 
 export const metadata: Metadata = {
-  title: "PMDA Regulatory Writing Services: Navigate Japan's Regulatory Requirements with Confidence - Pubrica",
+  title: { absolute: "PMDA Regulatory Writing Services" },
   description:
     "PMDA-compliant regulatory writing services from Pubrica — dossier preparation, CSRs, QMS documentation, and Japanese translation and localization.",
 };

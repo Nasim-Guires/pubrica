@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/scientific-communication__technology-enabled-medical-scientific-communication';
 
 export const metadata: Metadata = {
-  title: "Technology-Enabled Medical and Scientific Communication",
+  title: { absolute: "Technology-Enabled Medical and Scientific Communication" },
   description: "Expert-led, technology-enabled medical and scientific communication services delivering accurate, compliant, high-impact research.",
 };
 

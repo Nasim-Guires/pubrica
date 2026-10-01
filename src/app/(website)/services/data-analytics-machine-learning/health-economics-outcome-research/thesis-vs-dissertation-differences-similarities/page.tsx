@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/data-analytics-machine-learning__health-economics-outcome-research__thesis-vs-dissertation-differences-similarities';
 
 export const metadata: Metadata = {
-  title: "Thesis vs Dissertation: Key Differences & Similarities",
+  title: { absolute: "Thesis vs Dissertation: Key Differences & Similarities" },
   description: "Learn the differences and similarities between a thesis and a dissertation, including purpose, length, research type, and tips for choosing the right path.",
 };
 

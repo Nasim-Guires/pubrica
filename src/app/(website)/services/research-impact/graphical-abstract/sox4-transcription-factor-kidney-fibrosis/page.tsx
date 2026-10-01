@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import SamplePdfPage from '@/components/services/SamplePdfPage';
 
 export const metadata: Metadata = {
-  title: "SOX4's Role in Kidney Fibrosis: TEC Dedifferentiation & Fibroblast - Pubrica",
+  title: { absolute: "SOX4's Role in Kidney Fibrosis: TEC Dedifferentiation & Fibroblast" },
   description: 'Graphical abstract sample work on SOX4 and kidney fibrosis in chronic kidney disease.',
 };
 

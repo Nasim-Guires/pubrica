@@ -9,7 +9,7 @@ import { constructMetadata } from '@/lib/metadata'
 // canonicalize this duplicate-content page to the plural route, matching the
 // primary/duplicate pairing already established between these two routes.
 export const metadata = constructMetadata({
-  title: 'Life Sciences Research & Writing Services | Pubrica',
+  title: "Life Science Manuscript Formatting for Faster Publication",
   description: 'Get expert life sciences research, writing, editing, and publication support from Pubrica’s experienced scientific professionals.',
   keywords: [],
   slug: '/about-us/life-science/',

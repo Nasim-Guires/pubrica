@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/physician-writing-services__original-research-article__young-researchers-guide-original-research-article';
 
 export const metadata: Metadata = {
-  title: "A Young Researcher’s Guide to Original Research Articles",
+  title: { absolute: "A Young Researcher’s Guide to Original Research Articles" },
   description: "Learn how to write original research articles with proper structure, methodology, and scholarly rigor.",
 };
 

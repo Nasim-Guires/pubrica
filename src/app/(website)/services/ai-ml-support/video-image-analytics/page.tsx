@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/ai-ml-support__video-image-analytics';
 
 export const metadata: Metadata = {
-  title: "Video Image Analytics - Pubrica",
+  title: { absolute: "Video Image Analytics - Pubrica" },
   description: "Pubrica specializes in algorithm development for training and optimization. Our expert team ensures robust and efficient algorithms tailored to your specific",
 };
 

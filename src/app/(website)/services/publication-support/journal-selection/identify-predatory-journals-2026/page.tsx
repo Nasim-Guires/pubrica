@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/publication-support__journal-selection__identify-predatory-journals-2026';
 
 export const metadata: Metadata = {
-  title: "Predatory Journal Checklist and Guide 2026 Update",
+  title: { absolute: "Predatory Journal Checklist and Guide 2026 Update" },
   description: "Learn how to identify predatory journals in 2026 with evidence-based checklist, warning signs, and publishing ethics tips for researchers.",
 };
 

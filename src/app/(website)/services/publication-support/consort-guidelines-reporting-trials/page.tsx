@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/publication-support__consort-guidelines-reporting-trials';
 
 export const metadata: Metadata = {
-  title: "CONSORT Guidelines: Essential Standards for Reporting Trials",
+  title: { absolute: "CONSORT Guidelines: Essential Standards for Reporting Trials" },
   description: "Learn the key features, types, and benefits of the CONSORT guidelines for transparent reporting of randomized controlled trials.",
 };
 

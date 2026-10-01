@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/research-services__literature-review-and-gap__open-access-research-impact';
 
 export const metadata: Metadata = {
-  title: "Open Access Publishing & Research Impact | Pubrica",
+  title: { absolute: "Open Access Publishing & Research Impact | Pubrica" },
   description: "Explore how open access publishing improves research dissemination and scholarly publishing impact. Expert academic publishing services by Pubrica.",
 };
 

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import MinimalNoticePage from '@/components/common/MinimalNoticePage';
 
 export const metadata: Metadata = {
-  title: 'Biotech Clinical Trial Solutions - Pubrica',
+  title: { absolute: "Publishers - Pubrica" },
   description: 'Pubrica supports journals, publishers, and publication societies in acquiring high-value research output and improving submission quality.',
 };
 

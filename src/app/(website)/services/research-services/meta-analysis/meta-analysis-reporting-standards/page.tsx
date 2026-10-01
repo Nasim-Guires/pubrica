@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/research-services__meta-analysis__meta-analysis-reporting-standards';
 
 export const metadata: Metadata = {
-  title: "Meta-Analysis Reporting Standards(MARS) Guidelines",
+  title: { absolute: "Meta-Analysis Reporting Standards(MARS) Guidelines" },
   description: "Learn how MARS guidelines enhance transparency, reproducibility, and reporting quality in meta-analysis research for stronger publication outcomes.",
 };
 

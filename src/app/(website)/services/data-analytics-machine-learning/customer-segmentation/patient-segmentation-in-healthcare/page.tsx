@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/data-analytics-machine-learning__customer-segmentation__patient-segmentation-in-healthcare';
 
 export const metadata: Metadata = {
-  title: "Patient Segmentation in Healthcare Overview",
+  title: { absolute: "Patient Segmentation in Healthcare Overview" },
   description: "Patient segmentation in healthcare by Pubrica uses data analytics and machine learning to support hospitals, payers, and providers",
 };
 

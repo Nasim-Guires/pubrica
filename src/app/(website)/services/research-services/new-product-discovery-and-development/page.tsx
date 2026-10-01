@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/research-services__new-product-discovery-and-development';
 
 export const metadata: Metadata = {
-  title: "New Product Development - Pubrica",
+  title: { absolute: "New Product Development - Pubrica" },
   description: "New Product Development – Pubrica supports research, formulation, testing, and regulatory documentation for successful product launches.",
 };
 

@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/continuing-medical-education-cme-content-development__what-is-continuing-medical-education';
 
 export const metadata: Metadata = {
-  title: "What Is Continuing Medical Education and Its Role in Healthcare",
+  title: { absolute: "What Is Continuing Medical Education and Its Role in Healthcare" },
   description: "Learn what Continuing Medical Education is, its benefits, requirements, and how CME improves healthcare practice.",
 };
 

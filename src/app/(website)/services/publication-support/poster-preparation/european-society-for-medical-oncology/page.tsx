@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/publication-support__poster-preparation__european-society-for-medical-oncology';
 
 export const metadata: Metadata = {
-  title: "ESMO Guide: European Society for Medical Oncology",
+  title: { absolute: "ESMO Guide: European Society for Medical Oncology" },
   description: "Learn about the European Society for Medical Oncology, its mission, guidelines, structure, and contributions to cancer care.",
 };
 

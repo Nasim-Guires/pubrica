@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/research-services__systematic-review__risk-of-bias-assessment-guide';
 
 export const metadata: Metadata = {
-  title: "Risk of Bias Assessment Tools for Research Teams",
+  title: { absolute: "Risk of Bias Assessment Tools for Research Teams" },
   description: "Comprehensive guide to risk of bias assessment tools like RoB 2, ROBINS-I, QUADAS-2, and AMSTAR 2 for systematic reviews and evidence synthesis",
 };
 

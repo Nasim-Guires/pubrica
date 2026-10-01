@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/editing-and-translation__thesis-editing-guide';
 
 export const metadata: Metadata = {
-  title: "Thesis Editing: Process, Benefits & Editor Roles",
+  title: { absolute: "Thesis Editing: Process, Benefits & Editor Roles" },
   description: "Discover thesis editing services, benefits, and key roles of a thesis editor for academic success.",
 };
 

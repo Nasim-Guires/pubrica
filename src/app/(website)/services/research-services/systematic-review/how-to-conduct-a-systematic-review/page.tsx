@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/research-services__systematic-review__how-to-conduct-a-systematic-review';
 
 export const metadata: Metadata = {
-  title: "How to Conduct a Systematic Review: Step-by-Step Guide",
+  title: { absolute: "How to Conduct a Systematic Review: Step-by-Step Guide" },
   description: "Learn how to conduct a systematic review using PRISMA 2020, develop protocols, search databases, assess quality, synthesise evidence, and write for publication.",
 };
 

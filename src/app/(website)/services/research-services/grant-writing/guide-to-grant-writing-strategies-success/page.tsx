@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/research-services__grant-writing__guide-to-grant-writing-strategies-success';
 
 export const metadata: Metadata = {
-  title: "Grant Writing Guide: Strategies & Success Factors",
+  title: { absolute: "Grant Writing Guide: Strategies & Success Factors" },
   description: "Learn essential grant writing strategies, proposal structure, and success factors to secure funding for nonprofits, research, and projects.",
 };
 

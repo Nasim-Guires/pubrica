@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/publication-support__understanding-wame-medical-journal-editors';
 
 export const metadata: Metadata = {
-  title: "WAME Guidelines & Ethics for Medical Editors Explained",
+  title: { absolute: "WAME Guidelines & Ethics for Medical Editors Explained" },
   description: "Learn how WAME supports medical journal editors in following CONSORT guidelines to ensure ethical and transparent publication practices.",
 };
 

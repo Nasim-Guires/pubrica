@@ -11,7 +11,7 @@ import { constructMetadata } from '@/lib/metadata'
 // page's own real content (matching the title/description already used in its legacy
 // <Head> tag below) rather than copying that mismatched live page.
 export const metadata = constructMetadata({
-  title: 'Response to Reviewer | Pubrica',
+  title: "Training Effects on Nurses’ Safety Culture in ORs",
   description: 'Sample letter and guidelines for responding to reviewer comments for publication in academic journals.',
   slug: '/academy/response-to-reviewer',
 })

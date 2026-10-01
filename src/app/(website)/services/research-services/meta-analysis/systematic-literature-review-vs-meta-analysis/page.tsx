@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/research-services__meta-analysis__systematic-literature-review-vs-meta-analysis';
 
 export const metadata: Metadata = {
-  title: "Systematic Review vs Meta-Analysis: Evidence Synthesis",
+  title: { absolute: "Systematic Review vs Meta-Analysis: Evidence Synthesis" },
   description: "Explore differences, methods, and steps of systematic reviews and meta-analyses for research evidence synthesis.",
 };
 

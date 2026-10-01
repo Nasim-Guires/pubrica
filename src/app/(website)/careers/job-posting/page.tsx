@@ -6,7 +6,7 @@ import JobPostingTabs from "@/components/careers/JobPostingTabs";
 export const revalidate = 300;
 
 export const metadata: Metadata = {
-  title: "Job Postings",
+  title: { absolute: "Job Posting - Pubrica" },
   description: "Explore current full-time, freelance, and internship openings at Pubrica.",
 };
 

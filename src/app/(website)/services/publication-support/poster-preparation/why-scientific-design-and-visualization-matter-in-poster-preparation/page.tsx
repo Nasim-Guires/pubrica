@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/publication-support__poster-preparation__why-scientific-design-and-visualization-matter-in-poster-preparation';
 
 export const metadata: Metadata = {
-  title: "Scientific design and visualization improve clarity and impact.",
+  title: { absolute: "Scientific design and visualization improve clarity and impact." },
   description: "Pubrica provides expert scientific poster design and data visualization, presenting research clearly and impactfully.",
 };
 

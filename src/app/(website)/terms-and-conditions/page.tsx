@@ -4,7 +4,7 @@ import Container from '@/components/common/Container';
 import Breadcrumb from '@/components/seo/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'Terms & Conditions - Pubrica',
+  title: { absolute: "Terms & Condition - Pubrica" },
   description: 'Terms and Conditions governing your use of the Pubrica website and our professional engagement with you.',
 };
 

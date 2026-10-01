@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import GuideLayout from '@/components/guides/GuideLayout';
 
 export const metadata: Metadata = {
-  title: 'Understanding Disability-Adjusted Life Year (DALY): A Comprehensive Overview - Pubrica',
+  title: { absolute: "Disability-Adjusted Life Year (DALY): A Comprehensive Overview" },
   description:
     'A comprehensive overview of the Disability-Adjusted Life Year (DALY) — the equation, its comparison to QALY, and its use in public health research.',
 };

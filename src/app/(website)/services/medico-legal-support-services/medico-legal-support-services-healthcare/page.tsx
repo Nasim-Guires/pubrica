@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/medico-legal-support-services__medico-legal-support-services-healthcare';
 
 export const metadata: Metadata = {
-  title: "Medico-Legal Support Services in Healthcare Systems",
+  title: { absolute: "Medico-Legal Support Services in Healthcare Systems" },
   description: "Expert medico legal support services for healthcare organizations and hospitals. Ensure compliant documentation, case analysis, and reporting.",
 };
 

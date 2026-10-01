@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/research-services__grant-writing__research-grant-proposal-writing-guide';
 
 export const metadata: Metadata = {
-  title: "What You Must Know Before Writing a Research Grant Proposal",
+  title: { absolute: "What You Must Know Before Writing a Research Grant Proposal" },
   description: "Improve research grant applications with key writing strategies, funder priorities, evaluation methods, and tips to enhance proposal clarity and success.",
 };
 

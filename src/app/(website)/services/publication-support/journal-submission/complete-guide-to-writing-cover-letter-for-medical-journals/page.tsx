@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/publication-support__journal-submission__complete-guide-to-writing-cover-letter-for-medical-journals';
 
 export const metadata: Metadata = {
-  title: "Medical Journal Cover Letter Writing Guide for Authors",
+  title: { absolute: "Medical Journal Cover Letter Writing Guide for Authors" },
   description: "Learn how to write an effective cover letter for medical journals with expert tips, structure, and common mistakes to avoid.",
 };
 

@@ -5,7 +5,7 @@ import Container from '@/components/common/Container';
 import Breadcrumb from '@/components/seo/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'Cookie Policy - Pubrica',
+  title: { absolute: "Cookie Policy - Pubrica" },
   description: 'Pubrica Cookie Policy — how we use cookies, web beacons, and similar tracking technologies across our sites.',
 };
 

@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/medical-writing__ich-guidelines-clinical-trials-drug-development';
 
 export const metadata: Metadata = {
-  title: "ICH Guidelines for Clinical Trials & Drug Development",
+  title: { absolute: "ICH Guidelines for Clinical Trials & Drug Development" },
   description: "Learn ICH guidelines for clinical trials and drug development. Pubrica delivers professional medical writing services for accurate compliance.",
 };
 

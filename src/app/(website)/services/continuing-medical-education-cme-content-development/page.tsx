@@ -9,7 +9,7 @@ import InsightsSection from "@/components/services/medical-data-collection/Insig
 import { constructMetadata } from '@/lib/metadata'
 
 export const metadata = constructMetadata({
-    title: 'Thought Leadership Content & Editorial Design - Pubrica',
+    title: "CME Content Creation & Support for Healthcare | Pubrica",
     description: 'Pubrica’s subject experts create curated, unique content that transforms rich insights into measurable growth for your audience.',
     keywords: ['Thought Leadership Content & Editorial Design,Scientific thought leadership development,leadership development program content,thought leadership editorial support,thought leadership content creation'],
     slug: '/services/data-analytics-machine-learning/thought-leadership-content-editorial-design/',

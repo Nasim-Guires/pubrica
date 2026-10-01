@@ -3,7 +3,7 @@ import Image from 'next/image';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Global Partner Program - Pubrica',
+  title: { absolute: "Global Partner Program - Pubrica" },
   description: 'Publishers, universities, and research groups can get special discounts on all end-to-end editorial and journal publication services. Partner with Pubrica.',
 };
 

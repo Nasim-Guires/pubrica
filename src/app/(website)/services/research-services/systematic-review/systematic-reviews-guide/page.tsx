@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/research-services__systematic-review__systematic-reviews-guide';
 
 export const metadata: Metadata = {
-  title: "Systematic Reviews: A Complete Guide for Researchers",
+  title: { absolute: "Systematic Reviews: A Complete Guide for Researchers" },
   description: "Learn how to conduct systematic reviews, assess studies, and synthesise evidence for reliable research outcomes.",
 };
 

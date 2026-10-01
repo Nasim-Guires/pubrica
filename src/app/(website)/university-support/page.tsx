@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import MinimalNoticePage from '@/components/common/MinimalNoticePage';
 
 export const metadata: Metadata = {
-  title: 'University Support - Pubrica',
+  title: { absolute: "University Support - Pubrica" },
   description: 'Global expertise in research, publishing, and communication support for universities and research institutions.',
 };
 

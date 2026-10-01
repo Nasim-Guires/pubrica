@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/publication-support__hipaa-compliance-complete-overview';
 
 export const metadata: Metadata = {
-  title: "HIPAA Compliance Explained: Rules, Updates & Guidance",
+  title: { absolute: "HIPAA Compliance Explained: Rules, Updates & Guidance" },
   description: "Learn HIPAA compliance essentials, from PHI protection to safeguards and common violations.",
 };
 

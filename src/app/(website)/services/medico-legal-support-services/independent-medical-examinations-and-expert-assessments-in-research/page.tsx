@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/medico-legal-support-services__independent-medical-examinations-and-expert-assessments-in-research';
 
 export const metadata: Metadata = {
-  title: "Independent Medical Examinations in Research & Assessments",
+  title: { absolute: "Independent Medical Examinations in Research & Assessments" },
   description: "Learn how Independent Medical Examinations (IMEs) and expert assessments improve research quality, patient safety, and clinical trial outcomes.",
 };
 

@@ -6,7 +6,7 @@ import ImageLightboxGrid from "@/components/insight/ImageLightboxGrid";
 import HeroBanner from "@/components/common/HeroBanner";
 
 export const metadata: Metadata = {
-  title: "Flow Diagram | Pubrica Academy",
+  title: { absolute: "Flow Diagram Services for Research Accuracy | Pubrica" },
   description: "Flow diagram templates for research and reporting standards (PRISMA, CONSORT, TRIPOD, CARE, STARD).",
 };
 

@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/research-services__meta-analysis__meta-analysis-role-evidence-based-research';
 
 export const metadata: Metadata = {
-  title: "Meta-Analysis Role in Evidence-Based Research",
+  title: { absolute: "Meta-Analysis Role in Evidence-Based Research" },
   description: "Explore methods used to combine research findings for improved accuracy, stronger conclusions, and better support for scientific decision-making.",
 };
 

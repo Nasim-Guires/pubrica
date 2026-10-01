@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/education-editorial-service__accessibility-compliance__web-accessibility-compliance-wcag-standards';
 
 export const metadata: Metadata = {
-  title: "Web Accessibility Standards (WCAG) & Global Compliance",
+  title: { absolute: "Web Accessibility Standards (WCAG) & Global Compliance" },
   description: "Learn WCAG web accessibility standards, international compliance requirements, and digital accessibility guidelines for global businesses.",
 };
 

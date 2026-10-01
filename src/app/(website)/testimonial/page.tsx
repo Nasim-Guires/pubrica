@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import { TESTIMONIALS } from '@/lib/data/testimonials';
 
 export const metadata: Metadata = {
-  title: 'Testimonials - Pubrica',
+  title: { absolute: "Testimonial - Pubrica" },
   description: "Our clients reminisce their success stories. Here's what they say about Pubrica.",
 };
 
