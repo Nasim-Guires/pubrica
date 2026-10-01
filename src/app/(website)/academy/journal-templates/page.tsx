@@ -9,7 +9,7 @@ export const revalidate = 300;
 const PAGE_SIZE = 12;
 
 export const metadata: Metadata = {
-  title: "Journal Templates | Pubrica Academy",
+  title: { absolute: "Journal Templates - Pubrica" },
   description: "Formatting templates for leading academic and medical journals.",
 };
 

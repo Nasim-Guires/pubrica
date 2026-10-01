@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/physician-writing-services__case-report-writing__how-to-write-a-case-report';
 
 export const metadata: Metadata = {
-  title: "How to Write a Medical Case Report | Pubrica Guide",
+  title: { absolute: "How to Write a Medical Case Report | Pubrica Guide" },
   description: "Discover how to write a medical case report with expert insights. Boost your case report writing skills using Pubrica physician services.",
 };
 

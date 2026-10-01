@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import SamplePdfPage from '@/components/services/SamplePdfPage';
 
 export const metadata: Metadata = {
-  title: 'SGLT2i and Phimosis Risk in Men with Type 2 Diabetes - Pubrica',
+  title: { absolute: "SGLT2i and Phimosis Risk in Men with Type 2 Diabetes" },
   description: 'Simplified abstract sample work comparing phimosis risk with SGLT2i versus GLP-1RA therapy.',
 };
 

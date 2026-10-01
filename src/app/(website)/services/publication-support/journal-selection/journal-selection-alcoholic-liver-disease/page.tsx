@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import SamplePdfPage from '@/components/services/SamplePdfPage';
 
 export const metadata: Metadata = {
-  title: 'Journal Selection: Alcoholic Liver Disease Research - Pubrica',
+  title: { absolute: "Journal Selection: Alcoholic Liver Disease Research" },
   description: 'Journal selection sample work for a manuscript on alcoholic liver disease.',
 };
 

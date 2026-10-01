@@ -3,7 +3,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Our Services - Pubrica',
+  title: { absolute: "Medical Writing & Scientific Research Services | UK Experts" },
   description: 'Specialized data analytics and machine learning services for healthcare research and decision-making.',
 };
 

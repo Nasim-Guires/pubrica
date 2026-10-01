@@ -10,7 +10,7 @@ import InsightsSection from "@/components/services/medical-data-collection/Insig
 import { constructMetadata } from '@/lib/metadata'
 
 export const metadata = constructMetadata({
-    title: 'Expert Medical Writing Services for Pharma & Research',
+    title: "Interpretation, Reporting and Visualisation - Pubrica",
     description: 'Pubrica delivers expert medical writing, research writing, and medical paper writing services for physicians, researchers, and healthcare professionals.',
     keywords: ['Medical writing,medical writing services,research writing,medical paper writing service,clinical manuscript writing'],
     slug: '/research-services/medical-writing/',

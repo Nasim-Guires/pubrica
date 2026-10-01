@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/research-services__systematic-review__swim-synthesis-without-meta-analysis-systematic-reviews';
 
 export const metadata: Metadata = {
-  title: "SWiM: Synthesis Without Meta-Analysis in Systematic Reviews",
+  title: { absolute: "SWiM: Synthesis Without Meta-Analysis in Systematic Reviews" },
   description: "Understand how SWiM synthesis enables clear and transparent evidence synthesis when meta-analysis is not possible in systematic reviews.",
 };
 

@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/medical-writing__regulatory-writing__ctd-structure-overview-modules';
 
 export const metadata: Metadata = {
-  title: "Common Technical Document (CTD) Structure & Module Overview",
+  title: { absolute: "Common Technical Document (CTD) Structure & Module Overview" },
   description: "Explore CTD structure, modules 1-5, and key tips for preparing pharmaceutical regulatory submissions worldwide.",
 };
 

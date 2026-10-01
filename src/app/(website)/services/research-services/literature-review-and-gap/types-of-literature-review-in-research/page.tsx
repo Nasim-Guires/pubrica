@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/research-services__literature-review-and-gap__types-of-literature-review-in-research';
 
 export const metadata: Metadata = {
-  title: "Types of Literature Reviews Explained with Examples",
+  title: { absolute: "Types of Literature Reviews Explained with Examples" },
   description: "Learn types of literature review, including systematic literature review methods used in academic research and evidence-based publications.",
 };
 

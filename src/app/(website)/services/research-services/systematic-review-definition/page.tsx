@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/research-services__systematic-review-definition';
 
 export const metadata: Metadata = {
-  title: "Systematic Review Definition & Key Features",
+  title: { absolute: "Systematic Review Definition & Key Features" },
   description: "Learn the definition of a systematic review, its methodology, and how it differs from narrative reviews in evidence-based research.",
 };
 

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import SamplePdfPage from '@/components/services/SamplePdfPage';
 
 export const metadata: Metadata = {
-  title: 'CSPP1 Variant in Joubert Syndrome with Metabolic Dysfunction - Pubrica',
+  title: { absolute: "CSPP1 Variant in Joubert Syndrome with Metabolic Dysfunction" },
   description: 'Case report sample work: a CSPP1-related Joubert syndrome patient with metabolic abnormalities.',
 };
 

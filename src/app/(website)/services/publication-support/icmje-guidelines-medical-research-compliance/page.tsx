@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/publication-support__icmje-guidelines-medical-research-compliance';
 
 export const metadata: Metadata = {
-  title: "ICMJE Guidelines for Ethical Medical Research Publishing",
+  title: { absolute: "ICMJE Guidelines for Ethical Medical Research Publishing" },
   description: "Ensure ethical compliance in medical publishing with ICMJE-aligned support for authors, trials, and data sharing.",
 };
 

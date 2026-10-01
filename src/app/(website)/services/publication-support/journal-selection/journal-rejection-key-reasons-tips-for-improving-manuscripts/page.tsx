@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/publication-support__journal-selection__journal-rejection-key-reasons-tips-for-improving-manuscripts';
 
 export const metadata: Metadata = {
-  title: "Journal Rejection: Key Reasons & Tips for Improving Manuscripts",
+  title: { absolute: "Journal Rejection: Key Reasons & Tips for Improving Manuscripts" },
   description: "Learn why journals reject manuscripts and how to improve your paper for future submissions. Tips for handling peer review and enhancing quality.",
 };
 

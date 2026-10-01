@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/research-services__literature-review-and-gap__literature-review-research-gap-services';
 
 export const metadata: Metadata = {
-  title: "Systematic Literature Review Services | PRISMA 2020",
+  title: { absolute: "Systematic Literature Review Services | PRISMA 2020" },
   description: "Expert systematic, scoping, and narrative reviews, built to PRISMA 2020 standards, to identify real research gaps and strengthen your study's foundation.",
 };
 

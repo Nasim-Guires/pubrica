@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/publication-support__journal-selection__top-hybrid-journals-2025-trends-opportunities';
 
 export const metadata: Metadata = {
-  title: "Top Hybrid Journals 2025: Trends and Opportunities for Researchers",
+  title: { absolute: "Top Hybrid Journals 2025: Trends and Opportunities for Researchers" },
   description: "Explore top hybrid journals of 2025, discover trends in open access, and learn about the opportunities and challenges for researchers",
 };
 

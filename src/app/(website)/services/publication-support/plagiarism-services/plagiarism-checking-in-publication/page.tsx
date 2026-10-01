@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/publication-support__plagiarism-services__plagiarism-checking-in-publication';
 
 export const metadata: Metadata = {
-  title: "How Important Is Plagiarism Checking in Publication?",
+  title: { absolute: "How Important Is Plagiarism Checking in Publication?" },
   description: "Checking for plagiarism ensures originality, maintains academic integrity, prevents misconduct, and improves the quality of research publications.",
 };
 

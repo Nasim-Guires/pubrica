@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/publication-support__how-to-implement-gpp-medical-research';
 
 export const metadata: Metadata = {
-  title: "GPP Implementation Guide for Medical Research Publishing",
+  title: { absolute: "GPP Implementation Guide for Medical Research Publishing" },
   description: "Learn how to implement GPP in medical research to ensure transparency, integrity, and ethical standards",
 };
 

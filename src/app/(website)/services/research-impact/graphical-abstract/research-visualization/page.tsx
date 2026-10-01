@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/research-impact__graphical-abstract__research-visualization';
 
 export const metadata: Metadata = {
-  title: "Research Visualization Services for Scientific Impact",
+  title: { absolute: "Research Visualization Services for Scientific Impact" },
   description: "Enhance research visibility with Pubrica’s graphical abstract and research visualization services designed for academic teams.",
 };
 

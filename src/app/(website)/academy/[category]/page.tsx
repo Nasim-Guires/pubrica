@@ -1,8 +1,7 @@
 import React from "react";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { Phone, MessageSquare, Mail, Calendar, User, ChevronRight } from "lucide-react";
+import { Calendar, User } from "lucide-react";
 import { getPostBySlug, getDescription } from "@/lib/payload";
 import { LexicalRenderer } from "@/lib/payload/lexical";
 
@@ -10,7 +9,6 @@ export const revalidate = 300;
 
 interface AcademyFlatArticlePageProps {
   params: Promise<{ category: string }>;
-  searchParams?: Promise<{ page?: string }>;
 }
 
 function formatDate(iso?: string) {
@@ -34,11 +32,8 @@ export async function generateMetadata({ params }: AcademyFlatArticlePageProps):
 
 export default async function AcademyFlatArticlePage({
   params,
-  searchParams,
 }: AcademyFlatArticlePageProps) {
   const { category: slug } = await params;
-  const resolvedSearchParams = searchParams ? await searchParams : {};
-  const currentPage = Number(resolvedSearchParams.page) || 1;
 
   const post = await getPostBySlug(slug, "academy");
 
@@ -46,7 +41,7 @@ export default async function AcademyFlatArticlePage({
     notFound();
   }
 
-  const categories = post.categories?.map((cat: any) => cat.name) || ["Insights", "news", "Research Impact"];
+  const categories = post.categories?.map((cat) => cat.name) || ["Insights", "news", "Research Impact"];
   const formattedDate = formatDate(post.publishing?.publishedAt);
   const pageHeaderTitle = post.categories?.[0]?.name || "Examples";
 
@@ -121,7 +116,7 @@ export default async function AcademyFlatArticlePage({
           </div>
         </aside>
 
-        {/* MAIN ARTICLE CONTENT & PAGINATION */}
+        {/* MAIN ARTICLE CONTENT */}
         <main className="flex-1 min-w-0 flex flex-col justify-between">
           <article className="bg-white border border-gray-200/80 rounded-xl overflow-hidden shadow-xs p-8 sm:p-12 mb-8">
 
@@ -163,32 +158,6 @@ export default async function AcademyFlatArticlePage({
               <LexicalRenderer content={post.content} title={post.title} />
             </div>
           </article>
-
-          {/* HORIZONTAL BOXED PAGINATION BAR (Outside Content Card) */}
-          <div className="flex items-center justify-center gap-1 pt-2">
-            {[1, 2, 3].map((page) => {
-              const isActive = currentPage === page;
-              return (
-                <Link
-                  key={page}
-                  href={`/academy/${slug}/?page=${page}`}
-                  className={`w-9 h-9 flex items-center justify-center font-medium text-sm border transition-colors ${isActive
-                      ? "bg-[#3182ce] text-white border-[#3182ce]"
-                      : "bg-white text-gray-700 hover:bg-gray-100 border-gray-300"
-                    }`}
-                >
-                  {page}
-                </Link>
-              );
-            })}
-            <Link
-              href={`/academy/${slug}/?page=${Math.min(currentPage + 1, 3)}`}
-              className="w-9 h-9 flex items-center justify-center bg-white text-gray-600 hover:bg-gray-100 font-medium text-sm border border-gray-300 transition-colors"
-              aria-label="Next Page"
-            >
-              <ChevronRight className="w-4 h-4" />
-            </Link>
-          </div>
         </main>
 
         {/* FLOATING ACTION BUTTONS */}

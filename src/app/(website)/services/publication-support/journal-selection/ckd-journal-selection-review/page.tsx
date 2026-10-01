@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import SamplePdfPage from '@/components/services/SamplePdfPage';
 
 export const metadata: Metadata = {
-  title: 'Selecting and Reviewing Journals for Chronic Kidney Disease - Pubrica',
+  title: { absolute: "Selecting and Reviewing Journals for Chronic Kidney Disease" },
   description: 'Journal Selection & Submission sample work for a chronic kidney disease manuscript.',
 };
 

@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/research-services__statistical-vs-contextual-interpretation-research';
 
 export const metadata: Metadata = {
-  title: "Statistical vs Contextual Interpretation Guide in Research",
+  title: { absolute: "Statistical vs Contextual Interpretation Guide in Research" },
   description: "Understand statistical vs contextual interpretation in research studies. Learn how to analyze results accurately and gain meaningful insights from data..",
 };
 

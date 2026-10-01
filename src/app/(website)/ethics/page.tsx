@@ -4,7 +4,7 @@ import Container from '@/components/common/Container';
 import Breadcrumb from '@/components/seo/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'Ethics - Pubrica',
+  title: { absolute: "Ethics - Pubrica" },
   description: 'Ethics – Pubrica ensures responsible, transparent, and compliant research and publication practices across all services.',
 };
 

@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/physician-writing-services__physician-manuscripts';
 
 export const metadata: Metadata = {
-  title: "Physician Manuscript Writing Service | Pubrica",
+  title: { absolute: "Physician Manuscript Writing Service | Pubrica" },
   description: "Specialized manuscript support for physicians including writing, editing, and publication help for clinical studies, case reports & journals.",
 };
 

@@ -4,7 +4,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Top 6 Tips to Create a Perfect Video Abstract for Your Research Paper",
+    title: { absolute: "Create the Perfect Video Abstract for Your Research" },
     description:
         "Learn the top 6 tips to create an engaging video abstract for your research paper, explore different types of video abstracts, and understand best practices.",
     keywords: [

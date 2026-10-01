@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/physician-writing-services__scopus-indexed-journals-submission-guide';
 
 export const metadata: Metadata = {
-  title: "Scopus-indexed-journals-submission-guide",
+  title: { absolute: "Scopus-indexed-journals-submission-guide" },
   description: "Learn how to publish in SCOPUS-indexed journals: submission tips, guidelines, examples, and ethical standards.",
 };
 

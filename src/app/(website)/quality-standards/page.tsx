@@ -4,7 +4,7 @@ import Container from '@/components/common/Container';
 import Breadcrumb from '@/components/seo/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'Quality Standards - Pubrica',
+  title: { absolute: "Quality Standards - Pubrica" },
   description: 'Quality and ethical standards governing every Pubrica engagement — our mission, team roles, and quality guarantee.',
 };
 

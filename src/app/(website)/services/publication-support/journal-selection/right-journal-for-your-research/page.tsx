@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/publication-support__journal-selection__right-journal-for-your-research';
 
 export const metadata: Metadata = {
-  title: "How to Select the Right Journal for Your Research | Guide",
+  title: { absolute: "How to Select the Right Journal for Your Research | Guide" },
   description: "Choose the right journal for your research with tips on journal scope, indexing, ethics, impact, and submission to improve publication success.",
 };
 

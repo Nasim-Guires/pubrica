@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/physician-writing-services__case-report__care-guidelines-case-reports';
 
 export const metadata: Metadata = {
-  title: "CARE Guidelines for Case Reports: Tools & Applications",
+  title: { absolute: "CARE Guidelines for Case Reports: Tools & Applications" },
   description: "Learn CARE guidelines for accurate, transparent case reports, with tools like CARE-writer & clinical applications.",
 };
 

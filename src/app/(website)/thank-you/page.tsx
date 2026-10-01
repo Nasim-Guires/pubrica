@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import { CheckCircle2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Thank You - Pubrica',
+  title: { absolute: "Thank You - Pubrica" },
   description: 'We have received your query successfully. Our expert will revert within the next 30 minutes.',
 };
 

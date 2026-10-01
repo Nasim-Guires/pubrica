@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/publication-support__journal-selection__high-impact-academic-journals-guide';
 
 export const metadata: Metadata = {
-  title: "High-Impact Academic Journals: Definition, Examples & Tips",
+  title: { absolute: "High-Impact Academic Journals: Definition, Examples & Tips" },
   description: "Learn what high-impact academic journals are, examples by discipline, and tips to publish your research successfully.",
 };
 

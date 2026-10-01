@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/subject-matter-experts-algorithm-medical-insights';
 
 export const metadata: Metadata = {
-  title: 'Medical Insights: Comprehensive Medical Algorithms - Pubrica',
+  title: { absolute: "Medical Insights: Comprehensive Medical Algorithms" },
   description: 'Explore medical algorithms for diagnosis, treatment, research, and predictive healthcare decision-making.',
 };
 

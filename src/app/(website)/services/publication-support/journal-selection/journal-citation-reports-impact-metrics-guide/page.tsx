@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/publication-support__journal-selection__journal-citation-reports-impact-metrics-guide';
 
 export const metadata: Metadata = {
-  title: "Journal Citation Reports: Impact & Metrics Guide",
+  title: { absolute: "Journal Citation Reports: Impact & Metrics Guide" },
   description: "Understand Journal Citation Reports metrics, impact factor, and applications for research and publishing.",
 };
 

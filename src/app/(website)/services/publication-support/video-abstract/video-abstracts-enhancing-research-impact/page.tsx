@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/publication-support__video-abstract__video-abstracts-enhancing-research-impact';
 
 export const metadata: Metadata = {
-  title: "Video Abstracts: Complete Guide to Enhance Research Impact",
+  title: { absolute: "Video Abstracts: Complete Guide to Enhance Research Impact" },
   description: "Learn how video abstracts improve research visibility, engagement, and scientific communication with practical tips, benefits, and future trends.",
 };
 

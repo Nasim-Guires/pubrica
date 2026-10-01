@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/publication-support__journal-submission__ai-tools-transform-academic-publishing';
 
 export const metadata: Metadata = {
-  title: "How AI Tools for Academic Publishing Are Changing Support",
+  title: { absolute: "How AI Tools for Academic Publishing Are Changing Support" },
   description: "Explore how AI tools for academic publishing are transforming manuscript editing services, peer review automation, and scholarly publishing workflows.",
 };
 

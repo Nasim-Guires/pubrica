@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/data-analytics-machine-learning__patient-journey-insights-machine-learning__data-extraction-healthcare-definition-methods-applications';
 
 export const metadata: Metadata = {
-  title: "Healthcare Data Extraction: Definition, Methods & Uses",
+  title: { absolute: "Healthcare Data Extraction: Definition, Methods & Uses" },
   description: "Learn about data extraction in healthcare, its methods, applications, and challenges in improving clinical and research outcomes.",
 };
 

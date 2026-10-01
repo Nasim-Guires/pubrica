@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 import FaqAccordion from "@/features/services/components/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "Plagiarism Detection: A Complete Guide for Researchers",
+  title: { absolute: "Plagiarism Detection: A Guide for Researchers" },
   description:
     "Learn about plagiarism detection for researchers, why it is important, common challenges, types of plagiarism, and best practices to maintain academic integrity.",
   keywords: [

@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/research-services__experimental-design__benefits-of-experimental-plan-in-research-and-design';
 
 export const metadata: Metadata = {
-  title: "Benefits of an Experimental Plan in Research and Design",
+  title: { absolute: "Benefits of an Experimental Plan in Research and Design" },
   description: "Discover the key benefits of an experimental plan in research design. Learn about control, reliability, and ethical considerations",
 };
 

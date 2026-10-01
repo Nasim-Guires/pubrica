@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/research-services__literature-review-and-gap__literature-review-and-gap-literature-review-support-chronological-vs-thematic';
 
 export const metadata: Metadata = {
-  title: "Literature Review Support: Chronological vs Thematic",
+  title: { absolute: "Literature Review Support: Chronological vs Thematic" },
   description: "Expert literature review support for academic and clinical research using chronological and thematic structuring approaches.",
 };
 

@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/editing-and-translation__manuscript-editing__top-benefits-of-manuscript-editing-services';
 
 export const metadata: Metadata = {
-  title: "Top 7 Benefits of Expert Manuscript Editing Help",
+  title: { absolute: "Top 7 Benefits of Expert Manuscript Editing Help" },
   description: "Discover the top 7 benefits of professional manuscript editing services to improve clarity, meet journal standards, and increase publication success.",
 };
 

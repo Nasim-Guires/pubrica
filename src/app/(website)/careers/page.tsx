@@ -6,7 +6,7 @@ import { getPosts } from "@/lib/payload";
 export const revalidate = 300;
 
 export const metadata: Metadata = {
-  title: "Careers in Publishing & Editing",
+  title: { absolute: "Careers - Pubrica" },
   description:
     "Scale up your career with Pubrica—a place to learn, grow, and change. Explore job opportunities in academic editing, scientific writing, and research publishing.",
   keywords: [

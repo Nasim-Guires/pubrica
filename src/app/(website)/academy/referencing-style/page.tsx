@@ -7,7 +7,7 @@ import { getPosts, mediaUrl, getDescription } from "@/lib/payload";
 export const revalidate = 300;
 
 export const metadata: Metadata = {
-  title: "Referencing Style - Pubrica Academy",
+  title: { absolute: "Referencing Style - Pubrica" },
   description: "Citation and referencing style guidance for researchers from Pubrica Academy.",
 };
 

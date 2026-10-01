@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/academic-editorial-services__forensic-and-quality-audit-service__forensic-audit-complete-guide';
 
 export const metadata: Metadata = {
-  title: "Forensic Audit Explained: Corporate & Research Guide",
+  title: { absolute: "Forensic Audit Explained: Corporate & Research Guide" },
   description: "Learn what a forensic audit is, how it works in corporate and research settings, and why it is vital for fraud detection, compliance, and financial transparency",
 };
 

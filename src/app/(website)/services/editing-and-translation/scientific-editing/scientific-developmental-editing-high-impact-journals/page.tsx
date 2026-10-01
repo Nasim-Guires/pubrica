@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/seo/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'Scientific Developmental Editing for High-Impact Journal Publishing | Pubrica',
+  title: { absolute: "Scientific Developmental Editing Services for Research" },
   description:
     'Refine your manuscript structure, logic, data presentation, and methodology for high-impact journal publishing with Pubrica scientific editing services.',
   openGraph: {

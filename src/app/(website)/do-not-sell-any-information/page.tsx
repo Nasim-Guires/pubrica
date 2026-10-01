@@ -4,7 +4,7 @@ import Container from '@/components/common/Container';
 import Breadcrumb from '@/components/seo/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'Do Not Sell Any Information - Pubrica',
+  title: { absolute: "Do not sell any Information - Pubrica" },
   description: 'Your CCPA rights regarding the sale of personal information — Pubrica does not sell your data for monetary gain or compensation.',
 };
 

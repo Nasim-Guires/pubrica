@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/research-services__meta-analysis__introduction-to-bayesian-statistics';
 
 export const metadata: Metadata = {
-  title: "Introduction to Bayesian Statistics Explained",
+  title: { absolute: "Introduction to Bayesian Statistics Explained" },
   description: "Learn the principles, methods, and real-world applications of Bayesian statistics and how it differs from frequentist methods.",
 };
 

@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/research-services__meta-analysis__meta-analysis-services-prisma-2020';
 
 export const metadata: Metadata = {
-  title: "Meta-Analysis Services: RCTs & PRISMA 2020 Support",
+  title: { absolute: "Meta-Analysis Services: RCTs & PRISMA 2020 Support" },
   description: "Meta-analysis services covering RCTs, observational studies and diagnostic-accuracy research, built on PRISMA 2020 for publishable evidence synthesis.",
 };
 

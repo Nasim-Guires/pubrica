@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/publication-support__journal-selection__journal-selection-manuscript-optimization';
 
 export const metadata: Metadata = {
-  title: "Strategic Journal Selection and Manuscript Optimization",
+  title: { absolute: "Strategic Journal Selection and Manuscript Optimization" },
   description: "Learn journal selection and manuscript optimization tips to improve publication success, avoid rejection, and meet academic journal requirements.",
 };
 

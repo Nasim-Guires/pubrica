@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import { CheckCircle2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Ligand Identification - Pubrica',
+  title: { absolute: "Ligand Identification - Pubrica" },
   description:
     "Pubrica's Bioinformatics team supports identifying a specific disease and target selection, providing a summary and analysis of the relevant information in a given area.",
 };

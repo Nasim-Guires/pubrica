@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/physician-writing-services__clinical-literature-review-for-an-evidence-based-medicine__health-technology-assessment-hta-overview';
 
 export const metadata: Metadata = {
-  title: "Health Technology Assessment (HTA) Overview",
+  title: { absolute: "Health Technology Assessment (HTA) Overview" },
   description: "Comprehensive guide on HTA, its process, importance, and global implementation in healthcare.",
 };
 

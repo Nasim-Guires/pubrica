@@ -2,7 +2,7 @@ import React from 'react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Editorial Panel - Pubrica',
+  title: { absolute: "EDITORIAL PANEL - Pubrica" },
   description: 'Native subject-matter experts guide you in every phase of the publication process.',
 };
 

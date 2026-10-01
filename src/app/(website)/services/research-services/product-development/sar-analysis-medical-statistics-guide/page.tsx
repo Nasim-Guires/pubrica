@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/research-services__product-development__sar-analysis-medical-statistics-guide';
 
 export const metadata: Metadata = {
-  title: "SAR Analysis in Research: Structure Activity Guide",
+  title: { absolute: "SAR Analysis in Research: Structure Activity Guide" },
   description: "Optimize drug development with Pubrica’s SAR analysis medical statistics guide—data-driven insights for precise, scalable research decisions.",
 };
 

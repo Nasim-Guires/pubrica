@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import SamplePdfPage from '@/components/services/SamplePdfPage';
 
 export const metadata: Metadata = {
-  title: 'PCK1 and Mitochondrial Health: Impact on Kidney Disease - Pubrica',
+  title: { absolute: "PCK1 and Mitochondrial Health: Impact on Kidney Disease" },
   description: 'Graphical abstract sample work on the role of PCK1 in kidney disease progression.',
 };
 

@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/data-analytics-machine-learning__random-forests-biomedical-data-guide';
 
 export const metadata: Metadata = {
-  title: "Random Forests for Big Biomedical Data: A Handy Guide",
+  title: { absolute: "Random Forests for Big Biomedical Data: A Handy Guide" },
   description: "Explore Random Forests in biomedical data, from training to feature insights and practical applications.",
 };
 

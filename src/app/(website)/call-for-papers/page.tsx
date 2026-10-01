@@ -7,7 +7,7 @@ import { getPosts, mediaUrl } from "@/lib/payload";
 export const revalidate = 300;
 
 export const metadata: Metadata = {
-  title: "Call for Papers",
+  title: { absolute: "Call for Papers - Pubrica" },
   description: "Explore Pubrica's open calls for papers across therapeutic areas and research fields.",
 };
 

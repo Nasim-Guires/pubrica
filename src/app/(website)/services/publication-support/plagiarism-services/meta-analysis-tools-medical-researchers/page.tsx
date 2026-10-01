@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/publication-support__plagiarism-services__meta-analysis-tools-medical-researchers';
 
 export const metadata: Metadata = {
-  title: "Top 5 Tools to Simplify Meta-Analysis in Medical Research",
+  title: { absolute: "Top 5 Tools to Simplify Meta-Analysis in Medical Research" },
   description: "Explore top tools for meta-analysis in medical research, like Rev Man, CMA, R, Stata, and Rayyan, to simplify data analysis and systematic reviews.",
 };
 

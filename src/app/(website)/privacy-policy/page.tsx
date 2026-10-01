@@ -4,7 +4,7 @@ import Breadcrumb from '@/components/seo/Breadcrumb';
 import { constructMetadata } from '@/lib/metadata';
 
 export const metadata = constructMetadata({
-  title: 'Privacy Policy - Pubrica',
+  title: "Privacy Policy - Pubrica",
   description: '2.1 Identity & Contact',
   slug: '/privacy-policy',
 });

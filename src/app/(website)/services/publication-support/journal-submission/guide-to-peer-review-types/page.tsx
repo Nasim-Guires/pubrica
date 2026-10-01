@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/publication-support__journal-submission__guide-to-peer-review-types';
 
 export const metadata: Metadata = {
-  title: "Types of Peer Reviewers: Single, Double, Open, Post-Publication",
+  title: { absolute: "Types of Peer Reviewers: Single, Double, Open, Post-Publication" },
   description: "Explore the types of peer reviews—single blind, double blind, open peer review, post-publication review, and collaborative review—along with their pros and cons.",
 };
 

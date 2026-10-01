@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import { CheckCircle2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Gene X in Cancer Progression: Revised Manuscript Ready for Publication - Pubrica',
+  title: { absolute: "Gene X in Cancer Progression: Revised Manuscript" },
   description:
     'A sample editorial-comments response addressing reviewer feedback on "The Role of Gene X in Cancer Progression."',
 };

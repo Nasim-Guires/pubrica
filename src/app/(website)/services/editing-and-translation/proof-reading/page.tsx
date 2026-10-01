@@ -5,7 +5,7 @@ import { ARTICLE_BLOCKS } from '@/lib/services-content/editing-and-translation__
 import { constructMetadata } from '@/lib/metadata';
 
 export const metadata = constructMetadata({
-  title: 'Expert Proofreading Service for Research Writing Help',
+  title: "Proofreading Services | Pubrica",
   description: 'Get expert help to refine your writing, remove language errors, and improve clarity so your documents look professional and easy to understand.',
   keywords: ['proofreading,Manuscript proofreading service,Scientific Manuscript proofreading service,Academic Manuscript proofreading service,Medical Manuscript proofreading service'],
   slug: '/services/editing-and-translation/proofreading/',

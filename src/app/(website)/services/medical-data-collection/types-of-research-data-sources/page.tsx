@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/medical-data-collection__types-of-research-data-sources';
 
 export const metadata: Metadata = {
-  title: "Types of Research Data Sources Explained Simply",
+  title: { absolute: "Types of Research Data Sources Explained Simply" },
   description: "Understand how different data sources support research, with insights on choosing credible information for better analysis and informed decisions.",
 };
 

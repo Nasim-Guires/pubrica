@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/academic-editorial-services__tools-standards-academic-editing';
 
 export const metadata: Metadata = {
-  title: "Tools & Standards in High-Quality Academic Editing",
+  title: { absolute: "Tools & Standards in High-Quality Academic Editing" },
   description: "Ensure publication-ready manuscripts through expert academic editing, smart tools, and compliance with global publishing standards",
 };
 

@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/publication-support__journal-manuscript-formatting-services__citation-management-tools-formatting-referencing';
 
 export const metadata: Metadata = {
-  title: "Citation Management Tools for Accurate Formatting & Referencing",
+  title: { absolute: "Citation Management Tools for Accurate Formatting & Referencing" },
   description: "Explore citation management tools that ensure accurate formatting, referencing, and journal-ready manuscripts.",
 };
 

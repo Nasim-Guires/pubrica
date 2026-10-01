@@ -4,7 +4,7 @@ import ServiceArticleRenderer from '@/components/services/ServiceArticleRenderer
 import { ARTICLE_BLOCKS } from '@/lib/services-content/publication-support__journal-selection__top-journals-for-publication-in-2025-comprehensive-guide';
 
 export const metadata: Metadata = {
-  title: "2025 Guide to Top Academic Journals for Publication",
+  title: { absolute: "2025 Guide to Top Academic Journals for Publication" },
   description: "Discover top high-impact journals for 2025, including SCI and Scopus journals, with tips on selecting the right journal for manuscript submission.",
 };
 

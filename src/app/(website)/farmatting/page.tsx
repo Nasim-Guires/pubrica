@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import { CheckCircle2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Clinical Trial Audit and Monitoring Services - Pubrica',
+  title: { absolute: "Farmatting - Pubrica" },
   description: 'Good Clinical Practice (GCP) guaranteed — risk-based clinical trial monitoring services from Pubrica.',
 };
 
