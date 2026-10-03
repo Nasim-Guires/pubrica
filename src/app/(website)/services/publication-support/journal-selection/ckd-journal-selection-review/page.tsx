@@ -3,7 +3,7 @@ import SamplePdfPage from '@/components/services/SamplePdfPage';
 
 export const metadata: Metadata = {
   title: { absolute: "Selecting and Reviewing Journals for Chronic Kidney Disease" },
-  description: 'Journal Selection & Submission sample work for a chronic kidney disease manuscript.',
+  description: "Explore top journals for CKD research: AJKD, BMC Nephrology, NDT with scope, impact, and publication details.",
 };
 
 export default function CkdJournalSelectionReviewPage() {

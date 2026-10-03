@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { getDescription } from "@/lib/payload";
+import { getDescription, getPostMetadata } from "@/lib/payload";
 import { getPostDetail, getPostSummaries } from "@/lib/payload/summaries";
 import { getInsightHub, getStaticInsightHub } from "@/lib/payload/insightHubs";
 import { infographics, storyboards, factSheets } from "@/lib/data-insight";
@@ -45,23 +45,17 @@ export async function generateMetadata({ params }: InsightRouteProps): Promise<M
       ...(cardPage.description && { description: cardPage.description }),
     };
   }
-  const hub = getInsightHub(slug);
-  console.log("check", hub)
 
-
-  if (hub) {
-    return { title: `${hub.label} | Pubrica Insights`, description: hub.description };
-  }
-  const staticHub = getStaticInsightHub(slug);
-  if (staticHub) {
-    return { title: `${staticHub.label} | Pubrica Insights`, description: staticHub.description };
-  }
+  const hub = getInsightHub(slug) ?? getStaticInsightHub(slug);
   const post = await getPostDetail(slug, "insights");
-  if (!post) return {};
-  return {
-    title: post.seo?.metaTitle || post.title,
-    description: getDescription(post),
-  };
+
+  // A hub page is rendered from hard-coded labels, but the CMS holds the original site's
+  // title/description for the same URL, so prefer that and keep the labels as the fallback.
+  if (post) return getPostMetadata(post);
+  if (hub) {
+    return { title: { absolute: `${hub.label} | Pubrica Insights` }, description: hub.description };
+  }
+  return {};
 }
 
 export interface InsightImageItem {

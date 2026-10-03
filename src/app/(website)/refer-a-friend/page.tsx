@@ -3,8 +3,7 @@ import ReferAFriendPageClient from "@/components/refer-a-friend/ReferAFriendPage
 
 export const metadata = constructMetadata({
   title: "Refer a Friend - Pubrica",
-  description:
-    "Refer a Friend – Pubrica lets users share Pubrica's research and publication support services with peers and earn referral benefits.",
+  description: "Refer a Friend – Pubrica lets users share Pubrica’s research and publication support services with peers and earn referral benefits.",
   slug: "/refer-a-friend",
 });
 

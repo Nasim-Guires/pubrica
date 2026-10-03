@@ -3,7 +3,7 @@ import MinimalNoticePage from '@/components/common/MinimalNoticePage';
 
 export const metadata: Metadata = {
   title: { absolute: "Lab Assistance - Pubrica" },
-  description: 'Research and publication support for labs and research institutions, from Pubrica.',
+  description: "Lab Assistance – Pubrica: Expert Support for Research Experiments, Data Collection, and Laboratory Workflows",
 };
 
 export default function LabAssistancePage() {

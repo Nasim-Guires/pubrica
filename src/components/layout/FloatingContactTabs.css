@@ -1,0 +1,242 @@
+/* ---------- Side tabs ---------- */
+
+.ti-tabs{
+  position:fixed;
+  right:0;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:99999;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap:6px;
+  font-family:inherit;
+}
+
+.ti-tab-wrap{
+  position:relative;
+}
+
+.ti-tab{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  width:max-content;
+  height:46px;
+  padding:0 18px 0 13px;
+  border:none;
+  border-radius:12px 0 0 12px;
+  color:#fff;
+  font-family:inherit;
+  font-size:14px;
+  font-weight:700;
+  line-height:1;
+  white-space:nowrap;
+  text-decoration:none;
+  cursor:pointer;
+  box-shadow:-2px 3px 10px rgba(0,0,0,.22);
+  transform:translateX(calc(100% - 44px));
+  transition:transform .25s ease;
+}
+
+.ti-tab svg{
+  width:20px;
+  height:20px;
+  flex-shrink:0;
+}
+
+.ti-tab:focus-visible,
+.ti-tab.ti-active{
+  transform:translateX(0);
+  outline:none;
+}
+
+@media (hover:hover){
+  .ti-tab:hover{
+    transform:translateX(0);
+  }
+}
+
+/* keep hover text white */
+a.ti-tab:hover,
+button.ti-tab:hover,
+.ti-tab:hover span{
+  color:#fff !important;
+}
+
+a.ti-tab,
+a.ti-tab:hover,
+a.ti-tab:focus{
+  color:#fff;
+  text-decoration:none;
+}
+
+/* ---------- Call number list ---------- */
+
+.ti-call-list{
+  position:absolute;
+  top:0;
+  right:calc(100% + 8px);
+  background:#fff;
+  border-radius:14px;
+  box-shadow:0 8px 32px rgba(0,0,0,.18);
+  overflow:hidden;
+  min-width:220px;
+  border:1px solid #e5e7eb;
+}
+
+.ti-call-list[hidden]{
+  display:none;
+}
+
+.ti-call-title{
+  padding:10px 16px 8px;
+  font-size:11px;
+  font-weight:700;
+  color:#888;
+  text-transform:uppercase;
+  letter-spacing:.07em;
+  border-bottom:1px solid #f0f0f0;
+}
+
+.ti-call-list a{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:12px 16px;
+  text-decoration:none;
+  color:#1a2a6c;
+  border-bottom:1px solid #f5f5f5;
+}
+
+.ti-call-list a:hover{
+  background:#f0f4ff;
+}
+
+.ti-code{
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  font-size:11px;
+  font-weight:800;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+}
+
+.ti-call-label{
+  display:block;
+  font-size:11px;
+  color:#888;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:.05em;
+}
+
+.ti-call-num{
+  display:block;
+  font-size:15px;
+  font-weight:700;
+  color:#1a2a6c;
+}
+
+/* ---------- Enquiry popup ---------- */
+
+.ti-overlay{
+  position:fixed;
+  inset:0;
+  z-index:100000;
+  background:rgba(10,14,32,.72);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
+
+.ti-overlay[hidden]{
+  display:none;
+}
+
+.ti-panel{
+  position:relative;
+  width:100%;
+  max-width:440px;
+  max-height:calc(100vh - 48px);
+  border-radius:16px;
+  box-shadow:0 24px 64px rgba(0,0,0,.45);
+}
+
+.ti-panel-scroll{
+  max-height:calc(100vh - 48px);
+  overflow-y:auto;
+  border-radius:16px;
+}
+
+.ti-zoho{
+  display:block;
+  width:100%;
+  height:600px;
+  border:none;
+}
+
+.ti-close{
+  position:absolute;
+  top:-16px;
+  right:-16px;
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  background:#fff;
+  border:none;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  box-shadow:0 4px 14px rgba(0,0,0,.3);
+  z-index:1;
+  padding:0;
+}
+
+/* ---------- Phones and short screens ---------- */
+
+@media (max-width:480px){
+  .ti-tab{
+    height:42px;
+    padding:0 14px 0 11px;
+    transform:translateX(calc(100% - 40px));
+  }
+
+  .ti-call-list{
+    min-width:200px;
+  }
+}
+
+@media (max-width:480px),(max-height:700px){
+  .ti-overlay{
+    padding:16px;
+  }
+
+  .ti-panel,
+  .ti-panel-scroll{
+    max-height:calc(100vh - 32px);
+  }
+
+  .ti-close{
+    top:-12px;
+    right:-12px;
+    width:32px;
+    height:32px;
+  }
+
+  .ti-zoho{
+    height:420px;
+  }
+}
+
+@media print{
+  .ti-tabs,
+  .ti-overlay{
+    display:none!important;
+  }
+}

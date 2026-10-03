@@ -1,8 +1,8 @@
 import React from "react";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { Phone, MessageSquare, Mail, Calendar, User, ChevronRight } from "lucide-react";
-import { getDescription } from "@/lib/payload";
+import { Calendar, User } from "lucide-react";
+import { getPostMetadata } from "@/lib/payload";
 import { getPostDetail } from "@/lib/payload/summaries";
 import { LexicalRenderer } from "@/lib/payload/lexical";
 import HeroBanner from "@/components/common/HeroBanner";
@@ -26,10 +26,7 @@ export async function generateMetadata({ params }: AcademyFlatArticlePageProps):
   const { category: slug } = await params;
   const post = await getPostDetail(slug, "academy");
   if (!post) return {};
-  return {
-    title: post.seo?.metaTitle || post.title,
-    description: getDescription(post),
-  };
+  return getPostMetadata(post);
 }
 
 export default async function AcademyFlatArticlePage({

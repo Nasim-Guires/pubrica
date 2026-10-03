@@ -3,7 +3,7 @@ import SamplePdfPage from '@/components/services/SamplePdfPage';
 
 export const metadata: Metadata = {
   title: { absolute: "PCK1 and Mitochondrial Health: Impact on Kidney Disease" },
-  description: 'Graphical abstract sample work on the role of PCK1 in kidney disease progression.',
+  description: "PCK1 supports mitochondrial fitness and prevents kidney disease progression by regulating TCA cycle metabolites.",
 };
 
 export default function Pck1KidneyDiseasePage() {

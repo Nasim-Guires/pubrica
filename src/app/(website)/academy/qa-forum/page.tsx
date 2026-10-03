@@ -24,8 +24,7 @@ const OTHER_RESOURCES = [
 
 export const metadata: Metadata = {
   title: { absolute: "QA Forum - Pubrica Academy" },
-  description:
-    "Get all your inquiries about research writing and publishing addressed by experienced researchers and publication specialists.",
+  description: "Get all your inquiries about research writing and publishing addressed by experienced researchers and publication specialists!",
 };
 
 interface QaEntry {

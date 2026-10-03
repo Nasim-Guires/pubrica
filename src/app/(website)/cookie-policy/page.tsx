@@ -6,7 +6,7 @@ import Breadcrumb from '@/components/seo/Breadcrumb';
 
 export const metadata: Metadata = {
   title: { absolute: "Cookie Policy - Pubrica" },
-  description: 'Pubrica Cookie Policy — how we use cookies, web beacons, and similar tracking technologies across our sites.',
+  description: "Cookie Policy – Pubrica explains how cookies are used on the website, ensuring transparency, user privacy, and compliance with regulations.",
 };
 
 export default function CookiePolicyPage() {

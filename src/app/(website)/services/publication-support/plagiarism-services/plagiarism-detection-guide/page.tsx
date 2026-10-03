@@ -6,8 +6,7 @@ import FaqAccordion from "@/features/services/components/FaqAccordion";
 
 export const metadata: Metadata = {
   title: { absolute: "Plagiarism Detection: A Guide for Researchers" },
-  description:
-    "Learn about plagiarism detection for researchers, why it is important, common challenges, types of plagiarism, and best practices to maintain academic integrity.",
+  description: "Plagiarism Detection Services help researchers check manuscript originality with expert similarity reports and publication support from Pubrica.",
   keywords: [
     "Plagiarism Detection",
     "Plagiarism Checker for Researchers",

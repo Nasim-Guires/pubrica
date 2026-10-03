@@ -6,8 +6,7 @@ import type { Metadata } from 'next';
 // Built-in Next.js Metadata API for SEO
 export const metadata: Metadata = {
     title: { absolute: "Double-Blind Peer Review: Definition and Process" },
-    description:
-        'Learn about the double-blind peer review process, its definition, step-by-step workflow, advantages, limitations, and key takeaways for academic researchers.',
+    description: "Understand the double-blind peer review process, benefits, limitations, and what it means for academic researchers.",
     keywords: [
         'Double-Blind Peer Review',
         'Academic Publishing',

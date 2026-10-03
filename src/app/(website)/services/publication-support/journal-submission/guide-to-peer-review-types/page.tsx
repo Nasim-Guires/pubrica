@@ -5,7 +5,7 @@ import { ARTICLE_BLOCKS } from '@/lib/services-content/publication-support__jour
 
 export const metadata: Metadata = {
   title: { absolute: "Types of Peer Reviewers: Single, Double, Open, Post-Publication" },
-  description: "Explore the types of peer reviews—single blind, double blind, open peer review, post-publication review, and collaborative review—along with their pros and cons.",
+  description: "Understand peer review types and review models with Pubrica’s journal submission support and expert peer review services for researchers.",
 };
 
 const TOC: TocItem[] = [

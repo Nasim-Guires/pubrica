@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { ArrowLeft } from "lucide-react";
 import { EnquireNowForm } from "@/components/common/EnquireNowForm";
-import { mediaUrl, getDescription, getFaqQuestionOverrides } from "@/lib/payload";
+import { mediaUrl, getFaqQuestionOverrides, getPostMetadata } from "@/lib/payload";
 import { getPostDetail, getPostSummaries } from "@/lib/payload/summaries";
 import { LexicalRenderer } from "@/lib/payload/lexical";
 import HeroBanner from "@/components/common/HeroBanner";
@@ -25,21 +25,36 @@ function formatDate(iso?: string) {
   });
 }
 
+function decodeSegment(value: string): string {
+  try {
+    return decodeURIComponent(value);
+  } catch {
+    return value;
+  }
+}
+
+// Some migrated posts store their slug percent-encoded (non-ASCII characters), so retry with that form.
+async function findAcademyPost(slug: string) {
+  return (
+    (await getPostDetail(slug, "academy")) ??
+    (await getPostDetail(encodeURIComponent(slug).toLowerCase(), "academy"))
+  );
+}
+
 export async function generateMetadata({ params }: AcademyArticlePageProps): Promise<Metadata> {
-  const { slug } = await params;
-  const post = await getPostDetail(slug, "academy");
+  const slug = decodeSegment((await params).slug);
+  const post = await findAcademyPost(slug);
   if (!post) return {};
-  return {
-    title: post.seo?.metaTitle || post.title,
-    description: getDescription(post),
-  };
+  return getPostMetadata(post);
 }
 
 export default async function AcademyArticlePage({ params }: AcademyArticlePageProps) {
-  const { category, slug } = await params;
+  const resolved = await params;
+  const category = decodeSegment(resolved.category);
+  const slug = decodeSegment(resolved.slug);
   // Fetched in parallel — the recent-posts list doesn't depend on the post.
   const [post, { docs: otherPosts }] = await Promise.all([
-    getPostDetail(slug, "academy"),
+    findAcademyPost(slug),
     getPostSummaries({ source: "academy", limit: 6 }),
   ]);
 

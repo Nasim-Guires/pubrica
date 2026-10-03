@@ -3,7 +3,7 @@ import SamplePdfPage from '@/components/services/SamplePdfPage';
 
 export const metadata: Metadata = {
   title: { absolute: "Skin Cancer Journal Selection: Melanoma & Nonmelanoma" },
-  description: 'Journal selection sample work for research on melanoma and nonmelanoma skin cancer incidence.',
+  description: "Journal recommendations for publishing research on melanoma and nonmelanoma skin cancers in India and globally.",
 };
 
 export default function JournalSelectionSkinCancerPage() {

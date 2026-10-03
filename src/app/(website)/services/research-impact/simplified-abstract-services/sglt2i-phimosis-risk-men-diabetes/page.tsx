@@ -3,7 +3,7 @@ import SamplePdfPage from '@/components/services/SamplePdfPage';
 
 export const metadata: Metadata = {
   title: { absolute: "SGLT2i and Phimosis Risk in Men with Type 2 Diabetes" },
-  description: 'Simplified abstract sample work comparing phimosis risk with SGLT2i versus GLP-1RA therapy.',
+  description: "SGLT2 inhibitors may raise phimosis risk in men with diabetes via genital inflammation.",
 };
 
 export default function Sglt2iPhimosisRiskPage() {

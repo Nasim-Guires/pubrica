@@ -5,8 +5,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: { absolute: "Comparing Graphical and Video Abstracts in Research" },
-    description:
-        "Explore the differences, advantages, challenges, and best practices between graphical and video abstracts in scientific research communication.",
+    description: "Explore innovative methods for sharing research findings that improve understanding, expand accessibility, and encourage audience engagement worldwide.",
     keywords: [
         "Graphical Abstract",
         "Video Abstract",

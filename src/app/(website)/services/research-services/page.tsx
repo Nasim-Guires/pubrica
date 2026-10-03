@@ -13,7 +13,7 @@ import { constructMetadata } from '@/lib/metadata'
 
 export const metadata = constructMetadata({
   title: "Scientific Research Support for High-Impact Studies",
-  description: "Research services by Pubrica's team of experts create scientific and medical articles valuable to practitioners and authors.",
+  description: "Scientific research support services for clinical studies, research design, data analysis, biostatistics, medical writing, and journal publication.",
   keywords: ['Research services,scientific research writing services,medical thesis dissertation writing services,medical research paper writing service,Clinical research writing service'],
   slug: '/services/research-services',
 })

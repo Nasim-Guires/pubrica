@@ -3,7 +3,7 @@ import MinimalNoticePage from '@/components/common/MinimalNoticePage';
 
 export const metadata: Metadata = {
   title: { absolute: "Journal of Internal Medicine - Pubrica" },
-  description: 'A journal-submission example from Pubrica: Annals of Internal Medicine.',
+  description: "Journal of Internal Medicine – Pubrica provides tailored manuscript editing journal’s guidelines and standards.",
 };
 
 export default function JournalOfInternalMedicineDemoPage() {

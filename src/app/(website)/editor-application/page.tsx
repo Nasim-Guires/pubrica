@@ -3,7 +3,7 @@ import MinimalNoticePage from '@/components/common/MinimalNoticePage';
 
 export const metadata: Metadata = {
   title: { absolute: "Apply Now - Pubrica" },
-  description: 'Unlock your research potential with Pubrica. Apply now.',
+  description: "Unlock Your Research Potential -  with Pubrica!",
 };
 
 export default function EditorApplicationPage() {

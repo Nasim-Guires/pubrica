@@ -9,7 +9,7 @@ export const revalidate = 300;
 
 export const metadata: Metadata = {
   title: { absolute: "Call for Papers - Pubrica" },
-  description: "Explore Pubrica's open calls for papers across therapeutic areas and research fields.",
+  description: "Call for Paper",
 };
 
 // Available fallback images in /images/API/

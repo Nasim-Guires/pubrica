@@ -3,8 +3,7 @@ import BusinessSourcesPageClient from "@/components/academy/referencing-style/bu
 
 export const metadata = constructMetadata({
   title: "Specific business sources cited in APA style - Pubrica",
-  description:
-    "Let's discuss how to cite a few specific sources in APA style. Examples comprise annual reports, public reports, company reports, SWOT, and surveys.",
+  description: "Let’s discuss how to cite a few specific sources in APA style. Examples comprise annual reports, public reports, company reports, SWOT, and surveys.",
   slug: "/academy/referencing-style/business-sources",
 });
 

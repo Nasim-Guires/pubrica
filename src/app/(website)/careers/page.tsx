@@ -7,8 +7,7 @@ export const revalidate = 300;
 
 export const metadata: Metadata = {
   title: { absolute: "Careers - Pubrica" },
-  description:
-    "Scale up your career with Pubrica—a place to learn, grow, and change. Explore job opportunities in academic editing, scientific writing, and research publishing.",
+  description: "Careers in publishingJobs in editing Academic and scientific writingScale up your career with Pubrica—a place to learn, grow, and change; an opportunity to",
   keywords: [
     "Careers in Publishing",
     "Scientific Writing Jobs",

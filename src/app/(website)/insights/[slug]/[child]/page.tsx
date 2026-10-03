@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { permanentRedirect } from "next/navigation";
-import { getDescription } from "@/lib/payload";
+import { getPostMetadata } from "@/lib/payload";
 import { getPostDetail } from "@/lib/payload/summaries";
 import { newsIndustryPage } from "@/lib/insights/cardPages";
 import InsightPostDetail from "@/components/insight/InsightPostDetail";
@@ -28,10 +28,7 @@ export async function generateMetadata({ params }: NestedInsightProps): Promise<
   }
   const post = await getPostDetail(child, "insights");
   if (!post || post.urlPath !== path) return {};
-  return {
-    title: post.seo?.metaTitle || post.title,
-    description: getDescription(post),
-  };
+  return getPostMetadata(post);
 }
 
 /**

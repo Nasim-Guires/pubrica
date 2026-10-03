@@ -4,7 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { EnquireNowForm } from "@/components/common/EnquireNowForm";
-import { getPostBySlug, getPosts, mediaUrl, getDescription } from "@/lib/payload";
+import { getPostBySlug, getPosts, mediaUrl, getPostMetadata } from "@/lib/payload";
 import { LexicalRenderer } from "@/lib/payload/lexical";
 
 export const revalidate = 300;
@@ -27,10 +27,7 @@ export async function generateMetadata({ params }: BlogDetailsPageProps): Promis
   const post = await getPostBySlug(slug, "blog");
   
   if (!post) return {};
-  return {
-    title: post.seo?.metaTitle || post.title,
-    description: getDescription(post),
-  };
+  return getPostMetadata(post);
 
 
 }

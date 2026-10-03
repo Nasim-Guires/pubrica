@@ -3,7 +3,7 @@ import PublicationPackPage from '@/components/packs/PublicationPackPage';
 
 export const metadata: Metadata = {
   title: { absolute: "Silver Pack - Pubrica" },
-  description: 'The Silver Pack bundles five publication support services worth $998 for $718.',
+  description: "Silver PackTIME: 3 WEEKSFor authors looking for speedy support in preparing their manuscripts for submission",
 };
 
 export default function SilverPackPage() {

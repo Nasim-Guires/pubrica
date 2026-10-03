@@ -6,7 +6,7 @@ import HeroBanner from "@/components/common/HeroBanner";
 
 export const metadata: Metadata = {
   title: { absolute: "Flow Diagram Services for Research Accuracy | Pubrica" },
-  description: "Flow diagram templates for research and reporting standards (PRISMA, CONSORT, TRIPOD, CARE, STARD).",
+  description: "Pubrica’s diagram services ensure accuracy, clarity, and completeness across your research and publication processes for seamless submission.",
 };
 
 // Page-local copy of the shared data-insight.ts flowDiagrams list — the shared file

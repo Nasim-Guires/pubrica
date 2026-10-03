@@ -4,7 +4,7 @@ import { SERVICES_EXPERTISE } from '@/lib/subject-matter-experts/servicesExperti
 
 export const metadata: Metadata = {
   title: { absolute: "Biostatistical Programming - Pubrica" },
-  description: 'Subject matter experts in biostatistical programming — descriptive and comparative analytics, advanced statistical modeling, and disease surveillance publication support.',
+  description: "Biostatistics is the branch of statistics as it deals with the statistical data process related to the analysis of biological organisms. The science of",
 };
 
 export default function BiostatisticalProgrammingPage() {

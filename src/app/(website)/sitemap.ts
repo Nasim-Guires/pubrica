@@ -268,7 +268,6 @@ const STATIC_ROUTES: { path: string; priority: number; changeFrequency: Metadata
   { path: "/services/research-impact/simplified-abstract-services", priority: 0.6, changeFrequency: "monthly" },
   { path: "/services/research-impact/simplified-abstract-services/sglt2i-phimosis-risk-men-diabetes", priority: 0.5, changeFrequency: "monthly" },
   { path: "/services/research-services", priority: 0.7, changeFrequency: "monthly" },
-  { path: "/services/research-services/biostatistics-and-statistical-programming-service", priority: 0.6, changeFrequency: "monthly" },
   { path: "/services/research-services/biostatistics-and-statistical-programming-services", priority: 0.6, changeFrequency: "monthly" },
   { path: "/services/research-services/biostatistics-and-statistical-programming-services/biostatistical-programming-framework-regulatory-research", priority: 0.5, changeFrequency: "monthly" },
   { path: "/services/research-services/experimental-design", priority: 0.6, changeFrequency: "monthly" },
