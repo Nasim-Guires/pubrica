@@ -1,7 +1,6 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
-import { getPosts, mediaUrl, getDescription } from "@/lib/payload";
+import { Send } from "lucide-react";
 import { constructMetadata } from "@/lib/metadata";
 
 // Live pubrica.com page at this URL has no meta description tag, so the description
@@ -12,61 +11,38 @@ export const metadata = constructMetadata({
   slug: "/academy/articles",
 });
 
-export const revalidate = 300;
+// The live page is a hand-built list (not a feed), so its entries are listed here as-is.
+const ARTICLES = [
+  {
+    title: "English Editing of Scientific Manuscripts for Publication",
+    href: "/academy/articles/english-editing-of-scientific-manuscripts-for-publication/",
+  },
+  {
+    title: "Speed up the publication process: Easy way to find the right journal for your research",
+    href: "/academy/articles/journal-selection/easy-way-to-find-the-right-journal-for-your-research/",
+  },
+];
 
-function formatDate(iso?: string) {
-  if (!iso) return "";
-  return new Date(iso).toLocaleDateString("en-US", {
-    month: "long",
-    day: "numeric",
-    year: "numeric",
-  });
-}
-
-export default async function AcademyArticlesPage() {
-  const { docs } = await getPosts({ source: "academy", limit: 60 });
-  const articles = docs.filter((p) => p.urlPath?.includes("/"));
-
+export default function AcademyArticlesPage() {
   return (
-    <div className="bg-[#f9fbfb] min-h-screen text-gray-800 font-sans pb-10">
-      <section className="bg-[#0b2825] text-white py-6 text-center px-4">
-        <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-2">Academy Articles</h1>
-        <p className="text-gray-300 text-sm max-w-xl mx-auto">
-          Guides, explainers, and research-writing resources from the Pubrica Academy.
-        </p>
-      </section>
+    <div className="bg-[#fcfcfc] font-sans">
+      <div className="mx-auto w-full max-w-[1196px] px-4 xl:px-0 pb-[40px]">
+        <h1 className="pb-[40px] text-[31px] font-semibold leading-[42px] text-black">Articles</h1>
 
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {articles.map((post) => {
-            const image = mediaUrl(post.heroImage) || "/images/academy/Forensics-2.webp";
-            const desc = getDescription(post);
-            return (
-              <Link
-                key={post.id}
-                href={`/academy/${post.urlPath}`}
-                className="bg-white border border-gray-200/80 rounded-md overflow-hidden shadow-xs hover:shadow-md transition-shadow block"
-              >
-                <div className="relative aspect-[16/10] w-full bg-gray-100 overflow-hidden">
-                  <Image src={image} alt={post.title} fill className="object-cover" />
-                </div>
-                <div className="p-5">
-                  <span className="text-xs font-semibold text-gray-400 block mb-2 uppercase tracking-wide">
-                    {post.categories?.[0]?.name || "Academy"}
-                  </span>
-                  <h3 className="text-sm md:text-base font-bold text-[#0b2825] leading-snug mb-2 line-clamp-2">
-                    {post.title}
-                  </h3>
-                  <p className="text-xs text-gray-500 line-clamp-2 mb-3">{desc}</p>
-                  <span className="text-[11px] text-gray-400">
-                    {formatDate(post.publishing?.publishedAt)}
-                  </span>
-                </div>
+        <ul>
+          {ARTICLES.map((article) => (
+            <li
+              key={article.href}
+              className="mb-[40px] flex items-center rounded-[5px] border border-[#5b5b5b] p-[10px]"
+            >
+              <Send className="mr-[10px] h-[20px] w-[20px] shrink-0 text-[#161922]" aria-hidden />
+              <Link href={article.href} className="text-[16px] font-normal leading-[28px] text-[#0089f7]">
+                {article.title}
               </Link>
-            );
-          })}
-        </div>
-      </section>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }

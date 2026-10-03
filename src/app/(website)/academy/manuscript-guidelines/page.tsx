@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
-import { getPosts, mediaUrl, getDescription } from "@/lib/payload";
+import { getPosts, mediaUrl } from "@/lib/payload";
 
 export const revalidate = 300;
 
@@ -20,15 +20,22 @@ function formatDate(iso?: string) {
 }
 
 export default async function ManuscriptGuidelinesPage() {
-  const { docs } = await getPosts({ source: "academy", urlPathPrefix: "manuscript-guidelines/", limit: 20 });
-  const articles = docs.filter((post) => post.urlPath !== "manuscript-guidelines" && post.heroImage);
-  return (
-    <section className="bg-gray-50 py-6 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
-        <h1 className="text-2xl sm:text-3xl font-bold text-center text-slate-900 mb-8">
-          Manuscript Guidelines
-        </h1>
+  // Fetch up to 8 items or adjust limit as needed
+  const { docs } = await getPosts({ source: "academy", urlPathPrefix: "manuscript-guidelines/", limit: 8 });
 
+  // Sort descending (latest date first)
+  const articles = docs
+    .filter((post) => post.urlPath !== "manuscript-guidelines" && post.heroImage)
+    .sort((a, b) => {
+      const dateA = new Date(a.publishing?.publishedAt || a.createdAt).getTime();
+      const dateB = new Date(b.publishing?.publishedAt || b.createdAt).getTime();
+      return dateB - dateA;
+    })
+    .slice(0, 8); // Ensure exactly 8 items
+
+  return (
+    <section className="bg-white py-10 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {articles.map((post) => {
             const image = mediaUrl(post.heroImage) || "/images/blog/default.webp";
@@ -36,9 +43,10 @@ export default async function ManuscriptGuidelinesPage() {
               <Link
                 key={post.id}
                 href={`/academy/manuscript-guidelines/${post.slug}`}
-                className="group block bg-white rounded-md overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200"
+                className="group block bg-white border border-gray-200 rounded-sm overflow-hidden hover:border-gray-300 transition-all duration-200"
               >
-                <div className="relative w-full h-44 bg-gray-200 overflow-hidden">
+                {/* Image Container */}
+                <div className="relative w-full h-44 bg-gray-100 overflow-hidden">
                   <Image
                     src={image}
                     alt={post.title}
@@ -47,14 +55,15 @@ export default async function ManuscriptGuidelinesPage() {
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   />
                 </div>
-                <div className="p-4 flex flex-col justify-between">
-                  <span className="text-xs text-gray-400 font-medium mb-1">
-                    {formatDate(post.publishing?.publishedAt)}
+
+                {/* Text Content */}
+                <div className="p-4 pt-3 flex flex-col justify-start">
+                  <span className="text-[11px] text-gray-400 font-normal mb-1.5">
+                    {formatDate(post.publishing?.publishedAt || post.createdAt)}
                   </span>
-                  <h3 className="text-sm font-semibold text-gray-800 group-hover:text-emerald-700 line-clamp-3 transition-colors duration-200 leading-snug">
+                  <h3 className="text-sm font-bold text-gray-900 group-hover:text-emerald-700 line-clamp-3 leading-snug">
                     {post.title}
                   </h3>
-                  <p className="text-xs text-slate-500 mt-1.5 line-clamp-2">{getDescription(post)}</p>
                 </div>
               </Link>
             );

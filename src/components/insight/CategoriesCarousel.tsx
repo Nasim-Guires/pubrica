@@ -62,29 +62,30 @@ export default function CategoriesCarousel({ categories }: { categories: Categor
       onMouseLeave={handleMouseLeave}
       onMouseUp={handleMouseUp}
       onMouseMove={handleMouseMove}
-      className={`flex gap-4 overflow-x-auto select-none scroll-smooth py-2 ${isDragging ? "cursor-grabbing" : "cursor-grab"
+      className={`flex gap-[30px] overflow-x-auto select-none scroll-smooth p-[6px] ${isDragging ? "cursor-grabbing" : "cursor-grab"
         }`}
       style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
     >
+      {/* Card style matches the live pubrica.com All News carousel. */}
       {categories.map((cat, i) => (
         <Link
           key={i}
           href={cat.href || "#"}
-          className="flex-shrink-0 w-[calc(55%-12px)] sm:w-[calc(35%-12px)] md:w-[calc(22%-13px)] min-h-[85px] flex items-center gap-4 bg-white p-5 rounded-xl border border-slate-200 hover:border-[#004d40] hover:shadow-md transition-all text-left group pointer-events-auto"
+          target="_blank"
+          rel="noopener"
+          className="flex-shrink-0 w-[calc((100%-30px)/2)] sm:w-[calc((100%-60px)/3)] lg:w-[calc((100%-120px)/5)] min-h-[110px] flex items-start gap-[10px] bg-white p-[12px] rounded-[4px] border-2 border-[#ede4e4] shadow-[0_0_4px_0_#878787] text-left pointer-events-auto"
           onClick={(e) => {
             if (isDragging) e.preventDefault();
           }}
         >
-          {/* Container size matching the icon height, background removed */}
-          <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center">
+          <div className="flex-shrink-0 w-[60px] h-[60px] flex items-center justify-center">
             {cat.icon ? (
-              /* Enlarged icon image with no wrapper background */
-              <img src={cat.icon} alt={cat.title} className="w-12 h-12 object-contain" />
+              <img src={cat.icon} alt={cat.title} className="w-[60px] h-[60px] object-contain" />
             ) : (
               <span className="text-3xl">📄</span>
             )}
           </div>
-          <span className="text-sm md:text-base font-bold text-slate-800 group-hover:text-[#004d40] line-clamp-2 leading-tight">
+          <span className="flex-1 self-center text-center text-[13px] font-medium leading-[28px] text-black">
             {cat.title}
           </span>
         </Link>

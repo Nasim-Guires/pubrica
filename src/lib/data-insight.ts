@@ -32,7 +32,7 @@ export const newsCategories = [
   {
     title: "Medical Journey",
     icon: "/images/insight/Biosimilar-min.png",
-    href: "",
+    href: "/insights/medical-journey/",
   },
   {
     title: "Template",

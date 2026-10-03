@@ -14,7 +14,8 @@ import {
   TrendingUp,
   Mail,
 } from 'lucide-react';
-import { getPosts, mediaUrl, getDescription } from '@/lib/payload';
+import { mediaUrl, getDescription } from '@/lib/payload';
+import { getPostSummaries } from '@/lib/payload/summaries';
 import { constructMetadata } from '@/lib/metadata';
 
 export const metadata = constructMetadata({
@@ -136,15 +137,15 @@ const KNOWLEDGE_CATEGORIES = [
 ];
 
 const CONTENT_TYPES = [
-  { type: 'Articles', desc: 'Ready-made slides that help teachers and professors kickstart their lectures.', dark: true, icon: Layout, href: '/academy/articles' },
+  { type: 'Articles', desc: 'Ready-made slides that help teachers and professors kickstart their lectures.', dark: true, icon: Layout, href: '/academy/' },
   { type: 'Q & A Forum', desc: 'Annotated examples that show you how it\'s done.', dark: false, icon: HelpCircle, href: '/academy/qa-forum' },
-  { type: 'Workshops & Webinars', desc: 'Annotated examples that show you how it\'s done.', dark: false, icon: Video, href: '/academy' },
+  { type: 'Workshops & Webinars', desc: 'Annotated examples that show you how it\'s done.', dark: false, icon: Video, href: '/call-for-papers/' },
   { type: 'Videos', desc: 'Annotated examples that show you how it\'s done.', dark: false, icon: Video, href: '/insights' },
-  { type: 'Infographics & Downloadables', desc: 'Annotated examples that show you how it\'s done.', dark: false, icon: Info, href: '/insights' },
-  { type: 'Flow Diagram', desc: 'Ready-made slides that help teachers and professors kickstart their lectures.', dark: true, icon: Layout, href: '/academy/flow-diagram' },
-  { type: 'Templates', desc: 'Time-saving templates that you can download and edit in Word or Google Docs.', dark: true, icon: FileText, href: '/academy/journal-templates' },
-  { type: 'Examples', desc: 'Annotated examples that show you how it\'s done.', dark: false, icon: FileText, href: '/insights/sample-work' },
-  { type: 'Checklists', desc: 'Handy checklists so that you don\'t forget anything important.', dark: false, icon: CheckSquare, href: '/insights/checklist' },
+  { type: 'Infographics & Downloadables', desc: 'Annotated examples that show you how it\'s done.', dark: false, icon: Info, href: '/insights/infographics/' },
+  { type: 'Flow Diagram', desc: 'Ready-made slides that help teachers and professors kickstart their lectures.', dark: true, icon: Layout, href: '/academy/flow-diagram/' },
+  { type: 'Templates', desc: 'Time-saving templates that you can download and edit in Word or Google Docs.', dark: true, icon: FileText, href: '/academy/journal-templates/' },
+  { type: 'Examples', desc: 'Annotated examples that show you how it\'s done.', dark: false, icon: FileText, href: '/academy/examples/' },
+  { type: 'Checklists', desc: 'Handy checklists so that you don\'t forget anything important.', dark: false, icon: CheckSquare, href: '/insights/check-list/' },
 ];
 
 const QA_ITEMS = [
@@ -180,7 +181,7 @@ function formatDate(iso?: string) {
 }
 
 export default async function PubricaKnowledgeBase() {
-  const { docs } = await getPosts({ source: "academy", limit: 40 });
+  const { docs } = await getPostSummaries({ source: "academy", limit: 40 });
   // Real articles live under a nested urlPath (e.g. "peer-review/slug");
   // top-level entries are migrated section-index pages, not articles.
   const articles = docs.filter((p) => p.urlPath?.includes("/"));

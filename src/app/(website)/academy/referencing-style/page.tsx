@@ -21,9 +21,9 @@ export default async function ReferencingStylePage() {
   const articles = docs.filter((post) => post.heroImage);
 
   return (
-    <section className="bg-white py-6 px-4 sm:px-6 lg:px-8">
+    <section className="bg-white py-6 px-4 sm:px-6 lg:px-8  mb-8">
       <div className="max-w-5xl mx-auto">
-        <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-8">Referencing Style</h1>
+        <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-8">Referencing Style</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {articles.map((post) => {
@@ -44,13 +44,13 @@ export default async function ReferencingStylePage() {
                   />
                 </div>
                 <div>
-                  <span className="text-[11px] text-gray-400 block mb-1">
+                  <span className="text-xs text-gray-400 block mb-1">
                     {formatDate(post.publishing?.publishedAt)}
                   </span>
-                  <h3 className="text-sm font-bold text-gray-900 group-hover:text-emerald-700 transition-colors duration-200 leading-snug">
+                  <h3 className="text-base font-bold text-gray-900 group-hover:text-emerald-700 transition-colors duration-200 leading-snug">
                     {post.title}
                   </h3>
-                  <p className="text-xs text-slate-500 mt-1.5 line-clamp-2">{getDescription(post)}</p>
+                  {/* <p className="text-sm text-slate-500 mt-1.5 line-clamp-2">{getDescription(post)}</p> */}
                 </div>
               </Link>
             );
@@ -58,7 +58,7 @@ export default async function ReferencingStylePage() {
         </div>
 
         {articles.length === 0 && (
-          <p className="text-sm text-slate-500 text-center py-6">No articles found.</p>
+          <p className="text-base text-slate-500 text-center py-6">No articles found.</p>
         )}
       </div>
     </section>

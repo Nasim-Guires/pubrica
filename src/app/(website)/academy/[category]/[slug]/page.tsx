@@ -5,8 +5,10 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { ArrowLeft } from "lucide-react";
 import { EnquireNowForm } from "@/components/common/EnquireNowForm";
-import { getPostBySlug, getPosts, mediaUrl, getFaqQuestionOverrides, getPostMetadata } from "@/lib/payload";
+import { mediaUrl, getFaqQuestionOverrides, getPostMetadata } from "@/lib/payload";
+import { getPostDetail, getPostSummaries } from "@/lib/payload/summaries";
 import { LexicalRenderer } from "@/lib/payload/lexical";
+import HeroBanner from "@/components/common/HeroBanner";
 
 export const revalidate = 300;
 
@@ -34,8 +36,8 @@ function decodeSegment(value: string): string {
 // Some migrated posts store their slug percent-encoded (non-ASCII characters), so retry with that form.
 async function findAcademyPost(slug: string) {
   return (
-    (await getPostBySlug(slug, "academy")) ??
-    (await getPostBySlug(encodeURIComponent(slug).toLowerCase(), "academy"))
+    (await getPostDetail(slug, "academy")) ??
+    (await getPostDetail(encodeURIComponent(slug).toLowerCase(), "academy"))
   );
 }
 
@@ -50,7 +52,11 @@ export default async function AcademyArticlePage({ params }: AcademyArticlePageP
   const resolved = await params;
   const category = decodeSegment(resolved.category);
   const slug = decodeSegment(resolved.slug);
-  const post = await findAcademyPost(slug);
+  // Fetched in parallel — the recent-posts list doesn't depend on the post.
+  const [post, { docs: otherPosts }] = await Promise.all([
+    findAcademyPost(slug),
+    getPostSummaries({ source: "academy", limit: 6 }),
+  ]);
 
   // Guard against stale/incorrect category segments in a URL — only serve
   // the post at its real urlPath, not any category prefix paired with the slug.
@@ -58,19 +64,15 @@ export default async function AcademyArticlePage({ params }: AcademyArticlePageP
     notFound();
   }
 
-  const { docs: otherPosts } = await getPosts({ source: "academy", limit: 6 });
   const recentPosts = otherPosts.filter((p) => p.slug !== slug).slice(0, 5);
 
   return (
     <div className="bg-[#f9fbfb] min-h-screen text-gray-800 font-sans pb-10">
-      <section className="bg-[#0b2825] text-white py-6 px-4 text-center">
-        <div className="max-w-4xl mx-auto">
-          <span className="text-xs font-bold tracking-wider text-emerald-400 uppercase">
-            {post.categories?.[0]?.name || "Academy"}
-          </span>
-          <h1 className="text-2xl md:text-4xl font-bold tracking-tight mt-2">{post.title}</h1>
-        </div>
-      </section>
+      <HeroBanner
+        title={post.title}
+        description={post.categories?.[0]?.name || "Academy"}
+        headingAs="h1"
+      />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
