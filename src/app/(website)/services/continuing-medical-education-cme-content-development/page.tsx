@@ -10,9 +10,9 @@ import { constructMetadata } from '@/lib/metadata'
 
 export const metadata = constructMetadata({
     title: "CME Content Creation & Support for Healthcare | Pubrica",
-    description: "Pubrica delivers tailored CME content aligned to your medical education goals and audience needs, boosting learner engagement.",
-    keywords: ['Thought Leadership Content & Editorial Design,Scientific thought leadership development,leadership development program content,thought leadership editorial support,thought leadership content creation'],
-    slug: '/services/data-analytics-machine-learning/thought-leadership-content-editorial-design/',
+    description: 'Pubrica delivers tailored CME content aligned to your medical education goals and audience needs, boosting learner engagement.',
+    keywords: ['Continuing Medical Education,Continuing medical education content,CME module writing services,CME content development services,CME medical writing support'],
+    slug: '/services/continuing-medical-education-cme-content-development/',
 })
 
 

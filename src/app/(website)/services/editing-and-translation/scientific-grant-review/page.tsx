@@ -9,7 +9,7 @@ import { constructMetadata } from '@/lib/metadata'
 export const metadata = constructMetadata({
     title: 'Expert review service for all scientific grant proposal & researches',
     description: 'Need to get that grant for your research, need someone to review to make it better? Contact us for all scientific grant proposal review.',
-    slug: '/services/editing-and-translation/scientific-grant-review',
+    slug: '/services/editing-and-translation/scientific-grant-review/',
 })
 
 const page = () => {

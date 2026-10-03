@@ -10,7 +10,7 @@ export const metadata = constructMetadata({
   title: 'Comprehensive Glycobiology Research & Publication Support',
   description: 'Pubrica offers expert glycobiology research, writing, and publication support to advance glycan-based scientific discoveries.',
   keywords: ['Glycobiology Research'],
-  slug: '/subject-matter-experts/glycobiology',
+  slug: '/subject-matter-experts/glycobiology/',
 })
 
 const page = () => {

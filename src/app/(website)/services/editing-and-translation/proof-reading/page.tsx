@@ -6,9 +6,9 @@ import { constructMetadata } from '@/lib/metadata';
 
 export const metadata = constructMetadata({
   title: "Proofreading Services | Pubrica",
-  description: "Accurate and reliable proofreading to improve clarity, grammar, and quality of academic, scientific, and medical manuscripts.",
-  keywords: ['proofreading,Manuscript proofreading service,Scientific Manuscript proofreading service,Academic Manuscript proofreading service,Medical Manuscript proofreading service'],
-  slug: '/services/editing-and-translation/proofreading/',
+  description: 'Accurate and reliable proofreading to improve clarity, grammar, and quality of academic, scientific, and medical manuscripts.',
+  keywords: [],
+  slug: '/services/editing-and-translation/proof-reading/',
 })
 
 const TOC: TocItem[] = [];

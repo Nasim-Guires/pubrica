@@ -11,8 +11,8 @@ import { constructMetadata } from '@/lib/metadata'
 export const metadata = constructMetadata({
     title: 'Physician Training Content Development Service - Elevate',
     description: 'Pubrica offers physician training content development services to refine medical expertise. Tailored programs ensure skill enhancement.',
-    keywords: ['physician Training', 'Physician training services', 'clinical research training for physicians', 'medical writing training for doctors', 'scientific writing for physicians'],
-    slug: '/services/physician-writing-services/physician-training',
+    keywords: ['physician Training,Physician training services,clinical research training for physicians,medical writing training for doctors,scientific writing for physicians'],
+    slug: '/services/physician-writing-services/physician-training/',
 })
 
 const page = () => {

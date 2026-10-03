@@ -15,13 +15,7 @@ import { constructMetadata } from "@/lib/metadata";
 export const metadata = constructMetadata({
   title: 'Experimental Study Design Service for Research | Pubrica',
   description: 'Expert experimental study design services for research papers and manuscripts to ensure accuracy, validity, and journal-ready results.',
-  keywords: [
-    "Experimental Study Design",
-    "Experimental Research Design Service",
-    "Research Paper Study Design",
-    "Manuscript Study Design Service",
-    "Thesis Experimental Study Design",
-  ],
+  keywords: ["Experimental Study Design,Experimental Research Design Service,Research Paper Study Design,Manuscript Study Design Service,Thesis Experimental Study Design"],
   slug: '/services/research-services/experimental-design/',
 })
 

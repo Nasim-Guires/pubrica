@@ -13,8 +13,8 @@ import { constructMetadata } from "@/lib/metadata";
 
 export const metadata = constructMetadata({
   title: "Systematic Review Writing Services for Research Excellence",
-  description: "Comprehensive Systematic Review Writing Services, ensuring PRISMA compliance, rigorous methodology, and publication-ready quality.",
-  keywords: ['Meta Analysis,Meta-analysis research,statistical data analysis,systematic review,meta-analysis'],
+  description: 'Comprehensive Systematic Review Writing Services, ensuring PRISMA compliance, rigorous methodology, and publication-ready quality.',
+  keywords: ['Systematic review,Data Extraction for Systematic Review,End-to-End Systematic Review Writing Services,High-Impact Journal Submission Support,Systematic Review Data Collection Support'],
   slug: '/services/research-services/systematic-review/',
 })
 

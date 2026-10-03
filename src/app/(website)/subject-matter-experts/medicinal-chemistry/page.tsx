@@ -11,7 +11,7 @@ export const metadata = constructMetadata({
   title: 'End-to-End Medicinal Chemistry Research & Publication | Pubrica',
   description: 'Expert support for drug discovery, manuscript writing, and high-impact journal publication.',
   keywords: ['medicinal chemistry'],
-  slug: '/subject-matter-experts/medicinal-chemistry',
+  slug: '/subject-matter-experts/medicinal-chemistry/',
 })
 
 const page = () => {

@@ -7,7 +7,7 @@ export const metadata = constructMetadata({
   title: "Top Citation Styles: APA, AMA, MLA & Vancouver Explained",
   description: "Learn APA, AMA, MLA, and Vancouver citation styles for research papers in medicine, science, and humanities",
   keywords: ["citation"],
-  slug: "/services/publication-support/journal-manuscript-formatting-services/citation-styles-apa-ama-mla-vancouver-guide",
+  slug: "/services/publication-support/journal-manuscript-formatting-services/citation-styles-apa-ama-mla-vancouver-guide/",
 });
 
 export default function CitationStylesPage() {

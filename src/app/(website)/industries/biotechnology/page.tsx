@@ -10,7 +10,7 @@ export const metadata = constructMetadata({
   description:
     'Pubrica empowers biotech with expert research, regulatory, clinical, and commercialization support worldwide.',
   keywords: ['Biotechnology Innovation'],
-  slug: '/industries/biotechnology',
+  slug: '/industries/biotechnology/',
 })
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
 

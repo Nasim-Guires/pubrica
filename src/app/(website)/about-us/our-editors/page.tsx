@@ -5,7 +5,7 @@ import { constructMetadata } from '@/lib/metadata'
 export const metadata = constructMetadata({
   title: 'Our Editors - Pubrica',
   description: 'MEET THE EXPERTS',
-  slug: '/about-us/our-editors',
+  slug: '/about-us/our-editors/',
 })
 
 const page = () => {

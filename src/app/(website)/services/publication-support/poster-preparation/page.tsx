@@ -12,8 +12,8 @@ import { constructMetadata } from '@/lib/metadata'
 export const metadata = constructMetadata({
   title: 'Conference Presentation and Scientific Poster Services',
   description: 'Transform your research into a professional scientific poster with Pubrica’s expert design, content editing, data visualization, formatting, and support',
-  keywords: ['Poster preparation,Scientific research poster preparation design services', 'Visual Poster Preparation Services,Academic poster presentation design services', 'poster preparation service',],
-  slug: '/services/publication-support/poster-preparation',
+  keywords: ['Poster preparation,Scientific research poster preparation design services,Visual Poster Preparation Services,Academic poster presentation design services,poster preparation service'],
+  slug: '/services/publication-support/poster-preparation/',
 })
 
 const page = () => {

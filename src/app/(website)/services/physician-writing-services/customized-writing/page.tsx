@@ -13,8 +13,8 @@ import { constructMetadata } from '@/lib/metadata'
 export const metadata = constructMetadata({
     title: 'Customized Clinical and Medical Writing for Physicians | Pubrica',
     description: "Physician-focused writing support for manuscripts, grants, regulatory, CME & thesis work—expert, submission-ready documents by Pubrica.",
-    keywords: ['customized writing', 'Customized medical writing for physicians', 'Clinical manuscript writing services', 'Regulatory document writing for doctors', 'Physician-focused academic writing'],
-    slug: '/services/physician-writing-services/customized-writing',
+    keywords: ['customized writing,Customized medical writing for physicians,Clinical manuscript writing services,Regulatory document writing for doctors,Physician-focused academic writing'],
+    slug: '/services/physician-writing-services/customized-writing/',
 })
 
 const page = () => {

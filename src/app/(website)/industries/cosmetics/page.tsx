@@ -10,7 +10,7 @@ export const metadata = constructMetadata({
   description:
     'Expert cosmetic R&D, compliance, and marketing services for innovative, safe, and sustainable beauty products.',
   keywords: ['Transform Cosmetic Ideas'],
-  slug: '/industries/cosmetics',
+  slug: '/industries/cosmetics/',
 })
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
 

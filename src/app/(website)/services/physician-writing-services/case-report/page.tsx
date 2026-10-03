@@ -17,8 +17,8 @@ import React from "react";
 export const metadata = constructMetadata({
   title: "Medical Case Report Writing Service | Journal Publication",
   description: "Publish clinically relevant case reports with expert writing support aligned with CARE, ICMJE, and journal requirements for successful publication.",
-  keywords: ["clinical case report writing service", "Case report writing service", "SCARE guidelines", "Journal-compliant case reports", "Clinical documentation service"],
-  slug: "/services/physician-writing-services/case-report",
+  keywords: ["clinical case report writing service,Case report writing service,SCARE guidelines,Journal-compliant case reports,Clinical documentation service"],
+  slug: "/services/physician-writing-services/case-report/",
 });
 
 const page = () => {

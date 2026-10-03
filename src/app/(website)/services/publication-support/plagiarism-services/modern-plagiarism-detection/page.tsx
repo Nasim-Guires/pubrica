@@ -7,7 +7,7 @@ export const metadata = constructMetadata({
   title: "Modern Plagiarism Detection: AI & Semantic Analysis MLs",
   description: "AI-powered plagiarism detection by Pubrica identifies semantic similarity, paraphrasing, and AI-generated text for journals teams.",
   keywords: ["Plagiarism Service"],
-  slug: "/services/publication-support/plagiarism-services/modern-plagiarism-detection",
+  slug: "/services/publication-support/plagiarism-services/modern-plagiarism-detection/",
 });
 
 export default function PlagiarismDetectionPage() {

@@ -97,7 +97,7 @@ export const metadata = constructMetadata({
   title: "Research & Medical Writing Services | Pubrica",
   description:
     "Pubrica provides medical writing, research support, editing, and publication services to enhance scientific and clinical output.",
-  slug: "/services",
+  slug: "/services/",
 });
 
 export default function ServicesPage() {

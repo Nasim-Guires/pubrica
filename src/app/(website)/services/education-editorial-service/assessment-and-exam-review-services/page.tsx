@@ -16,13 +16,7 @@ import { constructMetadata } from '@/lib/metadata'
 export const metadata = constructMetadata({
     title: 'Assessment and Exam Review Services | Pubrica',
     description: 'Improve academic results with Pubrica’s Assessment & Exam Review Services, delivering structured reviews, expert insights, and focused support for success.',
-    keywords: [
-        "Assessment and Exam Review Services",
-        "Assessment review services",
-        "exam review services",
-        "academic assessment validation",
-        "exam content review",
-    ],
+    keywords: ["Assessment and Exam Review Services,Assessment review services,exam review services,academic assessment validation,exam content review"],
     slug: '/services/education-editorial-service/assessment-and-exam-review-services/',
 })
 

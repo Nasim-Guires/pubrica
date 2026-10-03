@@ -5,7 +5,7 @@ import { constructMetadata } from '@/lib/metadata'
 export const metadata = constructMetadata({
   title: 'Physical Sciences Engineering - Pubrica',
   description: 'All domains',
-  slug: '/about-us/physical-sciences-engineering',
+  slug: '/about-us/physical-sciences-engineering/',
 })
 
 const page = () => {

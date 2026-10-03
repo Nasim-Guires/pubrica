@@ -10,7 +10,7 @@ export const metadata = constructMetadata({
   description:
     'Expert regulatory, clinical, and scientific support for safe, cost-effective biosimilars worldwide, driving access and quality care.',
   keywords: ['Biosimilars'],
-  slug: '/industries/biosimilar',
+  slug: '/industries/biosimilar/',
 })
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
 

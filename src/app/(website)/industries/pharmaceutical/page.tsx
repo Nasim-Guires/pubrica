@@ -10,7 +10,7 @@ export const metadata = constructMetadata({
   description:
     'Expert support in pharma R&D, dossier preparation, pharmacovigilance, compliance, and market readiness solutions.',
   keywords: ['Pharmaceutical Regulatory'],
-  slug: '/industries/pharmaceutical',
+  slug: '/industries/pharmaceutical/',
 })
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
 

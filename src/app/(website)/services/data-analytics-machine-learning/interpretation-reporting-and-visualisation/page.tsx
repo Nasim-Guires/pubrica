@@ -11,9 +11,9 @@ import { constructMetadata } from '@/lib/metadata'
 
 export const metadata = constructMetadata({
     title: "Interpretation, Reporting and Visualisation - Pubrica",
-    description: "Pubrica data science experts, along with researchers, help to visualize the data and interpret it in a meaningful manner.",
-    keywords: ['Medical writing,medical writing services,research writing,medical paper writing service,clinical manuscript writing'],
-    slug: '/research-services/medical-writing/',
+    description: 'Pubrica data science experts, along with researchers, help to visualize the data and interpret it in a meaningful manner.',
+    keywords: ['Interpretation,scientific interpretation,support scientific reporting services,scientific visualization services,scientific data analysis'],
+    slug: '/services/data-analytics-machine-learning/interpretation-reporting-and-visualisation/',
 })  
 
 const page = () => {

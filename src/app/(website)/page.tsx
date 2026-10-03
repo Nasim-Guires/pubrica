@@ -18,7 +18,7 @@ export const metadata = constructMetadata({
   title: "Achieve Research Success with Pubrica’s Support Services",
   description:
     "Pubrica provides professional medical writing, research assistance, and publication support to help researchers produce high-quality work.",
-  keywords: ["Pubrica", "medical writing services", "scientific editing", "publication support", "research assistance"],
+  keywords: ["Pubrica,medical writing services,scientific editing,publication support,research assistance"],
   slug: "/",
 });
 

@@ -10,7 +10,7 @@ export const metadata = constructMetadata({
   title: 'Empowering Pharmaceutical Research & Publication | Pubrica',
   description: 'Expert editing, writing, and publication support for pharmaceutical research to ensure accuracy and journal success.',
   keywords: ['pharmaceutical research'],
-  slug: '/subject-matter-experts/pharmaceuticals',
+  slug: '/subject-matter-experts/pharmaceuticals/',
 })
 
 const page = () => {

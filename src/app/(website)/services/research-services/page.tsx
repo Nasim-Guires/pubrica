@@ -15,7 +15,7 @@ export const metadata = constructMetadata({
   title: "Scientific Research Support for High-Impact Studies",
   description: "Scientific research support services for clinical studies, research design, data analysis, biostatistics, medical writing, and journal publication.",
   keywords: ['Research services,scientific research writing services,medical thesis dissertation writing services,medical research paper writing service,Clinical research writing service'],
-  slug: '/services/research-services',
+  slug: '/services/research-services/',
 })
 
 export const professionalResearchFAQ = {

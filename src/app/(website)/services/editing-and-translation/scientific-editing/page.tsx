@@ -14,7 +14,8 @@ import ServiceBanner, { BannerProps } from "@/components/common/ServiceBanner";
 export const metadata = constructMetadata({
   title: 'Scientific Editing Services to Strengthen Research Papers',
   description: 'Professional scientific editing services refine manuscripts to improve quality, accuracy, and readiness for successful journal submission and publication.',
-  slug: '/services/editing-and-translation/scientific-editing',
+  keywords: ['Scientific editing,Scientific Research Paper Editing Services,Science Editing Services for Scientists,Science Editing Services for Academics,scientific editing services'],
+  slug: '/services/editing-and-translation/scientific-editing/',
 });
   const serviceBannerData: BannerProps = {
     imageSrc: "/images/publication-support/Satisfaction_Guarantee.webp",

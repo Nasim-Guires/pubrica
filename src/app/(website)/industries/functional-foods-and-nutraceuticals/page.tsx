@@ -10,7 +10,7 @@ export const metadata = constructMetadata({
   description:
     'Functional Foods and Nutraceuticals offer expert guidance for writing, editing, and publishing research on health foods and supplements.',
   keywords: ['Foods and Nutraceuticals'],
-  slug: '/industries/functional-foods-and-nutraceuticals',
+  slug: '/industries/functional-foods-and-nutraceuticals/',
 })
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
 

@@ -10,7 +10,7 @@ export const metadata = constructMetadata({
   description:
     'Pubrica offers 10+ years of expertise in cosmetic research, covering new product development, regulatory support, and scientific writing.',
   keywords: ['Innovative Cosmeceuticals'],
-  slug: '/industries/cosmeceutical-research',
+  slug: '/industries/cosmeceutical-research/',
 })
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
 

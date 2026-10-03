@@ -12,8 +12,8 @@ import Link from 'next/link'
 export const metadata = constructMetadata({
     title: 'Clinical & Medical Research Proposal Writing | Pubrica',
     description: 'Expert proposal writing for clinical and medical research tailored for physicians and surgeons to boost funding success now',
-    keywords: ['research proposal', 'Research proposal writing', 'medical research proposal', 'clinical research protocol', 'physician research proposal'],
-    slug: '/services/physician-writing-services/research-proposal',
+    keywords: ['research proposal,Research proposal writing,medical research proposal,clinical research protocol,physician research proposal'],
+    slug: '/services/physician-writing-services/research-proposal/',
 })
 
 const page = () => {

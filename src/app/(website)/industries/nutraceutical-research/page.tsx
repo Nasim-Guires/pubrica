@@ -10,7 +10,7 @@ export const metadata = constructMetadata({
   description:
     'Pubrica empowers wellness with science-backed nutraceutical innovations for safe, effective, and market-ready products.',
   keywords: ['Nutraceutical Solutions'],
-  slug: '/industries/nutraceutical-research',
+  slug: '/industries/nutraceutical-research/',
 })
 import InsightsSection from "@/components/services/medical-data-collection/InsightsSection";
 
