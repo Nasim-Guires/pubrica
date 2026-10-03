@@ -7,7 +7,7 @@ import { constructMetadata } from '@/lib/metadata';
 export const metadata = constructMetadata({
   title: 'Quality Assurance - Pubrica',
   description: 'ISO',
-  slug: '/quality/quality-assurance',
+  slug: '/quality/quality-assurance/',
 });
 
 export default function QualityAssurancePage() {
@@ -23,11 +23,11 @@ export default function QualityAssurancePage() {
 
         {/* Main Content Container */}
         <main className="max-w-4xl mx-auto px-6 py-6 space-y-10">
-          
+
           {/* ISO Section */}
           <section className="space-y-4">
             <h2 className="text-2xl font-bold text-slate-900">ISO</h2>
-            
+
             <div className="flex items-center space-x-2 text-red-600 font-semibold text-sm">
               <Lock className="w-4 h-4" />
               <span>Robust data security</span>
@@ -43,7 +43,7 @@ export default function QualityAssurancePage() {
               <div className="border border-gray-200 p-4 rounded bg-gray-50 flex flex-col items-center text-center shadow-sm">
                 <div className="relative w-36 h-48 mb-3">
                   <Image
-                    src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=400&auto=format&fit=crop"
+                    src="/images/ISO-QMS.webp"
                     alt="Quality Management System ISO 9001:2015 Certificate"
                     fill
                     className="object-cover rounded border"
@@ -56,7 +56,7 @@ export default function QualityAssurancePage() {
               <div className="border border-gray-200 p-4 rounded bg-gray-50 flex flex-col items-center text-center shadow-sm">
                 <div className="relative w-36 h-48 mb-3">
                   <Image
-                    src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=400&auto=format&fit=crop"
+                    src="/images/ISO-QMS.webp"
                     alt="Information Security Management System ISO/IEC 27001:2013 Certificate"
                     fill
                     className="object-cover rounded border"
@@ -91,7 +91,7 @@ export default function QualityAssurancePage() {
             <div className="flex flex-col md:flex-row items-center gap-6 bg-gray-50 p-6 border rounded-lg">
               <div className="relative w-48 h-36 flex-shrink-0">
                 <Image
-                  src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=400&auto=format&fit=crop"
+                  src="/images/ISMS.webp"
                   alt="Information Security Management System ISO 27001 Certified Badge"
                   fill
                   className="object-contain"
@@ -128,7 +128,7 @@ export default function QualityAssurancePage() {
             </h4>
             <div className="relative w-full max-w-lg mx-auto h-96">
               <Image
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop"
+                src="/images/isms2.webp"
                 alt="ISMS Security Mindmap Diagram representing data security elements"
                 fill
                 className="object-contain"
