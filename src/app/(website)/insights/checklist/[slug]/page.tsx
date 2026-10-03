@@ -82,13 +82,15 @@ export default async function ChecklistCardPage({ params }: ChecklistCardProps) 
 
   return (
     <div className="min-h-screen bg-white text-[#161922] font-sans">
-      {/* Dark banner with the page title (matches the live page's header band) */}
+      {/* Dark banner with the page title, matching the live page's header band */}
       <section
-        className="w-full min-h-[200px] md:min-h-[251px] px-4 pt-12 md:pt-20 pb-8"
-        style={{ background: "linear-gradient(rgba(17, 56, 57, 0.46) 0%, rgb(17, 56, 57) 100%)" }}
+        className="relative w-full min-h-[160px] md:min-h-[210px] px-4 py-8 md:py-10 flex items-center"
+        style={{ background: "linear-gradient(180deg, rgba(17, 56, 57, 0.46) 0%, rgb(17, 56, 57) 100%)" }}
       >
-        <div className="mx-auto max-w-[1000px]">
-          <h1 className="text-white text-2xl md:text-[31px] font-semibold leading-snug">{title}</h1>
+        <div className="relative mx-auto w-full max-w-[943px] border border-white px-4 pt-5 pb-2.5 text-center">
+          <h1 className="text-[#FCFFFF] text-[14px] md:text-[31px] font-semibold leading-[1.5em] md:leading-[42px] tracking-[0.5px] md:tracking-[0.4px]">
+            {title}
+          </h1>
         </div>
       </section>
 
@@ -96,39 +98,46 @@ export default async function ChecklistCardPage({ params }: ChecklistCardProps) 
         <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,640px)_304px] gap-8 lg:justify-between items-start">
           {/* Subtitle, intro and embedded PDF come from the CMS content */}
           <div className="min-w-0">
-            <LexicalRenderer content={withoutCardCta(post.content)} title={post.title} />
+            <LexicalRenderer content={withoutCardCta(post.content)} title={title} />
           </div>
 
           {/* Order CTA column (matches the live page's right-hand column) */}
-          <aside className="w-full flex flex-col gap-4">
-            <Image
-              src="/images/check-list/sample-workimage-for-sidebar.png"
-              alt="sample-workimage-for-sidebar"
-              width={372}
-              height={202}
-              className="w-full h-auto"
-            />
-            <h4 className="text-xl font-semibold text-[#161922]">Research your Services with our experts</h4>
-            <a
-              href="/order-now/"
-              className="block w-full text-center bg-[#61ce70] hover:bg-[#4fb85f] text-white text-sm font-medium py-2.5 rounded transition-colors"
-            >
-              Order Now
-            </a>
-            <p className="text-[15px] font-semibold text-[#161922]">Delivered on-time or your money back</p>
-            <p className="text-[15px] text-[#626262]">Give yourself the academic edge today</p>
-            <p className="text-[15px] font-semibold text-[#161922]">Each order includes</p>
-            <ul className="list-disc pl-5 space-y-1 text-[15px] text-[#626262]">
-              {ORDER_CHECKLIST.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-            <a
-              href="/services/"
-              className="block w-full text-center bg-[#61ce70] hover:bg-[#4fb85f] text-white text-sm font-medium py-2.5 rounded transition-colors"
-            >
-              Find More About Our Services
-            </a>
+          <aside className="w-full flex flex-col gap-6">
+            {/* Box 1: image and order call-to-action */}
+            <div className="flex flex-col gap-4 bg-white p-4 shadow-[0_0_5px_rgba(0,0,0,0.5)]">
+              <Image
+                src="/images/check-list/sample-workimage-for-sidebar.png"
+                alt="sample-workimage-for-sidebar"
+                width={372}
+                height={202}
+                className="w-full h-auto"
+              />
+              <h4 className="text-xl font-semibold text-[#161922]">Research your Services with our experts</h4>
+              <a
+                href="/order-now/"
+                className="block w-full text-center bg-[#61ce70] hover:bg-[#4fb85f] text-white text-sm font-medium py-2.5 rounded transition-colors"
+              >
+                Order Now
+              </a>
+              <p className="text-[15px] font-semibold text-[#161922]">Delivered on-time or your money back</p>
+            </div>
+
+            {/* Box 2: what each order includes */}
+            <div className="flex flex-col gap-4 bg-white p-4 shadow-[0_0_5px_rgba(0,0,0,0.5)]">
+              <p className="text-[15px] text-[#626262]">Give yourself the academic edge today</p>
+              <p className="text-[15px] font-semibold text-[#161922]">Each order includes</p>
+              <ul className="list-disc pl-5 space-y-1 text-[15px] text-[#626262]">
+                {ORDER_CHECKLIST.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+              <a
+                href="/services/"
+                className="block w-full text-center bg-[#61ce70] hover:bg-[#4fb85f] text-white text-sm font-medium py-2.5 rounded transition-colors"
+              >
+                Find More About Our Services
+              </a>
+            </div>
           </aside>
         </div>
       </section>
