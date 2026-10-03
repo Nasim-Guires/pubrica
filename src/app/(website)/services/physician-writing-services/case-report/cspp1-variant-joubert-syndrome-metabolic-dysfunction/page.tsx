@@ -3,7 +3,7 @@ import SamplePdfPage from '@/components/services/SamplePdfPage';
 
 export const metadata: Metadata = {
   title: { absolute: "CSPP1 Variant in Joubert Syndrome with Metabolic Dysfunction" },
-  description: 'Case report sample work: a CSPP1-related Joubert syndrome patient with metabolic abnormalities.',
+  description: "Case of CSPP1-related Joubert syndrome with early diabetes and liver disease expands phenotype spectrum.",
 };
 
 export default function Cspp1VariantJoubertSyndromePage() {

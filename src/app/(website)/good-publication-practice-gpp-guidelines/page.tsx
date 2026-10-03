@@ -4,8 +4,7 @@ import GuideLayout from '@/components/guides/GuideLayout';
 
 export const metadata: Metadata = {
   title: { absolute: "Good Publication Practice (GPP) Guidelines | Pubrica" },
-  description:
-    'Good Publication Practice (GPP) guidelines for transparent, accurate, and ethical medical and scientific publishing.',
+  description: "Learn about Good Publication Practice (GPP) guidelines to ensure ethical, transparent, and accurate scientific publishing in pharma and healthcare research.",
 };
 
 const TOC = [

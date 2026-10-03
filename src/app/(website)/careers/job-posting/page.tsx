@@ -7,7 +7,7 @@ export const revalidate = 300;
 
 export const metadata: Metadata = {
   title: { absolute: "Job Posting - Pubrica" },
-  description: "Explore current full-time, freelance, and internship openings at Pubrica.",
+  description: "Job Posting – Pubrica: Find career opportunities in research, medical writing, editing, and publication support roles globally.",
 };
 
 // Payload's "career" source also includes bare index stubs (e.g. slug

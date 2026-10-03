@@ -4,8 +4,7 @@ import GuideLayout from '@/components/guides/GuideLayout';
 
 export const metadata: Metadata = {
   title: { absolute: "ICH Guidelines? | Global Harmonization in Pharmaceuticals" },
-  description:
-    'A complete guide to ICH Guidelines — what they are, why they matter, their four categories, and how they vary by region.',
+  description: "ICH Guidelines and their impact on global pharmaceutical regulation. Discover how they enhance drug development, safety, efficacy",
 };
 
 const TOC = [

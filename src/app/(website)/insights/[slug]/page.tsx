@@ -4,7 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { EnquireNowForm } from "@/components/common/EnquireNowForm";
-import { getPostBySlug, getPosts, mediaUrl, getDescription } from "@/lib/payload";
+import { getPostBySlug, getPosts, mediaUrl, getDescription, getPostMetadata } from "@/lib/payload";
 import { LexicalRenderer } from "@/lib/payload/lexical";
 import { getInsightHub, getStaticInsightHub } from "@/lib/payload/insightHubs";
 import { infographics, storyboards, factSheets } from "@/lib/data-insight";
@@ -36,23 +36,16 @@ function formatDate(iso?: string) {
 
 export async function generateMetadata({ params }: InsightRouteProps): Promise<Metadata> {
   const { slug } = await params;
-  const hub = getInsightHub(slug);
-  // console.log("check", hub)
-
-
-  if (hub) {
-    return { title: `${hub.label} | Pubrica Insights`, description: hub.description };
-  }
-  const staticHub = getStaticInsightHub(slug);
-  if (staticHub) {
-    return { title: `${staticHub.label} | Pubrica Insights`, description: staticHub.description };
-  }
+  const hub = getInsightHub(slug) ?? getStaticInsightHub(slug);
   const post = await getPostBySlug(slug, "insights");
-  if (!post) return {};
-  return {
-    title: post.seo?.metaTitle || post.title,
-    description: getDescription(post),
-  };
+
+  // A hub page is rendered from hard-coded labels, but the CMS holds the original site's
+  // title/description for the same URL, so prefer that and keep the labels as the fallback.
+  if (post) return getPostMetadata(post);
+  if (hub) {
+    return { title: { absolute: `${hub.label} | Pubrica Insights` }, description: hub.description };
+  }
+  return {};
 }
 
 export default async function InsightRoutePage({ params, searchParams }: InsightRouteProps) {

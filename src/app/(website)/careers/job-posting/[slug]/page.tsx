@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { ArrowLeft } from "lucide-react";
-import { getPostBySlug, getDescription } from "@/lib/payload";
+import { getPostBySlug, getPostMetadata } from "@/lib/payload";
 import { LexicalRenderer } from "@/lib/payload/lexical";
 
 export const revalidate = 300;
@@ -16,10 +16,7 @@ export async function generateMetadata({ params }: JobPostingPageProps): Promise
   const { slug } = await params;
   const post = await getPostBySlug(slug, "career");
   if (!post) return {};
-  return {
-    title: post.seo?.metaTitle || post.title,
-    description: getDescription(post),
-  };
+  return getPostMetadata(post);
 }
 
 export default async function JobPostingPage({ params }: JobPostingPageProps) {

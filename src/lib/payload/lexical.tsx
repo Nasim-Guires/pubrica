@@ -708,3 +708,23 @@ export function getDescription(post: Pick<PayloadPost, "title" | "seo" | "conten
   }
   return extractExcerpt(post.content, maxLen, post.title);
 }
+
+/**
+ * <head> metadata for a CMS post detail page. The CMS holds the exact title and
+ * description of the original pubrica.com page, so both are used verbatim:
+ * `absolute` bypasses the root layout's "%s | Pubrica" title template (which would
+ * otherwise be appended on top of titles that already carry their own branding),
+ * and the description is not truncated/rewritten like a card excerpt is.
+ * Falls back to the card-style excerpt only when the CMS has no description.
+ */
+export function getPostMetadata(post: Pick<PayloadPost, "title" | "seo" | "content">): {
+  title: { absolute: string };
+  description: string;
+} {
+  const title = (post.seo?.metaTitle || post.title || "").trim();
+  const rawDescription = post.seo?.metaDescription?.replace(/\s+/g, " ").trim();
+  return {
+    title: { absolute: title },
+    description: rawDescription || getDescription(post),
+  };
+}

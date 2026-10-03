@@ -5,7 +5,7 @@ import Breadcrumb from '@/components/seo/Breadcrumb';
 
 export const metadata: Metadata = {
   title: { absolute: "Quality Standards - Pubrica" },
-  description: 'Quality and ethical standards governing every Pubrica engagement — our mission, team roles, and quality guarantee.',
+  description: "Our Team PUBRICA's team encompasses Academic Editors, Academic Translation Advisors, Illustrators, Quality Control Supervisors, Formatting Specialists,",
 };
 
 export default function QualityStandardsPage() {

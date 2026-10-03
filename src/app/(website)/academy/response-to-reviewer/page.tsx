@@ -12,7 +12,7 @@ import { constructMetadata } from '@/lib/metadata'
 // <Head> tag below) rather than copying that mismatched live page.
 export const metadata = constructMetadata({
   title: "Training Effects on Nurses’ Safety Culture in ORs",
-  description: 'Sample letter and guidelines for responding to reviewer comments for publication in academic journals.',
+  description: "Explore how training programs improve nurses’ safety culture in operating rooms, enhancing teamwork, compliance, and patient safety.",
   slug: '/academy/response-to-reviewer',
 })
 

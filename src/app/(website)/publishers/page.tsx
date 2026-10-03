@@ -3,7 +3,7 @@ import MinimalNoticePage from '@/components/common/MinimalNoticePage';
 
 export const metadata: Metadata = {
   title: { absolute: "Publishers - Pubrica" },
-  description: 'Pubrica supports journals, publishers, and publication societies in acquiring high-value research output and improving submission quality.',
+  description: "Publishers – Pubrica offers services and guidance to help authors meet publisher requirements and streamline the publication process.",
 };
 
 export default function PublishersPage() {

@@ -10,7 +10,7 @@ import { constructMetadata } from '@/lib/metadata'
 // primary/duplicate pairing already established between these two routes.
 export const metadata = constructMetadata({
   title: "Life Science Manuscript Formatting for Faster Publication",
-  description: 'Get expert life sciences research, writing, editing, and publication support from Pubrica’s experienced scientific professionals.',
+  description: "Learn how effective manuscript formatting speeds editorial screening, peer review, and publication in life science journals.",
   keywords: [],
   slug: '/about-us/life-science/',
 })

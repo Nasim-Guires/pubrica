@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: { absolute: "Medical Writing & Scientific Research Services | UK Experts" },
-  description: 'Specialized data analytics and machine learning services for healthcare research and decision-making.',
+  description: "Professional medical writing services for clinical research, regulatory writing, CSRs, and medical manuscript writing services in the UK.",
 };
 
 const SERVICES = [

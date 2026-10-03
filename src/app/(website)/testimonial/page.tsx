@@ -4,7 +4,7 @@ import { TESTIMONIALS } from '@/lib/data/testimonials';
 
 export const metadata: Metadata = {
   title: { absolute: "Testimonial - Pubrica" },
-  description: "Our clients reminisce their success stories. Here's what they say about Pubrica.",
+  description: "Our clients reminisce their success stories. Here’s what they say…",
 };
 
 export default function TestimonialPage() {

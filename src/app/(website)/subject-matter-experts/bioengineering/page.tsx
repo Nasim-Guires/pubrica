@@ -4,7 +4,7 @@ import { SERVICES_EXPERTISE } from '@/lib/subject-matter-experts/servicesExperti
 
 export const metadata: Metadata = {
   title: { absolute: "Bioengineering - Pubrica" },
-  description: 'Subject matter experts in bioengineering — publication and writing support for biomedical devices, tissue engineering, and biotechnology research.',
+  description: "Bioengineering is a field of engineering and the study of medicine and biology as has application in all medicinal engineering fields while",
 };
 
 const RELATED_SUBJECTS = [

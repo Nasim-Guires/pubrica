@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: { absolute: "EDITORIAL PANEL - Pubrica" },
-  description: 'Native subject-matter experts guide you in every phase of the publication process.',
+  description: "EDITORIAL PANEL Native Subject-Matter Experts (SMEs) guide you in every phase of the publication process. Scientists, doctors, technocrats, researchers, and",
 };
 
 const HIGHLIGHTS = [

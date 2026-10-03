@@ -5,7 +5,7 @@ import Breadcrumb from '@/components/seo/Breadcrumb';
 
 export const metadata: Metadata = {
   title: { absolute: "Do not sell any Information - Pubrica" },
-  description: 'Your CCPA rights regarding the sale of personal information — Pubrica does not sell your data for monetary gain or compensation.',
+  description: "Do not sell any InformationFor California residents using www.pubrica.com, which is managed by 1341 W Mockingbird Lane, Suite 600W, Dallas, Texas, 75247, the",
 };
 
 export default function DoNotSellPage() {

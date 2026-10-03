@@ -3,7 +3,7 @@ import MinimalNoticePage from '@/components/common/MinimalNoticePage';
 
 export const metadata: Metadata = {
   title: { absolute: "Order Now:Journal Selection - Pubrica" },
-  description: 'Journal Selection for Academic Publishing Support — order now.',
+  description: "Journal Selection for Academic Publishing Support",
 };
 
 export default function OrderJournalSelectionNowPage() {

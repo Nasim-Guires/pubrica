@@ -4,8 +4,7 @@ import GuideLayout from '@/components/guides/GuideLayout';
 
 export const metadata: Metadata = {
   title: { absolute: "PMDA Regulatory Writing Services" },
-  description:
-    "PMDA-compliant regulatory writing services from Pubrica — dossier preparation, CSRs, QMS documentation, and Japanese translation and localization.",
+  description: "Expert PMDA regulatory writing services for pharma and medical device companies, and language compliance with accurate documentation.",
 };
 
 const TOC = [

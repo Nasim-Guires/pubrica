@@ -5,8 +5,7 @@ import GuideLayout from '@/components/guides/GuideLayout';
 
 export const metadata: Metadata = {
   title: { absolute: "Disability-Adjusted Life Year (DALY): A Comprehensive Overview" },
-  description:
-    'A comprehensive overview of the Disability-Adjusted Life Year (DALY) — the equation, its comparison to QALY, and its use in public health research.',
+  description: "Explore DALY, measuring disease burden via YLL and YLD to guide public health and resource planning.",
 };
 
 const TOC = [

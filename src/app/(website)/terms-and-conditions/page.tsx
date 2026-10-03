@@ -5,7 +5,7 @@ import Breadcrumb from '@/components/seo/Breadcrumb';
 
 export const metadata: Metadata = {
   title: { absolute: "Terms & Condition - Pubrica" },
-  description: 'Terms and Conditions governing your use of the Pubrica website and our professional engagement with you.',
+  description: "Welcome to Pubrica - a global contract research, analytics, and editorial services organization. These Terms and Conditions outline the rules and regulations",
 };
 
 export default function TermsAndConditionsPage() {

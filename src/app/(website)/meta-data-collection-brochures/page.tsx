@@ -3,7 +3,7 @@ import BrochureGrid from '@/components/packs/BrochureGrid';
 
 export const metadata: Metadata = {
   title: { absolute: "Meta data collectin brouchure - Pubrica" },
-  description: 'Download Pubrica editing and translation brochures — scientific editing, manuscript editing, book editing, and more.',
+  description: "Hear from the experts",
 };
 
 const ITEMS = [

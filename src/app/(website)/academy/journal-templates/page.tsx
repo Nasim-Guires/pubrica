@@ -10,7 +10,7 @@ const PAGE_SIZE = 12;
 
 export const metadata: Metadata = {
   title: { absolute: "Journal Templates - Pubrica" },
-  description: "Formatting templates for leading academic and medical journals.",
+  description: "Journal Templates – Pubrica provide structured, journal-specific formats to help authors prepare manuscripts accurately and efficiently.",
 };
 
 function formatDate(iso?: string) {

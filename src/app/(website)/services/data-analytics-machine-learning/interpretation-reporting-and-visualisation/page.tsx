@@ -11,7 +11,7 @@ import { constructMetadata } from '@/lib/metadata'
 
 export const metadata = constructMetadata({
     title: "Interpretation, Reporting and Visualisation - Pubrica",
-    description: 'Pubrica delivers expert medical writing, research writing, and medical paper writing services for physicians, researchers, and healthcare professionals.',
+    description: "Pubrica data science experts, along with researchers, help to visualize the data and interpret it in a meaningful manner.",
     keywords: ['Medical writing,medical writing services,research writing,medical paper writing service,clinical manuscript writing'],
     slug: '/research-services/medical-writing/',
 })  

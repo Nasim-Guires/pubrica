@@ -4,7 +4,7 @@ import { SERVICES_EXPERTISE } from '@/lib/subject-matter-experts/servicesExperti
 
 export const metadata: Metadata = {
   title: { absolute: "Biomaterials - Pubrica" },
-  description: 'Subject matter experts in biomaterials — publication and writing support for biomaterial engineering, tissue engineering, and drug delivery research.',
+  description: "Any substance that has been specifically tailored to interact with a biological system to treat, augment, repair, or replace a tissue for the betterment of",
 };
 
 const RELATED_SUBJECTS = [

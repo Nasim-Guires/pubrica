@@ -5,7 +5,7 @@ import { CheckCircle2 } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: { absolute: "Farmatting - Pubrica" },
-  description: 'Good Clinical Practice (GCP) guaranteed — risk-based clinical trial monitoring services from Pubrica.',
+  description: "We offer remote monitoring solutions to our customers, which reduce frequency of on-site visits and enhance data quality. Our experts ensure perfect",
 };
 
 const SOLUTIONS = [

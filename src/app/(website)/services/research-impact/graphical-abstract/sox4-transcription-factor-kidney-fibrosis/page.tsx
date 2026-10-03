@@ -3,7 +3,7 @@ import SamplePdfPage from '@/components/services/SamplePdfPage';
 
 export const metadata: Metadata = {
   title: { absolute: "SOX4's Role in Kidney Fibrosis: TEC Dedifferentiation & Fibroblast" },
-  description: 'Graphical abstract sample work on SOX4 and kidney fibrosis in chronic kidney disease.',
+  description: "Explore how SOX4 influences tubular epithelial cell dedifferentiation and fibroblast activation in kidney fibrosis.",
 };
 
 export default function Sox4TranscriptionFactorPage() {

@@ -3,7 +3,7 @@ import PublicationPackPage from '@/components/packs/PublicationPackPage';
 
 export const metadata: Metadata = {
   title: { absolute: "Gold Pack - Pubrica" },
-  description: 'The Gold Pack bundles five publication support services worth $998 for $718.',
+  description: "Gold PackTIME: 3 WEEKSFor authors looking for speedy support in preparing their manuscripts for submission",
 };
 
 export default function GoldPackPage() {

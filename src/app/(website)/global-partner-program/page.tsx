@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: { absolute: "Global Partner Program - Pubrica" },
-  description: 'Publishers, universities, and research groups can get special discounts on all end-to-end editorial and journal publication services. Partner with Pubrica.',
+  description: "Publishers, universities, research groups can get special discounts on all end-to-end editorial and journal publication services. Partner with us.",
 };
 
 const CATEGORIES = [

@@ -533,7 +533,7 @@ export const GENERAL_FAQS = [
 //             label: "Grant writing services",
 //           },
 //           {
-//             href: "/services/research-services/biostatistics-and-statistical-programming-service",
+//             href: "/services/research-services/biostatistics-and-statistical-programming-services",
 //             label: " Biostatistical Programming",
 //           },
 //           {
@@ -598,7 +598,7 @@ export const GENERAL_FAQS = [
 //         label: "Statistical Analyses",
 //         children: [
 //           {
-//             href: "/services/research-services/biostatistics-and-statistical-programming-service",
+//             href: "/services/research-services/biostatistics-and-statistical-programming-services",
 //             label: " Biostatistics",
 //           },
 //           {
@@ -965,7 +965,7 @@ export const NAV_LINKS: NavLink[] = [
             label: "Grant writing services",
           },
           {
-            href: "/services/research-services/biostatistics-and-statistical-programming-service/",
+            href: "/services/research-services/biostatistics-and-statistical-programming-services/",
             label: " Biostatistical Programming",
           },
           {
@@ -1038,7 +1038,7 @@ export const NAV_LINKS: NavLink[] = [
         sampleWorkCaption: "Statistical Analyses",
         children: [
           {
-            href: "/services/research-services/biostatistics-and-statistical-programming-service/",
+            href: "/services/research-services/biostatistics-and-statistical-programming-services/",
             label: " Biostatistics",
           },
           {

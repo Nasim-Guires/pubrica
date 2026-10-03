@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { ArrowLeft } from "lucide-react";
 import { EnquireNowForm } from "@/components/common/EnquireNowForm";
-import { getPostBySlug, getPosts, mediaUrl, getDescription, getFaqQuestionOverrides } from "@/lib/payload";
+import { getPostBySlug, getPosts, mediaUrl, getFaqQuestionOverrides, getPostMetadata } from "@/lib/payload";
 import { LexicalRenderer } from "@/lib/payload/lexical";
 
 export const revalidate = 300;
@@ -23,19 +23,34 @@ function formatDate(iso?: string) {
   });
 }
 
+function decodeSegment(value: string): string {
+  try {
+    return decodeURIComponent(value);
+  } catch {
+    return value;
+  }
+}
+
+// Some migrated posts store their slug percent-encoded (non-ASCII characters), so retry with that form.
+async function findAcademyPost(slug: string) {
+  return (
+    (await getPostBySlug(slug, "academy")) ??
+    (await getPostBySlug(encodeURIComponent(slug).toLowerCase(), "academy"))
+  );
+}
+
 export async function generateMetadata({ params }: AcademyArticlePageProps): Promise<Metadata> {
-  const { slug } = await params;
-  const post = await getPostBySlug(slug, "academy");
+  const slug = decodeSegment((await params).slug);
+  const post = await findAcademyPost(slug);
   if (!post) return {};
-  return {
-    title: post.seo?.metaTitle || post.title,
-    description: getDescription(post),
-  };
+  return getPostMetadata(post);
 }
 
 export default async function AcademyArticlePage({ params }: AcademyArticlePageProps) {
-  const { category, slug } = await params;
-  const post = await getPostBySlug(slug, "academy");
+  const resolved = await params;
+  const category = decodeSegment(resolved.category);
+  const slug = decodeSegment(resolved.slug);
+  const post = await findAcademyPost(slug);
 
   // Guard against stale/incorrect category segments in a URL — only serve
   // the post at its real urlPath, not any category prefix paired with the slug.

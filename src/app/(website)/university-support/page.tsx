@@ -3,7 +3,7 @@ import MinimalNoticePage from '@/components/common/MinimalNoticePage';
 
 export const metadata: Metadata = {
   title: { absolute: "University Support - Pubrica" },
-  description: 'Global expertise in research, publishing, and communication support for universities and research institutions.',
+  description: "University Support – Pubrica provides research guidance, academic writing, and training programs for students and faculty.",
 };
 
 export default function UniversitySupportPage() {

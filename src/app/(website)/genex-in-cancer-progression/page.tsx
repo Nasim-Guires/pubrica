@@ -5,8 +5,7 @@ import { CheckCircle2 } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: { absolute: "Gene X in Cancer Progression: Revised Manuscript" },
-  description:
-    'A sample editorial-comments response addressing reviewer feedback on "The Role of Gene X in Cancer Progression."',
+  description: "Our manuscript on Gene X in cancer, revised per review, ready for Journal of Cancer Research. Improved clarity, expanded discussion.",
 };
 
 const PDF_URL = 'https://pubrica.com/wp-content/uploads/2024/05/Editorial-Comments-Addressal-Sample.pdf';

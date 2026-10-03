@@ -3,7 +3,7 @@ import SamplePdfPage from '@/components/services/SamplePdfPage';
 
 export const metadata: Metadata = {
   title: { absolute: "Journal Selection: Alcoholic Liver Disease Research" },
-  description: 'Journal selection sample work for a manuscript on alcoholic liver disease.',
+  description: "Explore top journals publishing on alcoholic liver disease in India and worldwide.",
 };
 
 export default function JournalSelectionAlcoholicLiverDiseasePage() {
