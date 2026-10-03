@@ -6,6 +6,7 @@ import { MessageCircle, Phone } from "lucide-react";
 import { getPostSummaries } from "@/lib/payload/summaries";
 import { constructMetadata } from "@/lib/metadata";
 import HeroBanner from "@/components/common/HeroBanner";
+import { CHECKLIST_CARD_ORDER, checklistCardTitle } from "../checklist/checklist-cards";
 
 // Per-post thumbnail override, keyed by slug. The Payload CMS's heroImage field is
 // wrong for most of these posts — 17 of the 25 point to a generic placeholder
@@ -83,13 +84,21 @@ export default async function CheckListPage() {
     limit: 50,
   });
 
+  // Live pubrica.com card order; unknown slugs go to the end.
+  const cardRank = (slug: string) => {
+    const i = CHECKLIST_CARD_ORDER.indexOf(slug);
+    return i === -1 ? Number.MAX_SAFE_INTEGER : i;
+  };
+
   return (
     <div className="bg-[#f8f9fa] min-h-screen text-[#333333] font-sans pb-16">
       <HeroBanner title="Check List" headingAs="h1" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {posts.map((post) => {
+          {[...posts]
+            .sort((a, b) => cardRank(a.slug) - cardRank(b.slug))
+            .map((post) => {
             const image = CHECKLIST_IMAGES[post.slug] || "/images/academy/Forensics-2.webp";
             const href = `/insights/${post.urlPath}/`;
             return (
@@ -108,7 +117,7 @@ export default async function CheckListPage() {
                 </Link>
                 <div className="p-5 flex flex-col gap-2.5">
                   <h2 className="text-sm font-bold text-[#0b2825] leading-snug line-clamp-2">
-                    {post.title}
+                    {checklistCardTitle(post.slug, post.title)}
                   </h2>
                   <Link
                     href={href}

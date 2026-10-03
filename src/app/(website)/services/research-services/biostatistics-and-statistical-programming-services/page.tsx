@@ -16,7 +16,7 @@ import { constructMetadata } from "@/lib/metadata";
 export const metadata = constructMetadata({
   title: "Biostatistical Programming Services for Clinical Trials – Pubrica",
   description: "Expert biostatistical programming and analysis for clinical trials, from data management to validated, regulatory-ready results output now.",
-  keywords: ["Biostatistical Programming Services", "clinical trial biostatistics", "statistical programming for clinical research", "clinical data management services", "CDISC SDTM ADaM programming"],
+  keywords: ["Biostatistical Programming Services,clinical trial biostatistics,statistical programming for clinical research,clinical data management services,CDISC SDTM ADaM programming"],
   slug: "/services/research-services/biostatistics-and-statistical-programming-services",
 });
 

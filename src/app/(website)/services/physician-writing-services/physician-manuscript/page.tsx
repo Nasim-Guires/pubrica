@@ -11,7 +11,7 @@ import { constructMetadata } from '@/lib/metadata'
 export const metadata = constructMetadata({
     title: 'Physician Manuscript Writing Service | Pubrica',
     description: 'Specialized manuscript support for physicians including writing, editing, and publication help for clinical studies, case reports & journals.',
-    keywords: ['Physician manuscript', 'Physician manuscript writing service', 'medical manuscript writing services', 'clinical research writing support', 'manuscript writing for doctors'],
+    keywords: ['Physician manuscript,Physician manuscript writing service,medical manuscript writing services,clinical research writing support,manuscript writing for doctors'],
     slug: '/services/physician-writing-services/physician-manuscript',
 })
 

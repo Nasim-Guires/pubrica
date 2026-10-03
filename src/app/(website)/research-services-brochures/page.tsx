@@ -7,14 +7,14 @@ export const metadata: Metadata = {
 };
 
 const ITEMS = [
-  { title: 'Literature Review & Gap', pdfUrl: 'https://pubrica.com/wp-content/uploads/2024/05/Pubrica-Literature-review-broucher-min_opt.pdf' },
-  { title: 'Meta-Analysis', pdfUrl: 'https://pubrica.com/wp-content/uploads/2024/05/Pubrica-meta-analysis-broucher-min.pdf' },
-  { title: 'Case Report Writing', pdfUrl: 'https://pubrica.com/wp-content/uploads/2024/05/Pubrica-Case-Report-Writing-broucher-min.pdf' },
-  { title: 'Systematic Review', pdfUrl: 'https://pubrica.com/wp-content/uploads/2024/05/Pubrica-Systematic-review-broucher-min.pdf' },
-  { title: 'Experimental Design', pdfUrl: 'https://pubrica.com/wp-content/uploads/2024/05/Pubrica-Experimental-design-broucher-min.pdf' },
-  { title: 'Biostatistics', pdfUrl: 'https://pubrica.com/wp-content/uploads/2024/05/Pubrica-Biostatistics-broucher-min.pdf' },
-  { title: 'Grant Writing', pdfUrl: 'https://pubrica.com/wp-content/uploads/2024/05/Pubrica-Grant-Writing-broucher-min.pdf' },
-  { title: 'Product Development', pdfUrl: 'https://pubrica.com/wp-content/uploads/2024/05/Pubrica-Product-Development-broucher-min.pdf' },
+  { title: 'Literature Review & Gap', pdfUrl: '/upload/research-services-brochures/literature-review-gap-brochure.pdf' },
+  { title: 'Meta-Analysis', pdfUrl: '/upload/research-services-brochures/meta-analysis-brochure.pdf' },
+  { title: 'Case Report Writing', pdfUrl: '/upload/research-services-brochures/case-report-writing-brochure.pdf' },
+  { title: 'Systematic Review', pdfUrl: '/upload/research-services-brochures/systematic-review-brochure.pdf' },
+  { title: 'Experimental Design', pdfUrl: '/upload/research-services-brochures/experimental-design-brochure.pdf' },
+  { title: 'Biostatistics', pdfUrl: '/upload/research-services-brochures/biostatistics-brochure.pdf' },
+  { title: 'Grant Writing', pdfUrl: '/upload/research-services-brochures/grant-writing-brochure.pdf' },
+  { title: 'Product Development', pdfUrl: '/upload/research-services-brochures/product-development-brochure.pdf' },
 ];
 
 export default function ResearchServicesBrochuresPage() {

@@ -8,7 +8,7 @@ import HeroBanner from "@/components/common/HeroBanner";
 
 export const metadata = constructMetadata({
   title: "Industries | Medical Research, Writing, Editing & Publishing",
-  description: "Explore our expertise in medical research, writing, editing, and publishing services across industries, delivers high-quality solutions for healthcare professionals",
+  description: "Explore Pubrica’s industry research services for healthcare, pharma, biotech, and medical sectors with expert clinical research support.",
   keywords: ["Industries"],
   slug: "/industries/",
 });
